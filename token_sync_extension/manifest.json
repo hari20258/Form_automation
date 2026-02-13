@@ -1,0 +1,19 @@
+{
+    "manifest_version": 3,
+    "name": "AMSuite Token Sync",
+    "version": "1.0",
+    "description": "Syncs cookies and tokens from AMSuite to the local automation script.",
+    "permissions": [
+        "cookies",
+        "activeTab",
+        "scripting"
+    ],
+    "host_permissions": [
+        "https://*.amig.com/*",
+        "https://*.munichre.com/*",
+        "http://localhost:3000/*"
+    ],
+    "action": {
+        "default_popup": "popup.html"
+    }
+}

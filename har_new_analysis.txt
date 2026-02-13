@@ -1,0 +1,1025 @@
+Found 10 JSON-RPC calls.
+
+--- Call #1 ---
+URL: https://amsuite.amig.com/pc/service/edge/address/addressstandardization
+Method: retrievePolicyAddresses
+Params: [
+  {
+    "quoteID": "0045975742",
+    "addressFilter": "CONTACTADDRESS"
+  }
+]
+
+--- Call #2 ---
+URL: https://amsuite.amig.com/pc/service/edge/prism/auth
+Method: getProducerProducts
+Params: [
+  {
+    "EffectiveDt": {
+      "year": 2026,
+      "month": 1,
+      "day": 12
+    },
+    "userName": "jberndt",
+    "state": "FL",
+    "jobType": "QUOTE",
+    "companyNum": "071",
+    "PolicyType": "boat",
+    "jobNumber": "0045975742"
+  }
+]
+
+--- Call #3 ---
+URL: https://amsuite.amig.com/pc/service/edge/prism/auth
+Method: validateProducerCriteria
+Params: [
+  {
+    "EffectiveDt": {
+      "year": 2026,
+      "month": 1,
+      "day": 12
+    },
+    "userName": "jberndt",
+    "state": "FL",
+    "jobType": "QUOTE",
+    "companyNum": "071",
+    "PolicyType": "boat",
+    "jobNumber": "0045975742"
+  }
+]
+
+--- Call #4 ---
+URL: https://amsuite.amig.com/pc/service/edge/gatewayquote/quote
+Method: updateDraftSubmission
+Params: [
+  {
+    "sessionUUID": "8d42d5b6-a74c-4a4f-bd0c-b5175e0ddd38",
+    "quoteID": "0045975742",
+    "baseData": {
+      "accountNumber": "0017445014",
+      "accountHolder": {
+        "publicID": "pc:33839423",
+        "displayName": "Luis Burckhardt",
+        "primaryPhoneType": "work",
+        "workNumber": "7875590302",
+        "contactName": "Luis Burckhardt",
+        "subtype": "Person",
+        "primaryAddress": {
+          "publicID": "pc:83936277",
+          "displayName": "2576 SE 31st Pl, Fl 34471US, Ocala, FL 34471-6876",
+          "addressLine1": "2576 SE 31st Pl",
+          "addressLine2": "Fl 34471US",
+          "city": "Ocala",
+          "state": "FL",
+          "postalCode": "34471-6876",
+          "country": "US",
+          "addressType": "home",
+          "countyName": "Marion",
+          "standardizeStatus": "standardized",
+          "standardizeDate_Ext": "2026-02-12T10:28:16Z",
+          "addDeliverIndi_Ext": "SECONDARY_NOT_VALIDATED"
+        },
+        "accountHolder": true,
+        "dateOfBirth": {
+          "year": 1979,
+          "month": 0,
+          "day": 0,
+          "isMasked": true
+        },
+        "firstName": "Luis",
+        "lastName": "Burckhardt",
+        "additionalInsuredType": "person",
+        "tempId": 5
+      },
+      "policyAddress": {
+        "publicID": "pc:83936277",
+        "displayName": "2576 SE 31st Pl, Fl 34471US, Ocala, FL 34471-6876",
+        "addressLine1": "2576 SE 31st Pl",
+        "addressLine2": "Fl 34471US",
+        "city": "Ocala",
+        "state": "FL",
+        "postalCode": "34471-6876",
+        "country": "US",
+        "addressType": "home",
+        "countyName": "Marion",
+        "standardizeStatus": "standardized",
+        "standardizeDate_Ext": "2026-02-12T10:28:16Z",
+        "addDeliverIndi_Ext": "SECONDARY_NOT_VALIDATED"
+      },
+      "productCode": "PersonalAuto",
+      "productName": "Recreational",
+      "uWCompany": "071",
+      "periodStartDate": {
+        "year": 2026,
+        "month": 1,
+        "day": 12
+      },
+      "periodEndDate": {
+        "year": 2027,
+        "month": 1,
+        "day": 12
+      },
+      "preQualQuestionSets": [],
+      "termType": "Annual",
+      "periodStatus": "Draft",
+      "pAPolicyType": "boat",
+      "sADFFields": [],
+      "isAddressChangedRecently": false,
+      "additionalInsureds": [],
+      "policyType": "boat",
+      "baseState": "FL",
+      "ratingState": "FL",
+      "isNCRatingApplicable": false,
+      "policyMailingAddress": {}
+    },
+    "lobData": {
+      "personalAuto": {
+        "preQualQuestionSets": [
+          {
+            "code": "PA_Qualification_1",
+            "answers": {
+              "PA_QSLossHistoryReport_1": null,
+              "PA_QSCreditReport_12": null,
+              "PA_QSLicenseSuspendedRevoked_1": null,
+              "PA_QSFR44_1": null,
+              "PA_QSVerifyTitledOwner_1": null,
+              "PA_RestorationOfCivilRightsForFelony_1": null,
+              "PA_QSMotorVehicleReport_1": null,
+              "PA_QSVehicleForRent_1": null,
+              "PA_QSVehicleForSaleConsignment_1": null,
+              "PA_QSSR22_1": null,
+              "PA_QSFelonyConviction_7": null,
+              "PA_QSDisclaimerVerification_1": null,
+              "PA_QSUnrepairedDamage_1": null
+            },
+            "$$hashKey": "object:128325"
+          },
+          {
+            "code": "PA_PolicyInfo_1",
+            "answers": {
+              "PA_QSPaperlessDiscount_1": "false",
+              "PA_QSMultiPolicyDiscount_1": "false",
+              "PA_QSPriorInsurance_1": null,
+              "PA_QSWatercraftLossesAccidents_1": null,
+              "PA_QSPaidInFullDiscount_1": "false",
+              "PA_QSApplicantPrimaryResidence_1": null
+            },
+            "$$hashKey": "object:128326"
+          }
+        ],
+        "offerings": [
+          {
+            "branchName": "CUSTOM",
+            "coverages": {
+              "vehicleCoverages": [],
+              "lineCoverages": [
+                {
+                  "name": "Uninsured Boaters/Underinsured Boaters",
+                  "updated": false,
+                  "terms": [
+                    {
+                      "name": "Limit",
+                      "patternCode": "PAUBUIBBI",
+                      "options": [],
+                      "chosenTermValue": "",
+                      "isAscendingBetter": true,
+                      "updated": false,
+                      "required": true,
+                      "isEditable": false
+                    }
+                  ],
+                  "selected": true,
+                  "required": true,
+                  "publicID": "PAUBUIBoatersCov",
+                  "description": "Uninsured Boaters/Underinsured Boaters",
+                  "coverageCategoryCode": "PALiabPolicyGrp",
+                  "coverageCategoryDisplayName": "Liability - Policy",
+                  "priority": 9336
+                },
+                {
+                  "name": "Accidental Spill Pollution",
+                  "updated": false,
+                  "terms": [
+                    {
+                      "name": "Option",
+                      "patternCode": "PAAccSpillPollutionLimitOpt",
+                      "options": [
+                        {
+                          "name": "See Form",
+                          "code": "z2sj4pjl0qdde7s33feaqdvnmp8",
+                          "optionValue": 5,
+                          "maxValue": 5
+                        }
+                      ],
+                      "chosenTerm": "z2sj4pjl0qdde7s33feaqdvnmp8",
+                      "chosenTermValue": "See Form",
+                      "isAscendingBetter": true,
+                      "updated": false,
+                      "required": true,
+                      "isEditable": false
+                    }
+                  ],
+                  "selected": true,
+                  "required": true,
+                  "publicID": "PAAccSpillPollutionCov",
+                  "description": "Accidental Spill Pollution",
+                  "coverageCategoryCode": "PALiabPolicyGrp",
+                  "coverageCategoryDisplayName": "Liability - Policy",
+                  "priority": -95
+                },
+                {
+                  "name": "Pet Protection",
+                  "updated": false,
+                  "terms": [
+                    {
+                      "name": "Limit",
+                      "patternCode": "PAPetProtectionLimit",
+                      "options": [
+                        {
+                          "name": "750",
+                          "code": "zjvg60u9pm1nmbfkj0brh90bc2a",
+                          "optionValue": 5,
+                          "maxValue": 5
+                        }
+                      ],
+                      "chosenTermValue": "",
+                      "isAscendingBetter": true,
+                      "updated": false,
+                      "required": true,
+                      "isEditable": false
+                    }
+                  ],
+                  "selected": true,
+                  "required": true,
+                  "publicID": "PAPetProtectionCov",
+                  "description": "Pet Protection",
+                  "coverageCategoryCode": "PAAddPhysDamPolicyGrp",
+                  "coverageCategoryDisplayName": "Additional Physical Damage - Policy",
+                  "priority": 9536
+                },
+                {
+                  "name": "Nautical Collectibles",
+                  "updated": false,
+                  "terms": [],
+                  "selected": false,
+                  "required": false,
+                  "publicID": "PANauticalCollectiblesCov",
+                  "description": "Nautical Collectibles",
+                  "coverageCategoryCode": "PAAddPhysDamPolicyGrp",
+                  "coverageCategoryDisplayName": "Additional Physical Damage - Policy",
+                  "priority": 9597
+                }
+              ]
+            }
+          }
+        ],
+        "coverables": {
+          "drivers": [],
+          "vehicles": [],
+          "prefillReportOrdered_Ext": false
+        },
+        "periodLosses": []
+      }
+    },
+    "validationResult": {
+      "shouldBlockPage": true,
+      "validationMessages": {
+        "errorsFound": false,
+        "warningsFound": true,
+        "previousWarningList": [],
+        "errors": [],
+        "warnings": [
+          {
+            "warningMessage": "The policy address is not a deliverable address according to the US Postal Service.  Please verify the address.",
+            "$$hashKey": "object:128689"
+          }
+        ]
+      }
+    },
+    "priorPolicies": [],
+    "mVRDataDTO": [],
+    "clueData": [],
+    "job": {
+      "jobNumber": "0045975742",
+      "canUserView": true,
+      "underwritingIssues": [],
+      "isEditLocked": false,
+      "statusCode": "Draft"
+    },
+    "fieldAvailability": {
+      "avaliableFields": {
+        "RecPolicyStorage": false,
+        "Gender": false
+      }
+    },
+    "isStorageConstTypeMandatory": false,
+    "persons": [
+      {
+        "publicID": "pc:33839423",
+        "displayName": "Luis Burckhardt",
+        "primaryPhoneType": "work",
+        "workNumber": "7875590302",
+        "contactName": "Luis Burckhardt",
+        "subtype": "Person",
+        "primaryAddress": {
+          "publicID": "pc:83936277",
+          "displayName": "2576 SE 31st Pl, Fl 34471US, Ocala, FL 34471-6876",
+          "addressLine1": "2576 SE 31st Pl",
+          "addressLine2": "Fl 34471US",
+          "city": "Ocala",
+          "state": "FL",
+          "postalCode": "34471-6876",
+          "country": "US",
+          "addressType": "home",
+          "countyName": "Marion",
+          "standardizeStatus": "standardized",
+          "standardizeDate_Ext": "2026-02-12T10:28:16Z",
+          "addDeliverIndi_Ext": "SECONDARY_NOT_VALIDATED"
+        },
+        "accountHolder": true,
+        "dateOfBirth": {
+          "year": 1979,
+          "month": 0,
+          "day": 0,
+          "isMasked": true
+        },
+        "firstName": "Luis",
+        "lastName": "Burckhardt",
+        "additionalInsuredType": "person",
+        "tempId": 5
+      }
+    ],
+    "pageContext": "POLICYDETAILS"
+  }
+]
+
+--- Call #5 ---
+URL: https://amsuite.amig.com/pc/service/edge/prism/auth
+Method: getProducerProducts
+Params: [
+  {
+    "EffectiveDt": {
+      "year": 2026,
+      "month": 1,
+      "day": 12
+    },
+    "userName": "jberndt",
+    "state": "FL",
+    "jobType": "QUOTE",
+    "companyNum": "071",
+    "PolicyType": "boat",
+    "jobNumber": "0045975742"
+  }
+]
+
+--- Call #6 ---
+URL: https://amsuite.amig.com/pc/service/edge/prism/auth
+Method: validateProducerCriteria
+Params: [
+  {
+    "EffectiveDt": {
+      "year": 2026,
+      "month": 1,
+      "day": 12
+    },
+    "userName": "jberndt",
+    "state": "FL",
+    "jobType": "QUOTE",
+    "companyNum": "071",
+    "PolicyType": "boat",
+    "jobNumber": "0045975742"
+  }
+]
+
+--- Call #7 ---
+URL: https://amsuite.amig.com/pc/service/edge/gatewayquote/quote
+Method: updateDraftSubmission
+Params: [
+  {
+    "sessionUUID": "8d42d5b6-a74c-4a4f-bd0c-b5175e0ddd38",
+    "quoteID": "0045975742",
+    "baseData": {
+      "accountNumber": "0017445014",
+      "accountHolder": {
+        "publicID": "pc:33839423",
+        "displayName": "Luis Burckhardt",
+        "primaryPhoneType": "work",
+        "workNumber": "7875590302",
+        "contactName": "Luis Burckhardt",
+        "subtype": "Person",
+        "primaryAddress": {
+          "publicID": "pc:83936277",
+          "displayName": "2576 SE 31st Pl, Fl 34471US, Ocala, FL 34471-6876",
+          "addressLine1": "2576 SE 31st Pl",
+          "addressLine2": "Fl 34471US",
+          "city": "Ocala",
+          "state": "FL",
+          "postalCode": "34471-6876",
+          "country": "US",
+          "addressType": "home",
+          "countyName": "Marion",
+          "standardizeStatus": "standardized",
+          "standardizeDate_Ext": "2026-02-12T10:28:16Z",
+          "addDeliverIndi_Ext": "SECONDARY_NOT_VALIDATED"
+        },
+        "accountHolder": true,
+        "dateOfBirth": {
+          "year": 1979,
+          "month": 0,
+          "day": 0,
+          "isMasked": true
+        },
+        "firstName": "Luis",
+        "lastName": "Burckhardt",
+        "additionalInsuredType": "person",
+        "tempId": 5
+      },
+      "policyAddress": {
+        "publicID": "pc:83936277",
+        "displayName": "2576 SE 31st Pl, Fl 34471US, Ocala, FL 34471-6876",
+        "addressLine1": "2576 SE 31st Pl",
+        "addressLine2": "Fl 34471US",
+        "city": "Ocala",
+        "state": "FL",
+        "postalCode": "34471-6876",
+        "country": "US",
+        "addressType": "home",
+        "countyName": "Marion",
+        "standardizeStatus": "standardized",
+        "standardizeDate_Ext": "2026-02-12T10:28:16Z",
+        "addDeliverIndi_Ext": "SECONDARY_NOT_VALIDATED"
+      },
+      "productCode": "PersonalAuto",
+      "productName": "Recreational",
+      "uWCompany": "071",
+      "periodStartDate": {
+        "year": 2026,
+        "month": 1,
+        "day": 12
+      },
+      "periodEndDate": {
+        "year": 2027,
+        "month": 1,
+        "day": 12
+      },
+      "preQualQuestionSets": [],
+      "termType": "Annual",
+      "periodStatus": "Draft",
+      "pAPolicyType": "boat",
+      "sADFFields": [],
+      "isAddressChangedRecently": false,
+      "additionalInsureds": [],
+      "policyType": "boat",
+      "baseState": "FL",
+      "ratingState": "FL",
+      "isNCRatingApplicable": false,
+      "policyMailingAddress": {}
+    },
+    "lobData": {
+      "personalAuto": {
+        "preQualQuestionSets": [
+          {
+            "code": "PA_Qualification_1",
+            "answers": {
+              "PA_QSLossHistoryReport_1": null,
+              "PA_QSCreditReport_12": null,
+              "PA_QSLicenseSuspendedRevoked_1": null,
+              "PA_QSFR44_1": null,
+              "PA_QSVerifyTitledOwner_1": null,
+              "PA_RestorationOfCivilRightsForFelony_1": null,
+              "PA_QSMotorVehicleReport_1": null,
+              "PA_QSVehicleForRent_1": null,
+              "PA_QSVehicleForSaleConsignment_1": null,
+              "PA_QSSR22_1": null,
+              "PA_QSFelonyConviction_7": null,
+              "PA_QSDisclaimerVerification_1": null,
+              "PA_QSUnrepairedDamage_1": null
+            },
+            "$$hashKey": "object:128325"
+          },
+          {
+            "code": "PA_PolicyInfo_1",
+            "answers": {
+              "PA_QSPaperlessDiscount_1": "false",
+              "PA_QSMultiPolicyDiscount_1": "false",
+              "PA_QSPriorInsurance_1": null,
+              "PA_QSWatercraftLossesAccidents_1": null,
+              "PA_QSPaidInFullDiscount_1": "false",
+              "PA_QSApplicantPrimaryResidence_1": null
+            },
+            "$$hashKey": "object:128326"
+          }
+        ],
+        "offerings": [
+          {
+            "branchName": "CUSTOM",
+            "coverages": {
+              "vehicleCoverages": [],
+              "lineCoverages": [
+                {
+                  "name": "Uninsured Boaters/Underinsured Boaters",
+                  "updated": false,
+                  "terms": [
+                    {
+                      "name": "Limit",
+                      "patternCode": "PAUBUIBBI",
+                      "options": [],
+                      "chosenTermValue": "",
+                      "isAscendingBetter": true,
+                      "updated": false,
+                      "required": true,
+                      "isEditable": false
+                    }
+                  ],
+                  "selected": true,
+                  "required": true,
+                  "publicID": "PAUBUIBoatersCov",
+                  "description": "Uninsured Boaters/Underinsured Boaters",
+                  "coverageCategoryCode": "PALiabPolicyGrp",
+                  "coverageCategoryDisplayName": "Liability - Policy",
+                  "priority": 9336
+                },
+                {
+                  "name": "Accidental Spill Pollution",
+                  "updated": false,
+                  "terms": [
+                    {
+                      "name": "Option",
+                      "patternCode": "PAAccSpillPollutionLimitOpt",
+                      "options": [
+                        {
+                          "name": "See Form",
+                          "code": "z2sj4pjl0qdde7s33feaqdvnmp8",
+                          "optionValue": 5,
+                          "maxValue": 5
+                        }
+                      ],
+                      "chosenTerm": "z2sj4pjl0qdde7s33feaqdvnmp8",
+                      "chosenTermValue": "See Form",
+                      "isAscendingBetter": true,
+                      "updated": false,
+                      "required": true,
+                      "isEditable": false
+                    }
+                  ],
+                  "selected": true,
+                  "required": true,
+                  "publicID": "PAAccSpillPollutionCov",
+                  "description": "Accidental Spill Pollution",
+                  "coverageCategoryCode": "PALiabPolicyGrp",
+                  "coverageCategoryDisplayName": "Liability - Policy",
+                  "priority": -95
+                },
+                {
+                  "name": "Pet Protection",
+                  "updated": false,
+                  "terms": [
+                    {
+                      "name": "Limit",
+                      "patternCode": "PAPetProtectionLimit",
+                      "options": [
+                        {
+                          "name": "750",
+                          "code": "zjvg60u9pm1nmbfkj0brh90bc2a",
+                          "optionValue": 5,
+                          "maxValue": 5
+                        }
+                      ],
+                      "chosenTermValue": "",
+                      "isAscendingBetter": true,
+                      "updated": false,
+                      "required": true,
+                      "isEditable": false
+                    }
+                  ],
+                  "selected": true,
+                  "required": true,
+                  "publicID": "PAPetProtectionCov",
+                  "description": "Pet Protection",
+                  "coverageCategoryCode": "PAAddPhysDamPolicyGrp",
+                  "coverageCategoryDisplayName": "Additional Physical Damage - Policy",
+                  "priority": 9536
+                },
+                {
+                  "name": "Nautical Collectibles",
+                  "updated": false,
+                  "terms": [],
+                  "selected": false,
+                  "required": false,
+                  "publicID": "PANauticalCollectiblesCov",
+                  "description": "Nautical Collectibles",
+                  "coverageCategoryCode": "PAAddPhysDamPolicyGrp",
+                  "coverageCategoryDisplayName": "Additional Physical Damage - Policy",
+                  "priority": 9597
+                }
+              ]
+            }
+          }
+        ],
+        "coverables": {
+          "drivers": [],
+          "vehicles": [],
+          "prefillReportOrdered_Ext": false
+        },
+        "periodLosses": []
+      }
+    },
+    "validationResult": {
+      "shouldBlockPage": true,
+      "validationMessages": {
+        "errorsFound": false,
+        "warningsFound": true,
+        "previousWarningList": [],
+        "errors": [],
+        "warnings": [
+          {
+            "warningMessage": "The policy address is not a deliverable address according to the US Postal Service.  Please verify the address.",
+            "$$hashKey": "object:128689"
+          }
+        ]
+      }
+    },
+    "priorPolicies": [],
+    "mVRDataDTO": [],
+    "clueData": [],
+    "job": {
+      "jobNumber": "0045975742",
+      "canUserView": true,
+      "underwritingIssues": [],
+      "isEditLocked": false,
+      "statusCode": "Draft"
+    },
+    "fieldAvailability": {
+      "avaliableFields": {
+        "RecPolicyStorage": false,
+        "Gender": false
+      }
+    },
+    "isStorageConstTypeMandatory": false,
+    "persons": [
+      {
+        "publicID": "pc:33839423",
+        "displayName": "Luis Burckhardt",
+        "primaryPhoneType": "work",
+        "workNumber": "7875590302",
+        "contactName": "Luis Burckhardt",
+        "subtype": "Person",
+        "primaryAddress": {
+          "publicID": "pc:83936277",
+          "displayName": "2576 SE 31st Pl, Fl 34471US, Ocala, FL 34471-6876",
+          "addressLine1": "2576 SE 31st Pl",
+          "addressLine2": "Fl 34471US",
+          "city": "Ocala",
+          "state": "FL",
+          "postalCode": "34471-6876",
+          "country": "US",
+          "addressType": "home",
+          "countyName": "Marion",
+          "standardizeStatus": "standardized",
+          "standardizeDate_Ext": "2026-02-12T10:28:16Z",
+          "addDeliverIndi_Ext": "SECONDARY_NOT_VALIDATED"
+        },
+        "accountHolder": true,
+        "dateOfBirth": {
+          "year": 1979,
+          "month": 0,
+          "day": 0,
+          "isMasked": true
+        },
+        "firstName": "Luis",
+        "lastName": "Burckhardt",
+        "additionalInsuredType": "person",
+        "tempId": 5
+      }
+    ],
+    "pageContext": "POLICYDETAILS"
+  }
+]
+
+--- Call #8 ---
+URL: https://amsuite.amig.com/pc/service/edge/gatewayquote/quote
+Method: updateDraftSubmission
+Params: [
+  {
+    "sessionUUID": "8d42d5b6-a74c-4a4f-bd0c-b5175e0ddd38",
+    "quoteID": "0045975742",
+    "baseData": {
+      "accountNumber": "0017445014",
+      "accountHolder": {
+        "publicID": "pc:33839423",
+        "displayName": "Luis Burckhardt",
+        "primaryPhoneType": "work",
+        "workNumber": "7875590302",
+        "contactName": "Luis Burckhardt",
+        "subtype": "Person",
+        "primaryAddress": {
+          "publicID": "pc:83936277",
+          "displayName": "2576 SE 31st Pl, Fl 34471US, Ocala, FL 34471-6876",
+          "addressLine1": "2576 SE 31st Pl",
+          "addressLine2": "Fl 34471US",
+          "city": "Ocala",
+          "state": "FL",
+          "postalCode": "34471-6876",
+          "country": "US",
+          "addressType": "home",
+          "countyName": "Marion",
+          "standardizeStatus": "standardized",
+          "standardizeDate_Ext": "2026-02-12T10:38:02Z",
+          "addDeliverIndi_Ext": "SECONDARY_NOT_VALIDATED"
+        },
+        "accountHolder": true,
+        "dateOfBirth": {
+          "year": 1979,
+          "month": 0,
+          "day": 0,
+          "isMasked": true
+        },
+        "firstName": "Luis",
+        "lastName": "Burckhardt",
+        "additionalInsuredType": "person",
+        "tempId": 9
+      },
+      "policyAddress": {
+        "publicID": "pc:83936277",
+        "displayName": "2576 SE 31st Pl, Fl 34471US, Ocala, FL 34471-6876",
+        "addressLine1": "2576 SE 31st Pl",
+        "addressLine2": "Fl 34471US",
+        "city": "Ocala",
+        "state": "FL",
+        "postalCode": "34471-6876",
+        "country": "US",
+        "addressType": "home",
+        "countyName": "Marion",
+        "standardizeStatus": "standardized",
+        "standardizeDate_Ext": "2026-02-12T10:38:02Z",
+        "addDeliverIndi_Ext": "SECONDARY_NOT_VALIDATED"
+      },
+      "productCode": "PersonalAuto",
+      "productName": "Recreational",
+      "uWCompany": "071",
+      "periodStartDate": {
+        "year": 2026,
+        "month": 1,
+        "day": 12
+      },
+      "periodEndDate": {
+        "year": 2027,
+        "month": 1,
+        "day": 12
+      },
+      "preQualQuestionSets": [],
+      "termType": "Annual",
+      "periodStatus": "Draft",
+      "pAPolicyType": "boat",
+      "sADFFields": [],
+      "isAddressChangedRecently": false,
+      "additionalInsureds": [],
+      "policyType": "boat",
+      "baseState": "FL",
+      "ratingState": "FL",
+      "isNCRatingApplicable": false
+    },
+    "lobData": {
+      "personalAuto": {
+        "preQualQuestionSets": [
+          {
+            "code": "PA_Qualification_1",
+            "answers": {
+              "PA_QSLossHistoryReport_1": "true",
+              "PA_QSCreditReport_12": "true",
+              "PA_QSLicenseSuspendedRevoked_1": "false",
+              "PA_QSFR44_1": "false",
+              "PA_QSVerifyTitledOwner_1": "false",
+              "PA_RestorationOfCivilRightsForFelony_1": null,
+              "PA_QSMotorVehicleReport_1": "true",
+              "PA_QSVehicleForRent_1": "false",
+              "PA_QSVehicleForSaleConsignment_1": "false",
+              "PA_QSSR22_1": "false",
+              "PA_QSFelonyConviction_7": "false",
+              "PA_QSDisclaimerVerification_1": "true",
+              "PA_QSUnrepairedDamage_1": "false"
+            },
+            "$$hashKey": "object:128977"
+          },
+          {
+            "code": "PA_PolicyInfo_1",
+            "answers": {
+              "PA_QSPaperlessDiscount_1": "false",
+              "PA_QSMultiPolicyDiscount_1": "false",
+              "PA_QSPriorInsurance_1": "No",
+              "PA_QSWatercraftLossesAccidents_1": "false",
+              "PA_QSPaidInFullDiscount_1": "false",
+              "PA_QSApplicantPrimaryResidence_1": "OwnHome"
+            },
+            "$$hashKey": "object:128978"
+          }
+        ],
+        "offerings": [
+          {
+            "branchName": "CUSTOM",
+            "coverages": {
+              "vehicleCoverages": [],
+              "lineCoverages": [
+                {
+                  "name": "Uninsured Boaters/Underinsured Boaters",
+                  "updated": false,
+                  "terms": [
+                    {
+                      "name": "Limit",
+                      "patternCode": "PAUBUIBBI",
+                      "options": [],
+                      "chosenTermValue": "",
+                      "isAscendingBetter": true,
+                      "updated": false,
+                      "required": true,
+                      "isEditable": false
+                    }
+                  ],
+                  "selected": true,
+                  "required": true,
+                  "publicID": "PAUBUIBoatersCov",
+                  "description": "Uninsured Boaters/Underinsured Boaters",
+                  "coverageCategoryCode": "PALiabPolicyGrp",
+                  "coverageCategoryDisplayName": "Liability - Policy",
+                  "priority": 9336
+                },
+                {
+                  "name": "Accidental Spill Pollution",
+                  "updated": false,
+                  "terms": [
+                    {
+                      "name": "Option",
+                      "patternCode": "PAAccSpillPollutionLimitOpt",
+                      "options": [
+                        {
+                          "name": "See Form",
+                          "code": "z2sj4pjl0qdde7s33feaqdvnmp8",
+                          "optionValue": 5,
+                          "maxValue": 5
+                        }
+                      ],
+                      "chosenTerm": "z2sj4pjl0qdde7s33feaqdvnmp8",
+                      "chosenTermValue": "See Form",
+                      "isAscendingBetter": true,
+                      "updated": false,
+                      "required": true,
+                      "isEditable": false
+                    }
+                  ],
+                  "selected": true,
+                  "required": true,
+                  "publicID": "PAAccSpillPollutionCov",
+                  "description": "Accidental Spill Pollution",
+                  "coverageCategoryCode": "PALiabPolicyGrp",
+                  "coverageCategoryDisplayName": "Liability - Policy",
+                  "priority": -95
+                },
+                {
+                  "name": "Pet Protection",
+                  "updated": false,
+                  "terms": [
+                    {
+                      "name": "Limit",
+                      "patternCode": "PAPetProtectionLimit",
+                      "options": [
+                        {
+                          "name": "750",
+                          "code": "zjvg60u9pm1nmbfkj0brh90bc2a",
+                          "optionValue": 5,
+                          "maxValue": 5
+                        }
+                      ],
+                      "chosenTermValue": "",
+                      "isAscendingBetter": true,
+                      "updated": false,
+                      "required": true,
+                      "isEditable": false
+                    }
+                  ],
+                  "selected": true,
+                  "required": true,
+                  "publicID": "PAPetProtectionCov",
+                  "description": "Pet Protection",
+                  "coverageCategoryCode": "PAAddPhysDamPolicyGrp",
+                  "coverageCategoryDisplayName": "Additional Physical Damage - Policy",
+                  "priority": 9536
+                },
+                {
+                  "name": "Nautical Collectibles",
+                  "updated": false,
+                  "terms": [],
+                  "selected": false,
+                  "required": false,
+                  "publicID": "PANauticalCollectiblesCov",
+                  "description": "Nautical Collectibles",
+                  "coverageCategoryCode": "PAAddPhysDamPolicyGrp",
+                  "coverageCategoryDisplayName": "Additional Physical Damage - Policy",
+                  "priority": 9597
+                }
+              ]
+            }
+          }
+        ],
+        "coverables": {
+          "drivers": [],
+          "vehicles": [],
+          "prefillReportOrdered_Ext": false
+        },
+        "periodLosses": []
+      }
+    },
+    "validationResult": {
+      "shouldBlockPage": true,
+      "validationMessages": {
+        "errorsFound": false,
+        "warningsFound": true,
+        "previousWarningList": [],
+        "errors": [],
+        "warnings": [
+          {
+            "warningMessage": "The policy address is not a deliverable address according to the US Postal Service.  Please verify the address."
+          }
+        ]
+      }
+    },
+    "priorPolicies": [],
+    "mVRDataDTO": [],
+    "clueData": [],
+    "job": {
+      "jobNumber": "0045975742",
+      "canUserView": true,
+      "underwritingIssues": [],
+      "isEditLocked": false,
+      "statusCode": "Draft"
+    },
+    "fieldAvailability": {
+      "avaliableFields": {
+        "RecPolicyStorage": false,
+        "Gender": false
+      }
+    },
+    "isStorageConstTypeMandatory": false,
+    "persons": [
+      {
+        "publicID": "pc:33839423",
+        "displayName": "Luis Burckhardt",
+        "primaryPhoneType": "work",
+        "workNumber": "7875590302",
+        "contactName": "Luis Burckhardt",
+        "subtype": "Person",
+        "primaryAddress": {
+          "publicID": "pc:83936277",
+          "displayName": "2576 SE 31st Pl, Fl 34471US, Ocala, FL 34471-6876",
+          "addressLine1": "2576 SE 31st Pl",
+          "addressLine2": "Fl 34471US",
+          "city": "Ocala",
+          "state": "FL",
+          "postalCode": "34471-6876",
+          "country": "US",
+          "addressType": "home",
+          "countyName": "Marion",
+          "standardizeStatus": "standardized",
+          "standardizeDate_Ext": "2026-02-12T10:38:02Z",
+          "addDeliverIndi_Ext": "SECONDARY_NOT_VALIDATED"
+        },
+        "accountHolder": true,
+        "dateOfBirth": {
+          "year": 1979,
+          "month": 0,
+          "day": 0,
+          "isMasked": true
+        },
+        "firstName": "Luis",
+        "lastName": "Burckhardt",
+        "additionalInsuredType": "person",
+        "tempId": 9
+      }
+    ],
+    "pageContext": "QUESTION"
+  }
+]
+
+--- Call #9 ---
+URL: https://amsuite.amig.com/pc/service/edge/gatewayquote/questionset
+Method: refreshQuestionSets
+Params: [
+  {
+    "questionSets": [
+      {
+        "code": "PA_DriverRoles_1",
+        "answers": {}
+      }
+    ],
+    "submissionNumber": "0045975742"
+  }
+]
+
+--- Call #10 ---
+URL: https://amsuite.amig.com/pc/service/edge/address/addressstandardization
+Method: retrievePolicyAddresses
+Params: [
+  {
+    "quoteID": "0045975742",
+    "addressFilter": "CONTACTADDRESS"
+  }
+]

@@ -1,0 +1,142 @@
+Analyzing 21 entries...
+Found 12 JSON-RPC calls.
+
+--- Call #1 ---
+URL: https://amsuite.amig.com/pc/service/edge/gateway/account
+Method: getPotentialExistingAccounts
+Params: [
+  {
+    "country": "US",
+    "contactType": "person",
+    "firstName": "Luis",
+    "lastName": "Burckhardt"
+  }
+]
+
+--- Call #2 ---
+URL: https://amsuite.amig.com/pc/service/edge/gateway/account
+Method: getAccountDetails
+Params: [
+  "0017445014"
+]
+
+--- Call #3 ---
+URL: https://amsuite.amig.com/pc/service/edge/gateway/user
+Method: getAvailableProducerCodesForCurrentUser
+Params: []
+
+--- Call #4 ---
+URL: https://amsuite.amig.com/pc/service/edge/gateway/account
+Method: getAccountDetails
+Params: [
+  "0017445014"
+]
+
+--- Call #5 ---
+URL: https://amsuite.amig.com/pc/service/edge/gateway/user
+Method: getAvailableProducerCodesForCurrentUser
+Params: []
+
+--- Call #6 ---
+URL: https://amsuite.amig.com/pc/service/edge/gateway/searchproducers
+Method: getProducerCodesByCriteria
+Params: [
+  {},
+  {
+    "OffsetEnd": 2,
+    "OffsetStart": 0
+  }
+]
+
+--- Call #7 ---
+URL: https://amsuite.amig.com/pc/service/edge/gateway/searchproducers
+Method: getProducerCodesByCriteria
+Params: [
+  {},
+  {
+    "OffsetEnd": 2,
+    "OffsetStart": 0
+  }
+]
+
+--- Call #8 ---
+URL: https://amsuite.amig.com/pc/service/edge/gateway/searchproducers
+Method: getProducerCodesByCriteria
+Params: [
+  {},
+  {
+    "OffsetEnd": 2,
+    "OffsetStart": 0
+  }
+]
+
+--- Call #9 ---
+URL: https://amsuite.amig.com/pc/service/edge/prism/auth
+Method: getProducerProducts
+Params: [
+  {
+    "effectiveDt": {
+      "year": 2026,
+      "month": 1,
+      "day": 12,
+      "isMasked": false
+    },
+    "userName": "jberndt",
+    "state": "FL",
+    "jobType": "QUOTE",
+    "chAsgnId": "029610",
+    "PrAsgnId": ""
+  }
+]
+
+--- Call #10 ---
+URL: https://amsuite.amig.com/pc/service/edge/gateway/submission
+Method: createNewSubmission
+Params: [
+  {
+    "effectiveDate": "2026-02-12T10:03:46.867Z",
+    "producerCode": "029610",
+    "state": "FL",
+    "productCode": "PersonalAuto",
+    "policyType": "boat",
+    "uWCompany": "071",
+    "country": "US",
+    "accountNumber": "0017445014"
+  }
+]
+
+--- Call #11 ---
+URL: https://amsuite.amig.com/pc/service/edge/gatewayquote/quote
+Method: retrieve
+Params: [
+  {
+    "quoteID": "0045975420",
+    "postalCode": "34471-6876",
+    "productCode": null,
+    "effectiveDate": null,
+    "gatewayportalnewsubmission": true,
+    "displayYourInfoStep": null,
+    "account": null,
+    "shouldUpdateEffectiveDate": null,
+    "pageContext": null
+  }
+]
+
+--- Call #12 ---
+URL: https://amsuite.amig.com/pc/service/edge/prism/auth
+Method: getProducerProducts
+Params: [
+  {
+    "effectiveDt": {
+      "year": 2026,
+      "month": 1,
+      "day": 12
+    },
+    "userName": "jberndt",
+    "state": "FL",
+    "jobType": "QUOTE",
+    "companyNum": "071",
+    "PolicyType": "boat",
+    "jobNumber": "0045975420"
+  }
+]

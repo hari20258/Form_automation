@@ -1,0 +1,9 @@
+node_modules/
+.DS_Store
+logs/
+data/*.har
+data/*.json
+!data/nboa_isheet_structured.json
+.env
+.cursor/
+*.log

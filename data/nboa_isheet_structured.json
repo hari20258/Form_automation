@@ -1,0 +1,145 @@
+{
+  "account": {
+    "account_number": "0017483217"
+  },
+  "applicant": {
+    "first_name": "Luis",
+    "middle_name": null,
+    "last_name": "Burckhardt",
+    "email": "x.e.velez@gmail.com",
+    "res_phone": "787-559-0302",
+    "mobile": "3525476529",
+    "mobile_2": null,
+    "work_phone": null,
+    "other_phone": null,
+    "fax": null,
+    "billing_address": "2576 SE 31st Pl\n\nOcala, FL 34471\n\nUS"
+  },
+  "consents": {
+    "loss_history_report": "true",
+    "credit_report": "true",
+    "mvr_report": "true",
+    "disclaimer_accepted": "true"
+  },
+  "qualifications": {
+    "license_suspended": "false",
+    "fr44_filing": "false",
+    "titled_owner": "false",
+    "vehicle_for_rent": "false",
+    "vehicle_for_sale": "false",
+    "sr22_filing": "false",
+    "felony_conviction": "false",
+    "unrepaired_damage": "false"
+  },
+  "policy_discounts": {
+    "multi_policy_discount": "false",
+    "paid_in_full": "false",
+    "paperless_delivery": "false",
+    "primary_residence": "OwnHome",
+    "prior_insurance": "Yes",
+    "watercraft_losses": "false"
+  },
+  "location_storage": {
+    "prim_loc": "Yes",
+    "loc_name": "Residence",
+    "loc_address": "2576 SE 31st Pl",
+    "city": "Ocala",
+    "state": "FL",
+    "zip": "34471",
+    "storage_type": "Trailer",
+    "prim_res_fl_co": null,
+    "lay_up_start": null,
+    "lay_up_end": null,
+    "lay_up_type": "Not Applicable",
+    "prim_mooring_st": null,
+    "additional_ins": false
+  },
+  "quote_policy": {
+    "effective_date": "2026-02-12",
+    "selected_carrier": "Progressive Insurance Co",
+    "payment_method": "Carrier Payment",
+    "member_type": "Decline",
+    "member_decline": "Sign & Glide",
+    "member_fee": "0",
+    "premium": "1325.12",
+    "policy_number": "868951114",
+    "lead_source": "Current/Prior Client",
+    "campaign": null,
+    "email_opt_out": "0",
+    "payment_taken": false
+  },
+  "vessel": {
+    "mfgr_name": "Sea Fox",
+    "model_name": "246 Commander",
+    "model_year": "2014",
+    "length_ft": "24",
+    "speed": "50",
+    "hull_value": "43500",
+    "purchase_price": "43500",
+    "purchase_date": "2026-01-27",
+    "hull_type": "CENTER CONSOLE",
+    "hull_material": "Fiberglass",
+    "watercraft_use": "Private Pleasure",
+    "value_valid": "New Vessel",
+    "incl_in_hull_value": "Yes",
+    "safety_equip": "Compass;Depth Sounder;GPS",
+    "survey": false,
+    "survey_date": null,
+    "vessel_name": null,
+    "navigation": "75 nautical miles from the coast of the United States, Canada and their respective territories.",
+    "prev_vessels": "18' Monterey - 5 years\n21' Bentley Pontoon - 6 years",
+    "prev_claims": null,
+    "prev_violations": "3/10/24 - DUI & at fault accident"
+  },
+  "hins": {
+    "hin_vessel": "LYGNB102E314",
+    "hin_engine_1": null,
+    "hin_engine_2": null,
+    "hin_engine_3": null,
+    "hin_engine_4": null,
+    "hin_trailer": null,
+    "hin_dinghy": null
+  },
+  "engine_trailer": {
+    "engine_mfgr": "Yamaha Motors",
+    "propulsion_type": "Outboard",
+    "fuel_type": "Gas",
+    "num_engines": "1",
+    "hp_per_engine": "250",
+    "hp_total": "250",
+    "trailer_mfgr": "Magic Trail Trailers",
+    "trailer_year": "2013",
+    "trailer_value": "3000"
+  },
+  "operators": [
+    {
+      "name": "Luis Burckhardt",
+      "insured_type": "Primary Insured & Operator",
+      "dob": "1979-10-18",
+      "dl_number": "B626526793780 - FL",
+      "ssn": null,
+      "marital_status": "Married",
+      "occupation": null,
+      "years_experience": "20",
+      "years_ownership": "20",
+      "certs_lics": null,
+      "prev_claims": null,
+      "prev_violations": "3/10/24 - DUI & at fault accident"
+    },
+    {
+      "name": "Xiomara Burckhardt",
+      "insured_type": "Additional Insured & Operator",
+      "dob": "1981-06-29",
+      "dl_number": "B225720598000- FL",
+      "ssn": null,
+      "marital_status": "Married",
+      "occupation": null,
+      "years_experience": "20",
+      "years_ownership": "20",
+      "certs_lics": null,
+      "prev_claims": null,
+      "prev_violations": null
+    }
+  ],
+  "coverage": []
+}

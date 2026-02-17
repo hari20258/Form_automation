@@ -2,6 +2,8 @@
     "compilerOptions": {
         "target": "es2020",
         "module": "commonjs",
+        "allowJs": true,
+        "checkJs": false,
         "strict": true,
         "esModuleInterop": true,
         "skipLibCheck": true,
@@ -10,7 +12,8 @@
         "rootDir": "./"
     },
     "include": [
-        "**/*.ts"
+        "**/*.ts",
+        "**/*.js"
     ],
     "exclude": [
         "node_modules"

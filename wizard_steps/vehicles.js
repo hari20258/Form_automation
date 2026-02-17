@@ -25,14 +25,27 @@ module.exports = async function saveVehicles(quoteApi, submission, customer) {
     const primaryDriver = drivers.find(d => d.isPolicyHolder === true || d.person?.accountHolder === true) || drivers[0] || null;
 
     // Address info (for storage/registration)
+    // Address info (for storage/registration)
+    // Prefer customer.address (parsed from index.js) if location_storage is missing or indicates primary
     const loc = customer.location_storage || {};
+    const primaryAddr = customer.address || {};
+
+    const usePrimary = loc.prim_loc === 'Yes' || !loc.loc_address;
+
+    // If usage is primary, use the robust parsed address from index.js
+    // Otherwise use loc storage, defaulting to primary if fields missing
+    const addressLine1 = usePrimary ? primaryAddr.address_line_1 : (loc.loc_address || primaryAddr.address_line_1 || '');
+    const city = usePrimary ? primaryAddr.city : (loc.city || primaryAddr.city || '');
+    const state = usePrimary ? primaryAddr.state : (loc.state || primaryAddr.state || '');
+    const zip = usePrimary ? primaryAddr.zip : (loc.zip || primaryAddr.zip || '');
+
     const address = {
         country: "US",
-        addressLine1: loc.loc_address || '',
-        city: loc.city || '',
-        state: loc.state || '',
-        postalCode: loc.zip || '',
-        displayName: `${loc.loc_address || ''}, ${loc.city || ''}, ${loc.state || ''} ${loc.zip || ''}`.trim(),
+        addressLine1: addressLine1,
+        city: city,
+        state: state,
+        postalCode: zip,
+        displayName: `${addressLine1}, ${city}, ${state} ${zip}`.trim(),
         standardizeStatus: "standardized",
         countyName: ""
     };
@@ -80,7 +93,7 @@ module.exports = async function saveVehicles(quoteApi, submission, customer) {
             engineDetails.push({
                 year: vessel.model_year || '',
                 make: engine.engine_mfgr.toUpperCase(),
-                model: 'N/A', // Required field, default to N/A if missing
+                model: engine.engine_model || 'Other', // Use provided model or default to 'Other'
                 horsePower: engine.hp_per_engine || engine.hp_total || '0'
             });
         }
@@ -140,6 +153,7 @@ module.exports = async function saveVehicles(quoteApi, submission, customer) {
             { field: 'Num Engines', value: boatVehicle.numberOfEngines },
             { field: 'Total HP', value: boatVehicle.totalHorsepower },
             { field: 'Purchase Price', value: `$${boatVehicle.purchasePrice}` },
+            { field: 'Purchase Date', value: purchaseDate ? `${purchaseDate.year}-${purchaseDate.month + 1}-${purchaseDate.day}` : 'N/A' },
             { field: 'Vehicle Value', value: `$${boatVehicle.vehicleValue}` },
             { field: 'Storage Type', value: storageType },
             { field: 'Primary Operator', value: primaryDriver ? `${primaryDriver.person?.firstName} ${primaryDriver.person?.lastName}` : 'N/A' },
@@ -172,8 +186,7 @@ module.exports = async function saveVehicles(quoteApi, submission, customer) {
     // =========================================================================
     if (engine.trailer_mfgr) {
         const trailerVehicle = {
-            tempId: 28,
-            costNew: { amount: 0 },
+            costNew: {},
             vehicleNumber: 2,
             vehicleType: 'trailer',
             storageAddress: address, // Fixed: Send full address instead of just country
@@ -182,19 +195,24 @@ module.exports = async function saveVehicles(quoteApi, submission, customer) {
             stateAssignedVin: false,
             vin: hins.hin_trailer || hins.hin_vessel || '',
             vinNumberChanged_Ext: true,
-            year: engine.trailer_year || '',
+            year: engine.trailer_year,
             make: (engine.trailer_mfgr || '').toUpperCase(),
-            length: 16, // Default if not provided
-            model: '',
+            length: vessel.length_ft || '24',
+            model: engine.trailer_model || 'Other',
             totalHorsepower: '0',
+            engineSize: '0',
             fuelType: 'Gasoline',
-            vehicleValue: engine.trailer_value || '0',
+            purchasePrice: '0.00',
+            // vehicleValue for trailer = hull value - trailer value (e.g. 43500 - 3000 = 40500)
+            vehicleValue: (parseInt(vessel.hull_value || vessel.purchase_price || '0') - parseInt(engine.trailer_value || '0')) || '0',
             primaryUse: 'commuting',
+            engineDetails: [],
             horsePowerChanged_Ext: false,
             hullConstructionChanged_Ext: false,
             engineTypeChanged_Ext: false,
             fuelTypeChanged_Ext: false,
-            engineSizeChanged_Ext: false
+            engineSizeChanged_Ext: false,
+            cC: '0',
         };
 
         // --- Print Trailer Summary ---
@@ -202,6 +220,7 @@ module.exports = async function saveVehicles(quoteApi, submission, customer) {
             { field: 'Type', value: 'Trailer' },
             { field: 'Year', value: trailerVehicle.year },
             { field: 'Make', value: trailerVehicle.make },
+            { field: 'Model', value: trailerVehicle.model },
             { field: 'VIN', value: trailerVehicle.vin || '(none)' },
             { field: 'Value', value: `$${trailerVehicle.vehicleValue}` },
         ];
@@ -230,6 +249,114 @@ module.exports = async function saveVehicles(quoteApi, submission, customer) {
     const postalCode = submission.baseData?.policyAddress?.postalCode ||
         customer.location_storage?.zip || '34471';
     const freshState = await quoteApi.retrieveQuote(submissionNumber, postalCode);
+
+    // VMM Lookup: Enrich vehicles with eligibility and rating data from the server
+    // This replicates what the UI's make/model dropdown does before saving
+    const freshVehicles = freshState.lobData?.personalAuto?.coverables?.vehicles || [];
+    const effectiveDate = freshState.baseData?.periodStartDate || new Date().toISOString();
+    const ratingState = freshState.baseData?.policyAddress?.state || customer.location_storage?.state || 'FL';
+
+    for (let i = 0; i < freshVehicles.length; i++) {
+        const v = freshVehicles[i];
+        console.log(`   🔍 Vehicle ${i + 1} (${v.vehicleType}): eligibleInd=${v.eligibleInd}, make=${v.make}, model=${v.model}`);
+
+        if ((!v.eligibleInd || v.eligibleInd !== 'Y') && v.vehicleType === 'boat') {
+            console.log(`   📡 Running VMM lookup for Vehicle ${i + 1}...`);
+            try {
+                // Step 1: Get valid lengths for this make
+                const lengths = await quoteApi.getBoatLengths({
+                    vehicleType: v.vehicleType,
+                    year: v.year,
+                    make: v.make
+                });
+
+                // Pick the best matching length (or use existing)
+                const targetLength = parseInt(v.length) || 16;
+                let bestLength = targetLength;
+                if (lengths.length > 0) {
+                    // Find closest matching length
+                    bestLength = lengths.reduce((prev, curr) =>
+                        Math.abs(curr - targetLength) < Math.abs(prev - targetLength) ? curr : prev
+                    );
+                    console.log(`   📏 VMM Lengths available: [${lengths.join(', ')}] → using ${bestLength}`);
+                }
+
+                // Step 2: Get valid models for this make/year/length
+                const models = await quoteApi.getModels({
+                    vehicleType: v.vehicleType,
+                    year: v.year,
+                    make: v.make,
+                    boatLength: bestLength
+                });
+
+                // Step 3: Find the best matching model
+                let resolvedModel = v.model; // default: use as-is
+                // getModels returns a dict {modelName: null, ...} not an array
+                const modelNames = Array.isArray(models) ? models.map(m => m.model || m.name || m) : Object.keys(models);
+                if (modelNames.length > 0) {
+                    console.log(`   📋 VMM Models available (${modelNames.length}): [${modelNames.slice(0, 5).join(', ')}${modelNames.length > 5 ? `, ...+${modelNames.length - 5}` : ''}]`);
+
+                    // Try exact match first
+                    let match = modelNames.find(m => m.toUpperCase() === v.model.toUpperCase());
+
+                    // Try partial match (model name contains our model or vice versa)
+                    if (!match) {
+                        match = modelNames.find(m =>
+                            m.toUpperCase().includes(v.model.toUpperCase()) ||
+                            v.model.toUpperCase().includes(m.toUpperCase())
+                        );
+                    }
+
+                    // Fallback: just use first model
+                    if (!match && modelNames.length > 0) {
+                        match = modelNames[0];
+                        console.log(`   ⚠️ No model match found for "${v.model}" — using first available: "${match}"`);
+                    }
+
+                    if (match) {
+                        resolvedModel = match;
+                        console.log(`   ✅ Model resolved: "${v.model}" → "${resolvedModel}"`);
+                    }
+                }
+
+                // Step 4: Call getUnitInfo with the resolved model
+                const unitInfo = await quoteApi.getUnitInfo({
+                    vehicleType: v.vehicleType,
+                    year: v.year,
+                    make: v.make,
+                    model: resolvedModel,
+                    boatLength: bestLength,
+                    totalHP: v.totalHorsepower || '0',
+                    state: ratingState,
+                    effectiveDate: effectiveDate
+                });
+
+                // Merge server-derived fields into the vehicle
+                if (unitInfo) {
+                    v.eligibleInd = unitInfo.eligibleInd || 'Y';
+                    v.availableInd = unitInfo.availableInd || 'Y';
+                    v.vMMGroup = unitInfo.vMMGroup || v.vMMGroup;
+                    v.version = unitInfo.version || v.version;
+                    if (unitInfo.fuelType) v.fuelType = unitInfo.fuelType;
+                    if (unitInfo.weight) v.weight = unitInfo.weight;
+                    if (unitInfo.symbol) v.symbol = unitInfo.symbol;
+                    if (unitInfo.vMMRuleKey_Ext) v.vMMRuleKey_Ext = unitInfo.vMMRuleKey_Ext;
+                    if (unitInfo.boatType) v.boatType = unitInfo.boatType;
+                    if (unitInfo.hull) v.hullConstruction = unitInfo.hull;
+                }
+            } catch (lookupErr) {
+                console.warn(`   ⚠️ VMM lookup failed for Vehicle ${i + 1}: ${lookupErr.message}. Defaulting eligibleInd to Y.`);
+                v.eligibleInd = 'Y';
+                v.availableInd = 'Y';
+            }
+        } else if (v.vehicleType === 'trailer') {
+            // Force eligibility for trailers to bypass VMM check
+            console.log(`   ℹ️ Forcing eligibleInd='Y' for Trailer (Vehicle ${i + 1})`);
+            v.eligibleInd = 'Y';
+            v.availableInd = 'Y';
+        }
+    }
+
     const result = await quoteApi.updateDraftSubmission(freshState, 'VEHICLE');
 
     // Check for Blocking Errors

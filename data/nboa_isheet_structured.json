@@ -102,13 +102,16 @@
   },
   "engine_trailer": {
     "engine_mfgr": "Yamaha Motors",
+    "engine_model": "F40JEA JET",
+    "engine_year": "2017",
     "propulsion_type": "Outboard",
     "fuel_type": "Gas",
     "num_engines": "1",
     "hp_per_engine": "250",
     "hp_total": "250",
-    "trailer_mfgr": "Magic Trail Trailers",
+    "trailer_mfgr": "Magic Tilt Trailers",
     "trailer_year": "2013",
+    "trailer_model": "Nautic Star 24 Bay TCA2452W F14C",
     "trailer_value": "3000"
   },
   "operators": [
@@ -141,5 +144,44 @@
       "prev_violations": null
     }
   ],
-  "coverage": []
+  "coverage": {
+    "hull": {
+      "selected": true,
+      "deductible": "500",
+      "settlement_option": "Agreed Value"
+    },
+    "haul_out": {
+      "selected": true
+    },
+    "personal_effects": {
+      "selected": true,
+      "limit": "2,500",
+      "deductible": "200",
+      "settlement_option": "Replacement Cost"
+    },
+    "towing": {
+      "selected": true,
+      "limit": "250"
+    },
+    "trailer_physical_damage": {
+      "selected": true,
+      "deductible": "250",
+      "settlement_option": "Agreed Value"
+    },
+    "liability": {
+      "limit": "100,000"
+    },
+    "uninsured_boaters": {
+      "limit": "100,000"
+    },
+    "medical_payments": {
+      "limit": "1,000"
+    },
+    "accidental_spill_pollution": {
+      "selected": true
+    },
+    "pet_protection": {
+      "selected": true
+    }
+  }
 }

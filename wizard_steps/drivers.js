@@ -12,6 +12,7 @@ module.exports = async function saveDrivers(quoteApi, submission, customer) {
     console.log('✅ Updating Drivers...');
 
     const operators = customer.operators || [];
+
     if (operators.length === 0) {
         console.warn('⚠️ No operators found in customer data. Skipping driver addition.');
         return await quoteApi.updateDraftSubmission(submission, 'DRIVER');
@@ -56,11 +57,32 @@ module.exports = async function saveDrivers(quoteApi, submission, customer) {
             p.lastName?.toLowerCase() === lastName.toLowerCase()
         );
 
+        // License Details
+        // Data format: "B626526793780 - FL"
+        let licenseNumber = '';
+        let licenseState = 'FL'; // Default
+
+        if (op.dl_number) {
+            const parts = op.dl_number.split('-');
+            if (parts.length > 0) {
+                licenseNumber = parts[0].trim();
+            }
+            if (parts.length > 1) {
+                licenseState = parts[1].trim();
+            }
+        } else {
+            // Fallback to old keys just in case
+            licenseNumber = op.license_number || '';
+            licenseState = op.license_state || 'FL';
+        }
+
         // Build person object
         const person = existingPerson ? {
             ...existingPerson,
             maritalStatus: maritalCode,
             dateOfBirth: dob,
+            LicenseNumber: licenseNumber,
+            LicenseState: licenseState,
         } : {
             firstName: firstName,
             lastName: lastName,
@@ -72,11 +94,13 @@ module.exports = async function saveDrivers(quoteApi, submission, customer) {
             primaryPhoneType: "mobile",
             cellNumber: customer.applicant?.mobile || customer.applicant?.res_phone || '',
             additionalInsuredType: "person",
+            LicenseNumber: licenseNumber,
+            LicenseState: licenseState,
             primaryAddress: {
-                addressLine1: customer.location_storage?.loc_address || '',
-                city: customer.location_storage?.city || '',
-                state: customer.location_storage?.state || '',
-                postalCode: customer.location_storage?.zip || '',
+                addressLine1: customer.address?.address_line_1 || '',
+                city: customer.address?.city || '',
+                state: customer.address?.state || '',
+                postalCode: customer.address?.zip || '',
                 country: "US",
                 addressType: "home",
                 standardizeStatus: "standardized"
@@ -112,6 +136,9 @@ module.exports = async function saveDrivers(quoteApi, submission, customer) {
             { field: 'Relationship', key: 'relationship', value: relationship },
             { field: 'Date of Birth', key: 'person.dateOfBirth', value: `${dob.year}-${dob.month}-${dob.day}` },
             { field: 'Marital Status', key: 'person.maritalStatus', value: `${op.marital_status} → ${maritalCode}` },
+            { field: 'License #', key: 'person.LicenseNumber', value: licenseNumber },
+            { field: 'License State', key: 'person.LicenseState', value: licenseState },
+            { field: 'Address', key: 'person.primaryAddress', value: `${person.primaryAddress.addressLine1}, ${person.primaryAddress.city}, ${person.primaryAddress.state} ${person.primaryAddress.postalCode}` },
             { field: 'Boating Experience', key: 'PA_QSYearsBoatingExp', value: `${yearsExp} yrs` },
             { field: 'Safety Course', key: 'PA_QSDateComplSafety', value: String(safetyCourse || 'N/A') },
             { field: 'Matched Person', key: 'existingPerson', value: existingPerson ? 'Yes' : 'New' },

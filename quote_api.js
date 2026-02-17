@@ -229,7 +229,7 @@ class QuoteApi {
         }
     }
 
-    async getPotentialExistingAccounts(firstName, lastName) {
+    async getPotentialExistingAccounts(firstName, lastName, targetAccountNumber = null) {
         console.log(`🔎 Searching for existing accounts: ${firstName} ${lastName}...`);
         const params = [{
             country: 'US',
@@ -238,20 +238,38 @@ class QuoteApi {
             lastName: lastName
         }];
 
-        const result = await apiClient.callRpc('/gateway/account', 'getPotentialExistingAccounts', params);
-        if (result && result.length > 0) {
-            const match = result[0];
-            console.log(`✅ Found ${result.length} matches. Using first match: ${match.accountNumber}`);
+        try {
+            const result = await apiClient.callRpc('/gateway/account', 'getPotentialExistingAccounts', params);
 
-            // The address is nested in accountHolder.primaryAddress
-            // Flatten it to match what index.js expects (account.primaryAddress)
-            if (match.accountHolder && match.accountHolder.primaryAddress) {
-                match.primaryAddress = match.accountHolder.primaryAddress;
+            if (result && result.length > 0) {
+                console.log(`   Debug: Found ${result.length} potential matches: ${result.map(r => r.accountNumber).join(', ')}`);
+                let match = result[0]; // Default to first match
+
+                // If a specific account number is targeted, try to find it
+                if (targetAccountNumber) {
+                    const exactMatch = result.find(acc => acc.accountNumber === targetAccountNumber);
+                    if (exactMatch) {
+                        console.log(`✅ Found exact match for target account: ${targetAccountNumber}`);
+                        match = exactMatch;
+                    } else {
+                        console.warn(`⚠️ Target account ${targetAccountNumber} not found in search results. Defaulting to first match: ${match.accountNumber}`);
+                    }
+                } else {
+                    console.log(`✅ Found ${result.length} matches. Using first match: ${match.accountNumber}`);
+                }
+
+                // The address is nested in accountHolder.primaryAddress
+                // Flatten it to match what index.js expects (account.primaryAddress)
+                if (match.accountHolder && match.accountHolder.primaryAddress) {
+                    match.primaryAddress = match.accountHolder.primaryAddress;
+                }
+                return match;
             }
-
-            return match;
+            return null;
+        } catch (e) {
+            console.warn(`⚠️ Account search failed: ${e.message}`);
+            return null;
         }
-        return null;
     }
 
     /**
@@ -270,6 +288,7 @@ class QuoteApi {
         }];
 
         const result = await apiClient.callRpc('/gatewayquote/driver', 'addDriverToSubmission', params);
+        this.logRpcValidation(result, 'Add Driver');
         console.log(`   ✅ Driver Added: ${driverName} (publicID: ${result?.publicID || 'N/A'})`);
         return result;
     }
@@ -296,15 +315,75 @@ class QuoteApi {
         }];
 
         const result = await apiClient.callRpc('/gatewayquote/vehicle', 'addVehicleToSubmission', params);
+        this.logRpcValidation(result, `Add Vehicle ${vType}`);
         console.log(`   ✅ Vehicle Added (${vType}): publicID ${result?.publicID || 'N/A'}`);
+        return result;
+    }
+
+    /**
+     * VMM Lookup: Get available boat lengths for a make/year/vehicleType.
+     */
+    async getBoatLengths({ vehicleType, year, make }) {
+        const params = [{
+            Year: String(year),
+            VehicleType: vehicleType || 'boat',
+            PolicyType: 'boat',
+            Make: make
+        }];
+        console.log(`   🔍 VMM getBoatLengths: ${vehicleType} ${year} ${make}...`);
+        const result = await apiClient.callRpc('/vmm/lookup', 'getBoatLengthsModels', params);
+        return result?.lengths || [];
+    }
+
+    /**
+     * VMM Lookup: Get available models for a make/year/vehicleType/length.
+     */
+    async getModels({ vehicleType, year, make, boatLength }) {
+        const params = [{
+            Year: String(year),
+            VehicleType: vehicleType || 'boat',
+            PolicyType: 'boat',
+            Make: make,
+            UnitConvSource: 'NONCONV',
+            BoatLength: parseInt(boatLength) || 24
+        }];
+        console.log(`   🔍 VMM getModels: ${vehicleType} ${year} ${make} len=${boatLength}...`);
+        const result = await apiClient.callRpc('/vmm/lookup', 'getModels', params);
+        return result?.models || [];
+    }
+
+    /**
+     * Calls the VMM (Vehicle Make/Model) lookup to get eligibility and rating info.
+     * This is what the UI's make/model dropdown uses to validate vehicles.
+     * @returns {Promise<Object>} - { eligibleInd, availableInd, vMMGroup, version, fuelType, ... }
+     */
+    async getUnitInfo({ vehicleType, year, make, model, boatLength, totalHP, state, effectiveDate }) {
+        const params = [{
+            VehicleType: vehicleType || 'boat',
+            PolicyType: 'boat',
+            Year: String(year),
+            Make: make,
+            Model: model,
+            BoatLength: parseInt(boatLength) || 24,
+            CompanyNumber: '071',
+            TotalHorsePower: String(totalHP || '0'),
+            transactionType: 'Submission',
+            State: state || 'FL',
+            UnitConvSource: 'NONCONV',
+            EffectiveDate: effectiveDate || new Date().toISOString()
+        }];
+
+        console.log(`   🔍 VMM getUnitInfo: ${vehicleType} ${year} ${make} ${model}...`);
+        const result = await apiClient.callRpc('/vmm/lookup', 'getUnitInfo', params);
+        console.log(`   ✅ VMM Result: eligibleInd=${result?.eligibleInd}, availableInd=${result?.availableInd}, vMMGroup=${result?.vMMGroup}`);
         return result;
     }
 
     /**
      * Retrieves the full submission object (baseData, lobData, etc.)
      */
-    async retrieveQuote(quoteID, postalCode) {
-        console.log(`📡 Retrieving Full Quote State for ${quoteID}...`);
+    async retrieveQuote(quoteID, postalCode, pageContext = null) {
+        console.log(`📡 Retrieving Full Quote State for ${quoteID} (Context: ${pageContext})...`);
 
         const params = [{
             quoteID: quoteID,
@@ -315,29 +394,49 @@ class QuoteApi {
             displayYourInfoStep: null,
             account: null,
             shouldUpdateEffectiveDate: null,
-            pageContext: null
+            pageContext: pageContext
         }];
 
         const result = await apiClient.callRpc('/gatewayquote/quote', 'retrieve', params);
         return result;
     }
 
-    async createNewSubmission(accountNumber, producerInfo) {
+    async retrieveCustomQuote(quoteID, sessionUUID) {
+        console.log(`📡 Retrieving Custom Quote State for ${quoteID}...`);
+        // Param structure guessed based on updateCustomQuoteCoverages peers
+        // or standard retrieve params. Let's try standard params first.
+        const params = [{
+            quoteID: quoteID,
+            sessionUUID: sessionUUID
+        }];
+
+        // Trying 'getCustomQuote' or 'retrieve' on the custom endpoint
+        try {
+            return await apiClient.callRpc('/gatewayquote/customquote', 'retrieve', params);
+        } catch (e) {
+            console.warn('   ⚠️ retrieve on customquote failed. Trying getQuote...');
+            return await apiClient.callRpc('/gatewayquote/customquote', 'getQuote', params);
+        }
+    }
+
+    async createNewSubmission(accountNumber, producerInfo, options = {}) {
         console.log(`📝 Creating Submission for Account ${accountNumber}...`);
 
         const params = [{
-            effectiveDate: new Date().toISOString(),
+            effectiveDate: options.effectiveDate || new Date().toISOString(),
             producerCode: producerInfo.producerCode,
-            state: QUOTE_CONFIG.state,
-            productCode: 'PersonalAuto',
-            policyType: 'boat',
+            state: options.state || QUOTE_CONFIG.state,
+            productCode: options.productCode || 'PersonalAuto',
+            policyType: options.policyType || 'boat',
             uWCompany: producerInfo.uWCompany,
             country: 'US',
             accountNumber: accountNumber
         }];
 
         // Returns the full submission object needed for updates
+        // Returns the full submission object needed for updates
         const result = await apiClient.callRpc('/gateway/submission', 'createNewSubmission', params);
+        this.logRpcValidation(result, 'Create Submission');
         return result;
     }
 
@@ -352,20 +451,50 @@ class QuoteApi {
 
         const params = [submissionObj];
         const result = await apiClient.callRpc('/gatewayquote/quote', 'updateDraftSubmission', params);
+        this.logRpcValidation(result, `Save Step: ${pageContext}`);
         return result; // Returns the updated submission object
+    }
+
+    /**
+     * Saves the submission AND triggers the rating engine to generate a premium.
+     * This is the key call that produces quoted premium amounts.
+     * @param {Object} submissionObj - The full submission object
+     * @param {string} pageContext - The wizard step name (e.g. 'VEHICLE')
+     * @returns {Promise<Object>} - The rated submission with quoteData.offeredQuotes[].premium
+     */
+    async saveAndQuote(submissionObj, pageContext) {
+        console.log(`💰 Save & Quote (Rating) Step: ${pageContext}...`);
+        submissionObj.pageContext = pageContext;
+
+        const params = [submissionObj];
+        const result = await apiClient.callRpc('/gatewayquote/quote', 'saveAndQuote', params);
+        this.logRpcValidation(result, `SaveAndQuote: ${pageContext}`);
+
+        // Extract premium from response
+        const offeredQuotes = result?.quoteData?.offeredQuotes || [];
+        if (offeredQuotes.length > 0 && offeredQuotes[0].premium) {
+            const premium = offeredQuotes[0].premium;
+            console.log(`   💵 Premium: $${premium.total?.amount} (Monthly: $${premium.monthlyPremium?.amount})`);
+        } else {
+            console.warn('   ⚠️ No premium returned from saveAndQuote.');
+        }
+
+        return result;
     }
 
 
 
-
-    async updateCustomQuoteCoverages(quoteObject) {
-        console.log(`   📝 Updating Coverages for Quote ${quoteObject.quoteID}...`);
+    async updateCustomQuoteCoverages(quoteObject, quoteID, sessionUUID) {
+        console.log(`   📝 Updating Coverages for Quote ${quoteID}...`);
 
         const params = [{
-            quote: quoteObject
+            quote: quoteObject,
+            quoteID: quoteID,
+            sessionUUID: sessionUUID
         }];
 
-        const result = await apiClient.callRpc('/gatewayquote/quote', 'updateCustomQuoteCoverages', params);
+        const result = await apiClient.callRpc('/gatewayquote/customquote', 'updateCustomQuoteCoverages', params);
+        this.logRpcValidation(result, 'Update Coverages');
 
         if (result && result.premium) {
             const total = result.premium.total?.amount || 0;
@@ -373,6 +502,144 @@ class QuoteApi {
         }
 
         return result;
+    }
+
+    /**
+     * Adds an Additional Insured (e.g., Secondary Applicant)
+     */
+    async addAdditionalInsured(quoteID, sessionUUID, insuredData) {
+        console.log(`➕ Adding Additional Insured to Quote ${quoteID}...`);
+
+        // Construct the payload based on standard Person pattern
+        const params = [{
+            sessionUUID: sessionUUID,
+            quoteID: quoteID,
+            additionalInsured: {
+                // If it's a person
+                subtype: "Person",
+                firstName: insuredData.firstName,
+                lastName: insuredData.lastName,
+                dateOfBirth: insuredData.dateOfBirth ? {
+                    year: parseInt(insuredData.dateOfBirth.split('-')[0]),
+                    month: parseInt(insuredData.dateOfBirth.split('-')[1]) - 1,
+                    day: parseInt(insuredData.dateOfBirth.split('-')[2]),
+                    isMasked: false
+                } : null,
+                maritalStatus: insuredData.maritalStatus,
+                primaryPhoneType: "mobile", // Default
+                cellNumber: insuredData.phone || "",
+                emailAddress1: insuredData.email || "",
+                additionalInsuredType: "person" // Explicit type from HAR
+            }
+        }];
+
+        return await apiClient.callRpc('/gatewayquote/quote', 'addAdditionalInsured', params);
+    }
+
+    /**
+     * Updates the Quoted Submission (Policy Info Step - Email/Phone/Consent)
+     */
+    async updateQuotedSubmission(quoteID, sessionUUID, baseDataUpdate) {
+        console.log(`📝 Updating Quoted Submission (Policy Info) for ${quoteID}...`);
+
+        const params = [{
+            sessionUUID: sessionUUID,
+            quoteID: quoteID,
+            baseData: baseDataUpdate
+        }];
+
+        return await apiClient.callRpc('/gatewayquote/quote', 'updateQuotedSubmission', params);
+    }
+
+    /**
+     * Explicitly rates the quote to get premium.
+     */
+    async rate(quoteID, sessionUUID) {
+        console.log(`💰 Rating Quote ${quoteID}...`);
+        const params = [{
+            sessionUUID: sessionUUID,
+            quoteID: quoteID
+        }];
+        const result = await apiClient.callRpc('/gatewayquote/quote', 'rate', params);
+        this.logRpcValidation(result, 'Rate Quote');
+        return result;
+    }
+
+    /**
+     * Helper to log validation errors/warnings from RPC response.
+     * NOW THROWS ERROR if action is blocking or errors are present.
+     */
+    logRpcValidation(result, context = '') {
+        if (!result || !result.validationResult) return;
+
+        const vr = result.validationResult;
+        const prefix = context ? `[${context}] ` : '';
+        let hasBlockingErrors = false;
+
+        // 1. Log Errors (Always Blocking)
+        if (vr.errors && vr.errors.length > 0) {
+            console.error(`❌ ${prefix}Validation Errors:`);
+            vr.errors.forEach(e => console.error(`   - ${e.errorMessage || JSON.stringify(e)}`));
+            hasBlockingErrors = true;
+        }
+
+        // 2. Log Warnings (May be blocking)
+        if (vr.warnings && vr.warnings.length > 0) {
+            console.warn(`⚠️ ${prefix}Validation Warnings:`);
+            vr.warnings.forEach(w => console.warn(`   - ${w.warningMessage || JSON.stringify(w)}`));
+        }
+
+        // 3. Check Blocking Flag
+        if (vr.shouldBlockPage) {
+            console.error(`🚫 ${prefix}Action BLOCKING Page Navigation!`);
+            hasBlockingErrors = true;
+        }
+
+        // 4. Halt Execution (with Smart Override for Warnings)
+        if (hasBlockingErrors) {
+            const messages = vr.validationMessages || {};
+            const errors = messages.errors || vr.errors || [];
+            const warnings = messages.warnings || vr.warnings || [];
+
+            const onlyWarnings = errors.length === 0 && warnings.length > 0;
+
+            if (onlyWarnings) {
+                // Critical warning patterns that MUST halt execution
+                const CRITICAL_PATTERNS = [
+                    'ineligible',
+                    'may not be submitted',
+                    'cannot be quoted',
+                    'cannot be bound',
+                    'declined',
+                    'rejected',
+                ];
+
+                const warningTexts = warnings.map(w => (w.warningMessage || w.message || '').toLowerCase());
+                const hasCriticalWarning = warningTexts.some(text =>
+                    CRITICAL_PATTERNS.some(pattern => text.includes(pattern))
+                );
+
+                if (hasCriticalWarning) {
+                    console.error(`🛑 ${prefix}CRITICAL WARNING detected — halting automation.`);
+                    warnings.forEach(w => {
+                        console.error(`   ❌ ${w.warningMessage || w.message}`);
+                    });
+                    console.error('   🔍 Full Validation Object:', JSON.stringify(vr, null, 2));
+                    throw new Error(`Critical Warning in ${context}`);
+                }
+
+                // Non-critical warnings (e.g. address deliverability) — bypass
+                console.warn(`⚠️ ${prefix}Blocking Warning(s) detected, but none are critical. Bypassing...`);
+                warnings.forEach(w => {
+                    console.warn(`   ⚠️ ${w.warningMessage || w.message}`);
+                });
+                return;
+            }
+
+            console.error(`🛑 HALTING AUTOMATION due to blocking validation errors in ${context}.`);
+            console.error('   🔍 Full Validation Object:', JSON.stringify(vr, null, 2));
+            throw new Error(`Blocking Validation Errors in ${context}`);
+        }
     }
 }
 

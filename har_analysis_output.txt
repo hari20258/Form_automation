@@ -1,0 +1,8 @@
+--- RPC Methods Found ---
+┌────────────────────────────┬────────┐
+│ (index)                    │ Values │
+├────────────────────────────┼────────┤
+│ updateCustomQuoteCoverages │ 26     │
+│ updateCustomQuote          │ 1      │
+└────────────────────────────┴────────┘
+✅ Extracted updateCustomQuoteCoverages payload to data/coverages_payload.json

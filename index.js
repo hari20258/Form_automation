@@ -65,31 +65,66 @@ async function main() {
         // --- STEP 2: Account ---
         console.log('\n--- STEP 2: Account ---');
 
-        const applicantData = customer.applicant; // Alias for clarity with new logic
+        // --- Helper: Parse Address String ---
+        function parseAddressString(addrStr) {
+            if (!addrStr) return null;
+            // Example: "2576 SE 31st Pl\n\nOcala, FL 34471\n\nUS"
+            // Simple logic: Split by newlines, filter empty.
+            // Last line is Country (US), 2nd to last is City, State Zip. First is Line 1.
+            const lines = addrStr.split('\n').map(l => l.trim()).filter(l => l);
+            if (lines.length < 2) return null;
+
+            const line1 = lines[0];
+            const lastLine = lines[lines.length - 1] === 'US' ? lines[lines.length - 2] : lines[lines.length - 1];
+
+            // Parse City, State Zip from "Ocala, FL 34471"
+            // Regex: (.*), ([A-Z]{2}) (\d{5}(?:-\d{4})?)
+            const match = lastLine.match(/^(.*),\s*([A-Z]{2})\s+(\d{5}(?:-\d{4})?)/);
+
+            if (match) {
+                return {
+                    address_line_1: line1,
+                    city: match[1],
+                    state: match[2],
+                    zip: match[3]
+                };
+            }
+            return {
+                address_line_1: line1,
+                city: '',
+                state: 'FL', // Default
+                zip: ''
+            };
+        }
+
+        const applicantData = customer.applicant;
         let account = null;
 
-        // Prepare data for New Customer creation (Mapping NBOA to API-friendly struct)
-        const primaryOperator = customer.operators?.[0] || {};
-        const addressData = customer.location_storage || {};
+        // Parse and attach address to customer object for steps to use
+        const parsedAddress = parseAddressString(applicantData.billing_address);
+        customer.address = parsedAddress || {
+            address_line_1: customer.location_storage?.loc_address || '',
+            city: customer.location_storage?.city || '',
+            state: customer.location_storage?.state || '',
+            zip: customer.location_storage?.zip || ''
+        };
+        console.log(`✅ Parsed Applicant Address: ${JSON.stringify(customer.address)}`);
 
+        // Prepare data for New Customer creation
         const newCustomerData = {
             first_name: applicantData.first_name,
             last_name: applicantData.last_name,
-            dob: primaryOperator.dob,
+            dob: customer.operators?.[0]?.dob,
             phone: applicantData.mobile || applicantData.res_phone,
-            address: {
-                address_line_1: addressData.loc_address, // Assuming single line in storage
-                address_line_2: "",
-                city: addressData.city,
-                state: addressData.state,
-                zip: addressData.zip
-            }
+            address: customer.address
         };
 
         if (applicantData.account_number || customer.account?.account_number) {
             const acctNum = applicantData.account_number || customer.account.account_number;
             console.log(`🔍 Search by Account Number: ${acctNum}`);
-            let potentialAccounts = await quoteApi.getPotentialExistingAccounts(applicantData.first_name, applicantData.last_name);
+
+            // Pass acctNum as the third argument to target specific account
+            let potentialAccounts = await quoteApi.getPotentialExistingAccounts(applicantData.first_name, applicantData.last_name, acctNum);
 
             if (potentialAccounts) {
                 if (potentialAccounts.accountNumber === acctNum) {
@@ -99,6 +134,7 @@ async function main() {
                     console.warn(`⚠️ Account Number mismatch in search. Using result: ${potentialAccounts.accountNumber}`);
                     account = potentialAccounts;
                 }
+
             } else {
                 console.warn("⚠️ Account number provided but not found via name search.");
                 throw new Error("Account Number provided but Account not found.");
@@ -127,10 +163,9 @@ async function main() {
         console.log(`✅ Using Account: ${accountNumber} (Zip: ${accountPostalCode})`);
 
         // 5. Create Initial Submission
-        console.log('\n--- STEP 3: Create Submission ---');
-        const submissionResult = await quoteApi.createNewSubmission(accountNumber, producerInfo);
+        const createSubmission = require('./wizard_steps/create_submission');
+        const submissionResult = await createSubmission(quoteApi, accountNumber, producerInfo);
         const jobNumber = submissionResult.jobNumber;
-        console.log(`✅ Submission Created: ${jobNumber}`);
 
         // 5.5 Retrieve Full Quote Object
         let submission = await quoteApi.retrieveQuote(jobNumber, accountPostalCode);
@@ -140,6 +175,10 @@ async function main() {
         console.log('\n--- STEP 4: Policy Details ---');
         submission = await savePolicyDetails(quoteApi, submission, customer);
         console.log('✅ Policy Details Saved.');
+
+        // 6.5 Additional Insured Step
+        const saveAdditionalInsured = require('./wizard_steps/additional_insured');
+        submission = await saveAdditionalInsured(quoteApi, submission, customer);
 
         // 7. Qualification Step
         console.log('\n--- STEP 5: Qualification ---');
@@ -161,12 +200,20 @@ async function main() {
         let vehiclesResult = await saveVehicles(quoteApi, driversResult, customer);
         console.log('✅ Vehicles Step Complete.');
 
+        // --- STEP 7b: Prior Losses & Violations ---
+        const savePriorLosses = require('./wizard_steps/prior_losses');
+        let priorLossesResult = await savePriorLosses(quoteApi, vehiclesResult, customer);
+
         // --- STEP 8: Coverages & Quote ---
         const { saveCoverages } = require('./wizard_steps/coverages');
-        await saveCoverages(vehiclesResult, customer);
+        let quoteResult = await saveCoverages(priorLossesResult, customer);
+
+        // --- STEP 9: Policy Info (Post-Quote) ---
+        const savePolicyInfo = require('./wizard_steps/policy_info');
+        await savePolicyInfo(quoteApi, quoteResult, customer);
 
         console.log('\n========================================');
-        console.log('🎉 Quote Automation Complete through Quote!');
+        console.log('🎉 Quote Automation Complete through Policy Info!');
         console.log(`Job Number: ${vehiclesResult.job?.jobNumber}`);
         console.log('Next Step: Payment / Bind');
         console.log('========================================\n');

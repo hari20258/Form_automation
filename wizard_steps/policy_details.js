@@ -30,11 +30,15 @@ module.exports = async function savePolicyDetails(quoteApi, submission, customer
                 "PA_QSPaperlessDiscount_1": "false",
                 "PA_QSMultiPolicyDiscount_1": "false",
                 "PA_QSPaidInFullDiscount_1": "false",
+                "PA_QSPriorInsurance_1": (customer.currently_insured === 'Yes' ? 'Yes' : 'No'),
+                "PA_QSApplicantPrimaryResidence_1": (customer.location_storage?.prim_loc === 'Yes' ? 'OwnHome' : 'Other')
             };
             Object.assign(policyInfoSet.answers, answers);
             policyInfoFields.push({ field: 'Paperless Discount', key: 'PA_QSPaperlessDiscount_1', value: 'false' });
             policyInfoFields.push({ field: 'Multi-Policy Discount', key: 'PA_QSMultiPolicyDiscount_1', value: 'false' });
             policyInfoFields.push({ field: 'Paid In Full Discount', key: 'PA_QSPaidInFullDiscount_1', value: 'false' });
+            policyInfoFields.push({ field: 'Prior Insurance', key: 'PA_QSPriorInsurance_1', value: answers.PA_QSPriorInsurance_1 });
+            policyInfoFields.push({ field: 'Primary Residence', key: 'PA_QSApplicantPrimaryResidence_1', value: answers.PA_QSApplicantPrimaryResidence_1 });
         }
     }
 

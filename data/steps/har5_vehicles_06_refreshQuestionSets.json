@@ -1,0 +1,58 @@
+{
+  "endpoint": "https://amsuite.amig.com/pc/service/edge/gatewayquote/questionset",
+  "rpcMethod": "refreshQuestionSets",
+  "pageContext": "unknown",
+  "payload": {
+    "id": "b3108cff-b2f6-4696-9487-2b3a2c4395d6",
+    "jsonrpc": "2.0",
+    "method": "refreshQuestionSets",
+    "params": [
+      {
+        "questionSets": [
+          {
+            "code": "PA_VehicleDetails_1",
+            "answers": {}
+          },
+          {
+            "code": "PA_VehicleDetails_3",
+            "answers": {}
+          },
+          {
+            "code": "PA_VehicleDetails_5",
+            "answers": {}
+          }
+        ],
+        "submissionNumber": "0046077452",
+        "params": {
+          "vehicleType": "boat"
+        }
+      }
+    ]
+  },
+  "response": {
+    "result": {
+      "submissionNumber": "0046077452",
+      "questionSets": [
+        {
+          "code": "PA_VehicleDetails_1",
+          "answers": {
+            "PA_QSAntiTheftVehicleRecoveryTrackingSystem_1": "false"
+          }
+        },
+        {
+          "code": "PA_VehicleDetails_3",
+          "answers": {}
+        },
+        {
+          "code": "PA_VehicleDetails_5",
+          "answers": {}
+        }
+      ],
+      "params": {
+        "vehicleType": "boat"
+      }
+    },
+    "id": "b3108cff-b2f6-4696-9487-2b3a2c4395d6",
+    "jsonrpc": "2.0"
+  }
+}

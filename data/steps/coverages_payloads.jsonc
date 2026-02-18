@@ -1,0 +1,122 @@
+// Coverages & Prior History Payload Documentation
+// Based on amsuite.amiquote-initial quote.har
+{
+    // ----------------------------------------------------------------------------------
+    // 1. PRIOR LOSSES / VIOLATIONS
+    // Endpoint: https://amsuite.amig.com/pc/service/edge/gatewayquote/quote
+    // Method: addManualPriorLosses
+    // Context: Usually sent before or during the Quote step if the user adds a loss manually.
+    // ----------------------------------------------------------------------------------
+    "priorLossesPayload": {
+        "method": "addManualPriorLosses",
+        "params": [
+            {
+                "amountPaid": {
+                    "currency": "usd",
+                    "amount": "200"
+                },
+                "vehicleClass": "WATERCRAFT", // Options: WATERCRAFT, AUTO, etc.
+                "occurDate": {
+                    "year": 2014,
+                    "month": 2,
+                    "day": 10
+                },
+                "description": "Other", // Description of loss
+                "driver": "Luis Burckhardt", // Must match a driver on the policy
+                "atFault": "yes", // or "no"
+                "source": "manual"
+            },
+            "0046077452" // Quote Number
+        ]
+    },
+    // ----------------------------------------------------------------------------------
+    // 2. COVERAGES
+    // Can be set in updateDraftSubmission (Context: COVERAGES) or updateCustomQuoteCoverages.
+    // Structure: lobData.personalAuto.offerings[0].coverages
+    // ----------------------------------------------------------------------------------
+    "coveragesPayload": {
+        "vehicleCoverages": [
+            {
+                "vehicleName": "2014 SEA FOX 246 COMMANDER", // Information only, ID matters
+                "coverages": [
+                    {
+                        "name": "Hull",
+                        "patternCode": "PAHullCov", // Crucial for mapping
+                        "terms": [
+                            {
+                                "name": "Deductible",
+                                "patternCode": "PAHullDeductibleMoney",
+                                "chosenTerm": "z0ahmu0aql4bm152q47sg2e9mta", // Internal ID
+                                "chosenTermValue": "500" // Display Value
+                            },
+                            {
+                                "name": "Diminishing Deductible",
+                                "patternCode": "PAHullDiminishingDeductible",
+                                "chosenTermValue": "No",
+                                "directBooleanValue": false
+                            },
+                            {
+                                "name": "Agreed Value",
+                                "patternCode": "PAHullSettlementOpt",
+                                "chosenTermValue": "Agreed Value"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Trailer Physical Damage",
+                        "patternCode": "PATrailerPhysicalDamageCov",
+                        "terms": [
+                            {
+                                "name": "Limit",
+                                "patternCode": "PATrailerPhysicalDamageLimit",
+                                "directValue": 40500,
+                                "chosenTermValue": "40,500"
+                            },
+                            {
+                                "name": "Deductible",
+                                "patternCode": "PATrailerPhysicalDamageDeductible",
+                                "chosenTermValue": "250"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "lineCoverages": [
+            {
+                "name": "Liability - Bodily Injury and Property Damage",
+                "patternCode": "PALiabilityCov",
+                "terms": [
+                    {
+                        "name": "Limit",
+                        "patternCode": "PALiability",
+                        "chosenTerm": "pack_188", // Example Pack ID
+                        "chosenTermValue": "100,000 CSL"
+                    }
+                ]
+            },
+            {
+                "name": "Uninsured Boaters",
+                "patternCode": "PAUBUIBoatersCov",
+                "terms": [
+                    {
+                        "name": "Limit",
+                        "patternCode": "PAUBUIBBI",
+                        "chosenTermValue": "100,000 CSL"
+                    }
+                ]
+            },
+            {
+                "name": "Medical Payments",
+                "patternCode": "PAMedPayCov",
+                "terms": [
+                    {
+                        "name": "Limit",
+                        "patternCode": "PAMedPayLimit",
+                        "chosenTermValue": "1,000"
+                    }
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,56 @@
+{
+  "endpoint": "https://amsuite.amig.com/pc/service/edge/vmm/lookup",
+  "rpcMethod": "getMakes",
+  "pageContext": "unknown",
+  "payload": {
+    "id": "3f342306-93e1-4a8f-bb5d-eff7a742751d",
+    "jsonrpc": "2.0",
+    "method": "getMakes",
+    "params": [
+      {
+        "Year": "2013",
+        "VehicleType": "trailer",
+        "PolicyType": "boat",
+        "UnitConvSource": "NONCONV"
+      }
+    ]
+  },
+  "response": {
+    "result": {
+      "makes": [
+        "ADMIRAL BY J-ROD INC.",
+        "ALL OTHER",
+        "AQUACART",
+        "CALKINS TRAILERS",
+        "E-Z LOADER TRAILERS",
+        "EAGLE TRAILER",
+        "GATOR",
+        "HAUL RITE TRAILERS",
+        "HERITAGE TRAILERS",
+        "HOOSIER BY SPREUER & SON",
+        "KARAVAN TRAILERS",
+        "LOAD RITE TRAILERS",
+        "MAGIC LOADER BY MAGIC TILT",
+        "MAGIC TILT TRAILERS",
+        "MAGNUM CUSTOM TRAILERS",
+        "QUICKLOAD TRAILERS",
+        "ROAD KING TRAILERS",
+        "ROLCO TRAILERS",
+        "SHORELAND'R TRAILERS",
+        "TRAIL-RITE TRAILERS",
+        "TRAILEX TRAILERS",
+        "TRAILMASTER TRAILERS",
+        "VANGUARD TRAILERS",
+        "VENTURE",
+        "WESCO TRAILERS",
+        "YACHT CLUB BY HAWKEYE LEISURE TRAILERS",
+        "YACHT CLUB TRAILERS BY HLT"
+      ],
+      "amodLength": 0,
+      "version": 0,
+      "lengths": []
+    },
+    "id": "3f342306-93e1-4a8f-bb5d-eff7a742751d",
+    "jsonrpc": "2.0"
+  }
+}

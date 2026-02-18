@@ -1,0 +1,39 @@
+{
+  "endpoint": "https://amsuite.amig.com/pc/service/edge/vmm/lookup",
+  "rpcMethod": "getUnitInfo",
+  "pageContext": "unknown",
+  "payload": {
+    "id": "0a80f00d-43ff-47e7-99ab-32299145439f",
+    "jsonrpc": "2.0",
+    "method": "getUnitInfo",
+    "params": [
+      {
+        "VehicleType": "trailer",
+        "PolicyType": "boat",
+        "Year": "2013",
+        "Make": "ALL OTHER",
+        "Model": "All Other 2-Axle Trailer",
+        "BoatLength": 24,
+        "CompanyNumber": "071",
+        "TotalHorsePower": "0",
+        "transactionType": "Submission",
+        "State": "FL",
+        "UnitConvSource": "NONCONV",
+        "EffectiveDate": "2026-02-16T18:30:00.000Z"
+      }
+    ]
+  },
+  "response": {
+    "result": {
+      "amodLength": 0,
+      "fuelType": "Gasoline",
+      "version": 1,
+      "vMMGroup": "BT_TRL",
+      "eligibleInd": "Y",
+      "availableInd": "Y",
+      "lengths": []
+    },
+    "id": "0a80f00d-43ff-47e7-99ab-32299145439f",
+    "jsonrpc": "2.0"
+  }
+}

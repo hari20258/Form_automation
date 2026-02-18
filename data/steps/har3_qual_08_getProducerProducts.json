@@ -1,0 +1,57 @@
+{
+  "endpoint": "https://amsuite.amig.com/pc/service/edge/prism/auth",
+  "rpcMethod": "getProducerProducts",
+  "payload": {
+    "id": "2605278d-9757-484a-83ce-4462b27928cd",
+    "jsonrpc": "2.0",
+    "method": "getProducerProducts",
+    "params": [
+      {
+        "EffectiveDt": {
+          "year": 2026,
+          "month": 1,
+          "day": 17
+        },
+        "userName": "jberndt",
+        "state": "FL",
+        "jobType": "QUOTE",
+        "companyNum": "071",
+        "PolicyType": "boat",
+        "jobNumber": "0046077452"
+      }
+    ]
+  },
+  "response": {
+    "result": {
+      "requestStatus": "SUCCESS",
+      "products": {
+        "Recreational": {
+          "code": "PersonalAuto",
+          "policyTypes": [
+            {
+              "policyTypeName": "Yacht",
+              "policyTypeCode": "yacht",
+              "description": "Yacht (27' and greater)\nTrailer\n",
+              "uWCompany": "071"
+            },
+            {
+              "policyTypeName": "Collector Vehicle",
+              "policyTypeCode": "collectorvehicle",
+              "description": "Auto/Truck\nRace Car\nSpecialty\nTrailer\n",
+              "uWCompany": "071"
+            },
+            {
+              "policyTypeName": "Boat",
+              "policyTypeCode": "boat",
+              "description": "Boat (less than 27')\nPersonal Watercraft\nTrailer\n",
+              "uWCompany": "071"
+            }
+          ]
+        }
+      },
+      "authorized": false
+    },
+    "id": "2605278d-9757-484a-83ce-4462b27928cd",
+    "jsonrpc": "2.0"
+  }
+}

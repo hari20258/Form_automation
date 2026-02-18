@@ -1,0 +1,57 @@
+{
+  "endpoint": "https://amsuite.amig.com/pc/service/edge/vmm/lookup",
+  "rpcMethod": "getMakes",
+  "pageContext": "unknown",
+  "payload": {
+    "id": "51c60627-eb4f-48dd-bfd3-486af037e8e6",
+    "jsonrpc": "2.0",
+    "method": "getMakes",
+    "params": [
+      {
+        "isEngineDetailsAvailable": true,
+        "VehicleType": "boat",
+        "Year": "2017",
+        "PolicyType": "boat"
+      }
+    ]
+  },
+  "response": {
+    "result": {
+      "makes": [
+        "ALL OTHER",
+        "AVERAGE MOTOR VALUES",
+        "CAT",
+        "CHRIS CRAFT",
+        "CRUSADER",
+        "CUMMINS",
+        "DETROIT DIESEL",
+        "EVINRUDE",
+        "GATORTAIL",
+        "GO - DEVIL",
+        "HONDA MARINE",
+        "ILMOR",
+        "INDMAR",
+        "JOHNSON & TOWERS",
+        "LEHR",
+        "MAN",
+        "MERCRUISER",
+        "MERCURY",
+        "MUD BUDDY",
+        "NISSAN MARINE",
+        "OMC",
+        "PCM",
+        "SUZUKI",
+        "TOHATSU",
+        "UNIVERSAL",
+        "VOLVO PENTA",
+        "YAMAHA",
+        "YANMAR"
+      ],
+      "amodLength": 0,
+      "version": 0,
+      "lengths": []
+    },
+    "id": "51c60627-eb4f-48dd-bfd3-486af037e8e6",
+    "jsonrpc": "2.0"
+  }
+}

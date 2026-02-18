@@ -1,0 +1,331 @@
+{
+  "endpoint": "https://amsuite.amig.com/pc/service/edge/gatewayquote/vehicle",
+  "rpcMethod": "addVehicleToSubmission",
+  "pageContext": "unknown",
+  "payload": {
+    "id": "fa136791-fcc6-4da6-9494-edbb7fa45e7e",
+    "jsonrpc": "2.0",
+    "method": "addVehicleToSubmission",
+    "params": [
+      {
+        "SubmissionNumber": "0046077452",
+        "SessionUUID": "57b9add4-46fb-477e-a539-57902f9cf182",
+        "Vehicle": {
+          "tempId": 34,
+          "costNew": {
+            "amount": 0
+          },
+          "licenseState": "FL",
+          "vehicleNumber": 1,
+          "storageAddress": {
+            "country": "US",
+            "addressLine1": "2576 SE 31st Pl",
+            "city": "Ocala",
+            "state": "FL",
+            "postalCode": "34471",
+            "displayName": "2576 SE 31st Pl, Ocala, FL 34471",
+            "standardizeStatus": "standardized",
+            "countyName": "MARION",
+            "publicID": "pc:84128814"
+          },
+          "registrationAddress": {
+            "country": "US",
+            "addressLine1": "2576 SE 31st Pl",
+            "city": "Ocala",
+            "state": "FL",
+            "postalCode": "34471",
+            "displayName": "2576 SE 31st Pl, Ocala, FL 34471",
+            "standardizeStatus": "standardized",
+            "countyName": "MARION",
+            "publicID": "pc:84128814"
+          },
+          "vehicleAdditionalUsage": false,
+          "stateAssignedVin": false,
+          "vinNumberChanged_Ext": false,
+          "$$hashKey": "object:6764",
+          "year": "2014",
+          "make": "SEA FOX",
+          "model": "246 COMMANDER",
+          "hullId": "LYGNB102E314",
+          "length": 24,
+          "totalHorsepower": "250",
+          "hullConstruction": "F",
+          "engineType": "Outboard",
+          "fuelType": "Gasoline",
+          "numberOfEngines": "1",
+          "primaryOperator": {
+            "publicID": "pc:127635327",
+            "person": {
+              "emailAddress1": "x.e.velez@gmail.com",
+              "publicID": "pc:33904322",
+              "displayName": "Luis Burckhardt",
+              "primaryPhoneType": "mobile",
+              "contactName": "Luis Burckhardt",
+              "subtype": "Person",
+              "primaryAddress": {
+                "publicID": "pc:84128813",
+                "displayName": "2576 SE 31st Pl, Ocala, FL 34471",
+                "addressLine1": "2576 SE 31st Pl",
+                "city": "Ocala",
+                "state": "FL",
+                "postalCode": "34471",
+                "country": "US",
+                "addressType": "other",
+                "standardizeStatus": "standardized",
+                "standardizeDate_Ext": "2026-02-17T10:31:50Z"
+              },
+              "accountHolder": true,
+              "cellNumber": "3525476529",
+              "dateOfBirth": {
+                "year": 1979,
+                "month": 0,
+                "day": 0,
+                "isMasked": true
+              },
+              "firstName": "Luis",
+              "lastName": "Burckhardt",
+              "maritalStatus": "M",
+              "additionalInsuredType": "person",
+              "customerCallOptInIndicator": false,
+              "tempId": 28
+            },
+            "licenseState": "FL",
+            "licenseNumber": "*********3780",
+            "licensed": true,
+            "dateOfBirth": {
+              "year": 1979,
+              "month": 0,
+              "day": 0,
+              "isMasked": true
+            },
+            "isPolicyHolder": true,
+            "driverQuestionSets": [
+              {
+                "code": "PA_DriverRoles_1",
+                "answers": {
+                  "PA_QSDateCompletedSafetyCourse_1": null,
+                  "PA_QSYearsBoatingExperience_1": "20",
+                  "PA_QSIneligibleDriver_1": "false"
+                }
+              }
+            ],
+            "relationship": "pni_ext",
+            "priorOwnerExp": [],
+            "$$hashKey": "object:7084"
+          },
+          "purchaseDate": {
+            "year": 2026,
+            "month": 0,
+            "day": 27
+          },
+          "purchasePrice": "43500",
+          "weight": "4200",
+          "numberOfEnginesChanged_Ext": true,
+          "vehicleValue": "40500",
+          "vehicleType": "boat",
+          "engineDetails": [
+            {
+              "year": "2017",
+              "make": "YAMAHA",
+              "model": "F250XCA 4-STROKE",
+              "horsePower": "250"
+            }
+          ],
+          "streetUse": false,
+          "storageType": "Other",
+          "vehicleQuestionSets": [
+            {
+              "code": "PA_VehicleDetails_1",
+              "answers": {
+                "PA_QSAntiTheftVehicleRecoveryTrackingSystem_1": "false"
+              },
+              "$$hashKey": "object:8140"
+            },
+            {
+              "code": "PA_VehicleDetails_3",
+              "answers": {},
+              "$$hashKey": "object:8141"
+            },
+            {
+              "code": "PA_VehicleDetails_5",
+              "answers": {},
+              "$$hashKey": "object:8142"
+            }
+          ],
+          "symbol": "B03",
+          "version": 127,
+          "eligibleInd": "Y",
+          "vMMRuleKey_Ext": "WC_340",
+          "availableInd": "Y",
+          "horsePowerChanged_Ext": true,
+          "hullConstructionChanged_Ext": false,
+          "engineTypeChanged_Ext": false,
+          "fuelTypeChanged_Ext": false,
+          "engineSizeChanged_Ext": false,
+          "boatType": "CC",
+          "maxSpeed": 79,
+          "additionalInterests": [],
+          "primaryUse": "commuting"
+        },
+        "PolicyType": "boat",
+        "RatingState": "FL"
+      }
+    ]
+  },
+  "response": {
+    "result": {
+      "fixedId": 13288903,
+      "publicID": "pc:13288903",
+      "vehicleNumber": 1,
+      "year": 2014,
+      "make": "SEA FOX",
+      "model": "246 COMMANDER",
+      "primaryUse": "commuting",
+      "licenseState": "FL",
+      "displayName": "SEA FOX 246 COMMANDER 2014",
+      "vehicleType": "boat",
+      "length": "24",
+      "purchaseDate": {
+        "year": 2026,
+        "month": 0,
+        "day": 27
+      },
+      "vehicleValue": 40500,
+      "streetUse": false,
+      "vehicleAge": 12,
+      "vehicleAdditionalUsage": false,
+      "storageAddress": {
+        "publicID": "pc:84128814",
+        "displayName": "2576 SE 31st Pl, Ocala, FL 34471",
+        "addressLine1": "2576 SE 31st Pl",
+        "city": "Ocala",
+        "state": "FL",
+        "postalCode": "34471",
+        "country": "US",
+        "countyName": "MARION"
+      },
+      "registrationAddress": {
+        "publicID": "pc:84128814",
+        "displayName": "2576 SE 31st Pl, Ocala, FL 34471",
+        "addressLine1": "2576 SE 31st Pl",
+        "city": "Ocala",
+        "state": "FL",
+        "postalCode": "34471",
+        "country": "US",
+        "countyName": "MARION"
+      },
+      "storageType": "Other",
+      "vehicleQuestionSets": [
+        {
+          "code": "PA_VehicleDetails_1",
+          "answers": {
+            "PA_QSAntiTheftVehicleRecoveryTrackingSystem_1": "false"
+          }
+        },
+        {
+          "code": "PA_VehicleDetails_3",
+          "answers": {}
+        },
+        {
+          "code": "PA_VehicleDetails_5",
+          "answers": {}
+        }
+      ],
+      "symbol": "B03",
+      "vMMRuleKey_Ext": "WC_340",
+      "version": "127",
+      "eligibleInd": "Y",
+      "vmmGroup": "WC_C",
+      "weight": "4200",
+      "totalHorsepower": "250",
+      "hullConstruction": "F",
+      "engineSize": "0",
+      "engineType": "Outboard",
+      "fuelType": "Gasoline",
+      "numberOfEngines": "1",
+      "numberOfEnginesChanged_Ext": true,
+      "purchasePrice": "43500.00",
+      "engineDetails": [
+        {
+          "publicID": "pc:1464799",
+          "year": "2017",
+          "make": "YAMAHA",
+          "model": "F250XCA 4-STROKE",
+          "horsePower": "250"
+        }
+      ],
+      "primaryOperator": {
+        "publicID": "pc:127635327",
+        "person": {
+          "publicID": "pc:33904322",
+          "displayName": "Luis Burckhardt",
+          "firstName": "Luis",
+          "lastName": "Burckhardt",
+          "primaryPhoneType": "mobile",
+          "cellNumber": "3525476529",
+          "maritalStatus": "M",
+          "dateOfBirth": {
+            "year": 1979,
+            "month": 0,
+            "day": 0,
+            "isMasked": true
+          },
+          "primaryAddress": {
+            "publicID": "pc:84128813",
+            "displayName": "2576 SE 31st Pl, Ocala, FL 34471",
+            "addressLine1": "2576 SE 31st Pl",
+            "city": "Ocala",
+            "state": "FL",
+            "postalCode": "34471",
+            "country": "US",
+            "addressType": "other",
+            "standardizeStatus": "standardized",
+            "standardizeDate_Ext": "2026-02-17T10:31:50Z"
+          }
+        },
+        "licenseState": "FL",
+        "licenseNumber": "*********3780",
+        "licensed": true,
+        "dateOfBirth": {
+          "year": 1979,
+          "month": 0,
+          "day": 0,
+          "isMasked": true
+        },
+        "isPolicyHolder": true,
+        "driverQuestionSets": [
+          {
+            "code": "PA_DriverRoles_1",
+            "answers": {
+              "PA_QSDateCompletedSafetyCourse_1": null,
+              "PA_QSYearsBoatingExperience_1": "20",
+              "PA_QSIneligibleDriver_1": "false"
+            }
+          }
+        ],
+        "relationship": "pni_ext"
+      },
+      "hullId": "LYGNB102E314",
+      "stateAssignedVin": false,
+      "factoryHorsePower": "300",
+      "availableInd": "Y",
+      "vMMGroup": "WC_C",
+      "amodHorsePower": 300,
+      "cC": "0",
+      "boatType": "CC",
+      "fob": "38462",
+      "code": "21972",
+      "highPrice": "18237",
+      "lowPrice": "14282",
+      "maxSpeed": "79",
+      "vinNumberChanged_Ext": false,
+      "fuelTypeChanged_Ext": false,
+      "engineTypeChanged_Ext": false,
+      "hullConstructionChanged_Ext": false,
+      "engineSizeChanged_Ext": false,
+      "horsePowerChanged_Ext": true
+    },
+    "id": "fa136791-fcc6-4da6-9494-edbb7fa45e7e",
+    "jsonrpc": "2.0"
+  }
+}

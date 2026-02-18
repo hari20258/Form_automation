@@ -1,0 +1,35 @@
+{
+  "endpoint": "https://amsuite.amig.com/pc/service/edge/vmm/lookup",
+  "rpcMethod": "getModels",
+  "pageContext": "unknown",
+  "payload": {
+    "id": "a2a14171-e234-43fb-aae4-f44e2d81054c",
+    "jsonrpc": "2.0",
+    "method": "getModels",
+    "params": [
+      {
+        "Year": "2013",
+        "VehicleType": "trailer",
+        "PolicyType": "boat",
+        "Make": "ALL OTHER",
+        "UnitConvSource": "NONCONV",
+        "BoatLength": 24
+      }
+    ]
+  },
+  "response": {
+    "result": {
+      "amodLength": 0,
+      "version": 0,
+      "models": {
+        "ALL OTHER SINGLE AXLE": null,
+        "All Other 2-Axle Trailer": null,
+        "All Other Trailer": null,
+        "ALL OTHER 2-AXLE": null
+      },
+      "lengths": []
+    },
+    "id": "a2a14171-e234-43fb-aae4-f44e2d81054c",
+    "jsonrpc": "2.0"
+  }
+}

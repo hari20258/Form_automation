@@ -1,0 +1,260 @@
+{
+    // ============================================================================
+    // STEP 2: QUALIFICATIONS — Essential API Payload
+    // This payload submits the answers to the Qualification questions.
+    // It advances the wizard from "Qualification" to "Drivers".
+    // ============================================================================
+    "updateDraftSubmission": {
+        // ENDPOINT: POST https://amsuite.amig.com/pc/service/edge/gatewayquote/quote
+        // PURPOSE: Submits the answers to the Qualification questions.
+        // RETURNS: Validation results (blocking/warning) or success moving to next step.
+        "id": "uuid-v4-here", // Unique request ID (generate a UUID)
+        "jsonrpc": "2.0",
+        "method": "updateDraftSubmission",
+        "params": [
+            {
+                // --- Session & Quote Identifiers ---
+                "sessionUUID": "57b9add4-46fb-477e-a539-57902f9cf182", // Session ID from previous step response
+                "quoteID": "0046077452", // Quote/job number
+                // --- Base Data (Must be included, even if unchanged) ---
+                "baseData": {
+                    "accountNumber": "0017483217",
+                    "accountHolder": {
+                        "emailAddress1": "x.e.velez@gmail.com",
+                        "publicID": "pc:33904322",
+                        "displayName": "Luis Burckhardt",
+                        "primaryPhoneType": "mobile",
+                        "contactName": "Luis Burckhardt",
+                        "subtype": "Person",
+                        "primaryAddress": {
+                            "publicID": "pc:84128813",
+                            "displayName": "2576 SE 31st Pl, Ocala, FL 34471",
+                            "addressLine1": "2576 SE 31st Pl",
+                            "city": "Ocala",
+                            "state": "FL",
+                            "postalCode": "34471",
+                            "country": "US",
+                            "addressType": "other",
+                            "standardizeStatus": "standardized",
+                            "standardizeDate_Ext": "2026-02-17T10:02:11Z",
+                            "countyName": ""
+                        },
+                        "accountHolder": true,
+                        "cellNumber": "3525476529",
+                        "dateOfBirth": {
+                            "year": 1979,
+                            "month": 0,
+                            "day": 0,
+                            "isMasked": true
+                        },
+                        "firstName": "Luis",
+                        "lastName": "Burckhardt",
+                        "maritalStatus": "M",
+                        "additionalInsuredType": "person",
+                        "customerCallOptInIndicator": false,
+                        "tempId": 7
+                    },
+                    "policyAddress": {
+                        "publicID": "pc:84128813",
+                        "displayName": "2576 SE 31st Pl, Ocala, FL 34471",
+                        "addressLine1": "2576 SE 31st Pl",
+                        "city": "Ocala",
+                        "state": "FL",
+                        "postalCode": "34471",
+                        "country": "US",
+                        "addressType": "other",
+                        "standardizeStatus": "standardized",
+                        "standardizeDate_Ext": "2026-02-17T10:02:11Z"
+                    },
+                    "productCode": "PersonalAuto",
+                    "productName": "Recreational",
+                    "uWCompany": "071",
+                    "periodStartDate": {
+                        "year": 2026,
+                        "month": 1,
+                        "day": 17
+                    },
+                    "periodEndDate": {
+                        "year": 2027,
+                        "month": 1,
+                        "day": 17
+                    },
+                    "preQualQuestionSets": [],
+                    "termType": "Annual",
+                    "periodStatus": "Draft",
+                    "pAPolicyType": "boat",
+                    "sADFFields": [],
+                    "isAddressChangedRecently": false,
+                    // --- Additional Insureds (Must be preserved from previous step) ---
+                    "additionalInsureds": [
+                        {
+                            "contactRole": "PolicyAddlNamedInsured",
+                            "contact": {
+                                "publicID": "pc:33937888",
+                                "displayName": "Xiomara Burckhardt",
+                                "primaryPhoneType": "mobile",
+                                "subtype": "Person",
+                                "primaryAddress": {
+                                    "publicID": "pc:84128813",
+                                    "displayName": "2576 SE 31st Pl, Ocala, FL 34471",
+                                    "addressLine1": "2576 SE 31st Pl",
+                                    "city": "Ocala",
+                                    "state": "FL",
+                                    "postalCode": "34471",
+                                    "country": "US",
+                                    "addressType": "other",
+                                    "standardizeStatus": "standardized",
+                                    "standardizeDate_Ext": "2026-02-17T10:02:11Z"
+                                },
+                                "accountHolder": true,
+                                "cellNumber": "2025550185",
+                                "dateOfBirth": {
+                                    "year": 1981,
+                                    "month": 0,
+                                    "day": 0,
+                                    "isMasked": true
+                                },
+                                "firstName": "Xiomara",
+                                "lastName": "Burckhardt",
+                                "maritalStatus": "M",
+                                "relationship": "SP",
+                                "descOfInterest": "additionalnamedinsured",
+                                "marina": "no",
+                                "additionalInsuredType": "person",
+                                "companyPrimaryContact": false
+                            },
+                            "publicID": "pc:127635324"
+                        }
+                    ],
+                    "policyType": "boat",
+                    "baseState": "FL",
+                    "ratingState": "FL",
+                    "isNCRatingApplicable": false
+                },
+                // --- LOB Data: Includes Question Answers ---
+                "lobData": {
+                    "personalAuto": {
+                        "preQualQuestionSets": [
+                            {
+                                // --- SET 1: Qualification Questions ---
+                                "code": "PA_Qualification_1",
+                                "answers": {
+                                    "PA_QSLossHistoryReport_1": "true", // Yes/No -> "true"/"false"
+                                    "PA_QSCreditReport_12": "true",
+                                    "PA_QSLicenseSuspendedRevoked_1": "false",
+                                    "PA_QSFR44_1": "false",
+                                    "PA_QSVerifyTitledOwner_1": "false",
+                                    "PA_RestorationOfCivilRightsForFelony_1": "false",
+                                    "PA_QSMotorVehicleReport_1": "true",
+                                    "PA_QSVehicleForRent_1": "false",
+                                    "PA_QSVehicleForSaleConsignment_1": "false",
+                                    "PA_QSSR22_1": "false",
+                                    "PA_QSFelonyConviction_7": "false",
+                                    "PA_QSDisclaimerVerification_1": "true", // Mandatory "true"
+                                    "PA_QSUnrepairedDamage_1": "false"
+                                }
+                            },
+                            {
+                                // --- SET 2: Policy Info Questions ---
+                                "code": "PA_PolicyInfo_1",
+                                "answers": {
+                                    "PA_QSPaperlessDiscount_1": "false", // "true" | "false"
+                                    "PA_QSMultiPolicyDiscount_1": "false",
+                                    "PA_QSPriorInsurance_1": "Yes", // "Yes" | "No"
+                                    "PA_QSWatercraftLossesAccidents_1": "true", // "true" | "false"
+                                    "PA_QSPaidInFullDiscount_1": "false",
+                                    "PA_QSApplicantPrimaryResidence_1": "OwnHome" // "OwnHome" | "Other"
+                                }
+                            }
+                        ],
+                        "coverables": {
+                            "drivers": [],
+                            "vehicles": [],
+                            "prefillReportOrdered_Ext": false
+                        },
+                        "offerings": [ /* ... Same Offerings ... */]
+                    }
+                },
+                // --- Quote Data ---
+                "quoteData": {
+                    "offeredQuotes": [
+                        {
+                            "publicID": "pc:47635190",
+                            "branchName": "CUSTOM",
+                            "branchCode": "CUSTOM",
+                            "isCustom": true,
+                            "hasUWIssuesBlockingQuote": false,
+                            "hasUWIssuesBlockingIssuance": false,
+                            "premium": {
+                                "termMonths": 12
+                            },
+                            "lobs": {
+                                "personalAuto": {
+                                    "vehicleCoverages": [],
+                                    "lineCoverages": [ /* ... Same Line Coverages ... */]
+                                }
+                            }
+                        }
+                    ]
+                },
+                "priorPolicies": [],
+                "mVRDataDTO": [],
+                "clueData": [],
+                "job": {
+                    "jobNumber": "0046077452",
+                    "canUserView": true,
+                    "underwritingIssues": [],
+                    "isEditLocked": false,
+                    "statusCode": "Draft"
+                },
+                "fieldAvailability": {
+                    "avaliableFields": {
+                        "RecPolicyStorage": false,
+                        "Gender": false
+                    }
+                },
+                "isStorageConstTypeMandatory": false,
+                // --- Persons Array ---
+                "persons": [
+                    {
+                        "emailAddress1": "x.e.velez@gmail.com",
+                        "publicID": "pc:33904322",
+                        "displayName": "Luis Burckhardt",
+                        "primaryPhoneType": "mobile",
+                        "contactName": "Luis Burckhardt",
+                        "subtype": "Person",
+                        "primaryAddress": { /* ... */},
+                        "accountHolder": true,
+                        // ...
+                        "firstName": "Luis",
+                        "lastName": "Burckhardt",
+                        "maritalStatus": "M",
+                        "additionalInsuredType": "person",
+                        "customerCallOptInIndicator": false,
+                        "tempId": 7
+                    },
+                    {
+                        "publicID": "pc:33937888",
+                        "displayName": "Xiomara Burckhardt",
+                        "firstName": "Xiomara",
+                        "lastName": "Burckhardt",
+                        "relationship": "SP",
+                        "additionalInsuredType": "person",
+                        "descOfInterest": "additionalnamedinsured",
+                        "primaryPhoneType": "mobile",
+                        "subtype": "Person",
+                        "primaryAddress": { /* ... */},
+                        "accountHolder": true,
+                        // ...
+                        "maritalStatus": "M",
+                        "marina": "no",
+                        "companyPrimaryContact": false
+                    }
+                ],
+                // 🚨 PAGE CONTEXT: "QUESTION" 🚨
+                // This tells the API that we are submitting the Qualification Questions step.
+                "pageContext": "QUESTION" // "POLICYDETAILS" | "QUALIFICATION" | "DRIVERS" | "VEHICLES" | ...
+            }
+        ]
+    }
+}

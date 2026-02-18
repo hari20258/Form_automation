@@ -1,0 +1,47 @@
+{
+  "endpoint": "https://amsuite.amig.com/pc/service/edge/vmm/lookup",
+  "rpcMethod": "getUnitInfo",
+  "pageContext": "unknown",
+  "payload": {
+    "id": "12afa966-7f94-403e-841e-22656d378b15",
+    "jsonrpc": "2.0",
+    "method": "getUnitInfo",
+    "params": [
+      {
+        "VehicleType": "boat",
+        "PolicyType": "boat",
+        "Year": "2014",
+        "Make": "SEA FOX",
+        "Model": "246 COMMANDER",
+        "BoatLength": 24,
+        "CompanyNumber": "071",
+        "TotalHorsePower": "250",
+        "transactionType": "Submission",
+        "State": "FL",
+        "UnitConvSource": "NONCONV",
+        "EffectiveDate": "2026-02-16T18:30:00.000Z"
+      }
+    ]
+  },
+  "response": {
+    "result": {
+      "weight": "4200",
+      "amodLength": 0,
+      "numOfEngines": "1",
+      "fuelType": "Gasoline",
+      "boatType": "CC",
+      "hull": "F",
+      "symbol": "B03",
+      "vMMRuleKey_Ext": "WC_340",
+      "version": 127,
+      "vMMGroup": "WC_C",
+      "eligibleInd": "Y",
+      "availableInd": "Y",
+      "lengths": [],
+      "engineType": "Outboard",
+      "maxSpeed": 79
+    },
+    "id": "12afa966-7f94-403e-841e-22656d378b15",
+    "jsonrpc": "2.0"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "endpoint": "https://amsuite.amig.com/pc/service/edge/prism/auth",
+  "rpcMethod": "validateProducerCriteria",
+  "payload": {
+    "id": "23940f63-ecc1-49b0-a35a-ff49efbbdea8",
+    "jsonrpc": "2.0",
+    "method": "validateProducerCriteria",
+    "params": [
+      {
+        "EffectiveDt": {
+          "year": 2026,
+          "month": 1,
+          "day": 12
+        },
+        "userName": "jberndt",
+        "state": "FL",
+        "jobType": "QUOTE",
+        "companyNum": "071",
+        "PolicyType": "boat",
+        "jobNumber": "0045994285"
+      }
+    ]
+  },
+  "response": {
+    "requestStatus": "SUCCESS",
+    "authorized": true
+  }
+}

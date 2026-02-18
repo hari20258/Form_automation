@@ -1,0 +1,175 @@
+{
+  "endpoint": "https://amsuite.amig.com/pc/service/edge/gateway/submission",
+  "rpcMethod": "createNewSubmission",
+  "payload": {
+    "id": "1bef8ff1-391b-44e9-a4f9-12c75fc76a8b",
+    "jsonrpc": "2.0",
+    "method": "createNewSubmission",
+    "params": [
+      {
+        "effectiveDate": "2026-02-17T18:30:00.000Z",
+        "producerCode": "029610",
+        "state": "FL",
+        "productCode": "PersonalAuto",
+        "policyType": "boat",
+        "uWCompany": "071",
+        "country": "US",
+        "accountNumber": "0017483217"
+      }
+    ]
+  },
+  "response": {
+    "jobNumber": "0046077452",
+    "policy": {
+      "account": {
+        "publicID": "pc:17589933",
+        "accountNumber": "0017483217",
+        "accountHolder": {
+          "emailAddress1": "x.e.velez@gmail.com",
+          "publicID": "pc:33904322",
+          "displayName": "Luis Burckhardt",
+          "primaryPhoneType": "mobile",
+          "contactName": "Luis Burckhardt",
+          "subtype": "Person",
+          "primaryAddress": {
+            "publicID": "pc:84128813",
+            "displayName": "2576 SE 31st Pl, Ocala, FL 34471",
+            "addressLine1": "2576 SE 31st Pl",
+            "city": "Ocala",
+            "state": "FL",
+            "postalCode": "34471",
+            "country": "US",
+            "addressType": "home",
+            "standardizeStatus": "standardized",
+            "standardizeDate_Ext": "2026-02-17T09:04:35Z"
+          },
+          "accountHolder": true,
+          "cellNumber": "3525476529",
+          "dateOfBirth": {
+            "year": 1979,
+            "month": 0,
+            "day": 0,
+            "isMasked": true
+          },
+          "firstName": "Luis",
+          "lastName": "Burckhardt",
+          "maritalStatus": "M",
+          "additionalInsuredType": "person",
+          "customerCallOptInIndicator": false
+        },
+        "producerCodes": [
+          {
+            "publicID": "pc:21658",
+            "code": "029610",
+            "description": "Nboa Marine Insurance Agency Inc",
+            "displayValue": "029610 Nboa Marine Insurance Agency Inc"
+          }
+        ],
+        "policySummaries": [],
+        "canUserView": true,
+        "canUserCreateSubmission": true,
+        "accountCreatedDate": "2026-02-13T04:56:06Z",
+        "statusDisplayName": "Active"
+      },
+      "latestPeriod": {
+        "policyLines": [
+          {
+            "lineOfBusinessCode": "PersonalAutoLine",
+            "lineOfBusinessName": "Recreational"
+          }
+        ],
+        "effectiveDate": "2026-02-17T05:01:00Z",
+        "formatEffectiveDate": {
+          "year": 2026,
+          "month": 1,
+          "day": 17
+        },
+        "status": "Draft",
+        "displayStatus": "Draft",
+        "totalPremium": {
+          "currency": "usd",
+          "amount": 0
+        },
+        "expirationDate": "2027-02-17T05:01:00Z",
+        "formatExpirationDate": {
+          "year": 2027,
+          "month": 1,
+          "day": 17
+        },
+        "producerCodeOfRecord": "029610",
+        "producerCodeOfService": "029610",
+        "canRenew": false,
+        "canCancel": true,
+        "canChange": false,
+        "totalCost": {
+          "currency": "usd",
+          "amount": 0
+        },
+        "producerCodeOfRecordOrg": "External",
+        "producerCodeOfServiceOrg": "External",
+        "createdByMe": false,
+        "primaryInsuredName": "Luis Burckhardt",
+        "canceled": false,
+        "amigProduct": "BT",
+        "isPrintIDCardAvailable": false,
+        "isPrintDeclarationsPageAvailable": false,
+        "producerCodeOfRecordAgency": "Nboa Marine Insurance Agency Inc",
+        "producerCodeOfRecordProducer": "Nboa Marine Insurance Agency Inc",
+        "producerCodeOfServiceAgency": "Nboa Marine Insurance Agency Inc",
+        "producerCodeOfServiceProducer": "Nboa Marine Insurance Agency Inc",
+        "producerCodeOfServiceProducerPhone": "800-248-3512",
+        "producerCodeOfServiceProducerEmail": "jberndt@nboat.com",
+        "pNIEmail": "x.e.velez@gmail.com",
+        "isNotOutsideChargeOffPeriod": true,
+        "isSCLine": false
+      },
+      "issued": false,
+      "canUserView": true,
+      "numberOfContacts": 0,
+      "numberOfOpenActivities": 0,
+      "numberOfNotes": 0,
+      "numberOfDocuments": 0,
+      "numberOfOpenClaims": 0,
+      "product": {
+        "publicID": "PersonalAuto",
+        "productName": "Recreational"
+      },
+      "lobs": {
+        "homeOwners": {},
+        "personalAuto": {
+          "publicID": "pc:47893193",
+          "lineOfBusiness": "Recreational",
+          "expirationDate": "2027-02-17T05:01:00Z",
+          "effectiveDate": "2026-02-17T05:01:00Z",
+          "status": "Draft",
+          "totalPremium": {
+            "amount": 0,
+            "currency": "usd"
+          },
+          "coverageDTOs": [],
+          "driverDTOs": [],
+          "vehicleDTOs": [],
+          "priorPolicyNumbers": []
+        }
+      },
+      "coverables": [
+        {
+          "name": "Recreational",
+          "coverages": []
+        }
+      ],
+      "baseState": "FL",
+      "displayEZPayWarning": false
+    },
+    "status": "Draft",
+    "type": "Submission",
+    "displayType": "Submission",
+    "canUserView": true,
+    "createdByMe": false,
+    "underwritingIssues": [],
+    "isEditLocked": false,
+    "statusCode": "Draft",
+    "productCode": "PersonalAuto",
+    "policyType": "Boat"
+  }
+}

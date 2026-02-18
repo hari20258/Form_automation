@@ -1,0 +1,49 @@
+{
+  "endpoint": "https://amsuite.amig.com/pc/service/edge/address/addressstandardization",
+  "rpcMethod": "lookupAddressUsingObject",
+  "payload": {
+    "id": "311ed2a3-652d-4edd-bd40-65151641ac76",
+    "jsonrpc": "2.0",
+    "method": "lookupAddressUsingObject",
+    "params": [
+      {
+        "addressLine1": "155 S Seward St",
+        "city": "Juneau",
+        "state": "AK",
+        "postalCode": "99801",
+        "country": "US",
+        "showOverride": true
+      }
+    ]
+  },
+  "response": {
+    "matches": [
+      {
+        "matchAccuracy": 0,
+        "address": {
+          "addressLine1": "155 SEWARD ST",
+          "addressLine2": "",
+          "city": "JUNEAU",
+          "state": "AK",
+          "postalCode": "99801",
+          "standardizeStatus": "standardized",
+          "containsRange": false,
+          "requiresUserResponse": false
+        }
+      },
+      {
+        "matchAccuracy": 0,
+        "address": {
+          "addressLine1": "155 S Seward St",
+          "city": "Juneau",
+          "state": "AK",
+          "postalCode": "99801",
+          "countyName": "JUNEAU",
+          "standardizeStatus": "override",
+          "addDeliverIndi_Ext": "NOT_VALIDATED"
+        }
+      }
+    ],
+    "geoCodeDetailsEnabledScriptParam": true
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "endpoint": "https://amsuite.amig.com/pc/service/edge/gatewayquote/questionset",
+  "rpcMethod": "refreshQuestionSets",
+  "pageContext": "unknown",
+  "payload": {
+    "id": "0c3f9a6c-6e64-450c-aed6-274ebf23ef48",
+    "jsonrpc": "2.0",
+    "method": "refreshQuestionSets",
+    "params": [
+      {
+        "questionSets": [
+          {
+            "code": "PA_DriverRoles_1",
+            "answers": {
+              "PA_QSDateCompletedSafetyCourse_1": null,
+              "PA_QSYearsBoatingExperience_1": null,
+              "PA_QSIneligibleDriver_1": "false"
+            },
+            "$$hashKey": "object:4233"
+          }
+        ],
+        "submissionNumber": "0046077452"
+      }
+    ]
+  },
+  "response": {
+    "result": {
+      "submissionNumber": "0046077452",
+      "questionSets": [
+        {
+          "code": "PA_DriverRoles_1",
+          "answers": {
+            "PA_QSDateCompletedSafetyCourse_1": null,
+            "PA_QSYearsBoatingExperience_1": null,
+            "PA_QSIneligibleDriver_1": "false"
+          }
+        }
+      ]
+    },
+    "id": "0c3f9a6c-6e64-450c-aed6-274ebf23ef48",
+    "jsonrpc": "2.0"
+  }
+}

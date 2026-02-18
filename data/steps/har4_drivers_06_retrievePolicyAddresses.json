@@ -1,0 +1,36 @@
+{
+  "endpoint": "https://amsuite.amig.com/pc/service/edge/address/addressstandardization",
+  "rpcMethod": "retrievePolicyAddresses",
+  "pageContext": "unknown",
+  "payload": {
+    "id": "22c98970-ff05-4277-8383-a9e01f1d16f2",
+    "jsonrpc": "2.0",
+    "method": "retrievePolicyAddresses",
+    "params": [
+      {
+        "quoteID": "0046077452",
+        "addressFilter": "POLICYLOCATION",
+        "ratingState": "FL",
+        "policyType": "boat"
+      }
+    ]
+  },
+  "response": {
+    "result": [
+      {
+        "publicID": "pc:84128814",
+        "displayName": "2576 SE 31st Pl, Ocala, FL 34471",
+        "addressLine1": "2576 SE 31st Pl",
+        "city": "Ocala",
+        "state": "FL",
+        "postalCode": "34471",
+        "country": "US",
+        "addressType": "home",
+        "countyName": "MARION",
+        "standardizeStatus": "standardized"
+      }
+    ],
+    "id": "22c98970-ff05-4277-8383-a9e01f1d16f2",
+    "jsonrpc": "2.0"
+  }
+}

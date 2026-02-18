@@ -1,0 +1,36 @@
+{
+  "endpoint": "https://amsuite.amig.com/pc/service/edge/vmm/lookup",
+  "rpcMethod": "getBoatLengthsModels",
+  "pageContext": "unknown",
+  "payload": {
+    "id": "f1f30975-ce49-42fd-ab77-ca1906759c06",
+    "jsonrpc": "2.0",
+    "method": "getBoatLengthsModels",
+    "params": [
+      {
+        "Year": "2014",
+        "VehicleType": "boat",
+        "PolicyType": "boat",
+        "Make": "SEA FOX"
+      }
+    ]
+  },
+  "response": {
+    "result": {
+      "amodLength": 0,
+      "version": 0,
+      "lengths": [
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25
+      ]
+    },
+    "id": "f1f30975-ce49-42fd-ab77-ca1906759c06",
+    "jsonrpc": "2.0"
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "endpoint": "https://amsuite.amig.com/pc/service/edge/gatewayquote/quote",
+  "rpcMethod": "getPreQualificationQuestions",
+  "payload": {
+    "id": "0d16e450-ed11-4588-b80f-33da7ba00c46",
+    "jsonrpc": "2.0",
+    "method": "getPreQualificationQuestions",
+    "params": [
+      {
+        "policyType": "boat",
+        "jobNumber": "0045994285"
+      }
+    ]
+  },
+  "response": [
+    {
+      "code": "PA_Qualification_1",
+      "answers": {
+        "PA_QSLossHistoryReport_1": null,
+        "PA_QSCreditReport_12": null,
+        "PA_QSLicenseSuspendedRevoked_1": null,
+        "PA_QSFR44_1": null,
+        "PA_QSVerifyTitledOwner_1": null,
+        "PA_RestorationOfCivilRightsForFelony_1": null,
+        "PA_QSMotorVehicleReport_1": null,
+        "PA_QSVehicleForRent_1": null,
+        "PA_QSVehicleForSaleConsignment_1": null,
+        "PA_QSSR22_1": null,
+        "PA_QSFelonyConviction_7": null,
+        "PA_QSDisclaimerVerification_1": null,
+        "PA_QSUnrepairedDamage_1": null
+      }
+    },
+    {
+      "code": "PA_PolicyInfo_1",
+      "answers": {
+        "PA_QSLossHistoryReport_1": null,
+        "PA_QSCreditReport_12": null,
+        "PA_QSLicenseSuspendedRevoked_1": null,
+        "PA_QSFR44_1": null,
+        "PA_QSVerifyTitledOwner_1": null,
+        "PA_RestorationOfCivilRightsForFelony_1": null,
+        "PA_QSMotorVehicleReport_1": null,
+        "PA_QSVehicleForRent_1": null,
+        "PA_QSVehicleForSaleConsignment_1": null,
+        "PA_QSSR22_1": null,
+        "PA_QSFelonyConviction_7": null,
+        "PA_QSDisclaimerVerification_1": null,
+        "PA_QSUnrepairedDamage_1": null
+      }
+    }
+  ]
+}

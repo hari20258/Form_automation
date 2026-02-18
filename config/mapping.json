@@ -1,0 +1,55 @@
+{
+    "policy_details": {
+        "directMappings": {
+            "updateDraftSubmission.params[0].sessionUUID": "$RUN.sessionUUID",
+            "updateDraftSubmission.params[0].quoteID": "$RUN.quoteID",
+            "updateDraftSubmission.params[0].baseData.accountNumber": "$RUN.accountNumber",
+            "updateDraftSubmission.params[0].baseData.accountHolder.publicID": "$RUN.accountHolderID",
+            "updateDraftSubmission.params[0].baseData.accountHolder.firstName": "opportunityDetails.contactInformation.first_name", // Fallback logic needed?
+            "updateDraftSubmission.params[0].baseData.accountHolder.emailAddress1": "opportunityDetails.contactInformation.account_email__c",
+            "updateDraftSubmission.params[0].baseData.accountHolder.cellNumber": "opportunityDetails.contactInformation.mobile_phone__c",
+            "updateDraftSubmission.params[0].baseData.policyAddress.addressLine1": "opportunityDetails.storageLocation.map__c" // Needs parsing usually, simplified for now
+        }
+    },
+    "drivers": {
+        "directMappings": {
+            "updateDraftSubmission.params[0].baseData.accountNumber": "$RUN.accountNumber"
+        },
+        "arrayMappings": [
+            {
+                "targetArrayPath": "updateDraftSubmission.params[0].lobData.personalAuto.coverables.drivers",
+                "sourceArrayPath": "opportunityDetails.operators", // Needs to be an array in source! Flatten it? 
+                // Wait, Salesforce 'operators' is an object based on the file content seen earlier? 
+                // Ah, 'FromSalesforce.json' had "operators": { ... fields ... } 
+                // BUT 'nboa_isheet_structured.json' had it as ARRAY. 
+                // We must handle the Object-to-Array logic if Salesforce gives flattened fields like "operator_1_name".
+                // For this config, let's assume we pre-process Salesforce data to be clean arrays OR handle it in mapper.
+                // Let's assume standard array for now.
+                "itemMapping": {
+                    "person.firstName": "first_name",
+                    "person.lastName": "last_name",
+                    "licenseNumber": "dl_number",
+                    "licenseState": "dl_state"
+                    // Add more mappings
+                }
+            }
+        ]
+    },
+    "vehicles": {
+        "directMappings": {
+            "addVehicleToSubmission_Boat.params[0].SubmissionNumber": "$RUN.quoteID",
+            "addVehicleToSubmission_Boat.params[0].SessionUUID": "$RUN.sessionUUID",
+            "addVehicleToSubmission_Boat.params[0].Vehicle.year": {
+                "path": "opportunityDetails.watercraft.model_year__c",
+                "transform": "int"
+            },
+            "addVehicleToSubmission_Boat.params[0].Vehicle.make": "opportunityDetails.watercraft.manufactuer_name",
+            "addVehicleToSubmission_Boat.params[0].Vehicle.model": "opportunityDetails.watercraft.model_name",
+            "addVehicleToSubmission_Boat.params[0].Vehicle.hullId": "opportunityDetails.watercraft.hin_vessel__c",
+            "addVehicleToSubmission_Boat.params[0].Vehicle.vehicleValue": {
+                "path": "opportunityDetails.watercraft.purchase_price__c",
+                "transform": "int"
+            }
+        }
+    }
+}

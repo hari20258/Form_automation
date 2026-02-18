@@ -1,0 +1,34 @@
+{
+  "endpoint": "https://amsuite.amig.com/pc/service/edge/vmm/lookup",
+  "rpcMethod": "getUnitInfo",
+  "pageContext": "unknown",
+  "payload": {
+    "id": "b939eaf4-73da-4ae6-9d96-3783856775b0",
+    "jsonrpc": "2.0",
+    "method": "getUnitInfo",
+    "params": [
+      {
+        "VehicleType": "trailer",
+        "PolicyType": "boat",
+        "Year": "2013",
+        "Make": "AQUACART",
+        "Model": null,
+        "BoatLength": null,
+        "CompanyNumber": "071",
+        "TotalHorsePower": "0",
+        "transactionType": "Submission",
+        "State": "FL",
+        "UnitConvSource": "NONCONV",
+        "EffectiveDate": "2026-02-16T18:30:00.000Z"
+      }
+    ]
+  },
+  "response": {
+    "error": {
+      "message": "Argument \"model\" cannot be null",
+      "code": -32602
+    },
+    "id": "b939eaf4-73da-4ae6-9d96-3783856775b0",
+    "jsonrpc": "2.0"
+  }
+}

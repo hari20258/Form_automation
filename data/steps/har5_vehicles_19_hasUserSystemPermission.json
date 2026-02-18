@@ -1,0 +1,20 @@
+{
+  "endpoint": "https://amsuite.amig.com/pc/service/edge/gateway/user",
+  "rpcMethod": "hasUserSystemPermission",
+  "pageContext": "unknown",
+  "payload": {
+    "id": "b51c4b90-8734-4b66-9d47-c58ccde928a1",
+    "jsonrpc": "2.0",
+    "method": "hasUserSystemPermission",
+    "params": [
+      {
+        "permission": "Request_UW_Approval_Ext"
+      }
+    ]
+  },
+  "response": {
+    "result": true,
+    "id": "b51c4b90-8734-4b66-9d47-c58ccde928a1",
+    "jsonrpc": "2.0"
+  }
+}

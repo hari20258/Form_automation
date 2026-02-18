@@ -1,0 +1,21 @@
+{
+  "endpoint": "https://amsuite.amig.com/pc/service/edge/validation/policyValidator",
+  "rpcMethod": "validateLicenseNumber",
+  "pageContext": "unknown",
+  "payload": {
+    "id": "011b9690-8746-4ca4-ac6e-f3714d87e8e3",
+    "jsonrpc": "2.0",
+    "method": "validateLicenseNumber",
+    "params": [
+      {
+        "licenseNumber": "B626526793780",
+        "licenseState": "FL"
+      }
+    ]
+  },
+  "response": {
+    "result": false,
+    "id": "011b9690-8746-4ca4-ac6e-f3714d87e8e3",
+    "jsonrpc": "2.0"
+  }
+}

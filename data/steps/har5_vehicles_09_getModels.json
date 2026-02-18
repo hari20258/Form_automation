@@ -1,0 +1,34 @@
+{
+  "endpoint": "https://amsuite.amig.com/pc/service/edge/vmm/lookup",
+  "rpcMethod": "getModels",
+  "pageContext": "unknown",
+  "payload": {
+    "id": "05595d3e-8dba-4456-912d-dc8f4d1c1c0e",
+    "jsonrpc": "2.0",
+    "method": "getModels",
+    "params": [
+      {
+        "Year": "2014",
+        "VehicleType": "boat",
+        "PolicyType": "boat",
+        "Make": "SEA FOX",
+        "UnitConvSource": "NONCONV",
+        "BoatLength": 24
+      }
+    ]
+  },
+  "response": {
+    "result": {
+      "amodLength": 0,
+      "version": 0,
+      "models": {
+        "249 AVENGER": null,
+        "240 VIPER": null,
+        "246 COMMANDER": null
+      },
+      "lengths": []
+    },
+    "id": "05595d3e-8dba-4456-912d-dc8f4d1c1c0e",
+    "jsonrpc": "2.0"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "endpoint": "https://amsuite.amig.com/pc/service/edge/address/addressstandardization",
+  "rpcMethod": "lookupAddressUsingObject",
+  "payload": {
+    "id": "c07f4263-42fb-4eb9-9d28-1c2bd9ad6ba3",
+    "jsonrpc": "2.0",
+    "method": "lookupAddressUsingObject",
+    "params": [
+      {
+        "addressLine1": "632 W 6th Ave",
+        "city": "Anchorage",
+        "state": "AK",
+        "postalCode": "99501",
+        "country": "US",
+        "showOverride": false
+      }
+    ]
+  },
+  "response": {
+    "errorCode": "INVALID",
+    "errorDescription": "The address entered does not appear to be a valid address.  Click \"Re-Enter Address\" to review and make sure the entered address is correct.",
+    "matches": [
+      {
+        "matchAccuracy": 0,
+        "address": {
+          "addressLine1": "632 W 6th Ave",
+          "city": "Anchorage",
+          "state": "AK",
+          "postalCode": "99501",
+          "countyName": "ANCHORAGE",
+          "standardizeStatus": "override",
+          "addDeliverIndi_Ext": "NOT_VALIDATED"
+        }
+      }
+    ],
+    "geoCodeDetailsEnabledScriptParam": true
+  }
+}

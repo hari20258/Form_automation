@@ -1,0 +1,206 @@
+{
+    // ============================================================================
+    // STEP 4: VEHICLES — Essential API Payload
+    // This payload submits vehicle details (Year, Make, Model, Hull ID, Engine, Price, etc.)
+    // It also handles "Additional Interests" (Lienholders) attached to specific vehicles.
+    // Advances wizard to the next step (e.g., Coverages).
+    // ============================================================================
+    "updateDraftSubmission": {
+        // ENDPOINT: POST https://amsuite.amig.com/pc/service/edge/gatewayquote/quote
+        // PURPOSE: Saves detailed vehicle information and any lienholders.
+        // RETURNS: Validation results or success moving to next step.
+        "id": "uuid-v4-here",
+        "jsonrpc": "2.0",
+        "method": "updateDraftSubmission",
+        "params": [
+            {
+                // --- Session & Quote Identifiers ---
+                "sessionUUID": "57b9add4-46fb-477e-a539-57902f9cf182",
+                "quoteID": "0046077452",
+                // --- Base Data (Account & Policy Info - Keep populated) ---
+                "baseData": {
+                    "accountNumber": "0017483217",
+                    "accountHolder": { /* ... Same as before ... */},
+                    "policyAddress": { /* ... Same as before ... */},
+                    "productCode": "PersonalAuto",
+                    "productName": "Recreational",
+                    "uWCompany": "071",
+                    "periodStartDate": {
+                        "year": 2026,
+                        "month": 1,
+                        "day": 17
+                    },
+                    "periodEndDate": {
+                        "year": 2027,
+                        "month": 1,
+                        "day": 17
+                    },
+                    "preQualQuestionSets": [],
+                    "additionalInsureds": [ /* ... Same as before ... */],
+                    "policyType": "boat",
+                    "baseState": "FL",
+                    "ratingState": "FL"
+                },
+                // --- LOB Data: WHERE VEHICLES LIVE ---
+                "lobData": {
+                    "personalAuto": {
+                        "preQualQuestionSets": [ /* ... Same Questions as Step 2 ... */],
+                        "coverables": {
+                            "drivers": [ /* ... Same Drivers as Step 3 ... */],
+                            "vehicles": [
+                                // --- VEHICLE 1: BOAT ---
+                                {
+                                    "fixedId": 13288903, // Internal ID (null for new)
+                                    "publicID": "pc:13288903",
+                                    "vehicleNumber": 1,
+                                    "year": 2014,
+                                    "make": "SEA FOX",
+                                    "model": "246 COMMANDER",
+                                    "primaryUse": "commuting", // "commuting" | "pleasure" | etc.
+                                    "licenseState": "FL",
+                                    "displayName": "SEA FOX 246 COMMANDER 2014",
+                                    "vehicleType": "boat",
+                                    "length": "24",
+                                    "purchaseDate": {
+                                        "year": 2026,
+                                        "month": 0,
+                                        "day": 27
+                                    },
+                                    "vehicleValue": 40500, // Current Value
+                                    "purchasePrice": "43500.00", // Original Price
+                                    "streetUse": false,
+                                    "vehicleAge": 12,
+                                    "vehicleAdditionalUsage": false,
+                                    // Storage & Registration Addresses
+                                    "storageAddress": {
+                                        "publicID": "pc:84128814",
+                                        "displayName": "2576 SE 31st Pl, Ocala, FL 34471",
+                                        "addressLine1": "2576 SE 31st Pl",
+                                        "city": "Ocala",
+                                        "state": "FL",
+                                        "postalCode": "34471",
+                                        "country": "US",
+                                        "countyName": "MARION",
+                                        "storageType": "Other"
+                                    },
+                                    "registrationAddress": { /* ... Usually same as storage ... */},
+                                    "storageType": "Other",
+                                    // Vehicle Specific Questions (Anti-Theft, etc.)
+                                    "vehicleQuestionSets": [
+                                        {
+                                            "code": "PA_VehicleDetails_1",
+                                            "answers": {
+                                                "PA_QSAntiTheftVehicleRecoveryTrackingSystem_1": "false"
+                                            }
+                                        }
+                                    ],
+                                    // Technical Specs
+                                    "symbol": "B03",
+                                    "vMMRuleKey_Ext": "WC_340",
+                                    "version": "127",
+                                    "eligibleInd": "Y",
+                                    "vmmGroup": "WC_C",
+                                    "weight": "4200",
+                                    "totalHorsepower": "250",
+                                    "hullConstruction": "F", // "F" = Fiberglass?
+                                    "engineSize": "0",
+                                    "engineType": "Outboard",
+                                    "fuelType": "Gasoline",
+                                    "numberOfEngines": "1",
+                                    "hullId": "LYGNB102E314",
+                                    "stateAssignedVin": false,
+                                    "factoryHorsePower": "300",
+                                    "maxSpeed": "79",
+                                    "boatType": "CC", // Center Console?
+                                    // Engine Details (Array)
+                                    "engineDetails": [
+                                        {
+                                            "publicID": "pc:1464800",
+                                            "year": "2017",
+                                            "make": "YAMAHA",
+                                            "model": "F250XCA 4-STROKE",
+                                            "horsePower": "250"
+                                        }
+                                    ],
+                                    // Primary Operator (Must link to a valid driver publicID)
+                                    "primaryOperator": {
+                                        "publicID": "pc:127635327", // Driver's publicID
+                                        "person": {
+                                            "publicID": "pc:33904322" // Account Holder's publicID
+                                        },
+                                        "relationship": "pni_ext"
+                                    },
+                                    // --- ADDITIONAL INTERESTS (Lienholders) ---
+                                    "additionalInterests": [
+                                        // Example structure for a Lienholder (if one existed):
+                                        /*
+                                        {
+                                            "interestType": "lienholder", // "lienholder" | "lossPayee"
+                                            "contact": {
+                                                "subtype": "Company", // Usually "Company" for banks
+                                                "displayName": "Bank of America",
+                                                "companyName": "Bank of America",
+                                                "primaryAddress": {
+                                                    "addressLine1": "123 Bank St",
+                                                    "city": "Charlotte",
+                                                    "state": "NC",
+                                                    "postalCode": "28255",
+                                                    "country": "US"
+                                                }
+                                            },
+                                            "loanNumber": "123456789"
+                                        }
+                                        */
+                                    ]
+                                },
+                                // --- VEHICLE 2: TRAILER ---
+                                {
+                                    "fixedId": 13288905,
+                                    "publicID": "pc:13288905",
+                                    "vehicleNumber": 2,
+                                    "year": 2013,
+                                    "make": "ALL OTHER",
+                                    "model": "All Other Trailer",
+                                    "vin": "LYGNB102E314", // Note: Matches Boat Hull ID in HAR (unusual?)
+                                    "primaryUse": "commuting",
+                                    "displayName": "ALL OTHER All Other Trailer 2013",
+                                    "vehicleType": "trailer", // Distinct type
+                                    "makeDescription": "Magic Trail Trailers",
+                                    "modelDescription": "2 axile",
+                                    "length": "24",
+                                    "vehicleValue": 40500, // Matches boat value in HAR?
+                                    "streetUse": false,
+                                    "vehicleAge": 13,
+                                    "storageAddress": {
+                                        "publicID": "pc:84128814", // Same storage ID
+                                        "displayName": "2576 SE 31st Pl, Ocala, FL 34471",
+                                        "addressLine1": "2576 SE 31st Pl",
+                                        "city": "Ocala",
+                                        "state": "FL",
+                                        "postalCode": "34471",
+                                        "country": "US",
+                                        "countyName": "MARION"
+                                    },
+                                    "vehicleQuestionSets": [ /* Empty in HAR */],
+                                    "eligibleInd": "Y",
+                                    "totalHorsepower": "0",
+                                    "engineSize": "0",
+                                    "fuelType": "Gasoline",
+                                    "purchasePrice": "0.00",
+                                    "engineDetails": [],
+                                    "availableInd": "Y",
+                                    "cC": "0"
+                                }
+                            ],
+                            "prefillReportOrdered_Ext": false
+                        },
+                        "offerings": [ /* ... Same Offerings ... */]
+                    }
+                },
+                "persons": [ /* ... List of all persons ... */],
+                // 🚨 PAGE CONTEXT: "VEHICLE" (Singular) 🚨
+                "pageContext": "VEHICLE"
+            }
+        ]
+    }
+}

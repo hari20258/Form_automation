@@ -131,7 +131,8 @@ module.exports = async function saveVehicles(quoteApi, submission, customer) {
                 { code: "PA_VehicleDetails_3", answers: {} },
                 { code: "PA_VehicleDetails_5", answers: {} }
             ],
-            primaryUse: 'commuting'
+            primaryUse: vessel.primary_use || 'commuting',
+            maxSpeed: vessel.max_speed || 0
         };
 
         // Set primary operator if available

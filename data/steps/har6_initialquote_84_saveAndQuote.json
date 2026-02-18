@@ -1,0 +1,3845 @@
+{
+  "endpoint": "https://amsuite.amig.com/pc/service/edge/gatewayquote/quote",
+  "rpcMethod": "saveAndQuote",
+  "pageContext": "unknown",
+  "payload": {
+    "id": "3d7d3d12-9985-4d3f-a12e-90d177e6d818",
+    "jsonrpc": "2.0",
+    "method": "saveAndQuote",
+    "params": [
+      {
+        "sessionUUID": "57b9add4-46fb-477e-a539-57902f9cf182",
+        "quoteID": "0046077452",
+        "baseData": {
+          "accountNumber": "0017483217",
+          "accountHolder": {
+            "emailAddress1": "x.e.velez@gmail.com",
+            "publicID": "pc:33904322",
+            "displayName": "Luis Burckhardt",
+            "primaryPhoneType": "mobile",
+            "contactName": "Luis Burckhardt",
+            "subtype": "Person",
+            "primaryAddress": {
+              "publicID": "pc:84128813",
+              "displayName": "2576 SE 31st Pl, Ocala, FL 34471",
+              "addressLine1": "2576 SE 31st Pl",
+              "city": "Ocala",
+              "state": "FL",
+              "postalCode": "34471",
+              "country": "US",
+              "addressType": "other",
+              "standardizeStatus": "standardized",
+              "standardizeDate_Ext": "2026-02-17T11:03:48Z"
+            },
+            "accountHolder": true,
+            "cellNumber": "3525476529",
+            "dateOfBirth": {
+              "year": 1979,
+              "month": 0,
+              "day": 0,
+              "isMasked": true
+            },
+            "firstName": "Luis",
+            "lastName": "Burckhardt",
+            "maritalStatus": "M",
+            "additionalInsuredType": "person",
+            "customerCallOptInIndicator": false,
+            "tempId": 49
+          },
+          "policyAddress": {
+            "publicID": "pc:84128813",
+            "displayName": "2576 SE 31st Pl, Ocala, FL 34471",
+            "addressLine1": "2576 SE 31st Pl",
+            "city": "Ocala",
+            "state": "FL",
+            "postalCode": "34471",
+            "country": "US",
+            "addressType": "other",
+            "standardizeStatus": "standardized",
+            "standardizeDate_Ext": "2026-02-17T11:03:48Z"
+          },
+          "productCode": "PersonalAuto",
+          "productName": "Recreational",
+          "uWCompany": "071",
+          "periodStartDate": {
+            "year": 2026,
+            "month": 1,
+            "day": 17
+          },
+          "periodEndDate": {
+            "year": 2027,
+            "month": 1,
+            "day": 17
+          },
+          "preQualQuestionSets": [],
+          "termType": "Annual",
+          "periodStatus": "Draft",
+          "pAPolicyType": "boat",
+          "sADFFields": [],
+          "isAddressChangedRecently": false,
+          "additionalInsureds": [
+            {
+              "contactRole": "PolicyAddlNamedInsured",
+              "contact": {
+                "publicID": "pc:33937888",
+                "displayName": "Xiomara Burckhardt",
+                "primaryPhoneType": "mobile",
+                "subtype": "Person",
+                "primaryAddress": {
+                  "publicID": "pc:84128813",
+                  "displayName": "2576 SE 31st Pl, Ocala, FL 34471",
+                  "addressLine1": "2576 SE 31st Pl",
+                  "city": "Ocala",
+                  "state": "FL",
+                  "postalCode": "34471",
+                  "country": "US",
+                  "addressType": "other",
+                  "standardizeStatus": "standardized",
+                  "standardizeDate_Ext": "2026-02-17T11:03:48Z"
+                },
+                "accountHolder": true,
+                "cellNumber": "2025550185",
+                "dateOfBirth": {
+                  "year": 1981,
+                  "month": 0,
+                  "day": 0,
+                  "isMasked": true
+                },
+                "firstName": "Xiomara",
+                "lastName": "Burckhardt",
+                "maritalStatus": "M",
+                "relationship": "SP",
+                "descOfInterest": "additionalnamedinsured",
+                "marina": "no",
+                "additionalInsuredType": "person",
+                "companyPrimaryContact": false
+              },
+              "publicID": "pc:127635324"
+            }
+          ],
+          "policyType": "boat",
+          "baseState": "FL",
+          "ratingState": "FL",
+          "isNCRatingApplicable": false
+        },
+        "lobData": {
+          "personalAuto": {
+            "preQualQuestionSets": [
+              {
+                "code": "PA_Qualification_1",
+                "answers": {
+                  "PA_QSLossHistoryReport_1": "true",
+                  "PA_QSCreditReport_12": "true",
+                  "PA_QSLicenseSuspendedRevoked_1": "false",
+                  "PA_QSFR44_1": "false",
+                  "PA_QSVerifyTitledOwner_1": "false",
+                  "PA_RestorationOfCivilRightsForFelony_1": null,
+                  "PA_QSMotorVehicleReport_1": "true",
+                  "PA_QSVehicleForRent_1": "false",
+                  "PA_QSVehicleForSaleConsignment_1": "false",
+                  "PA_QSSR22_1": "false",
+                  "PA_QSFelonyConviction_7": "false",
+                  "PA_QSDisclaimerVerification_1": "true",
+                  "PA_QSUnrepairedDamage_1": "false"
+                }
+              },
+              {
+                "code": "PA_PolicyInfo_1",
+                "answers": {
+                  "PA_QSPaperlessDiscount_1": "false",
+                  "PA_QSMultiPolicyDiscount_1": "false",
+                  "PA_QSPriorInsurance_1": "Yes",
+                  "PA_QSWatercraftLossesAccidents_1": "true",
+                  "PA_QSPaidInFullDiscount_1": "false",
+                  "PA_QSApplicantPrimaryResidence_1": "OwnHome"
+                }
+              }
+            ],
+            "offerings": [
+              {
+                "branchName": "CUSTOM",
+                "coverages": {
+                  "vehicleCoverages": [
+                    {
+                      "publicID": "pc:13288903",
+                      "fixedId": 13288903,
+                      "vehicleName": "2014 SEA FOX 246 COMMANDER ",
+                      "coverages": [
+                        {
+                          "name": "Hull",
+                          "updated": false,
+                          "terms": [
+                            {
+                              "name": "Deductible",
+                              "patternCode": "PAHullDeductibleMoney",
+                              "options": [
+                                {
+                                  "name": "100",
+                                  "code": "ze4hcaglkh7r98agqrb73d8rb9b",
+                                  "optionValue": 1,
+                                  "maxValue": 5
+                                },
+                                {
+                                  "name": "250",
+                                  "code": "zesi8gfpt636cbkqo3ubr5b23va",
+                                  "optionValue": 2,
+                                  "maxValue": 5
+                                },
+                                {
+                                  "name": "500",
+                                  "code": "z0ahmu0aql4bm152q47sg2e9mta",
+                                  "optionValue": 3,
+                                  "maxValue": 5
+                                },
+                                {
+                                  "name": "1,000",
+                                  "code": "z3gjqf6952n0c9r5p9r536oi5m8",
+                                  "optionValue": 3,
+                                  "maxValue": 5
+                                },
+                                {
+                                  "name": "2,500",
+                                  "code": "z82hs5c7kquafci7cioe5j2u4pb",
+                                  "optionValue": 4,
+                                  "maxValue": 5
+                                },
+                                {
+                                  "name": "5,000",
+                                  "code": "zmchqa89v4thparv7ltre3t6dvb",
+                                  "optionValue": 5,
+                                  "maxValue": 5
+                                }
+                              ],
+                              "chosenTerm": "z0ahmu0aql4bm152q47sg2e9mta",
+                              "chosenTermValue": "500",
+                              "isAscendingBetter": true,
+                              "updated": false,
+                              "required": true,
+                              "isEditable": true
+                            },
+                            {
+                              "name": "Diminishing Deductible",
+                              "patternCode": "PAHullDiminishingDeductible",
+                              "options": [
+                                {
+                                  "name": "Yes",
+                                  "code": "true",
+                                  "optionValue": 1,
+                                  "maxValue": 1
+                                },
+                                {
+                                  "name": "No",
+                                  "code": "false",
+                                  "optionValue": 0,
+                                  "maxValue": 1
+                                }
+                              ],
+                              "chosenTerm": "false",
+                              "chosenTermValue": "No",
+                              "directBooleanValue": false,
+                              "isAscendingBetter": true,
+                              "updated": false,
+                              "valueType": "bit",
+                              "required": true,
+                              "isEditable": true
+                            },
+                            {
+                              "name": "Named Storm Deductible",
+                              "patternCode": "PANamedStormDeductiblePercentOpt",
+                              "options": [
+                                {
+                                  "name": "1%",
+                                  "code": "z2sjganoskumc2nlmimorug2r99",
+                                  "optionValue": 1,
+                                  "maxValue": 5
+                                },
+                                {
+                                  "name": "2%",
+                                  "code": "zrlgansj3foha48rklv465t98l8",
+                                  "optionValue": 1,
+                                  "maxValue": 5
+                                },
+                                {
+                                  "name": "3%",
+                                  "code": "zkvgodt4as6lpb6jshjcmaj7399",
+                                  "optionValue": 2,
+                                  "maxValue": 5
+                                },
+                                {
+                                  "name": "4%",
+                                  "code": "ztgi61e53toofae2ii1koskd9b9",
+                                  "optionValue": 3,
+                                  "maxValue": 5
+                                },
+                                {
+                                  "name": "5%",
+                                  "code": "znnggv83lft348fh5qqs3l25sr8",
+                                  "optionValue": 3,
+                                  "maxValue": 5
+                                },
+                                {
+                                  "name": "10%",
+                                  "code": "z8ahuemqn9kl30et6gove63bcl8",
+                                  "optionValue": 4,
+                                  "maxValue": 5
+                                },
+                                {
+                                  "name": "15%",
+                                  "code": "zgejo4ee20biiaje0lo4djtbdr8",
+                                  "optionValue": 4,
+                                  "maxValue": 5
+                                },
+                                {
+                                  "name": "20%",
+                                  "code": "z5kg0g22kkn8gdsn67pdshdba49",
+                                  "optionValue": 5,
+                                  "maxValue": 5
+                                }
+                              ],
+                              "chosenTerm": "znnggv83lft348fh5qqs3l25sr8",
+                              "chosenTermValue": "5%",
+                              "isAscendingBetter": true,
+                              "updated": false,
+                              "required": true,
+                              "isEditable": true
+                            },
+                            {
+                              "name": "Named Storm Deductible",
+                              "patternCode": "PANamedStormDeductibleDirect",
+                              "options": [],
+                              "chosenTerm": "2025.0000",
+                              "chosenTermValue": "2,025",
+                              "directValue": 2025,
+                              "isAscendingBetter": true,
+                              "updated": false,
+                              "valueType": "Money",
+                              "required": true,
+                              "isEditable": false
+                            },
+                            {
+                              "name": "Settlement Option",
+                              "patternCode": "PAHullSettlementOpt",
+                              "options": [
+                                {
+                                  "name": "Agreed Value",
+                                  "code": "z5pj21s6sphro4rs9s9g4neadga",
+                                  "optionValue": 3,
+                                  "maxValue": 5
+                                },
+                                {
+                                  "name": "Actual Cash Value",
+                                  "code": "zsaieb6c94uc94nj74ph75hk4q9",
+                                  "optionValue": 5,
+                                  "maxValue": 5
+                                }
+                              ],
+                              "chosenTerm": "z5pj21s6sphro4rs9s9g4neadga",
+                              "chosenTermValue": "Agreed Value",
+                              "isAscendingBetter": true,
+                              "updated": false,
+                              "required": true,
+                              "isEditable": true
+                            }
+                          ],
+                          "selected": true,
+                          "required": false,
+                          "publicID": "PAHullCov",
+                          "description": "Hull",
+                          "coverageCategoryCode": "PAPhysDamVehicleGrp",
+                          "coverageCategoryDisplayName": "Physical Damage - Vehicle",
+                          "priority": 9546
+                        },
+                        {
+                          "name": "Haul Out",
+                          "updated": false,
+                          "terms": [
+                            {
+                              "name": "Limit",
+                              "patternCode": "PAHaulOutLimit",
+                              "options": [
+                                {
+                                  "name": "50% up to $500",
+                                  "code": "zi9hahl2m2svia83a9vpm1pbm48",
+                                  "optionValue": 5,
+                                  "maxValue": 5
+                                }
+                              ],
+                              "chosenTerm": "zi9hahl2m2svia83a9vpm1pbm48",
+                              "chosenTermValue": "50% up to $500",
+                              "isAscendingBetter": true,
+                              "updated": false,
+                              "required": true,
+                              "isEditable": false
+                            }
+                          ],
+                          "selected": true,
+                          "required": true,
+                          "publicID": "PAHaulOutCov",
+                          "description": "Haul Out",
+                          "coverageCategoryCode": "PAPhysDamVehicleGrp",
+                          "coverageCategoryDisplayName": "Physical Damage - Vehicle",
+                          "priority": 9547
+                        },
+                        {
+                          "name": "Port Risk",
+                          "updated": false,
+                          "terms": [],
+                          "selected": false,
+                          "required": false,
+                          "publicID": "PAPortRiskCov",
+                          "description": "Port Risk",
+                          "coverageCategoryCode": "PAAddPhysDamVehicleGrp",
+                          "coverageCategoryDisplayName": "Additional Physical Damage - Vehicle",
+                          "priority": 9574
+                        },
+                        {
+                          "name": "Personal Effects",
+                          "updated": false,
+                          "terms": [
+                            {
+                              "name": "Limit",
+                              "patternCode": "PAPersonalEffectsLimit",
+                              "options": [
+                                {
+                                  "name": "2,500",
+                                  "code": "zobj44dq3gp1vfvtc3oj1tgrnfb",
+                                  "optionValue": 1,
+                                  "maxValue": 5
+                                },
+                                {
+                                  "name": "5,000",
+                                  "code": "z15jqjoi7c4rqbd1mr98ntprsm8",
+                                  "optionValue": 1,
+                                  "maxValue": 5
+                                },
+                                {
+                                  "name": "7,500",
+                                  "code": "z09i8ue68nr658od817c7sr1epb",
+                                  "optionValue": 2,
+                                  "maxValue": 5
+                                },
+                                {
+                                  "name": "10,000",
+                                  "code": "zkmi252qt6npb37bshdf07nd8oa",
+                                  "optionValue": 3,
+                                  "maxValue": 5
+                                },
+                                {
+                                  "name": "12,500",
+                                  "code": "zt5jqfkaip9csafnasl9bevj4s9",
+                                  "optionValue": 4,
+                                  "maxValue": 5
+                                },
+                                {
+                                  "name": "15,000",
+                                  "code": "z2phqiadhr6l5acc7gpgo2h0a1a",
+                                  "optionValue": 4,
+                                  "maxValue": 5
+                                },
+                                {
+                                  "name": "20,000",
+                                  "code": "zt7isr36tr6eo6jv2eihvb6ivkb",
+                                  "optionValue": 5,
+                                  "maxValue": 5
+                                }
+                              ],
+                              "chosenTerm": "zobj44dq3gp1vfvtc3oj1tgrnfb",
+                              "chosenTermValue": "2,500",
+                              "isAscendingBetter": true,
+                              "updated": false,
+                              "required": true,
+                              "isEditable": true
+                            },
+                            {
+                              "name": "Deductible",
+                              "patternCode": "PAPersonalEffectsDeductible",
+                              "options": [
+                                {
+                                  "name": "200",
+                                  "code": "ztohmqcoqpoef1sao87qivq6jfa",
+                                  "optionValue": 5,
+                                  "maxValue": 5
+                                }
+                              ],
+                              "chosenTerm": "ztohmqcoqpoef1sao87qivq6jfa",
+                              "chosenTermValue": "200",
+                              "isAscendingBetter": true,
+                              "updated": false,
+                              "required": true,
+                              "isEditable": false
+                            },
+                            {
+                              "name": "Settlement Option",
+                              "patternCode": "PAPersonalEffectsSettlementOpt",
+                              "options": [
+                                {
+                                  "name": "Replacement Cost",
+                                  "code": "z4ohok7k00nb449a52vi4u5rfpb",
+                                  "optionValue": 5,
+                                  "maxValue": 5
+                                }
+                              ],
+                              "chosenTerm": "z4ohok7k00nb449a52vi4u5rfpb",
+                              "chosenTermValue": "Replacement Cost",
+                              "isAscendingBetter": true,
+                              "updated": false,
+                              "required": true,
+                              "isEditable": false
+                            }
+                          ],
+                          "selected": true,
+                          "required": true,
+                          "publicID": "PAPersonalEffectsCov",
+                          "description": "Personal Effects",
+                          "coverageCategoryCode": "PAAddPhysDamVehicleGrp",
+                          "coverageCategoryDisplayName": "Additional Physical Damage - Vehicle",
+                          "priority": 9549
+                        },
+                        {
+                          "name": "Extended Parts Replacement",
+                          "updated": false,
+                          "terms": [],
+                          "selected": false,
+                          "required": false,
+                          "publicID": "PAExtendedPartsReplacementCov",
+                          "description": "Extended Parts Replacement",
+                          "coverageCategoryCode": "PAAddPhysDamVehicleGrp",
+                          "coverageCategoryDisplayName": "Additional Physical Damage - Vehicle",
+                          "priority": 9564
+                        },
+                        {
+                          "name": "Professional Angler",
+                          "updated": false,
+                          "terms": [],
+                          "selected": false,
+                          "required": false,
+                          "publicID": "PAProfessionalAnglerCov",
+                          "description": "Professional Angler",
+                          "coverageCategoryCode": "PAAddPhysDamVehicleGrp",
+                          "coverageCategoryDisplayName": "Additional Physical Damage - Vehicle",
+                          "priority": 9556
+                        },
+                        {
+                          "name": "Towing and Emergency Expense",
+                          "updated": false,
+                          "terms": [
+                            {
+                              "name": "Limit",
+                              "patternCode": "PATowingEmergencyExpenseLimit",
+                              "options": [
+                                {
+                                  "name": "250",
+                                  "code": "zngh2jap35kcjalflk1aqv500q9",
+                                  "optionValue": 1,
+                                  "maxValue": 5
+                                },
+                                {
+                                  "name": "500",
+                                  "code": "zeohiai1it2t33p4v54047fu4b9",
+                                  "optionValue": 2,
+                                  "maxValue": 5
+                                },
+                                {
+                                  "name": "1,000",
+                                  "code": "zi3hechlc4jft2d9dksn90pt0r8",
+                                  "optionValue": 3,
+                                  "maxValue": 5
+                                },
+                                {
+                                  "name": "3,000",
+                                  "code": "zjgiao5khj7i0b692vu6d2v82i8",
+                                  "optionValue": 4,
+                                  "maxValue": 5
+                                },
+                                {
+                                  "name": "5,000",
+                                  "code": "zu2iap9r50inu33sksiuvuam2k8",
+                                  "optionValue": 5,
+                                  "maxValue": 5
+                                }
+                              ],
+                              "chosenTerm": "zngh2jap35kcjalflk1aqv500q9",
+                              "chosenTermValue": "250",
+                              "isAscendingBetter": true,
+                              "updated": false,
+                              "required": true,
+                              "isEditable": true
+                            }
+                          ],
+                          "selected": true,
+                          "required": true,
+                          "publicID": "PATowingEmergencyExpenseCov",
+                          "description": "Towing and Emergency Expense",
+                          "coverageCategoryCode": "PAAddPhysDamVehicleGrp",
+                          "coverageCategoryDisplayName": "Additional Physical Damage - Vehicle",
+                          "priority": 9550
+                        },
+                        {
+                          "name": "Boat Lift",
+                          "updated": false,
+                          "terms": [],
+                          "selected": false,
+                          "required": false,
+                          "publicID": "PABoatLiftCov",
+                          "description": "Boat Lift",
+                          "coverageCategoryCode": "PAAddPhysDamVehicleGrp",
+                          "coverageCategoryDisplayName": "Additional Physical Damage - Vehicle",
+                          "priority": 9563
+                        },
+                        {
+                          "name": "Bow To Stern",
+                          "updated": false,
+                          "terms": [],
+                          "selected": false,
+                          "required": false,
+                          "publicID": "PABowToSternCov",
+                          "description": "Bow To Stern",
+                          "coverageCategoryCode": "PAAddPhysDamVehicleGrp",
+                          "coverageCategoryDisplayName": "Additional Physical Damage - Vehicle",
+                          "priority": 9573
+                        },
+                        {
+                          "name": "Chartered Fishing Guide",
+                          "updated": false,
+                          "terms": [],
+                          "selected": false,
+                          "required": false,
+                          "publicID": "PACharteredFishingGuideCov",
+                          "description": "Chartered Fishing Guide",
+                          "coverageCategoryCode": "PAAddLiabVehicleGrp",
+                          "coverageCategoryDisplayName": "Additional Liability - Vehicle",
+                          "priority": 9562
+                        },
+                        {
+                          "name": "Named Driver",
+                          "updated": false,
+                          "terms": [],
+                          "selected": false,
+                          "required": false,
+                          "publicID": "PANamedDriverCov",
+                          "description": "Named Driver",
+                          "coverageCategoryCode": "PAAddLiabVehicleGrp",
+                          "coverageCategoryDisplayName": "Additional Liability - Vehicle",
+                          "priority": 9555
+                        },
+                        {
+                          "name": "Sailboat Rigging Exclusion",
+                          "updated": false,
+                          "terms": [],
+                          "selected": false,
+                          "required": false,
+                          "publicID": "PASailboatRiggingExclusion",
+                          "description": "Sailboat Rigging Exclusion",
+                          "coverageCategoryCode": "PAExclVehicleGrp",
+                          "coverageCategoryDisplayName": "Exclusions - Vehicle",
+                          "priority": 9594
+                        },
+                        {
+                          "name": "Named Storm Exclusion",
+                          "updated": false,
+                          "terms": [],
+                          "selected": false,
+                          "required": false,
+                          "publicID": "PANamedStormExclusion",
+                          "description": "Named Storm Exclusion",
+                          "coverageCategoryCode": "PAExclVehicleGrp",
+                          "coverageCategoryDisplayName": "Exclusions - Vehicle",
+                          "priority": 9591
+                        },
+                        {
+                          "name": "Watersports Liability Exclusion",
+                          "updated": false,
+                          "terms": [],
+                          "selected": false,
+                          "required": false,
+                          "publicID": "PAWatersportsLiabilityExclusion",
+                          "description": "Watersports Liability Exclusion",
+                          "coverageCategoryCode": "PAExclVehicleGrp",
+                          "coverageCategoryDisplayName": "Exclusions - Vehicle",
+                          "priority": 9592
+                        }
+                      ],
+                      "$$hashKey": "object:11119"
+                    },
+                    {
+                      "publicID": "pc:13288905",
+                      "fixedId": 13288905,
+                      "vehicleName": "2013 ALL OTHER All Other Trailer ",
+                      "coverages": [
+                        {
+                          "name": "Trailer Physical Damage",
+                          "updated": false,
+                          "terms": [
+                            {
+                              "name": "Limit",
+                              "patternCode": "PATrailerPhysicalDamageLimit",
+                              "options": [],
+                              "chosenTerm": "40500.0000",
+                              "chosenTermValue": "40,500",
+                              "directValue": 40500,
+                              "isAscendingBetter": true,
+                              "updated": false,
+                              "valueType": "Money",
+                              "required": true,
+                              "isEditable": true
+                            },
+                            {
+                              "name": "Deductible",
+                              "patternCode": "PATrailerPhysicalDamageDeductible",
+                              "options": [
+                                {
+                                  "name": "250",
+                                  "code": "zpnjms9hdnc914r4ue2241i0s18",
+                                  "optionValue": 5,
+                                  "maxValue": 5
+                                }
+                              ],
+                              "chosenTerm": "zpnjms9hdnc914r4ue2241i0s18",
+                              "chosenTermValue": "250",
+                              "isAscendingBetter": true,
+                              "updated": false,
+                              "required": true,
+                              "isEditable": false
+                            },
+                            {
+                              "name": "Settlement Option",
+                              "patternCode": "PATrailerPhysicalDamageSettlementOpt",
+                              "options": [
+                                {
+                                  "name": "Actual Cash Value",
+                                  "code": "zbih4g64bmjvp8bted8k5tlhetb",
+                                  "optionValue": 3,
+                                  "maxValue": 5
+                                },
+                                {
+                                  "name": "Agreed Value",
+                                  "code": "znti8jckc4t87fk9n3dn0j3je6b",
+                                  "optionValue": 5,
+                                  "maxValue": 5
+                                }
+                              ],
+                              "chosenTerm": "znti8jckc4t87fk9n3dn0j3je6b",
+                              "chosenTermValue": "Agreed Value",
+                              "isAscendingBetter": true,
+                              "updated": false,
+                              "required": true,
+                              "isEditable": true
+                            }
+                          ],
+                          "selected": true,
+                          "required": true,
+                          "publicID": "PATrailerPhysicalDamageCov",
+                          "description": "Trailer Physical Damage",
+                          "coverageCategoryCode": "PAPhysDamVehicleGrp",
+                          "coverageCategoryDisplayName": "Physical Damage - Vehicle",
+                          "priority": 9584
+                        }
+                      ],
+                      "$$hashKey": "object:11120"
+                    }
+                  ],
+                  "lineCoverages": [
+                    {
+                      "name": "Liability - Bodily Injury and Property Damage",
+                      "updated": false,
+                      "terms": [
+                        {
+                          "name": "Limit",
+                          "patternCode": "PALiability",
+                          "options": [
+                            {
+                              "name": "15,000 CSL",
+                              "code": "z0lg2pl6at08cdsgpve2i9gkmca",
+                              "optionValue": 1,
+                              "maxValue": 5
+                            },
+                            {
+                              "name": "25,000 CSL",
+                              "code": "z00hgjsm9qtoae4pc5sevaonlm9",
+                              "optionValue": 1,
+                              "maxValue": 5
+                            },
+                            {
+                              "name": "50,000 CSL",
+                              "code": "pack_187",
+                              "optionValue": 2,
+                              "maxValue": 5
+                            },
+                            {
+                              "name": "100,000 CSL",
+                              "code": "pack_188",
+                              "optionValue": 3,
+                              "maxValue": 5
+                            },
+                            {
+                              "name": "300,000 CSL",
+                              "code": "zsvg8nddff1ncati0qt4d08jq7a",
+                              "optionValue": 4,
+                              "maxValue": 5
+                            },
+                            {
+                              "name": "500,000 CSL",
+                              "code": "pack_190",
+                              "optionValue": 4,
+                              "maxValue": 5
+                            },
+                            {
+                              "name": "1,000,000 CSL",
+                              "code": "pack_191",
+                              "optionValue": 5,
+                              "maxValue": 5
+                            }
+                          ],
+                          "chosenTerm": "zsvg8nddff1ncati0qt4d08jq7a",
+                          "chosenTermValue": "300,000 CSL",
+                          "isAscendingBetter": true,
+                          "updated": false,
+                          "required": true,
+                          "isEditable": true
+                        }
+                      ],
+                      "selected": true,
+                      "required": true,
+                      "publicID": "PALiabilityCov",
+                      "description": "Liability - Bodily Injury and Property Damage",
+                      "coverageCategoryCode": "PALiabPolicyGrp",
+                      "coverageCategoryDisplayName": "Liability - Policy",
+                      "priority": -201
+                    },
+                    {
+                      "name": "Uninsured Boaters/Underinsured Boaters",
+                      "updated": false,
+                      "terms": [
+                        {
+                          "name": "Limit",
+                          "patternCode": "PAUBUIBBI",
+                          "options": [
+                            {
+                              "name": "300,000 CSL",
+                              "code": "z38hamftvdhcrbtbnbkkqergo19",
+                              "optionValue": 5,
+                              "maxValue": 5
+                            }
+                          ],
+                          "chosenTerm": "z38hamftvdhcrbtbnbkkqergo19",
+                          "chosenTermValue": "300,000 CSL",
+                          "isAscendingBetter": true,
+                          "updated": false,
+                          "required": true,
+                          "isEditable": false
+                        }
+                      ],
+                      "selected": true,
+                      "required": true,
+                      "publicID": "PAUBUIBoatersCov",
+                      "description": "Uninsured Boaters/Underinsured Boaters",
+                      "coverageCategoryCode": "PALiabPolicyGrp",
+                      "coverageCategoryDisplayName": "Liability - Policy",
+                      "priority": 9336
+                    },
+                    {
+                      "name": "Accidental Spill Pollution",
+                      "updated": false,
+                      "terms": [
+                        {
+                          "name": "Option",
+                          "patternCode": "PAAccSpillPollutionLimitOpt",
+                          "options": [
+                            {
+                              "name": "See Form",
+                              "code": "z2sj4pjl0qdde7s33feaqdvnmp8",
+                              "optionValue": 5,
+                              "maxValue": 5
+                            }
+                          ],
+                          "chosenTerm": "z2sj4pjl0qdde7s33feaqdvnmp8",
+                          "chosenTermValue": "See Form",
+                          "isAscendingBetter": true,
+                          "updated": false,
+                          "required": true,
+                          "isEditable": false
+                        }
+                      ],
+                      "selected": true,
+                      "required": true,
+                      "publicID": "PAAccSpillPollutionCov",
+                      "description": "Accidental Spill Pollution",
+                      "coverageCategoryCode": "PALiabPolicyGrp",
+                      "coverageCategoryDisplayName": "Liability - Policy",
+                      "priority": -95
+                    },
+                    {
+                      "name": "Medical Payments",
+                      "updated": false,
+                      "terms": [
+                        {
+                          "name": "Limit",
+                          "patternCode": "PAMedLimitPackage",
+                          "options": [
+                            {
+                              "name": "1,000",
+                              "code": "zjmie9e3cpgifdgeto7s7rdpfn8",
+                              "optionValue": 1,
+                              "maxValue": 5
+                            },
+                            {
+                              "name": "2,500",
+                              "code": "z92hgkbhbu66lcfmhvutmcgosob",
+                              "optionValue": 1,
+                              "maxValue": 5
+                            },
+                            {
+                              "name": "5,000",
+                              "code": "zgqjoiji8a63414t2be8e4l6ai9",
+                              "optionValue": 2,
+                              "maxValue": 5
+                            },
+                            {
+                              "name": "10,000",
+                              "code": "zrggcjt8pqhrqffqu17th0149l9",
+                              "optionValue": 3,
+                              "maxValue": 5
+                            },
+                            {
+                              "name": "15,000",
+                              "code": "zneh4rihcpqfh9u3eekh697toqb",
+                              "optionValue": 4,
+                              "maxValue": 5
+                            },
+                            {
+                              "name": "20,000",
+                              "code": "znsgahmghopbf9m6dp88rto4gfa",
+                              "optionValue": 4,
+                              "maxValue": 5
+                            },
+                            {
+                              "name": "25,000",
+                              "code": "zr3hm52tegu9g8ou12mij3onqoa",
+                              "optionValue": 5,
+                              "maxValue": 5
+                            }
+                          ],
+                          "chosenTerm": "zjmie9e3cpgifdgeto7s7rdpfn8",
+                          "chosenTermValue": "1,000",
+                          "isAscendingBetter": true,
+                          "updated": false,
+                          "required": true,
+                          "isEditable": true
+                        }
+                      ],
+                      "selected": true,
+                      "required": true,
+                      "publicID": "PAMedPayCov",
+                      "description": "Medical Payments",
+                      "coverageCategoryCode": "PALiabPolicyGrp",
+                      "coverageCategoryDisplayName": "Liability - Policy",
+                      "priority": 9330
+                    },
+                    {
+                      "name": "Pet Protection",
+                      "updated": false,
+                      "terms": [
+                        {
+                          "name": "Limit",
+                          "patternCode": "PAPetProtectionLimit",
+                          "options": [
+                            {
+                              "name": "750",
+                              "code": "zjvg60u9pm1nmbfkj0brh90bc2a",
+                              "optionValue": 5,
+                              "maxValue": 5
+                            }
+                          ],
+                          "chosenTerm": "zjvg60u9pm1nmbfkj0brh90bc2a",
+                          "chosenTermValue": "750",
+                          "isAscendingBetter": true,
+                          "updated": false,
+                          "required": true,
+                          "isEditable": false
+                        }
+                      ],
+                      "selected": true,
+                      "required": true,
+                      "publicID": "PAPetProtectionCov",
+                      "description": "Pet Protection",
+                      "coverageCategoryCode": "PAAddPhysDamPolicyGrp",
+                      "coverageCategoryDisplayName": "Additional Physical Damage - Policy",
+                      "priority": 9536
+                    },
+                    {
+                      "name": "Nautical Collectibles",
+                      "updated": false,
+                      "terms": [],
+                      "selected": false,
+                      "required": false,
+                      "publicID": "PANauticalCollectiblesCov",
+                      "description": "Nautical Collectibles",
+                      "coverageCategoryCode": "PAAddPhysDamPolicyGrp",
+                      "coverageCategoryDisplayName": "Additional Physical Damage - Policy",
+                      "priority": 9597
+                    }
+                  ]
+                }
+              }
+            ],
+            "coverables": {
+              "drivers": [
+                {
+                  "publicID": "pc:127635329",
+                  "person": {
+                    "publicID": "pc:33937889",
+                    "displayName": "Xiomara Burckhardt",
+                    "firstName": "Xiomara",
+                    "lastName": "Burckhardt",
+                    "primaryPhoneType": "mobile",
+                    "cellNumber": "3525476529",
+                    "maritalStatus": "M",
+                    "dateOfBirth": {
+                      "year": 1981,
+                      "month": 0,
+                      "day": 0,
+                      "isMasked": true
+                    },
+                    "primaryAddress": {
+                      "publicID": "pc:84128813",
+                      "displayName": "2576 SE 31st Pl, Ocala, FL 34471",
+                      "addressLine1": "2576 SE 31st Pl",
+                      "city": "Ocala",
+                      "state": "FL",
+                      "postalCode": "34471",
+                      "country": "US",
+                      "addressType": "other",
+                      "standardizeStatus": "standardized",
+                      "standardizeDate_Ext": "2026-02-17T11:03:48Z"
+                    },
+                    "tempId": 50
+                  },
+                  "licenseState": "FL",
+                  "licenseNumber": "*********8000",
+                  "licensed": true,
+                  "dateOfBirth": {
+                    "year": 1981,
+                    "month": 0,
+                    "day": 0,
+                    "isMasked": true
+                  },
+                  "isPolicyHolder": false,
+                  "driverQuestionSets": [
+                    {
+                      "code": "PA_DriverRoles_1",
+                      "answers": {
+                        "PA_QSDateCompletedSafetyCourse_1": null,
+                        "PA_QSYearsBoatingExperience_1": "20",
+                        "PA_QSIneligibleDriver_1": "false"
+                      }
+                    }
+                  ],
+                  "relationship": "SP",
+                  "priorOwnerExp": []
+                },
+                {
+                  "publicID": "pc:127635327",
+                  "person": {
+                    "emailAddress1": "x.e.velez@gmail.com",
+                    "publicID": "pc:33904322",
+                    "displayName": "Luis Burckhardt",
+                    "primaryPhoneType": "mobile",
+                    "contactName": "Luis Burckhardt",
+                    "subtype": "Person",
+                    "primaryAddress": {
+                      "publicID": "pc:84128813",
+                      "displayName": "2576 SE 31st Pl, Ocala, FL 34471",
+                      "addressLine1": "2576 SE 31st Pl",
+                      "city": "Ocala",
+                      "state": "FL",
+                      "postalCode": "34471",
+                      "country": "US",
+                      "addressType": "other",
+                      "standardizeStatus": "standardized",
+                      "standardizeDate_Ext": "2026-02-17T11:03:48Z"
+                    },
+                    "accountHolder": true,
+                    "cellNumber": "3525476529",
+                    "dateOfBirth": {
+                      "year": 1979,
+                      "month": 0,
+                      "day": 0,
+                      "isMasked": true
+                    },
+                    "firstName": "Luis",
+                    "lastName": "Burckhardt",
+                    "maritalStatus": "M",
+                    "additionalInsuredType": "person",
+                    "customerCallOptInIndicator": false,
+                    "tempId": 49
+                  },
+                  "licenseState": "FL",
+                  "licenseNumber": "*********3780",
+                  "licensed": true,
+                  "dateOfBirth": {
+                    "year": 1979,
+                    "month": 0,
+                    "day": 0,
+                    "isMasked": true
+                  },
+                  "isPolicyHolder": true,
+                  "driverQuestionSets": [
+                    {
+                      "code": "PA_DriverRoles_1",
+                      "answers": {
+                        "PA_QSDateCompletedSafetyCourse_1": null,
+                        "PA_QSYearsBoatingExperience_1": "20",
+                        "PA_QSIneligibleDriver_1": "false"
+                      }
+                    }
+                  ],
+                  "relationship": "pni_ext",
+                  "priorOwnerExp": []
+                }
+              ],
+              "vehicles": [
+                {
+                  "fixedId": 13288903,
+                  "publicID": "pc:13288903",
+                  "vehicleNumber": 1,
+                  "year": 2014,
+                  "make": "SEA FOX",
+                  "model": "246 COMMANDER",
+                  "primaryUse": "commuting",
+                  "licenseState": "FL",
+                  "displayName": "SEA FOX 246 COMMANDER 2014",
+                  "vehicleType": "boat",
+                  "length": "24",
+                  "purchaseDate": {
+                    "year": 2026,
+                    "month": 0,
+                    "day": 27
+                  },
+                  "vehicleValue": 40500,
+                  "streetUse": false,
+                  "vehicleAge": 12,
+                  "vehicleAdditionalUsage": false,
+                  "storageAddress": {
+                    "publicID": "pc:84128814",
+                    "displayName": "2576 SE 31st Pl, Ocala, FL 34471",
+                    "addressLine1": "2576 SE 31st Pl",
+                    "city": "Ocala",
+                    "state": "FL",
+                    "postalCode": "34471",
+                    "country": "US",
+                    "countyName": "MARION"
+                  },
+                  "registrationAddress": {
+                    "publicID": "pc:84128814",
+                    "displayName": "2576 SE 31st Pl, Ocala, FL 34471",
+                    "addressLine1": "2576 SE 31st Pl",
+                    "city": "Ocala",
+                    "state": "FL",
+                    "postalCode": "34471",
+                    "country": "US",
+                    "countyName": "MARION"
+                  },
+                  "storageType": "Other",
+                  "vehicleQuestionSets": [
+                    {
+                      "code": "PA_VehicleDetails_1",
+                      "answers": {
+                        "PA_QSAntiTheftVehicleRecoveryTrackingSystem_1": "false"
+                      }
+                    },
+                    {
+                      "code": "PA_VehicleDetails_3",
+                      "answers": {}
+                    },
+                    {
+                      "code": "PA_VehicleDetails_5",
+                      "answers": {}
+                    }
+                  ],
+                  "symbol": "B03",
+                  "vMMRuleKey_Ext": "WC_340",
+                  "version": "127",
+                  "eligibleInd": "Y",
+                  "vmmGroup": "WC_C",
+                  "weight": "4200",
+                  "totalHorsepower": "250",
+                  "hullConstruction": "F",
+                  "engineSize": "0",
+                  "engineType": "Outboard",
+                  "fuelType": "Gasoline",
+                  "numberOfEngines": "1",
+                  "numberOfEnginesChanged_Ext": true,
+                  "purchasePrice": "43500.00",
+                  "engineDetails": [
+                    {
+                      "publicID": "pc:1464800",
+                      "year": "2017",
+                      "make": "YAMAHA",
+                      "model": "F250XCA 4-STROKE",
+                      "horsePower": "250"
+                    }
+                  ],
+                  "primaryOperator": {
+                    "publicID": "pc:127635327",
+                    "person": {
+                      "publicID": "pc:33904322",
+                      "displayName": "Luis Burckhardt",
+                      "firstName": "Luis",
+                      "lastName": "Burckhardt",
+                      "primaryPhoneType": "mobile",
+                      "cellNumber": "3525476529",
+                      "maritalStatus": "M",
+                      "dateOfBirth": {
+                        "year": 1979,
+                        "month": 0,
+                        "day": 0,
+                        "isMasked": true
+                      },
+                      "primaryAddress": {
+                        "publicID": "pc:84128813",
+                        "displayName": "2576 SE 31st Pl, Ocala, FL 34471",
+                        "addressLine1": "2576 SE 31st Pl",
+                        "city": "Ocala",
+                        "state": "FL",
+                        "postalCode": "34471",
+                        "country": "US",
+                        "addressType": "other",
+                        "standardizeStatus": "standardized",
+                        "standardizeDate_Ext": "2026-02-17T11:03:48Z"
+                      }
+                    },
+                    "licenseState": "FL",
+                    "licenseNumber": "*********3780",
+                    "licensed": true,
+                    "dateOfBirth": {
+                      "year": 1979,
+                      "month": 0,
+                      "day": 0,
+                      "isMasked": true
+                    },
+                    "isPolicyHolder": true,
+                    "driverQuestionSets": [
+                      {
+                        "code": "PA_DriverRoles_1",
+                        "answers": {
+                          "PA_QSDateCompletedSafetyCourse_1": null,
+                          "PA_QSYearsBoatingExperience_1": "20",
+                          "PA_QSIneligibleDriver_1": "false"
+                        }
+                      }
+                    ],
+                    "relationship": "pni_ext"
+                  },
+                  "hullId": "LYGNB102E314",
+                  "stateAssignedVin": false,
+                  "factoryHorsePower": "300",
+                  "availableInd": "Y",
+                  "vMMGroup": "WC_C",
+                  "amodHorsePower": 300,
+                  "cC": "0",
+                  "boatType": "CC",
+                  "fob": "38462",
+                  "code": "21972",
+                  "highPrice": "18237",
+                  "lowPrice": "14282",
+                  "maxSpeed": "79",
+                  "errors": {
+                    "errorsFound": true,
+                    "warningsFound": false,
+                    "previousWarningList": [],
+                    "errors": [
+                      {
+                        "errorMessage": "You indicated there were watercraft losses in the last 5 years.  Please enter details of the Watercraft prior losses in the Losses or Accidents section.  (In AMsuite Core, this is on the Risk Analysis page)."
+                      }
+                    ],
+                    "warnings": []
+                  },
+                  "vinNumberChanged_Ext": false,
+                  "fuelTypeChanged_Ext": false,
+                  "engineTypeChanged_Ext": false,
+                  "hullConstructionChanged_Ext": false,
+                  "engineSizeChanged_Ext": false,
+                  "horsePowerChanged_Ext": true,
+                  "costNew": {}
+                },
+                {
+                  "fixedId": 13288905,
+                  "publicID": "pc:13288905",
+                  "vehicleNumber": 2,
+                  "year": 2013,
+                  "make": "ALL OTHER",
+                  "model": "All Other Trailer",
+                  "vin": "LYGNB102E314",
+                  "primaryUse": "commuting",
+                  "displayName": "ALL OTHER All Other Trailer 2013",
+                  "vehicleType": "trailer",
+                  "makeDescription": "Magic Trail Trailers",
+                  "length": "24",
+                  "modelDescription": "2 axile",
+                  "vehicleValue": 40500,
+                  "streetUse": false,
+                  "vehicleAge": 13,
+                  "storageAddress": {
+                    "publicID": "pc:84128814",
+                    "displayName": "2576 SE 31st Pl, Ocala, FL 34471",
+                    "addressLine1": "2576 SE 31st Pl",
+                    "city": "Ocala",
+                    "state": "FL",
+                    "postalCode": "34471",
+                    "country": "US",
+                    "countyName": "MARION"
+                  },
+                  "vehicleQuestionSets": [
+                    {
+                      "code": "PA_VehicleDetails_1",
+                      "answers": {}
+                    },
+                    {
+                      "code": "PA_VehicleDetails_3",
+                      "answers": {}
+                    },
+                    {
+                      "code": "PA_VehicleDetails_5",
+                      "answers": {}
+                    }
+                  ],
+                  "version": "1",
+                  "eligibleInd": "Y",
+                  "totalHorsepower": "0",
+                  "engineSize": "0",
+                  "fuelType": "Gasoline",
+                  "numberOfEnginesChanged_Ext": false,
+                  "purchasePrice": "0.00",
+                  "engineDetails": [],
+                  "availableInd": "Y",
+                  "cC": "0",
+                  "errors": {
+                    "errorsFound": true,
+                    "warningsFound": false,
+                    "previousWarningList": [],
+                    "errors": [
+                      {
+                        "errorMessage": "You indicated there were watercraft losses in the last 5 years.  Please enter details of the Watercraft prior losses in the Losses or Accidents section.  (In AMsuite Core, this is on the Risk Analysis page)."
+                      }
+                    ],
+                    "warnings": []
+                  },
+                  "vinNumberChanged_Ext": true,
+                  "fuelTypeChanged_Ext": false,
+                  "engineTypeChanged_Ext": false,
+                  "hullConstructionChanged_Ext": false,
+                  "engineSizeChanged_Ext": false,
+                  "horsePowerChanged_Ext": false,
+                  "costNew": {}
+                }
+              ],
+              "prefillReportOrdered_Ext": false
+            },
+            "periodLosses": [
+              {
+                "publicID": "pc:19445257",
+                "source": "manual",
+                "vehicleClass": "WATERCRAFT",
+                "driver": "Luis Burckhardt",
+                "occurDate": {
+                  "year": 2014,
+                  "month": 2,
+                  "day": 10
+                },
+                "description": "Other",
+                "amountPaid": {
+                  "amount": 200,
+                  "currency": "usd"
+                },
+                "atFault": "yes"
+              }
+            ]
+          }
+        },
+        "quoteData": {
+          "offeredQuotes": [
+            {
+              "publicID": "pc:47635190",
+              "branchName": "CUSTOM",
+              "branchCode": "CUSTOM",
+              "isCustom": true,
+              "hasUWIssuesBlockingQuote": false,
+              "hasUWIssuesBlockingIssuance": true,
+              "premium": {
+                "termMonths": 12
+              },
+              "blockLevel": "ISSUE",
+              "lobs": {
+                "personalAuto": {
+                  "vehicleCoverages": [
+                    {
+                      "publicID": "pc:13288903",
+                      "fixedId": 13288903,
+                      "vehicleName": "2014 SEA FOX 246 COMMANDER ",
+                      "coverages": [
+                        {
+                          "name": "Hull",
+                          "updated": false,
+                          "terms": [
+                            {
+                              "name": "Deductible",
+                              "patternCode": "PAHullDeductibleMoney",
+                              "options": [
+                                {
+                                  "name": "100",
+                                  "code": "ze4hcaglkh7r98agqrb73d8rb9b",
+                                  "optionValue": 1,
+                                  "maxValue": 5
+                                },
+                                {
+                                  "name": "250",
+                                  "code": "zesi8gfpt636cbkqo3ubr5b23va",
+                                  "optionValue": 2,
+                                  "maxValue": 5
+                                },
+                                {
+                                  "name": "500",
+                                  "code": "z0ahmu0aql4bm152q47sg2e9mta",
+                                  "optionValue": 3,
+                                  "maxValue": 5
+                                },
+                                {
+                                  "name": "1,000",
+                                  "code": "z3gjqf6952n0c9r5p9r536oi5m8",
+                                  "optionValue": 3,
+                                  "maxValue": 5
+                                },
+                                {
+                                  "name": "2,500",
+                                  "code": "z82hs5c7kquafci7cioe5j2u4pb",
+                                  "optionValue": 4,
+                                  "maxValue": 5
+                                },
+                                {
+                                  "name": "5,000",
+                                  "code": "zmchqa89v4thparv7ltre3t6dvb",
+                                  "optionValue": 5,
+                                  "maxValue": 5
+                                }
+                              ],
+                              "chosenTerm": "zesi8gfpt636cbkqo3ubr5b23va",
+                              "chosenTermValue": "250",
+                              "isAscendingBetter": true,
+                              "updated": false,
+                              "required": true,
+                              "isEditable": true
+                            },
+                            {
+                              "name": "Diminishing Deductible",
+                              "patternCode": "PAHullDiminishingDeductible",
+                              "options": [
+                                {
+                                  "name": "Yes",
+                                  "code": "true",
+                                  "optionValue": 1,
+                                  "maxValue": 1
+                                },
+                                {
+                                  "name": "No",
+                                  "code": "false",
+                                  "optionValue": 0,
+                                  "maxValue": 1
+                                }
+                              ],
+                              "chosenTerm": "false",
+                              "chosenTermValue": "No",
+                              "directBooleanValue": false,
+                              "isAscendingBetter": true,
+                              "updated": false,
+                              "valueType": "bit",
+                              "required": true,
+                              "isEditable": true
+                            },
+                            {
+                              "name": "Named Storm Deductible",
+                              "patternCode": "PANamedStormDeductiblePercentOpt",
+                              "options": [
+                                {
+                                  "name": "1%",
+                                  "code": "z2sjganoskumc2nlmimorug2r99",
+                                  "optionValue": 1,
+                                  "maxValue": 5
+                                },
+                                {
+                                  "name": "2%",
+                                  "code": "zrlgansj3foha48rklv465t98l8",
+                                  "optionValue": 1,
+                                  "maxValue": 5
+                                },
+                                {
+                                  "name": "3%",
+                                  "code": "zkvgodt4as6lpb6jshjcmaj7399",
+                                  "optionValue": 2,
+                                  "maxValue": 5
+                                },
+                                {
+                                  "name": "4%",
+                                  "code": "ztgi61e53toofae2ii1koskd9b9",
+                                  "optionValue": 3,
+                                  "maxValue": 5
+                                },
+                                {
+                                  "name": "5%",
+                                  "code": "znnggv83lft348fh5qqs3l25sr8",
+                                  "optionValue": 3,
+                                  "maxValue": 5
+                                },
+                                {
+                                  "name": "10%",
+                                  "code": "z8ahuemqn9kl30et6gove63bcl8",
+                                  "optionValue": 4,
+                                  "maxValue": 5
+                                },
+                                {
+                                  "name": "15%",
+                                  "code": "zgejo4ee20biiaje0lo4djtbdr8",
+                                  "optionValue": 4,
+                                  "maxValue": 5
+                                },
+                                {
+                                  "name": "20%",
+                                  "code": "z5kg0g22kkn8gdsn67pdshdba49",
+                                  "optionValue": 5,
+                                  "maxValue": 5
+                                }
+                              ],
+                              "chosenTerm": "znnggv83lft348fh5qqs3l25sr8",
+                              "chosenTermValue": "5%",
+                              "isAscendingBetter": true,
+                              "updated": false,
+                              "required": true,
+                              "isEditable": true
+                            },
+                            {
+                              "name": "Named Storm Deductible",
+                              "patternCode": "PANamedStormDeductibleDirect",
+                              "options": [],
+                              "chosenTerm": "2025.0000",
+                              "chosenTermValue": "2,025",
+                              "directValue": 2025,
+                              "isAscendingBetter": true,
+                              "updated": false,
+                              "valueType": "Money",
+                              "required": true,
+                              "isEditable": false
+                            },
+                            {
+                              "name": "Settlement Option",
+                              "patternCode": "PAHullSettlementOpt",
+                              "options": [
+                                {
+                                  "name": "Agreed Value",
+                                  "code": "z5pj21s6sphro4rs9s9g4neadga",
+                                  "optionValue": 3,
+                                  "maxValue": 5
+                                },
+                                {
+                                  "name": "Actual Cash Value",
+                                  "code": "zsaieb6c94uc94nj74ph75hk4q9",
+                                  "optionValue": 5,
+                                  "maxValue": 5
+                                }
+                              ],
+                              "chosenTerm": "z5pj21s6sphro4rs9s9g4neadga",
+                              "chosenTermValue": "Agreed Value",
+                              "isAscendingBetter": true,
+                              "updated": false,
+                              "required": true,
+                              "isEditable": true
+                            }
+                          ],
+                          "selected": true,
+                          "required": false,
+                          "publicID": "PAHullCov",
+                          "description": "Hull",
+                          "coverageCategoryCode": "PAPhysDamVehicleGrp",
+                          "coverageCategoryDisplayName": "Physical Damage - Vehicle",
+                          "priority": 9546
+                        },
+                        {
+                          "name": "Haul Out",
+                          "updated": false,
+                          "terms": [
+                            {
+                              "name": "Limit",
+                              "patternCode": "PAHaulOutLimit",
+                              "options": [
+                                {
+                                  "name": "50% up to $500",
+                                  "code": "zi9hahl2m2svia83a9vpm1pbm48",
+                                  "optionValue": 5,
+                                  "maxValue": 5
+                                }
+                              ],
+                              "chosenTerm": "zi9hahl2m2svia83a9vpm1pbm48",
+                              "chosenTermValue": "50% up to $500",
+                              "isAscendingBetter": true,
+                              "updated": false,
+                              "required": true,
+                              "isEditable": false
+                            }
+                          ],
+                          "selected": true,
+                          "required": true,
+                          "publicID": "PAHaulOutCov",
+                          "description": "Haul Out",
+                          "coverageCategoryCode": "PAPhysDamVehicleGrp",
+                          "coverageCategoryDisplayName": "Physical Damage - Vehicle",
+                          "priority": 9547
+                        },
+                        {
+                          "name": "Port Risk",
+                          "updated": false,
+                          "terms": [],
+                          "selected": false,
+                          "required": false,
+                          "publicID": "PAPortRiskCov",
+                          "description": "Port Risk",
+                          "coverageCategoryCode": "PAAddPhysDamVehicleGrp",
+                          "coverageCategoryDisplayName": "Additional Physical Damage - Vehicle",
+                          "priority": 9574
+                        },
+                        {
+                          "name": "Personal Effects",
+                          "updated": false,
+                          "terms": [
+                            {
+                              "name": "Limit",
+                              "patternCode": "PAPersonalEffectsLimit",
+                              "options": [
+                                {
+                                  "name": "2,500",
+                                  "code": "zobj44dq3gp1vfvtc3oj1tgrnfb",
+                                  "optionValue": 1,
+                                  "maxValue": 5
+                                },
+                                {
+                                  "name": "5,000",
+                                  "code": "z15jqjoi7c4rqbd1mr98ntprsm8",
+                                  "optionValue": 1,
+                                  "maxValue": 5
+                                },
+                                {
+                                  "name": "7,500",
+                                  "code": "z09i8ue68nr658od817c7sr1epb",
+                                  "optionValue": 2,
+                                  "maxValue": 5
+                                },
+                                {
+                                  "name": "10,000",
+                                  "code": "zkmi252qt6npb37bshdf07nd8oa",
+                                  "optionValue": 3,
+                                  "maxValue": 5
+                                },
+                                {
+                                  "name": "12,500",
+                                  "code": "zt5jqfkaip9csafnasl9bevj4s9",
+                                  "optionValue": 4,
+                                  "maxValue": 5
+                                },
+                                {
+                                  "name": "15,000",
+                                  "code": "z2phqiadhr6l5acc7gpgo2h0a1a",
+                                  "optionValue": 4,
+                                  "maxValue": 5
+                                },
+                                {
+                                  "name": "20,000",
+                                  "code": "zt7isr36tr6eo6jv2eihvb6ivkb",
+                                  "optionValue": 5,
+                                  "maxValue": 5
+                                }
+                              ],
+                              "chosenTerm": "zobj44dq3gp1vfvtc3oj1tgrnfb",
+                              "chosenTermValue": "2,500",
+                              "isAscendingBetter": true,
+                              "updated": false,
+                              "required": true,
+                              "isEditable": true
+                            },
+                            {
+                              "name": "Deductible",
+                              "patternCode": "PAPersonalEffectsDeductible",
+                              "options": [
+                                {
+                                  "name": "200",
+                                  "code": "ztohmqcoqpoef1sao87qivq6jfa",
+                                  "optionValue": 5,
+                                  "maxValue": 5
+                                }
+                              ],
+                              "chosenTerm": "ztohmqcoqpoef1sao87qivq6jfa",
+                              "chosenTermValue": "200",
+                              "isAscendingBetter": true,
+                              "updated": false,
+                              "required": true,
+                              "isEditable": false
+                            },
+                            {
+                              "name": "Settlement Option",
+                              "patternCode": "PAPersonalEffectsSettlementOpt",
+                              "options": [
+                                {
+                                  "name": "Replacement Cost",
+                                  "code": "z4ohok7k00nb449a52vi4u5rfpb",
+                                  "optionValue": 5,
+                                  "maxValue": 5
+                                }
+                              ],
+                              "chosenTerm": "z4ohok7k00nb449a52vi4u5rfpb",
+                              "chosenTermValue": "Replacement Cost",
+                              "isAscendingBetter": true,
+                              "updated": false,
+                              "required": true,
+                              "isEditable": false
+                            }
+                          ],
+                          "selected": true,
+                          "required": true,
+                          "publicID": "PAPersonalEffectsCov",
+                          "description": "Personal Effects",
+                          "coverageCategoryCode": "PAAddPhysDamVehicleGrp",
+                          "coverageCategoryDisplayName": "Additional Physical Damage - Vehicle",
+                          "priority": 9549
+                        },
+                        {
+                          "name": "Extended Parts Replacement",
+                          "updated": false,
+                          "terms": [],
+                          "selected": false,
+                          "required": false,
+                          "publicID": "PAExtendedPartsReplacementCov",
+                          "description": "Extended Parts Replacement",
+                          "coverageCategoryCode": "PAAddPhysDamVehicleGrp",
+                          "coverageCategoryDisplayName": "Additional Physical Damage - Vehicle",
+                          "priority": 9564
+                        },
+                        {
+                          "name": "Professional Angler",
+                          "updated": false,
+                          "terms": [],
+                          "selected": false,
+                          "required": false,
+                          "publicID": "PAProfessionalAnglerCov",
+                          "description": "Professional Angler",
+                          "coverageCategoryCode": "PAAddPhysDamVehicleGrp",
+                          "coverageCategoryDisplayName": "Additional Physical Damage - Vehicle",
+                          "priority": 9556
+                        },
+                        {
+                          "name": "Towing and Emergency Expense",
+                          "updated": false,
+                          "terms": [
+                            {
+                              "name": "Limit",
+                              "patternCode": "PATowingEmergencyExpenseLimit",
+                              "options": [
+                                {
+                                  "name": "250",
+                                  "code": "zngh2jap35kcjalflk1aqv500q9",
+                                  "optionValue": 1,
+                                  "maxValue": 5
+                                },
+                                {
+                                  "name": "500",
+                                  "code": "zeohiai1it2t33p4v54047fu4b9",
+                                  "optionValue": 2,
+                                  "maxValue": 5
+                                },
+                                {
+                                  "name": "1,000",
+                                  "code": "zi3hechlc4jft2d9dksn90pt0r8",
+                                  "optionValue": 3,
+                                  "maxValue": 5
+                                },
+                                {
+                                  "name": "3,000",
+                                  "code": "zjgiao5khj7i0b692vu6d2v82i8",
+                                  "optionValue": 4,
+                                  "maxValue": 5
+                                },
+                                {
+                                  "name": "5,000",
+                                  "code": "zu2iap9r50inu33sksiuvuam2k8",
+                                  "optionValue": 5,
+                                  "maxValue": 5
+                                }
+                              ],
+                              "chosenTerm": "zi3hechlc4jft2d9dksn90pt0r8",
+                              "chosenTermValue": "1,000",
+                              "isAscendingBetter": true,
+                              "updated": false,
+                              "required": true,
+                              "isEditable": true
+                            }
+                          ],
+                          "selected": true,
+                          "required": true,
+                          "publicID": "PATowingEmergencyExpenseCov",
+                          "description": "Towing and Emergency Expense",
+                          "coverageCategoryCode": "PAAddPhysDamVehicleGrp",
+                          "coverageCategoryDisplayName": "Additional Physical Damage - Vehicle",
+                          "priority": 9550
+                        },
+                        {
+                          "name": "Boat Lift",
+                          "updated": false,
+                          "terms": [],
+                          "selected": false,
+                          "required": false,
+                          "publicID": "PABoatLiftCov",
+                          "description": "Boat Lift",
+                          "coverageCategoryCode": "PAAddPhysDamVehicleGrp",
+                          "coverageCategoryDisplayName": "Additional Physical Damage - Vehicle",
+                          "priority": 9563
+                        },
+                        {
+                          "name": "Bow To Stern",
+                          "updated": false,
+                          "terms": [],
+                          "selected": false,
+                          "required": false,
+                          "publicID": "PABowToSternCov",
+                          "description": "Bow To Stern",
+                          "coverageCategoryCode": "PAAddPhysDamVehicleGrp",
+                          "coverageCategoryDisplayName": "Additional Physical Damage - Vehicle",
+                          "priority": 9573
+                        },
+                        {
+                          "name": "Chartered Fishing Guide",
+                          "updated": false,
+                          "terms": [],
+                          "selected": false,
+                          "required": false,
+                          "publicID": "PACharteredFishingGuideCov",
+                          "description": "Chartered Fishing Guide",
+                          "coverageCategoryCode": "PAAddLiabVehicleGrp",
+                          "coverageCategoryDisplayName": "Additional Liability - Vehicle",
+                          "priority": 9562
+                        },
+                        {
+                          "name": "Named Driver",
+                          "updated": false,
+                          "terms": [],
+                          "selected": false,
+                          "required": false,
+                          "publicID": "PANamedDriverCov",
+                          "description": "Named Driver",
+                          "coverageCategoryCode": "PAAddLiabVehicleGrp",
+                          "coverageCategoryDisplayName": "Additional Liability - Vehicle",
+                          "priority": 9555
+                        },
+                        {
+                          "name": "Sailboat Rigging Exclusion",
+                          "updated": false,
+                          "terms": [],
+                          "selected": false,
+                          "required": false,
+                          "publicID": "PASailboatRiggingExclusion",
+                          "description": "Sailboat Rigging Exclusion",
+                          "coverageCategoryCode": "PAExclVehicleGrp",
+                          "coverageCategoryDisplayName": "Exclusions - Vehicle",
+                          "priority": 9594
+                        },
+                        {
+                          "name": "Named Storm Exclusion",
+                          "updated": false,
+                          "terms": [],
+                          "selected": false,
+                          "required": false,
+                          "publicID": "PANamedStormExclusion",
+                          "description": "Named Storm Exclusion",
+                          "coverageCategoryCode": "PAExclVehicleGrp",
+                          "coverageCategoryDisplayName": "Exclusions - Vehicle",
+                          "priority": 9591
+                        },
+                        {
+                          "name": "Watersports Liability Exclusion",
+                          "updated": false,
+                          "terms": [],
+                          "selected": false,
+                          "required": false,
+                          "publicID": "PAWatersportsLiabilityExclusion",
+                          "description": "Watersports Liability Exclusion",
+                          "coverageCategoryCode": "PAExclVehicleGrp",
+                          "coverageCategoryDisplayName": "Exclusions - Vehicle",
+                          "priority": 9592
+                        }
+                      ],
+                      "$$hashKey": "object:19470"
+                    },
+                    {
+                      "publicID": "pc:13288905",
+                      "fixedId": 13288905,
+                      "vehicleName": "2013 ALL OTHER All Other Trailer ",
+                      "coverages": [
+                        {
+                          "name": "Trailer Physical Damage",
+                          "updated": false,
+                          "terms": [
+                            {
+                              "name": "Limit",
+                              "patternCode": "PATrailerPhysicalDamageLimit",
+                              "options": [],
+                              "chosenTerm": "40500.0000",
+                              "chosenTermValue": "40,500",
+                              "directValue": 40500,
+                              "isAscendingBetter": true,
+                              "updated": false,
+                              "valueType": "Money",
+                              "required": true,
+                              "isEditable": true
+                            },
+                            {
+                              "name": "Deductible",
+                              "patternCode": "PATrailerPhysicalDamageDeductible",
+                              "options": [
+                                {
+                                  "name": "250",
+                                  "code": "zpnjms9hdnc914r4ue2241i0s18",
+                                  "optionValue": 5,
+                                  "maxValue": 5
+                                }
+                              ],
+                              "chosenTerm": "zpnjms9hdnc914r4ue2241i0s18",
+                              "chosenTermValue": "250",
+                              "isAscendingBetter": true,
+                              "updated": false,
+                              "required": true,
+                              "isEditable": false
+                            },
+                            {
+                              "name": "Settlement Option",
+                              "patternCode": "PATrailerPhysicalDamageSettlementOpt",
+                              "options": [
+                                {
+                                  "name": "Actual Cash Value",
+                                  "code": "zbih4g64bmjvp8bted8k5tlhetb",
+                                  "optionValue": 3,
+                                  "maxValue": 5
+                                },
+                                {
+                                  "name": "Agreed Value",
+                                  "code": "znti8jckc4t87fk9n3dn0j3je6b",
+                                  "optionValue": 5,
+                                  "maxValue": 5
+                                }
+                              ],
+                              "chosenTerm": "znti8jckc4t87fk9n3dn0j3je6b",
+                              "chosenTermValue": "Agreed Value",
+                              "isAscendingBetter": true,
+                              "updated": false,
+                              "required": true,
+                              "isEditable": true
+                            }
+                          ],
+                          "selected": true,
+                          "required": true,
+                          "publicID": "PATrailerPhysicalDamageCov",
+                          "description": "Trailer Physical Damage",
+                          "coverageCategoryCode": "PAPhysDamVehicleGrp",
+                          "coverageCategoryDisplayName": "Physical Damage - Vehicle",
+                          "priority": 9584
+                        }
+                      ],
+                      "$$hashKey": "object:19471"
+                    }
+                  ],
+                  "lineCoverages": [
+                    {
+                      "name": "Liability - Bodily Injury and Property Damage",
+                      "updated": false,
+                      "terms": [
+                        {
+                          "name": "Limit",
+                          "patternCode": "PALiability",
+                          "options": [
+                            {
+                              "name": "15,000 CSL",
+                              "code": "z0lg2pl6at08cdsgpve2i9gkmca",
+                              "optionValue": 1,
+                              "maxValue": 5
+                            },
+                            {
+                              "name": "25,000 CSL",
+                              "code": "z00hgjsm9qtoae4pc5sevaonlm9",
+                              "optionValue": 1,
+                              "maxValue": 5
+                            },
+                            {
+                              "name": "50,000 CSL",
+                              "code": "pack_187",
+                              "optionValue": 2,
+                              "maxValue": 5
+                            },
+                            {
+                              "name": "100,000 CSL",
+                              "code": "pack_188",
+                              "optionValue": 3,
+                              "maxValue": 5
+                            },
+                            {
+                              "name": "300,000 CSL",
+                              "code": "zsvg8nddff1ncati0qt4d08jq7a",
+                              "optionValue": 4,
+                              "maxValue": 5
+                            },
+                            {
+                              "name": "500,000 CSL",
+                              "code": "pack_190",
+                              "optionValue": 4,
+                              "maxValue": 5
+                            },
+                            {
+                              "name": "1,000,000 CSL",
+                              "code": "pack_191",
+                              "optionValue": 5,
+                              "maxValue": 5
+                            }
+                          ],
+                          "chosenTerm": "zsvg8nddff1ncati0qt4d08jq7a",
+                          "chosenTermValue": "300,000 CSL",
+                          "isAscendingBetter": true,
+                          "updated": false,
+                          "required": true,
+                          "isEditable": true
+                        }
+                      ],
+                      "selected": true,
+                      "required": true,
+                      "publicID": "PALiabilityCov",
+                      "description": "Liability - Bodily Injury and Property Damage",
+                      "coverageCategoryCode": "PALiabPolicyGrp",
+                      "coverageCategoryDisplayName": "Liability - Policy",
+                      "priority": -201
+                    },
+                    {
+                      "name": "Uninsured Boaters/Underinsured Boaters",
+                      "updated": false,
+                      "terms": [
+                        {
+                          "name": "Limit",
+                          "patternCode": "PAUBUIBBI",
+                          "options": [
+                            {
+                              "name": "300,000 CSL",
+                              "code": "z38hamftvdhcrbtbnbkkqergo19",
+                              "optionValue": 5,
+                              "maxValue": 5
+                            }
+                          ],
+                          "chosenTerm": "z38hamftvdhcrbtbnbkkqergo19",
+                          "chosenTermValue": "300,000 CSL",
+                          "isAscendingBetter": true,
+                          "updated": false,
+                          "required": true,
+                          "isEditable": false
+                        }
+                      ],
+                      "selected": true,
+                      "required": true,
+                      "publicID": "PAUBUIBoatersCov",
+                      "description": "Uninsured Boaters/Underinsured Boaters",
+                      "coverageCategoryCode": "PALiabPolicyGrp",
+                      "coverageCategoryDisplayName": "Liability - Policy",
+                      "priority": 9336
+                    },
+                    {
+                      "name": "Accidental Spill Pollution",
+                      "updated": false,
+                      "terms": [
+                        {
+                          "name": "Option",
+                          "patternCode": "PAAccSpillPollutionLimitOpt",
+                          "options": [
+                            {
+                              "name": "See Form",
+                              "code": "z2sj4pjl0qdde7s33feaqdvnmp8",
+                              "optionValue": 5,
+                              "maxValue": 5
+                            }
+                          ],
+                          "chosenTerm": "z2sj4pjl0qdde7s33feaqdvnmp8",
+                          "chosenTermValue": "See Form",
+                          "isAscendingBetter": true,
+                          "updated": false,
+                          "required": true,
+                          "isEditable": false
+                        }
+                      ],
+                      "selected": true,
+                      "required": true,
+                      "publicID": "PAAccSpillPollutionCov",
+                      "description": "Accidental Spill Pollution",
+                      "coverageCategoryCode": "PALiabPolicyGrp",
+                      "coverageCategoryDisplayName": "Liability - Policy",
+                      "priority": -95
+                    },
+                    {
+                      "name": "Medical Payments",
+                      "updated": false,
+                      "terms": [
+                        {
+                          "name": "Limit",
+                          "patternCode": "PAMedLimitPackage",
+                          "options": [
+                            {
+                              "name": "1,000",
+                              "code": "zjmie9e3cpgifdgeto7s7rdpfn8",
+                              "optionValue": 1,
+                              "maxValue": 5
+                            },
+                            {
+                              "name": "2,500",
+                              "code": "z92hgkbhbu66lcfmhvutmcgosob",
+                              "optionValue": 1,
+                              "maxValue": 5
+                            },
+                            {
+                              "name": "5,000",
+                              "code": "zgqjoiji8a63414t2be8e4l6ai9",
+                              "optionValue": 2,
+                              "maxValue": 5
+                            },
+                            {
+                              "name": "10,000",
+                              "code": "zrggcjt8pqhrqffqu17th0149l9",
+                              "optionValue": 3,
+                              "maxValue": 5
+                            },
+                            {
+                              "name": "15,000",
+                              "code": "zneh4rihcpqfh9u3eekh697toqb",
+                              "optionValue": 4,
+                              "maxValue": 5
+                            },
+                            {
+                              "name": "20,000",
+                              "code": "znsgahmghopbf9m6dp88rto4gfa",
+                              "optionValue": 4,
+                              "maxValue": 5
+                            },
+                            {
+                              "name": "25,000",
+                              "code": "zr3hm52tegu9g8ou12mij3onqoa",
+                              "optionValue": 5,
+                              "maxValue": 5
+                            }
+                          ],
+                          "chosenTerm": "zgqjoiji8a63414t2be8e4l6ai9",
+                          "chosenTermValue": "5,000",
+                          "isAscendingBetter": true,
+                          "updated": false,
+                          "required": true,
+                          "isEditable": true
+                        }
+                      ],
+                      "selected": true,
+                      "required": true,
+                      "publicID": "PAMedPayCov",
+                      "description": "Medical Payments",
+                      "coverageCategoryCode": "PALiabPolicyGrp",
+                      "coverageCategoryDisplayName": "Liability - Policy",
+                      "priority": 9330
+                    },
+                    {
+                      "name": "Pet Protection",
+                      "updated": false,
+                      "terms": [
+                        {
+                          "name": "Limit",
+                          "patternCode": "PAPetProtectionLimit",
+                          "options": [
+                            {
+                              "name": "750",
+                              "code": "zjvg60u9pm1nmbfkj0brh90bc2a",
+                              "optionValue": 5,
+                              "maxValue": 5
+                            }
+                          ],
+                          "chosenTerm": "zjvg60u9pm1nmbfkj0brh90bc2a",
+                          "chosenTermValue": "750",
+                          "isAscendingBetter": true,
+                          "updated": false,
+                          "required": true,
+                          "isEditable": false
+                        }
+                      ],
+                      "selected": true,
+                      "required": true,
+                      "publicID": "PAPetProtectionCov",
+                      "description": "Pet Protection",
+                      "coverageCategoryCode": "PAAddPhysDamPolicyGrp",
+                      "coverageCategoryDisplayName": "Additional Physical Damage - Policy",
+                      "priority": 9536
+                    },
+                    {
+                      "name": "Nautical Collectibles",
+                      "updated": false,
+                      "terms": [],
+                      "selected": false,
+                      "required": false,
+                      "publicID": "PANauticalCollectiblesCov",
+                      "description": "Nautical Collectibles",
+                      "coverageCategoryCode": "PAAddPhysDamPolicyGrp",
+                      "coverageCategoryDisplayName": "Additional Physical Damage - Policy",
+                      "priority": 9597
+                    }
+                  ]
+                }
+              }
+            }
+          ],
+          "priorPolicies": []
+        },
+        "errors": {
+          "errorsFound": false,
+          "warningsFound": false,
+          "previousWarningList": [],
+          "errors": [],
+          "warnings": []
+        },
+        "priorPolicies": [],
+        "mVRDataDTO": [],
+        "clueData": [],
+        "job": {
+          "jobNumber": "0046077452",
+          "canUserView": true,
+          "underwritingIssues": [
+            {
+              "longDescription": "Vehicle 1: Value must be between 11425.6 and 21884.399999999998. If you wish to proceed with a value outside of this range, please refer to underwriting and upload any documentation supporting the value.",
+              "shortDescription": "Boat, Yacht Underwriting Review Needed",
+              "hasApprovalOrRejection": false,
+              "currentBlockingPoint": "BlocksIssuance",
+              "offerings": [
+                "CUSTOM"
+              ],
+              "onOfferings": [
+                {
+                  "offering": "CUSTOM",
+                  "hasApprovalOrRejection": false,
+                  "currentBlockingPoint": "BlocksIssuance"
+                }
+              ],
+              "$$hashKey": "object:11076"
+            },
+            {
+              "longDescription": "Vehicle #1: Storage Type Other requires underwriting review.",
+              "shortDescription": "Boat, yacht storage ineligible",
+              "hasApprovalOrRejection": false,
+              "currentBlockingPoint": "BlocksIssuance",
+              "offerings": [
+                "CUSTOM"
+              ],
+              "onOfferings": [
+                {
+                  "offering": "CUSTOM",
+                  "hasApprovalOrRejection": false,
+                  "currentBlockingPoint": "BlocksIssuance"
+                }
+              ],
+              "$$hashKey": "object:11077"
+            },
+            {
+              "longDescription": "Vehicle 2 : Model of \"All Other\" requires underwriting review.",
+              "shortDescription": "Model of all other requires review",
+              "hasApprovalOrRejection": false,
+              "currentBlockingPoint": "BlocksIssuance",
+              "offerings": [
+                "CUSTOM"
+              ],
+              "onOfferings": [
+                {
+                  "offering": "CUSTOM",
+                  "hasApprovalOrRejection": false,
+                  "currentBlockingPoint": "BlocksIssuance"
+                }
+              ],
+              "$$hashKey": "object:11078"
+            },
+            {
+              "longDescription": "Vehicle 2 : Make of \"All Other\" requires underwriting review.",
+              "shortDescription": "Make of all other",
+              "hasApprovalOrRejection": false,
+              "currentBlockingPoint": "BlocksIssuance",
+              "offerings": [
+                "CUSTOM"
+              ],
+              "onOfferings": [
+                {
+                  "offering": "CUSTOM",
+                  "hasApprovalOrRejection": false,
+                  "currentBlockingPoint": "BlocksIssuance"
+                }
+              ],
+              "$$hashKey": "object:11079"
+            }
+          ],
+          "isEditLocked": false,
+          "statusCode": "Draft"
+        },
+        "fieldAvailability": {
+          "avaliableFields": {
+            "RecPolicyStorage": false,
+            "Gender": false
+          }
+        },
+        "isStorageConstTypeMandatory": false,
+        "persons": [
+          {
+            "emailAddress1": "x.e.velez@gmail.com",
+            "publicID": "pc:33904322",
+            "displayName": "Luis Burckhardt",
+            "primaryPhoneType": "mobile",
+            "contactName": "Luis Burckhardt",
+            "subtype": "Person",
+            "primaryAddress": {
+              "publicID": "pc:84128813",
+              "displayName": "2576 SE 31st Pl, Ocala, FL 34471",
+              "addressLine1": "2576 SE 31st Pl",
+              "city": "Ocala",
+              "state": "FL",
+              "postalCode": "34471",
+              "country": "US",
+              "addressType": "other",
+              "standardizeStatus": "standardized",
+              "standardizeDate_Ext": "2026-02-17T11:03:48Z"
+            },
+            "accountHolder": true,
+            "cellNumber": "3525476529",
+            "dateOfBirth": {
+              "year": 1979,
+              "month": 0,
+              "day": 0,
+              "isMasked": true
+            },
+            "firstName": "Luis",
+            "lastName": "Burckhardt",
+            "maritalStatus": "M",
+            "additionalInsuredType": "person",
+            "customerCallOptInIndicator": false,
+            "tempId": 49
+          },
+          {
+            "publicID": "pc:33937889",
+            "displayName": "Xiomara Burckhardt",
+            "firstName": "Xiomara",
+            "lastName": "Burckhardt",
+            "primaryPhoneType": "mobile",
+            "cellNumber": "3525476529",
+            "maritalStatus": "M",
+            "dateOfBirth": {
+              "year": 1981,
+              "month": 0,
+              "day": 0,
+              "isMasked": true
+            },
+            "primaryAddress": {
+              "publicID": "pc:84128813",
+              "displayName": "2576 SE 31st Pl, Ocala, FL 34471",
+              "addressLine1": "2576 SE 31st Pl",
+              "city": "Ocala",
+              "state": "FL",
+              "postalCode": "34471",
+              "country": "US",
+              "addressType": "other",
+              "standardizeStatus": "standardized",
+              "standardizeDate_Ext": "2026-02-17T11:03:48Z"
+            },
+            "tempId": 50
+          }
+        ],
+        "manualPriorPolicies": []
+      }
+    ]
+  },
+  "response": {
+    "result": {
+      "sessionUUID": "57b9add4-46fb-477e-a539-57902f9cf182",
+      "quoteID": "0046077452",
+      "baseData": {
+        "accountNumber": "0017483217",
+        "accountHolder": {
+          "emailAddress1": "x.e.velez@gmail.com",
+          "publicID": "pc:33904322",
+          "displayName": "Luis Burckhardt",
+          "primaryPhoneType": "mobile",
+          "contactName": "Luis Burckhardt",
+          "subtype": "Person",
+          "primaryAddress": {
+            "publicID": "pc:84128813",
+            "displayName": "2576 SE 31st Pl, Ocala, FL 34471",
+            "addressLine1": "2576 SE 31st Pl",
+            "city": "Ocala",
+            "state": "FL",
+            "postalCode": "34471",
+            "country": "US",
+            "addressType": "other",
+            "standardizeStatus": "standardized",
+            "standardizeDate_Ext": "2026-02-17T11:03:48Z"
+          },
+          "accountHolder": true,
+          "cellNumber": "3525476529",
+          "dateOfBirth": {
+            "year": 1979,
+            "month": 0,
+            "day": 0,
+            "isMasked": true
+          },
+          "firstName": "Luis",
+          "lastName": "Burckhardt",
+          "maritalStatus": "M",
+          "additionalInsuredType": "person",
+          "customerCallOptInIndicator": false
+        },
+        "policyAddress": {
+          "publicID": "pc:84128813",
+          "displayName": "2576 SE 31st Pl, Ocala, FL 34471",
+          "addressLine1": "2576 SE 31st Pl",
+          "city": "Ocala",
+          "state": "FL",
+          "postalCode": "34471",
+          "country": "US",
+          "addressType": "other",
+          "standardizeStatus": "standardized",
+          "standardizeDate_Ext": "2026-02-17T11:03:48Z"
+        },
+        "productCode": "PersonalAuto",
+        "productName": "Recreational",
+        "uWCompany": "071",
+        "periodStartDate": {
+          "year": 2026,
+          "month": 1,
+          "day": 17
+        },
+        "periodEndDate": {
+          "year": 2027,
+          "month": 1,
+          "day": 17
+        },
+        "preQualQuestionSets": [],
+        "termType": "Annual",
+        "periodStatus": "Quoted",
+        "pAPolicyType": "boat",
+        "sADFFields": [],
+        "isAddressChangedRecently": false,
+        "additionalInsureds": [
+          {
+            "contactRole": "PolicyAddlNamedInsured",
+            "contact": {
+              "publicID": "pc:33937888",
+              "displayName": "Xiomara Burckhardt",
+              "primaryPhoneType": "mobile",
+              "subtype": "Person",
+              "primaryAddress": {
+                "publicID": "pc:84128813",
+                "displayName": "2576 SE 31st Pl, Ocala, FL 34471",
+                "addressLine1": "2576 SE 31st Pl",
+                "city": "Ocala",
+                "state": "FL",
+                "postalCode": "34471",
+                "country": "US",
+                "addressType": "other",
+                "standardizeStatus": "standardized",
+                "standardizeDate_Ext": "2026-02-17T11:03:48Z"
+              },
+              "accountHolder": true,
+              "cellNumber": "2025550185",
+              "dateOfBirth": {
+                "year": 1981,
+                "month": 0,
+                "day": 0,
+                "isMasked": true
+              },
+              "firstName": "Xiomara",
+              "lastName": "Burckhardt",
+              "maritalStatus": "M",
+              "relationship": "SP",
+              "descOfInterest": "additionalnamedinsured",
+              "marina": "no",
+              "additionalInsuredType": "person",
+              "companyPrimaryContact": false
+            },
+            "publicID": "pc:127635324"
+          }
+        ],
+        "policyType": "boat",
+        "baseState": "FL",
+        "ratingState": "FL",
+        "isNCRatingApplicable": false
+      },
+      "lobData": {
+        "personalAuto": {
+          "preQualQuestionSets": [
+            {
+              "code": "PA_Qualification_1",
+              "answers": {
+                "PA_QSLossHistoryReport_1": "true",
+                "PA_QSCreditReport_12": "true",
+                "PA_QSLicenseSuspendedRevoked_1": "false",
+                "PA_QSFR44_1": "false",
+                "PA_QSVerifyTitledOwner_1": "false",
+                "PA_RestorationOfCivilRightsForFelony_1": null,
+                "PA_QSMotorVehicleReport_1": "true",
+                "PA_QSVehicleForRent_1": "false",
+                "PA_QSVehicleForSaleConsignment_1": "false",
+                "PA_QSSR22_1": "false",
+                "PA_QSFelonyConviction_7": "false",
+                "PA_QSDisclaimerVerification_1": "true",
+                "PA_QSUnrepairedDamage_1": "false"
+              }
+            },
+            {
+              "code": "PA_PolicyInfo_1",
+              "answers": {
+                "PA_QSPaperlessDiscount_1": "false",
+                "PA_QSMultiPolicyDiscount_1": "false",
+                "PA_QSPriorInsurance_1": "Yes",
+                "PA_QSWatercraftLossesAccidents_1": "true",
+                "PA_QSPaidInFullDiscount_1": "false",
+                "PA_QSApplicantPrimaryResidence_1": "OwnHome"
+              }
+            }
+          ],
+          "coverables": {
+            "drivers": [
+              {
+                "publicID": "pc:127635329",
+                "person": {
+                  "publicID": "pc:33937889",
+                  "displayName": "Xiomara Burckhardt",
+                  "firstName": "Xiomara",
+                  "lastName": "Burckhardt",
+                  "primaryPhoneType": "mobile",
+                  "cellNumber": "3525476529",
+                  "maritalStatus": "M",
+                  "dateOfBirth": {
+                    "year": 1981,
+                    "month": 0,
+                    "day": 0,
+                    "isMasked": true
+                  },
+                  "primaryAddress": {
+                    "publicID": "pc:84128813",
+                    "displayName": "2576 SE 31st Pl, Ocala, FL 34471",
+                    "addressLine1": "2576 SE 31st Pl",
+                    "city": "Ocala",
+                    "state": "FL",
+                    "postalCode": "34471",
+                    "country": "US",
+                    "addressType": "other",
+                    "standardizeStatus": "standardized",
+                    "standardizeDate_Ext": "2026-02-17T11:03:48Z"
+                  }
+                },
+                "licenseState": "FL",
+                "licenseNumber": "*********8000",
+                "licensed": true,
+                "dateOfBirth": {
+                  "year": 1981,
+                  "month": 0,
+                  "day": 0,
+                  "isMasked": true
+                },
+                "isPolicyHolder": false,
+                "driverQuestionSets": [
+                  {
+                    "code": "PA_DriverRoles_1",
+                    "answers": {
+                      "PA_QSDateCompletedSafetyCourse_1": null,
+                      "PA_QSYearsBoatingExperience_1": "20",
+                      "PA_QSIneligibleDriver_1": "false"
+                    }
+                  }
+                ],
+                "relationship": "SP",
+                "priorOwnerExp": []
+              },
+              {
+                "publicID": "pc:127635327",
+                "person": {
+                  "publicID": "pc:33904322",
+                  "displayName": "Luis Burckhardt",
+                  "firstName": "Luis",
+                  "lastName": "Burckhardt",
+                  "primaryPhoneType": "mobile",
+                  "cellNumber": "3525476529",
+                  "maritalStatus": "M",
+                  "dateOfBirth": {
+                    "year": 1979,
+                    "month": 0,
+                    "day": 0,
+                    "isMasked": true
+                  },
+                  "primaryAddress": {
+                    "publicID": "pc:84128813",
+                    "displayName": "2576 SE 31st Pl, Ocala, FL 34471",
+                    "addressLine1": "2576 SE 31st Pl",
+                    "city": "Ocala",
+                    "state": "FL",
+                    "postalCode": "34471",
+                    "country": "US",
+                    "addressType": "other",
+                    "standardizeStatus": "standardized",
+                    "standardizeDate_Ext": "2026-02-17T11:03:48Z"
+                  }
+                },
+                "licenseState": "FL",
+                "licenseNumber": "*********3780",
+                "licensed": true,
+                "dateOfBirth": {
+                  "year": 1979,
+                  "month": 0,
+                  "day": 0,
+                  "isMasked": true
+                },
+                "isPolicyHolder": true,
+                "driverQuestionSets": [
+                  {
+                    "code": "PA_DriverRoles_1",
+                    "answers": {
+                      "PA_QSDateCompletedSafetyCourse_1": null,
+                      "PA_QSYearsBoatingExperience_1": "20",
+                      "PA_QSIneligibleDriver_1": "false"
+                    }
+                  }
+                ],
+                "relationship": "pni_ext",
+                "priorOwnerExp": []
+              }
+            ],
+            "vehicles": [
+              {
+                "fixedId": 13288903,
+                "publicID": "pc:13288903",
+                "vehicleNumber": 1,
+                "year": 2014,
+                "make": "SEA FOX",
+                "model": "246 COMMANDER",
+                "primaryUse": "commuting",
+                "licenseState": "FL",
+                "displayName": "SEA FOX 246 COMMANDER 2014",
+                "vehicleType": "boat",
+                "length": "24",
+                "purchaseDate": {
+                  "year": 2026,
+                  "month": 0,
+                  "day": 27
+                },
+                "vehicleValue": 40500,
+                "streetUse": false,
+                "vehicleAge": 12,
+                "vehicleAdditionalUsage": false,
+                "storageAddress": {
+                  "publicID": "pc:84128814",
+                  "displayName": "2576 SE 31st Pl, Ocala, FL 34471",
+                  "addressLine1": "2576 SE 31st Pl",
+                  "city": "Ocala",
+                  "state": "FL",
+                  "postalCode": "34471",
+                  "country": "US",
+                  "countyName": "MARION"
+                },
+                "registrationAddress": {
+                  "publicID": "pc:84128814",
+                  "displayName": "2576 SE 31st Pl, Ocala, FL 34471",
+                  "addressLine1": "2576 SE 31st Pl",
+                  "city": "Ocala",
+                  "state": "FL",
+                  "postalCode": "34471",
+                  "country": "US",
+                  "countyName": "MARION"
+                },
+                "storageType": "Other",
+                "vehicleQuestionSets": [
+                  {
+                    "code": "PA_VehicleDetails_1",
+                    "answers": {
+                      "PA_QSAntiTheftVehicleRecoveryTrackingSystem_1": "false"
+                    }
+                  },
+                  {
+                    "code": "PA_VehicleDetails_3",
+                    "answers": {}
+                  },
+                  {
+                    "code": "PA_VehicleDetails_5",
+                    "answers": {}
+                  }
+                ],
+                "symbol": "B03",
+                "vMMRuleKey_Ext": "WC_340",
+                "version": "127",
+                "eligibleInd": "Y",
+                "vmmGroup": "WC_C",
+                "weight": "4200",
+                "totalHorsepower": "250",
+                "hullConstruction": "F",
+                "engineSize": "0",
+                "engineType": "Outboard",
+                "fuelType": "Gasoline",
+                "numberOfEngines": "1",
+                "numberOfEnginesChanged_Ext": true,
+                "purchasePrice": "43500.00",
+                "engineDetails": [
+                  {
+                    "publicID": "pc:1464800",
+                    "year": "2017",
+                    "make": "YAMAHA",
+                    "model": "F250XCA 4-STROKE",
+                    "horsePower": "250"
+                  }
+                ],
+                "primaryOperator": {
+                  "publicID": "pc:127635327",
+                  "person": {
+                    "publicID": "pc:33904322",
+                    "displayName": "Luis Burckhardt",
+                    "firstName": "Luis",
+                    "lastName": "Burckhardt",
+                    "primaryPhoneType": "mobile",
+                    "cellNumber": "3525476529",
+                    "maritalStatus": "M",
+                    "dateOfBirth": {
+                      "year": 1979,
+                      "month": 0,
+                      "day": 0,
+                      "isMasked": true
+                    },
+                    "primaryAddress": {
+                      "publicID": "pc:84128813",
+                      "displayName": "2576 SE 31st Pl, Ocala, FL 34471",
+                      "addressLine1": "2576 SE 31st Pl",
+                      "city": "Ocala",
+                      "state": "FL",
+                      "postalCode": "34471",
+                      "country": "US",
+                      "addressType": "other",
+                      "standardizeStatus": "standardized",
+                      "standardizeDate_Ext": "2026-02-17T11:03:48Z"
+                    }
+                  },
+                  "licenseState": "FL",
+                  "licenseNumber": "*********3780",
+                  "licensed": true,
+                  "dateOfBirth": {
+                    "year": 1979,
+                    "month": 0,
+                    "day": 0,
+                    "isMasked": true
+                  },
+                  "isPolicyHolder": true,
+                  "driverQuestionSets": [
+                    {
+                      "code": "PA_DriverRoles_1",
+                      "answers": {
+                        "PA_QSDateCompletedSafetyCourse_1": null,
+                        "PA_QSYearsBoatingExperience_1": "20",
+                        "PA_QSIneligibleDriver_1": "false"
+                      }
+                    }
+                  ],
+                  "relationship": "pni_ext"
+                },
+                "hullId": "LYGNB102E314",
+                "stateAssignedVin": false,
+                "factoryHorsePower": "300",
+                "availableInd": "Y",
+                "vMMGroup": "WC_C",
+                "amodHorsePower": 300,
+                "cC": "0",
+                "boatType": "CC",
+                "fob": "38462",
+                "code": "21972",
+                "highPrice": "18237",
+                "lowPrice": "14282",
+                "maxSpeed": "79",
+                "vinNumberChanged_Ext": false,
+                "fuelTypeChanged_Ext": false,
+                "engineTypeChanged_Ext": false,
+                "hullConstructionChanged_Ext": false,
+                "engineSizeChanged_Ext": false,
+                "horsePowerChanged_Ext": true
+              },
+              {
+                "fixedId": 13288905,
+                "publicID": "pc:13288905",
+                "vehicleNumber": 2,
+                "year": 2013,
+                "make": "ALL OTHER",
+                "model": "All Other Trailer",
+                "vin": "LYGNB102E314",
+                "primaryUse": "commuting",
+                "displayName": "ALL OTHER All Other Trailer 2013",
+                "vehicleType": "trailer",
+                "makeDescription": "Magic Trail Trailers",
+                "length": "24",
+                "modelDescription": "2 axile",
+                "vehicleValue": 40500,
+                "streetUse": false,
+                "vehicleAge": 13,
+                "storageAddress": {
+                  "publicID": "pc:84128814",
+                  "displayName": "2576 SE 31st Pl, Ocala, FL 34471",
+                  "addressLine1": "2576 SE 31st Pl",
+                  "city": "Ocala",
+                  "state": "FL",
+                  "postalCode": "34471",
+                  "country": "US",
+                  "countyName": "MARION"
+                },
+                "vehicleQuestionSets": [
+                  {
+                    "code": "PA_VehicleDetails_1",
+                    "answers": {}
+                  },
+                  {
+                    "code": "PA_VehicleDetails_3",
+                    "answers": {}
+                  },
+                  {
+                    "code": "PA_VehicleDetails_5",
+                    "answers": {}
+                  }
+                ],
+                "version": "1",
+                "eligibleInd": "Y",
+                "totalHorsepower": "0",
+                "engineSize": "0",
+                "fuelType": "Gasoline",
+                "numberOfEnginesChanged_Ext": false,
+                "purchasePrice": "0.00",
+                "engineDetails": [],
+                "availableInd": "Y",
+                "cC": "0",
+                "vinNumberChanged_Ext": true,
+                "fuelTypeChanged_Ext": false,
+                "engineTypeChanged_Ext": false,
+                "hullConstructionChanged_Ext": false,
+                "engineSizeChanged_Ext": false,
+                "horsePowerChanged_Ext": false
+              }
+            ],
+            "prefillReportOrdered_Ext": false
+          },
+          "offerings": [
+            {
+              "branchName": "CUSTOM",
+              "coverages": {
+                "vehicleCoverages": [
+                  {
+                    "publicID": "pc:13288903",
+                    "fixedId": 13288903,
+                    "vehicleName": "2014 SEA FOX 246 COMMANDER ",
+                    "coverages": [
+                      {
+                        "name": "Hull",
+                        "updated": false,
+                        "terms": [
+                          {
+                            "name": "Deductible",
+                            "patternCode": "PAHullDeductibleMoney",
+                            "options": [
+                              {
+                                "name": "100",
+                                "code": "ze4hcaglkh7r98agqrb73d8rb9b",
+                                "optionValue": 1,
+                                "maxValue": 5
+                              },
+                              {
+                                "name": "250",
+                                "code": "zesi8gfpt636cbkqo3ubr5b23va",
+                                "optionValue": 2,
+                                "maxValue": 5
+                              },
+                              {
+                                "name": "500",
+                                "code": "z0ahmu0aql4bm152q47sg2e9mta",
+                                "optionValue": 3,
+                                "maxValue": 5
+                              },
+                              {
+                                "name": "1,000",
+                                "code": "z3gjqf6952n0c9r5p9r536oi5m8",
+                                "optionValue": 3,
+                                "maxValue": 5
+                              },
+                              {
+                                "name": "2,500",
+                                "code": "z82hs5c7kquafci7cioe5j2u4pb",
+                                "optionValue": 4,
+                                "maxValue": 5
+                              },
+                              {
+                                "name": "5,000",
+                                "code": "zmchqa89v4thparv7ltre3t6dvb",
+                                "optionValue": 5,
+                                "maxValue": 5
+                              }
+                            ],
+                            "chosenTerm": "zesi8gfpt636cbkqo3ubr5b23va",
+                            "chosenTermValue": "250",
+                            "isAscendingBetter": true,
+                            "updated": false,
+                            "required": true,
+                            "isEditable": true
+                          },
+                          {
+                            "name": "Diminishing Deductible",
+                            "patternCode": "PAHullDiminishingDeductible",
+                            "options": [
+                              {
+                                "name": "Yes",
+                                "code": "true",
+                                "optionValue": 1,
+                                "maxValue": 1
+                              },
+                              {
+                                "name": "No",
+                                "code": "false",
+                                "optionValue": 0,
+                                "maxValue": 1
+                              }
+                            ],
+                            "chosenTerm": "false",
+                            "chosenTermValue": "No",
+                            "directBooleanValue": false,
+                            "isAscendingBetter": true,
+                            "updated": false,
+                            "valueType": "bit",
+                            "required": true,
+                            "isEditable": true
+                          },
+                          {
+                            "name": "Named Storm Deductible",
+                            "patternCode": "PANamedStormDeductiblePercentOpt",
+                            "options": [
+                              {
+                                "name": "1%",
+                                "code": "z2sjganoskumc2nlmimorug2r99",
+                                "optionValue": 1,
+                                "maxValue": 5
+                              },
+                              {
+                                "name": "2%",
+                                "code": "zrlgansj3foha48rklv465t98l8",
+                                "optionValue": 1,
+                                "maxValue": 5
+                              },
+                              {
+                                "name": "3%",
+                                "code": "zkvgodt4as6lpb6jshjcmaj7399",
+                                "optionValue": 2,
+                                "maxValue": 5
+                              },
+                              {
+                                "name": "4%",
+                                "code": "ztgi61e53toofae2ii1koskd9b9",
+                                "optionValue": 3,
+                                "maxValue": 5
+                              },
+                              {
+                                "name": "5%",
+                                "code": "znnggv83lft348fh5qqs3l25sr8",
+                                "optionValue": 3,
+                                "maxValue": 5
+                              },
+                              {
+                                "name": "10%",
+                                "code": "z8ahuemqn9kl30et6gove63bcl8",
+                                "optionValue": 4,
+                                "maxValue": 5
+                              },
+                              {
+                                "name": "15%",
+                                "code": "zgejo4ee20biiaje0lo4djtbdr8",
+                                "optionValue": 4,
+                                "maxValue": 5
+                              },
+                              {
+                                "name": "20%",
+                                "code": "z5kg0g22kkn8gdsn67pdshdba49",
+                                "optionValue": 5,
+                                "maxValue": 5
+                              }
+                            ],
+                            "chosenTerm": "znnggv83lft348fh5qqs3l25sr8",
+                            "chosenTermValue": "5%",
+                            "isAscendingBetter": true,
+                            "updated": false,
+                            "required": true,
+                            "isEditable": true
+                          },
+                          {
+                            "name": "Named Storm Deductible",
+                            "patternCode": "PANamedStormDeductibleDirect",
+                            "options": [],
+                            "chosenTerm": "2025.0000",
+                            "chosenTermValue": "2,025",
+                            "directValue": 2025,
+                            "isAscendingBetter": true,
+                            "updated": false,
+                            "valueType": "Money",
+                            "required": true,
+                            "isEditable": false
+                          },
+                          {
+                            "name": "Settlement Option",
+                            "patternCode": "PAHullSettlementOpt",
+                            "options": [
+                              {
+                                "name": "Agreed Value",
+                                "code": "z5pj21s6sphro4rs9s9g4neadga",
+                                "optionValue": 3,
+                                "maxValue": 5
+                              },
+                              {
+                                "name": "Actual Cash Value",
+                                "code": "zsaieb6c94uc94nj74ph75hk4q9",
+                                "optionValue": 5,
+                                "maxValue": 5
+                              }
+                            ],
+                            "chosenTerm": "z5pj21s6sphro4rs9s9g4neadga",
+                            "chosenTermValue": "Agreed Value",
+                            "isAscendingBetter": true,
+                            "updated": false,
+                            "required": true,
+                            "isEditable": true
+                          }
+                        ],
+                        "selected": true,
+                        "required": false,
+                        "publicID": "PAHullCov",
+                        "description": "Hull",
+                        "amount": {
+                          "amount": 712,
+                          "currency": "usd"
+                        },
+                        "coverageCategoryCode": "PAPhysDamVehicleGrp",
+                        "coverageCategoryDisplayName": "Physical Damage - Vehicle",
+                        "priority": 9546
+                      },
+                      {
+                        "name": "Haul Out",
+                        "updated": false,
+                        "terms": [
+                          {
+                            "name": "Limit",
+                            "patternCode": "PAHaulOutLimit",
+                            "options": [
+                              {
+                                "name": "50% up to $500",
+                                "code": "zi9hahl2m2svia83a9vpm1pbm48",
+                                "optionValue": 5,
+                                "maxValue": 5
+                              }
+                            ],
+                            "chosenTerm": "zi9hahl2m2svia83a9vpm1pbm48",
+                            "chosenTermValue": "50% up to $500",
+                            "isAscendingBetter": true,
+                            "updated": false,
+                            "required": true,
+                            "isEditable": false
+                          }
+                        ],
+                        "selected": true,
+                        "required": true,
+                        "publicID": "PAHaulOutCov",
+                        "description": "Haul Out",
+                        "amount": {
+                          "amount": 0,
+                          "currency": "usd"
+                        },
+                        "coverageCategoryCode": "PAPhysDamVehicleGrp",
+                        "coverageCategoryDisplayName": "Physical Damage - Vehicle",
+                        "priority": 9547
+                      },
+                      {
+                        "name": "Port Risk",
+                        "updated": false,
+                        "terms": [],
+                        "selected": false,
+                        "required": false,
+                        "publicID": "PAPortRiskCov",
+                        "description": "Port Risk",
+                        "coverageCategoryCode": "PAAddPhysDamVehicleGrp",
+                        "coverageCategoryDisplayName": "Additional Physical Damage - Vehicle",
+                        "priority": 9574
+                      },
+                      {
+                        "name": "Personal Effects",
+                        "updated": false,
+                        "terms": [
+                          {
+                            "name": "Limit",
+                            "patternCode": "PAPersonalEffectsLimit",
+                            "options": [
+                              {
+                                "name": "2,500",
+                                "code": "zobj44dq3gp1vfvtc3oj1tgrnfb",
+                                "optionValue": 1,
+                                "maxValue": 5
+                              },
+                              {
+                                "name": "5,000",
+                                "code": "z15jqjoi7c4rqbd1mr98ntprsm8",
+                                "optionValue": 1,
+                                "maxValue": 5
+                              },
+                              {
+                                "name": "7,500",
+                                "code": "z09i8ue68nr658od817c7sr1epb",
+                                "optionValue": 2,
+                                "maxValue": 5
+                              },
+                              {
+                                "name": "10,000",
+                                "code": "zkmi252qt6npb37bshdf07nd8oa",
+                                "optionValue": 3,
+                                "maxValue": 5
+                              },
+                              {
+                                "name": "12,500",
+                                "code": "zt5jqfkaip9csafnasl9bevj4s9",
+                                "optionValue": 4,
+                                "maxValue": 5
+                              },
+                              {
+                                "name": "15,000",
+                                "code": "z2phqiadhr6l5acc7gpgo2h0a1a",
+                                "optionValue": 4,
+                                "maxValue": 5
+                              },
+                              {
+                                "name": "20,000",
+                                "code": "zt7isr36tr6eo6jv2eihvb6ivkb",
+                                "optionValue": 5,
+                                "maxValue": 5
+                              }
+                            ],
+                            "chosenTerm": "zobj44dq3gp1vfvtc3oj1tgrnfb",
+                            "chosenTermValue": "2,500",
+                            "isAscendingBetter": true,
+                            "updated": false,
+                            "required": true,
+                            "isEditable": true
+                          },
+                          {
+                            "name": "Deductible",
+                            "patternCode": "PAPersonalEffectsDeductible",
+                            "options": [
+                              {
+                                "name": "200",
+                                "code": "ztohmqcoqpoef1sao87qivq6jfa",
+                                "optionValue": 5,
+                                "maxValue": 5
+                              }
+                            ],
+                            "chosenTerm": "ztohmqcoqpoef1sao87qivq6jfa",
+                            "chosenTermValue": "200",
+                            "isAscendingBetter": true,
+                            "updated": false,
+                            "required": true,
+                            "isEditable": false
+                          },
+                          {
+                            "name": "Settlement Option",
+                            "patternCode": "PAPersonalEffectsSettlementOpt",
+                            "options": [
+                              {
+                                "name": "Replacement Cost",
+                                "code": "z4ohok7k00nb449a52vi4u5rfpb",
+                                "optionValue": 5,
+                                "maxValue": 5
+                              }
+                            ],
+                            "chosenTerm": "z4ohok7k00nb449a52vi4u5rfpb",
+                            "chosenTermValue": "Replacement Cost",
+                            "isAscendingBetter": true,
+                            "updated": false,
+                            "required": true,
+                            "isEditable": false
+                          }
+                        ],
+                        "selected": true,
+                        "required": true,
+                        "publicID": "PAPersonalEffectsCov",
+                        "description": "Personal Effects",
+                        "amount": {
+                          "amount": 13,
+                          "currency": "usd"
+                        },
+                        "coverageCategoryCode": "PAAddPhysDamVehicleGrp",
+                        "coverageCategoryDisplayName": "Additional Physical Damage - Vehicle",
+                        "priority": 9549
+                      },
+                      {
+                        "name": "Extended Parts Replacement",
+                        "updated": false,
+                        "terms": [],
+                        "selected": false,
+                        "required": false,
+                        "publicID": "PAExtendedPartsReplacementCov",
+                        "description": "Extended Parts Replacement",
+                        "coverageCategoryCode": "PAAddPhysDamVehicleGrp",
+                        "coverageCategoryDisplayName": "Additional Physical Damage - Vehicle",
+                        "priority": 9564
+                      },
+                      {
+                        "name": "Professional Angler",
+                        "updated": false,
+                        "terms": [],
+                        "selected": false,
+                        "required": false,
+                        "publicID": "PAProfessionalAnglerCov",
+                        "description": "Professional Angler",
+                        "coverageCategoryCode": "PAAddPhysDamVehicleGrp",
+                        "coverageCategoryDisplayName": "Additional Physical Damage - Vehicle",
+                        "priority": 9556
+                      },
+                      {
+                        "name": "Towing and Emergency Expense",
+                        "updated": false,
+                        "terms": [
+                          {
+                            "name": "Limit",
+                            "patternCode": "PATowingEmergencyExpenseLimit",
+                            "options": [
+                              {
+                                "name": "250",
+                                "code": "zngh2jap35kcjalflk1aqv500q9",
+                                "optionValue": 1,
+                                "maxValue": 5
+                              },
+                              {
+                                "name": "500",
+                                "code": "zeohiai1it2t33p4v54047fu4b9",
+                                "optionValue": 2,
+                                "maxValue": 5
+                              },
+                              {
+                                "name": "1,000",
+                                "code": "zi3hechlc4jft2d9dksn90pt0r8",
+                                "optionValue": 3,
+                                "maxValue": 5
+                              },
+                              {
+                                "name": "3,000",
+                                "code": "zjgiao5khj7i0b692vu6d2v82i8",
+                                "optionValue": 4,
+                                "maxValue": 5
+                              },
+                              {
+                                "name": "5,000",
+                                "code": "zu2iap9r50inu33sksiuvuam2k8",
+                                "optionValue": 5,
+                                "maxValue": 5
+                              }
+                            ],
+                            "chosenTerm": "zi3hechlc4jft2d9dksn90pt0r8",
+                            "chosenTermValue": "1,000",
+                            "isAscendingBetter": true,
+                            "updated": false,
+                            "required": true,
+                            "isEditable": true
+                          }
+                        ],
+                        "selected": true,
+                        "required": true,
+                        "publicID": "PATowingEmergencyExpenseCov",
+                        "description": "Towing and Emergency Expense",
+                        "amount": {
+                          "amount": 8,
+                          "currency": "usd"
+                        },
+                        "coverageCategoryCode": "PAAddPhysDamVehicleGrp",
+                        "coverageCategoryDisplayName": "Additional Physical Damage - Vehicle",
+                        "priority": 9550
+                      },
+                      {
+                        "name": "Boat Lift",
+                        "updated": false,
+                        "terms": [],
+                        "selected": false,
+                        "required": false,
+                        "publicID": "PABoatLiftCov",
+                        "description": "Boat Lift",
+                        "coverageCategoryCode": "PAAddPhysDamVehicleGrp",
+                        "coverageCategoryDisplayName": "Additional Physical Damage - Vehicle",
+                        "priority": 9563
+                      },
+                      {
+                        "name": "Bow To Stern",
+                        "updated": false,
+                        "terms": [],
+                        "selected": false,
+                        "required": false,
+                        "publicID": "PABowToSternCov",
+                        "description": "Bow To Stern",
+                        "coverageCategoryCode": "PAAddPhysDamVehicleGrp",
+                        "coverageCategoryDisplayName": "Additional Physical Damage - Vehicle",
+                        "priority": 9573
+                      },
+                      {
+                        "name": "Chartered Fishing Guide",
+                        "updated": false,
+                        "terms": [],
+                        "selected": false,
+                        "required": false,
+                        "publicID": "PACharteredFishingGuideCov",
+                        "description": "Chartered Fishing Guide",
+                        "coverageCategoryCode": "PAAddLiabVehicleGrp",
+                        "coverageCategoryDisplayName": "Additional Liability - Vehicle",
+                        "priority": 9562
+                      },
+                      {
+                        "name": "Named Driver",
+                        "updated": false,
+                        "terms": [],
+                        "selected": false,
+                        "required": false,
+                        "publicID": "PANamedDriverCov",
+                        "description": "Named Driver",
+                        "coverageCategoryCode": "PAAddLiabVehicleGrp",
+                        "coverageCategoryDisplayName": "Additional Liability - Vehicle",
+                        "priority": 9555
+                      },
+                      {
+                        "name": "Sailboat Rigging Exclusion",
+                        "updated": false,
+                        "terms": [],
+                        "selected": false,
+                        "required": false,
+                        "publicID": "PASailboatRiggingExclusion",
+                        "description": "Sailboat Rigging Exclusion",
+                        "coverageCategoryCode": "PAExclVehicleGrp",
+                        "coverageCategoryDisplayName": "Exclusions - Vehicle",
+                        "priority": 9594
+                      },
+                      {
+                        "name": "Named Storm Exclusion",
+                        "updated": false,
+                        "terms": [],
+                        "selected": false,
+                        "required": false,
+                        "publicID": "PANamedStormExclusion",
+                        "description": "Named Storm Exclusion",
+                        "coverageCategoryCode": "PAExclVehicleGrp",
+                        "coverageCategoryDisplayName": "Exclusions - Vehicle",
+                        "priority": 9591
+                      },
+                      {
+                        "name": "Watersports Liability Exclusion",
+                        "updated": false,
+                        "terms": [],
+                        "selected": false,
+                        "required": false,
+                        "publicID": "PAWatersportsLiabilityExclusion",
+                        "description": "Watersports Liability Exclusion",
+                        "coverageCategoryCode": "PAExclVehicleGrp",
+                        "coverageCategoryDisplayName": "Exclusions - Vehicle",
+                        "priority": 9592
+                      }
+                    ]
+                  },
+                  {
+                    "publicID": "pc:13288905",
+                    "fixedId": 13288905,
+                    "vehicleName": "2013 ALL OTHER All Other Trailer ",
+                    "coverages": [
+                      {
+                        "name": "Trailer Physical Damage",
+                        "updated": false,
+                        "terms": [
+                          {
+                            "name": "Limit",
+                            "patternCode": "PATrailerPhysicalDamageLimit",
+                            "options": [],
+                            "chosenTerm": "40500.0000",
+                            "chosenTermValue": "40,500",
+                            "directValue": 40500,
+                            "isAscendingBetter": true,
+                            "updated": false,
+                            "valueType": "Money",
+                            "required": true,
+                            "isEditable": true
+                          },
+                          {
+                            "name": "Deductible",
+                            "patternCode": "PATrailerPhysicalDamageDeductible",
+                            "options": [
+                              {
+                                "name": "250",
+                                "code": "zpnjms9hdnc914r4ue2241i0s18",
+                                "optionValue": 5,
+                                "maxValue": 5
+                              }
+                            ],
+                            "chosenTerm": "zpnjms9hdnc914r4ue2241i0s18",
+                            "chosenTermValue": "250",
+                            "isAscendingBetter": true,
+                            "updated": false,
+                            "required": true,
+                            "isEditable": false
+                          },
+                          {
+                            "name": "Settlement Option",
+                            "patternCode": "PATrailerPhysicalDamageSettlementOpt",
+                            "options": [
+                              {
+                                "name": "Actual Cash Value",
+                                "code": "zbih4g64bmjvp8bted8k5tlhetb",
+                                "optionValue": 3,
+                                "maxValue": 5
+                              },
+                              {
+                                "name": "Agreed Value",
+                                "code": "znti8jckc4t87fk9n3dn0j3je6b",
+                                "optionValue": 5,
+                                "maxValue": 5
+                              }
+                            ],
+                            "chosenTerm": "znti8jckc4t87fk9n3dn0j3je6b",
+                            "chosenTermValue": "Agreed Value",
+                            "isAscendingBetter": true,
+                            "updated": false,
+                            "required": true,
+                            "isEditable": true
+                          }
+                        ],
+                        "selected": true,
+                        "required": true,
+                        "publicID": "PATrailerPhysicalDamageCov",
+                        "description": "Trailer Physical Damage",
+                        "amount": {
+                          "amount": 405,
+                          "currency": "usd"
+                        },
+                        "coverageCategoryCode": "PAPhysDamVehicleGrp",
+                        "coverageCategoryDisplayName": "Physical Damage - Vehicle",
+                        "priority": 9584
+                      }
+                    ]
+                  }
+                ],
+                "lineCoverages": [
+                  {
+                    "name": "Liability - Bodily Injury and Property Damage",
+                    "updated": false,
+                    "terms": [
+                      {
+                        "name": "Limit",
+                        "patternCode": "PALiability",
+                        "options": [
+                          {
+                            "name": "15,000 CSL",
+                            "code": "z0lg2pl6at08cdsgpve2i9gkmca",
+                            "optionValue": 1,
+                            "maxValue": 5
+                          },
+                          {
+                            "name": "25,000 CSL",
+                            "code": "z00hgjsm9qtoae4pc5sevaonlm9",
+                            "optionValue": 1,
+                            "maxValue": 5
+                          },
+                          {
+                            "name": "50,000 CSL",
+                            "code": "pack_187",
+                            "optionValue": 2,
+                            "maxValue": 5
+                          },
+                          {
+                            "name": "100,000 CSL",
+                            "code": "pack_188",
+                            "optionValue": 3,
+                            "maxValue": 5
+                          },
+                          {
+                            "name": "300,000 CSL",
+                            "code": "zsvg8nddff1ncati0qt4d08jq7a",
+                            "optionValue": 4,
+                            "maxValue": 5
+                          },
+                          {
+                            "name": "500,000 CSL",
+                            "code": "pack_190",
+                            "optionValue": 4,
+                            "maxValue": 5
+                          },
+                          {
+                            "name": "1,000,000 CSL",
+                            "code": "pack_191",
+                            "optionValue": 5,
+                            "maxValue": 5
+                          }
+                        ],
+                        "chosenTerm": "zsvg8nddff1ncati0qt4d08jq7a",
+                        "chosenTermValue": "300,000 CSL",
+                        "isAscendingBetter": true,
+                        "updated": false,
+                        "required": true,
+                        "isEditable": true
+                      }
+                    ],
+                    "selected": true,
+                    "required": true,
+                    "publicID": "PALiabilityCov",
+                    "description": "Liability - Bodily Injury and Property Damage",
+                    "amount": {
+                      "amount": 84,
+                      "currency": "usd"
+                    },
+                    "coverageCategoryCode": "PALiabPolicyGrp",
+                    "coverageCategoryDisplayName": "Liability - Policy",
+                    "priority": -201
+                  },
+                  {
+                    "name": "Uninsured Boaters/Underinsured Boaters",
+                    "updated": false,
+                    "terms": [
+                      {
+                        "name": "Limit",
+                        "patternCode": "PAUBUIBBI",
+                        "options": [
+                          {
+                            "name": "300,000 CSL",
+                            "code": "z38hamftvdhcrbtbnbkkqergo19",
+                            "optionValue": 5,
+                            "maxValue": 5
+                          }
+                        ],
+                        "chosenTerm": "z38hamftvdhcrbtbnbkkqergo19",
+                        "chosenTermValue": "300,000 CSL",
+                        "isAscendingBetter": true,
+                        "updated": false,
+                        "required": true,
+                        "isEditable": false
+                      }
+                    ],
+                    "selected": true,
+                    "required": true,
+                    "publicID": "PAUBUIBoatersCov",
+                    "description": "Uninsured Boaters/Underinsured Boaters",
+                    "amount": {
+                      "amount": 0,
+                      "currency": "usd"
+                    },
+                    "coverageCategoryCode": "PALiabPolicyGrp",
+                    "coverageCategoryDisplayName": "Liability - Policy",
+                    "priority": 9336
+                  },
+                  {
+                    "name": "Accidental Spill Pollution",
+                    "updated": false,
+                    "terms": [
+                      {
+                        "name": "Option",
+                        "patternCode": "PAAccSpillPollutionLimitOpt",
+                        "options": [
+                          {
+                            "name": "See Form",
+                            "code": "z2sj4pjl0qdde7s33feaqdvnmp8",
+                            "optionValue": 5,
+                            "maxValue": 5
+                          }
+                        ],
+                        "chosenTerm": "z2sj4pjl0qdde7s33feaqdvnmp8",
+                        "chosenTermValue": "See Form",
+                        "isAscendingBetter": true,
+                        "updated": false,
+                        "required": true,
+                        "isEditable": false
+                      }
+                    ],
+                    "selected": true,
+                    "required": true,
+                    "publicID": "PAAccSpillPollutionCov",
+                    "description": "Accidental Spill Pollution",
+                    "amount": {
+                      "amount": 0,
+                      "currency": "usd"
+                    },
+                    "coverageCategoryCode": "PALiabPolicyGrp",
+                    "coverageCategoryDisplayName": "Liability - Policy",
+                    "priority": -95
+                  },
+                  {
+                    "name": "Medical Payments",
+                    "updated": false,
+                    "terms": [
+                      {
+                        "name": "Limit",
+                        "patternCode": "PAMedLimitPackage",
+                        "options": [
+                          {
+                            "name": "1,000",
+                            "code": "zjmie9e3cpgifdgeto7s7rdpfn8",
+                            "optionValue": 1,
+                            "maxValue": 5
+                          },
+                          {
+                            "name": "2,500",
+                            "code": "z92hgkbhbu66lcfmhvutmcgosob",
+                            "optionValue": 1,
+                            "maxValue": 5
+                          },
+                          {
+                            "name": "5,000",
+                            "code": "zgqjoiji8a63414t2be8e4l6ai9",
+                            "optionValue": 2,
+                            "maxValue": 5
+                          },
+                          {
+                            "name": "10,000",
+                            "code": "zrggcjt8pqhrqffqu17th0149l9",
+                            "optionValue": 3,
+                            "maxValue": 5
+                          },
+                          {
+                            "name": "15,000",
+                            "code": "zneh4rihcpqfh9u3eekh697toqb",
+                            "optionValue": 4,
+                            "maxValue": 5
+                          },
+                          {
+                            "name": "20,000",
+                            "code": "znsgahmghopbf9m6dp88rto4gfa",
+                            "optionValue": 4,
+                            "maxValue": 5
+                          },
+                          {
+                            "name": "25,000",
+                            "code": "zr3hm52tegu9g8ou12mij3onqoa",
+                            "optionValue": 5,
+                            "maxValue": 5
+                          }
+                        ],
+                        "chosenTerm": "zgqjoiji8a63414t2be8e4l6ai9",
+                        "chosenTermValue": "5,000",
+                        "isAscendingBetter": true,
+                        "updated": false,
+                        "required": true,
+                        "isEditable": true
+                      }
+                    ],
+                    "selected": true,
+                    "required": true,
+                    "publicID": "PAMedPayCov",
+                    "description": "Medical Payments",
+                    "amount": {
+                      "amount": 10,
+                      "currency": "usd"
+                    },
+                    "coverageCategoryCode": "PALiabPolicyGrp",
+                    "coverageCategoryDisplayName": "Liability - Policy",
+                    "priority": 9330
+                  },
+                  {
+                    "name": "Pet Protection",
+                    "updated": false,
+                    "terms": [
+                      {
+                        "name": "Limit",
+                        "patternCode": "PAPetProtectionLimit",
+                        "options": [
+                          {
+                            "name": "750",
+                            "code": "zjvg60u9pm1nmbfkj0brh90bc2a",
+                            "optionValue": 5,
+                            "maxValue": 5
+                          }
+                        ],
+                        "chosenTerm": "zjvg60u9pm1nmbfkj0brh90bc2a",
+                        "chosenTermValue": "750",
+                        "isAscendingBetter": true,
+                        "updated": false,
+                        "required": true,
+                        "isEditable": false
+                      }
+                    ],
+                    "selected": true,
+                    "required": true,
+                    "publicID": "PAPetProtectionCov",
+                    "description": "Pet Protection",
+                    "amount": {
+                      "amount": 0,
+                      "currency": "usd"
+                    },
+                    "coverageCategoryCode": "PAAddPhysDamPolicyGrp",
+                    "coverageCategoryDisplayName": "Additional Physical Damage - Policy",
+                    "priority": 9536
+                  },
+                  {
+                    "name": "Nautical Collectibles",
+                    "updated": false,
+                    "terms": [],
+                    "selected": false,
+                    "required": false,
+                    "publicID": "PANauticalCollectiblesCov",
+                    "description": "Nautical Collectibles",
+                    "coverageCategoryCode": "PAAddPhysDamPolicyGrp",
+                    "coverageCategoryDisplayName": "Additional Physical Damage - Policy",
+                    "priority": 9597
+                  }
+                ]
+              }
+            }
+          ],
+          "policyType": "boat",
+          "periodLosses": [
+            {
+              "publicID": "pc:19445257",
+              "source": "manual",
+              "vehicleClass": "WATERCRAFT",
+              "driver": "Luis Burckhardt",
+              "occurDate": {
+                "year": 2014,
+                "month": 2,
+                "day": 10
+              },
+              "description": "Other",
+              "amountPaid": {
+                "amount": 200,
+                "currency": "usd"
+              },
+              "atFault": "yes",
+              "excluded": false
+            }
+          ]
+        }
+      },
+      "quoteData": {
+        "offeredQuotes": [
+          {
+            "publicID": "pc:47635190",
+            "branchName": "CUSTOM",
+            "branchCode": "CUSTOM",
+            "isCustom": true,
+            "hasUWIssuesBlockingQuote": false,
+            "hasUWIssuesBlockingIssuance": true,
+            "premium": {
+              "total": {
+                "amount": 1244.32,
+                "currency": "usd"
+              },
+              "monthlyPremium": {
+                "amount": 103.69,
+                "currency": "usd"
+              },
+              "termMonths": 12,
+              "taxes": {
+                "amount": 0,
+                "currency": "usd"
+              },
+              "totalBeforeTaxes": {
+                "amount": 1232,
+                "currency": "usd"
+              }
+            },
+            "blockLevel": "ISSUE"
+          }
+        ]
+      },
+      "bindData": {
+        "accountNumber": "0017483217",
+        "contactPhone": "352-547-6529",
+        "contactEmail": "x.e.velez@gmail.com",
+        "totalSuspensePayment": {
+          "currency": "usd",
+          "amount": 0
+        }
+      },
+      "priorPolicies": [],
+      "mVRDataDTO": [],
+      "clueData": [],
+      "job": {
+        "jobNumber": "0046077452",
+        "canUserView": true,
+        "underwritingIssues": [
+          {
+            "longDescription": "Vehicle 1: Value must be between 11425.6 and 21884.399999999998. If you wish to proceed with a value outside of this range, please refer to underwriting and upload any documentation supporting the value.",
+            "shortDescription": "Boat, Yacht Underwriting Review Needed",
+            "hasApprovalOrRejection": false,
+            "currentBlockingPoint": "BlocksIssuance",
+            "offerings": [
+              "CUSTOM"
+            ],
+            "onOfferings": [
+              {
+                "offering": "CUSTOM",
+                "hasApprovalOrRejection": false,
+                "currentBlockingPoint": "BlocksIssuance"
+              }
+            ]
+          },
+          {
+            "longDescription": "Vehicle #1: Storage Type Other requires underwriting review.",
+            "shortDescription": "Boat, yacht storage ineligible",
+            "hasApprovalOrRejection": false,
+            "currentBlockingPoint": "BlocksIssuance",
+            "offerings": [
+              "CUSTOM"
+            ],
+            "onOfferings": [
+              {
+                "offering": "CUSTOM",
+                "hasApprovalOrRejection": false,
+                "currentBlockingPoint": "BlocksIssuance"
+              }
+            ]
+          },
+          {
+            "longDescription": "Vehicle 2 : Model of \"All Other\" requires underwriting review.",
+            "shortDescription": "Model of all other requires review",
+            "hasApprovalOrRejection": false,
+            "currentBlockingPoint": "BlocksIssuance",
+            "offerings": [
+              "CUSTOM"
+            ],
+            "onOfferings": [
+              {
+                "offering": "CUSTOM",
+                "hasApprovalOrRejection": false,
+                "currentBlockingPoint": "BlocksIssuance"
+              }
+            ]
+          },
+          {
+            "longDescription": "Vehicle 2 : Make of \"All Other\" requires underwriting review.",
+            "shortDescription": "Make of all other",
+            "hasApprovalOrRejection": false,
+            "currentBlockingPoint": "BlocksIssuance",
+            "offerings": [
+              "CUSTOM"
+            ],
+            "onOfferings": [
+              {
+                "offering": "CUSTOM",
+                "hasApprovalOrRejection": false,
+                "currentBlockingPoint": "BlocksIssuance"
+              }
+            ]
+          }
+        ],
+        "isEditLocked": false,
+        "statusCode": "Quoted"
+      },
+      "fieldAvailability": {
+        "avaliableFields": {
+          "RecPolicyStorage": false,
+          "Gender": false
+        }
+      },
+      "isStorageConstTypeMandatory": false
+    },
+    "id": "3d7d3d12-9985-4d3f-a12e-90d177e6d818",
+    "jsonrpc": "2.0"
+  }
+}

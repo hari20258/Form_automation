@@ -1,0 +1,158 @@
+{
+    // ============================================================================
+    // STEP 3: DRIVERS — Essential API Payload
+    // This payload submits the drivers (Primary + Additional) and their details.
+    // It advances the wizard from "Drivers" to the next step (likely "Violations" or "Vehicles").
+    // ============================================================================
+    "updateDraftSubmission": {
+        // ENDPOINT: POST https://amsuite.amig.com/pc/service/edge/gatewayquote/quote
+        // PURPOSE: Saves driver details (license, experience, safety course) for all drivers.
+        // RETURNS: Validation results or success moving to next step.
+        "id": "uuid-v4-here",
+        "jsonrpc": "2.0",
+        "method": "updateDraftSubmission",
+        "params": [
+            {
+                // --- Session & Quote Identifiers ---
+                "sessionUUID": "57b9add4-46fb-477e-a539-57902f9cf182",
+                "quoteID": "0046077452",
+                // --- Base Data (Account & Policy Info - Keep populated) ---
+                "baseData": {
+                    "accountNumber": "0017483217",
+                    "accountHolder": { /* ... Same as before ... */},
+                    "policyAddress": { /* ... Same as before ... */},
+                    "productCode": "PersonalAuto",
+                    "productName": "Recreational",
+                    "uWCompany": "071",
+                    "periodStartDate": {
+                        "year": 2026,
+                        "month": 1,
+                        "day": 17
+                    },
+                    "periodEndDate": {
+                        "year": 2027,
+                        "month": 1,
+                        "day": 17
+                    },
+                    "preQualQuestionSets": [],
+                    "additionalInsureds": [ /* ... Same as before ... */],
+                    "policyType": "boat",
+                    "baseState": "FL",
+                    "ratingState": "FL"
+                },
+                // --- LOB Data: WHERE DRIVERS LIVE ---
+                "lobData": {
+                    "personalAuto": {
+                        "preQualQuestionSets": [ /* ... Same Questions as Step 2 ... */],
+                        "coverables": {
+                            "drivers": [
+                                // --- DRIVER 1: PRIMARY INSURED (Linked to Account Holder) ---
+                                {
+                                    "publicID": "pc:127635327", // Driver internal ID (null if new)
+                                    "person": {
+                                        "publicID": "pc:33904322", // Links to baseData.accountHolder.publicID
+                                        "displayName": "Luis Burckhardt",
+                                        "firstName": "Luis",
+                                        "lastName": "Burckhardt",
+                                        "primaryPhoneType": "mobile",
+                                        "cellNumber": "3525476529",
+                                        "maritalStatus": "M",
+                                        "dateOfBirth": {
+                                            "year": 1979,
+                                            "month": 0,
+                                            "day": 0,
+                                            "isMasked": true
+                                        },
+                                        "primaryAddress": { /* ... Same address ... */},
+                                        "subtype": "Person",
+                                        "accountHolder": true
+                                    },
+                                    "isPolicyHolder": true, // Designates as Primary
+                                    "relationship": "pni_ext", // "pni_ext" = Primary Named Insured
+                                    "licensed": true,
+                                    "licenseState": "FL",
+                                    "licenseNumber": "B626526793780", // Real license number (masked in HAR)
+                                    "dateOfBirth": {
+                                        "year": 1979,
+                                        "month": 0,
+                                        "day": 0,
+                                        "isMasked": true
+                                    },
+                                    "priorOwnerExp": [],
+                                    "accidents": 0,
+                                    "violations": 0,
+                                    // --- Driver Questions (Safety Course / Experience) ---
+                                    "driverQuestionSets": [
+                                        {
+                                            "code": "PA_DriverRoles_1",
+                                            "answers": {
+                                                "PA_QSDateCompletedSafetyCourse_1": null, // Date or null
+                                                "PA_QSYearsBoatingExperience_1": "20", // String number
+                                                "PA_QSIneligibleDriver_1": "false"
+                                            }
+                                        }
+                                    ]
+                                },
+                                // --- DRIVER 2: ADDITIONAL INSURED (Spouse) ---
+                                {
+                                    "publicID": "pc:127635329",
+                                    "person": {
+                                        "publicID": "pc:33937889", // Links to baseData.additionalInsureds[0].contact.publicID ?? (Verify linkage)
+                                        // Note: In HAR, this ID (33937889) is different from Add'l Insured contact ID (33937888).
+                                        // Use the one returned from previous step or null for new.
+                                        "displayName": "Xiomara Burckhardt",
+                                        "firstName": "Xiomara",
+                                        "lastName": "Burckhardt",
+                                        "primaryPhoneType": "mobile",
+                                        "cellNumber": "3525476529", // Same as primary in example?
+                                        "maritalStatus": "M",
+                                        "dateOfBirth": {
+                                            "year": 1981,
+                                            "month": 0,
+                                            "day": 0,
+                                            "isMasked": true
+                                        },
+                                        "primaryAddress": { /* ... Same address ... */}
+                                    },
+                                    "isPolicyHolder": false,
+                                    "relationship": "SP", // "SP" = Spouse
+                                    "licensed": true,
+                                    "licenseState": "FL",
+                                    "licenseNumber": "B225720598000",
+                                    "dateOfBirth": {
+                                        "year": 1981,
+                                        "month": 0,
+                                        "day": 0,
+                                        "isMasked": true
+                                    },
+                                    "priorOwnerExp": [],
+                                    "accidents": "0", // String in HAR for this one?
+                                    "violations": "0", // String in HAR for this one?
+                                    "driverQuestionSets": [
+                                        {
+                                            "code": "PA_DriverRoles_1",
+                                            "answers": {
+                                                "PA_QSDateCompletedSafetyCourse_1": null,
+                                                "PA_QSYearsBoatingExperience_1": "20",
+                                                "PA_QSIneligibleDriver_1": "false"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ],
+                            "vehicles": [],
+                            "prefillReportOrdered_Ext": false
+                        },
+                        "offerings": [ /* ... Same Offerings ... */]
+                    }
+                },
+                "persons": [
+                    /* ... List of all persons (Luis + Xiomara) same as before ... */
+                ],
+                // 🚨 PAGE CONTEXT: "DRIVER" (Singular) 🚨
+                // This tells the API that we are submitting the Drivers step.
+                "pageContext": "DRIVER"
+            }
+        ]
+    }
+}

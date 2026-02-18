@@ -1,0 +1,33 @@
+{
+  "endpoint": "https://amsuite.amig.com/pc/service/edge/address/addressstandardization",
+  "rpcMethod": "retrievePolicyAddresses",
+  "payload": {
+    "id": "996a315e-c4d1-4273-9abf-b04eee92ad96",
+    "jsonrpc": "2.0",
+    "method": "retrievePolicyAddresses",
+    "params": [
+      {
+        "quoteID": "0046077452",
+        "addressFilter": "CONTACTADDRESS"
+      }
+    ]
+  },
+  "response": {
+    "result": [
+      {
+        "publicID": "pc:84128813",
+        "displayName": "2576 SE 31st Pl, Ocala, FL 34471",
+        "addressLine1": "2576 SE 31st Pl",
+        "city": "Ocala",
+        "state": "FL",
+        "postalCode": "34471",
+        "country": "US",
+        "addressType": "home",
+        "standardizeStatus": "standardized",
+        "standardizeDate_Ext": "2026-02-17T09:11:26Z"
+      }
+    ],
+    "id": "996a315e-c4d1-4273-9abf-b04eee92ad96",
+    "jsonrpc": "2.0"
+  }
+}

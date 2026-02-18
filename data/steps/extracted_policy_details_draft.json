@@ -1,0 +1,1078 @@
+[
+  {
+    "requestNumber": 1,
+    "endpoint": "https://amsuite.amig.com/pc/service/edge/prism/auth",
+    "rpcMethod": "getProducerProducts",
+    "httpStatus": 200,
+    "payload": {
+      "id": "df50a30e-c620-4c8d-ad49-dc8fa5f53cd3",
+      "jsonrpc": "2.0",
+      "method": "getProducerProducts",
+      "params": [
+        {
+          "effectiveDt": {
+            "year": 2026,
+            "month": 1,
+            "day": 12
+          },
+          "userName": "jberndt",
+          "state": "FL",
+          "jobType": "QUOTE",
+          "companyNum": "071",
+          "PolicyType": "boat",
+          "jobNumber": "0045994285"
+        }
+      ]
+    },
+    "responseTopLevelKeys": [
+      "requestStatus",
+      "products",
+      "authorized"
+    ]
+  },
+  {
+    "requestNumber": 2,
+    "endpoint": "https://ec.walkme.com/event/tell",
+    "rpcMethod": "(not JSON-RPC)",
+    "httpStatus": 200,
+    "payload": "{\"_static\":true,\"Wm-Client-Timestamp\":1771318864536}\n{\"_enc\":\"bbd%=rk|=3b/,,2%=zqpezrvk=3zls~y%=zsv}pr=3b/(+.%=wk{vh=3)*&%=kwxvzw=d%=qzzm|l=3b=(1*.1/.=%=qpvlmzi=3=LP|~R=%=zr~q=d%=lp=3b=/1/1/1++.=%=qpvlmzi=3=zrpmw\\\\=%=zr~q=d%=mzlhpm}=d%=iqz=3b=/+)~y|(/+'&/}y)~'y)+-+~}-{{{,)z'=%={V~lr=3=//z,-*)./.y{2~{}~2-/,+2~y&-2z*,z~*.+=%={Vjzl|=3.%=rmpyk~so=3/%=iqz=3.2%={Vrmzo=3=(/}'z.(}{*'y&|y&z(,+~~}{y.)+.},y=%={Vj=3=mzvyvkqz{V=%=z|mjpL{Vjz=3=k{qmz}u=%={Vjz=d%=rh=3=(-y(y|-.z{(.2~&z'2~{,+2*.)z2}|&&{~/,=%={Vl=3b=-1/1*=%=zo=3=,-}(/yy-2+.|&,..'2*.+/.-2*-&/*-/-=%=}vs=3=((1/1*=%=~m}~=d%=qpvlmzi=3b=PLL0k|zmv{zM0-SR^L0zsvypmo0o{vz0rp|1xvr~1zkvjlr~00%lokkw=%=mzmmzyzm=3=lkqzx^?mpy?s~kmpO?f~hzk~X=%=zskvk=3=.yy((,*,{}}.){{})'*+.y'(+z,,~y}y=%={Vkvlvi=3zls~y%=zr~myVlv=3b=hpsy2}qn0<=%=wl~w=3=srkw1gz{qv0srkw0klv{0s~kmpo2f~hzk~x0=%=zr~qwk~o=3=rp|1xvr~1zkvjlr~=%=zr~qklpw=3=%lokkw=%=sp|pkpmo=d%=qpvk~|ps=3=(&y){)/)+(z{*..&/|~+~'/+,y.).y+/=%={Vqvh=3b',)-%=zrvK{~ps=3,')*&)'.,.((.%=km~kLi~q=d%=xqvrvk=d%=gk|=3/'-+)''.,.((.%=zrvk=3b.%=}rvs|=3=mzkqvpo=%=zofk=d%=|lvr=3b=IV[?Z[JS\\\\LQ^MK2XQ?RMPY2XQ?QV^R?B=Cmzqqv2zx~o=C\\\"{vDIV[=%=fmzjNpkj~=3=m~{qzs~|2~y1~y1qp|v2mzt|vozrvkzk~{1B.Dv0zsxxpk2qhp{opm{2hx1-mzt|vozk~{<B.Div{0mzoo~mh2mzt|vozrvkzk~{1B.Div{0{vs~i2xq1{zw|jpkqj2xq1zqvklvmo2xq1fkorz2kpq2xq1zop|l2zk~splv2xq1B.Dq~ol0zop|l2xq1zop|l2zk~splv2xq1B.Dq~ol0~zm~2z{js|lq~mk@@ojpmx2spmkqp|2hx1B.Dz{js|lq~mk2xq0lspmkqp|2hx1B.Div{0ojpmx2spmkqp|2hx1B.Div{0zop|l2zk~splv2xq1B.Div{0B.Div{0b1tl~r2{vs~i2xq1{vs~i2xq1zqvklvmo2xq1d%ll~s|2xq1%8{zkkvr}jl2hx81B.Drmpy2xq0zop|l2zk~splv2xq1kgzk2l~w@mzoo~mh2mz{~ps2hx1t|ps}@mzoo~mh2mz{~ps2hx1B-Div{0zop|l2xq1B.Div{0zop|l2xq1B-Div{0B-Div{0zop|l2zk~splv2xq1zx~o2hx1t|ps}@mzoo~mh2mz{~ps2hx1gp}2hx1B.Div{0qv~r2{m~evh2hx1B-Div{0{m~evh2hx1B.Div{0{m~evhzkpjn2hx1f~hzk~x2hx1mzqv~kqp|2hx1B.Div{0zop|l2xq1mzqv~kqp|2hx1B.Div{0zop|l2xq1kqzkqp|2hx1mzqv~kqp|2hx1B.Div{0mzoo~mh2kqzkqp|2hx1B-Div{0qv~r2hx1B.Div{0mzoo~mh2qv~r2hx1B.Dqv~r0mzqqv2kqzkqp|2o~ql2hx1B.Div{0kqzkqp|2o~ql2hx1B-Div{0mzqqv2zx~o<B.Div{0zop|l2xq1zx~o<B.Div{0zop|l2xq1B.Div{0B.Df{p}0B.Dsrkw=%=wk~og=d%=kqzrzsz=3=qhp{zljpr=%=zofk=d\"}",
+    "responseTopLevelKeys": []
+  },
+  {
+    "requestNumber": 3,
+    "endpoint": "https://ec.walkme.com/event/tell",
+    "rpcMethod": "(not JSON-RPC)",
+    "httpStatus": 200,
+    "payload": "{\"_static\":true,\"Wm-Client-Timestamp\":1771318865994}\n{\"_enc\":\"bbd%=rk|=3b/,,2%=zqpezrvk=3zls~y%=zsv}pr=3b/(+.%=wk{vh=3)*&%=kwxvzw=d%=qzzm|l=3b=(1*.1/.=%=qpvlmzi=3=LP|~R=%=zr~q=d%=lp=3b=/1/1/1++.=%=qpvlmzi=3=zrpmw\\\\=%=zr~q=d%=mzlhpm}=d%=iqz=3b=/+)~y|(/+'&/}y)~'y)+-+~}-{{{,)z'=%={V~lr=3=//z,-*)./.y{2~{}~2-/,+2~y&-2z*,z~*.+=%={Vjzl|=3.%=rmpyk~so=3/%=iqz=3.2%={Vrmzo=3=(/}'z.(}{*'y&|y&z(,+~~}{y.)+.},y=%={Vj=3=mzvyvkqz{V=%=z|mjpL{Vjz=3=k{qmz}u=%={Vjz=d%=rh=3=(-y(y|-.z{(.2~&z'2~{,+2*.)z2}|&&{~/,=%={Vl=3b=-1/1*=%=zo=3=,-}(/yy-2+.|&,..'2*.+/.-2*-&/*-/-=%=}vs=3=((1/1*=%=~m}~=d%=qpvlmzi=3b=PLL0k|zmv{zM0-SR^L0zsvypmo0o{vz0rp|1xvr~1zkvjlr~00%lokkw=%=mzmmzyzm=3=lkqzx^?mpy?s~kmpO?f~hzk~X=%=zskvk=3=.yy((,*,{}}.){{})'*+.y'(+z,,~y}y=%={Vkvlvi=3zls~y%=zr~myVlv=3b=hpsy2}qn0<=%=wl~w=3=srkw1gz{qv0srkw0klv{0s~kmpo2f~hzk~x0=%=zr~qwk~o=3=rp|1xvr~1zkvjlr~=%=zr~qklpw=3=%lokkw=%=sp|pkpmo=d%=qpvk~|ps=3=(&y){)/)+(z{*..&/|~+~'/+,y.).y+/=%={Vqvh=3b',)-%=zrvK{~ps=3,')*&)'.,.((.%=km~kLi~q=d%=xqvrvk=d%=gk|=3(,(*)''.,.((.%=zrvk=3b=)-/-=%=kgzk=3=Q^OL?F[P]K?ZS]^K?Z[JS\\\\LQ^MK2XQ?RMPY2XQ?QV^R?B=Cmzqqv2zx~o=C\\\"{vDIV[=%=fmzjNpkj~=3=m~zf1zivk|~1B'Dq~ol0B.D{k0zop|l2xq1B.Dmk0B.Df{p}k0hzvi2m~zf1{zlqz{qp|2zs}~k1zs}~k1B.Dzs}~k0zivlqpolzm2zs}~k1{vs~i2xq1fkorz2kpq2xq1zop|l2zk~splv2xq1mzt|vozrvkzk~{1B.Div{0jqzr2qhp{opm{2hx1qhp{opm{2mzt|vozrvkzk~{1B,Div{0qzop2hx1mzoo~mh2mzt|vozrvkzk~{1B.Div{0{vs~i2xq1{zw|jpkqj2xq1zqvklvmo2xq1fkorz2kpq2xq1zop|l2zk~splv2xq1B.Dq~ol0zop|l2xq1zop|l2zk~splv2xq1B.Dq~ol0~zm~2z{js|lq~mk@@ojpmx2spmkqp|2hx1B.Dz{js|lq~mk2xq0lspmkqp|2hx1B.Div{0ojpmx2spmkqp|2hx1B.Div{0zop|l2zk~splv2xq1B.Div{0B.Div{0b1tl~r2{vs~i2xq1{vs~i2xq1zqvklvmo2xq1d%ll~s|2xq1%8{zkkvr}jl2hx81B.Drmpy2xq0zop|l2zk~splv2xq1kgzk2l~w@mzoo~mh2mz{~ps2hx1t|ps}@mzoo~mh2mz{~ps2hx1B-Div{0zop|l2xq1B.Div{0zop|l2xq1B-Div{0B-Div{0zop|l2zk~splv2xq1zx~o2hx1t|ps}@mzoo~mh2mz{~ps2hx1gp}2hx1B.Div{0qv~r2{m~evh2hx1B-Div{0{m~evh2hx1B.Div{0{m~evhzkpjn2hx1f~hzk~x2hx1mzqv~kqp|2hx1B.Div{0zop|l2xq1mzqv~kqp|2hx1B.Div{0zop|l2xq1kqzkqp|2hx1mzqv~kqp|2hx1B.Div{0mzoo~mh2kqzkqp|2hx1B-Div{0qv~r2hx1B.Div{0mzoo~mh2qv~r2hx1B.Dqv~r0mzqqv2kqzkqp|2o~ql2hx1B.Div{0kqzkqp|2o~ql2hx1B-Div{0mzqqv2zx~o<B.Div{0zop|l2xq1zx~o<B.Div{0zop|l2xq1B.Div{0B.Df{p}0B.Dsrkw=%=wk~og=d%=kqzrzsz=3=qhp{zljpr=%=zofk=d\"}",
+    "responseTopLevelKeys": []
+  },
+  {
+    "requestNumber": 4,
+    "endpoint": "https://ec.walkme.com/event/tell",
+    "rpcMethod": "(not JSON-RPC)",
+    "httpStatus": 200,
+    "payload": "{\"_static\":true,\"Wm-Client-Timestamp\":1771318866904}\n{\"_enc\":\"bbd%=rk|=3b/,,2%=zqpezrvk=3zls~y%=zsv}pr=3b/(+.%=wk{vh=3)*&%=kwxvzw=d%=qzzm|l=3b=(1*.1/.=%=qpvlmzi=3=LP|~R=%=zr~q=d%=lp=3b=/1/1/1++.=%=qpvlmzi=3=zrpmw\\\\=%=zr~q=d%=mzlhpm}=d%=iqz=3b=/+)~y|(/+'&/}y)~'y)+-+~}-{{{,)z'=%={V~lr=3=//z,-*)./.y{2~{}~2-/,+2~y&-2z*,z~*.+=%={Vjzl|=3.%=rmpyk~so=3/%=iqz=3.2%={Vrmzo=3=(/}'z.(}{*'y&|y&z(,+~~}{y.)+.},y=%={Vj=3=mzvyvkqz{V=%=z|mjpL{Vjz=3=k{qmz}u=%={Vjz=d%=rh=3=(-y(y|-.z{(.2~&z'2~{,+2*.)z2}|&&{~/,=%={Vl=3b=-1/1*=%=zo=3=,-}(/yy-2+.|&,..'2*.+/.-2*-&/*-/-=%=}vs=3=((1/1*=%=~m}~=d%=qpvlmzi=3b=PLL0k|zmv{zM0-SR^L0zsvypmo0o{vz0rp|1xvr~1zkvjlr~00%lokkw=%=mzmmzyzm=3=lkqzx^?mpy?s~kmpO?f~hzk~X=%=zskvk=3=.yy((,*,{}}.){{})'*+.y'(+z,,~y}y=%={Vkvlvi=3zls~y%=zr~myVlv=3b=hpsy2}qn0<=%=wl~w=3=srkw1gz{qv0srkw0klv{0s~kmpo2f~hzk~x0=%=zr~qwk~o=3=rp|1xvr~1zkvjlr~=%=zr~qklpw=3=%lokkw=%=sp|pkpmo=d%=qpvk~|ps=3=(&y){)/)+(z{*..&/|~+~'/+,y.).y+/=%={Vqvh=3b',)-%=zrvK{~ps=3,')*&)'.,.((.%=km~kLi~q=d%=xqvrvk=d%=gk|=3.+)))''.,.((.%=zrvk=3b=}zY=%=kgzk=3=Q^OL?F[P]K?ZS]^K?Z[JS\\\\LQ^MK2XQ?RMPY2XQ?QV^R?B=Cmzqqv2zx~o=C\\\"{vDIV[=%=fmzjNpkj~=3=wkqpr1zivk|~1B-Dq~ol0B.D{k0zop|l2xq1B.Dmk0B.Df{p}k0{zlqz{qp|2zs}~k1zs}~k1hzvi2wkqpr1B.Dzs}~k0zivlqpolzm2zs}~k1{vs~i2xq1fkorz2kpq2xq1zop|l2zk~splv2xq1mzt|vozrvkzk~{1B.Div{0jqzr2qhp{opm{2hx1qhp{opm{2mzt|vozrvkzk~{1B,Div{0qzop2hx1mzoo~mh2mzt|vozrvkzk~{1B.Div{0{vs~i2xq1{zw|jpkqj2xq1zqvklvmo2xq1fkorz2kpq2xq1zop|l2zk~splv2xq1B.Dq~ol0zop|l2xq1zop|l2zk~splv2xq1B.Dq~ol0~zm~2z{js|lq~mk@@ojpmx2spmkqp|2hx1B.Dz{js|lq~mk2xq0lspmkqp|2hx1B.Div{0ojpmx2spmkqp|2hx1B.Div{0zop|l2zk~splv2xq1B.Div{0B.Div{0b1tl~r2{vs~i2xq1{vs~i2xq1zqvklvmo2xq1d%ll~s|2xq1%8{zkkvr}jl2hx81B.Drmpy2xq0zop|l2zk~splv2xq1kgzk2l~w@mzoo~mh2mz{~ps2hx1t|ps}@mzoo~mh2mz{~ps2hx1B-Div{0zop|l2xq1B.Div{0zop|l2xq1B-Div{0B-Div{0zop|l2zk~splv2xq1zx~o2hx1t|ps}@mzoo~mh2mz{~ps2hx1gp}2hx1B.Div{0qv~r2{m~evh2hx1B-Div{0{m~evh2hx1B.Div{0{m~evhzkpjn2hx1f~hzk~x2hx1mzqv~kqp|2hx1B.Div{0zop|l2xq1mzqv~kqp|2hx1B.Div{0zop|l2xq1kqzkqp|2hx1mzqv~kqp|2hx1B.Div{0mzoo~mh2kqzkqp|2hx1B-Div{0qv~r2hx1B.Div{0mzoo~mh2qv~r2hx1B.Dqv~r0mzqqv2kqzkqp|2o~ql2hx1B.Div{0kqzkqp|2o~ql2hx1B-Div{0mzqqv2zx~o<B.Div{0zop|l2xq1zx~o<B.Div{0zop|l2xq1B.Div{0B.Df{p}0B.Dsrkw=%=wk~og=d%=kqzrzsz=3=qhp{zljpr=%=zofk=d\"}",
+    "responseTopLevelKeys": []
+  },
+  {
+    "requestNumber": 5,
+    "endpoint": "https://ec.walkme.com/event/tell",
+    "rpcMethod": "(not JSON-RPC)",
+    "httpStatus": 200,
+    "payload": "{\"_static\":true,\"Wm-Client-Timestamp\":1771318867660}\n{\"_enc\":\"bbd%=rk|=3b/,,2%=zqpezrvk=3zls~y%=zsv}pr=3b/(+.%=wk{vh=3)*&%=kwxvzw=d%=qzzm|l=3b=(1*.1/.=%=qpvlmzi=3=LP|~R=%=zr~q=d%=lp=3b=/1/1/1++.=%=qpvlmzi=3=zrpmw\\\\=%=zr~q=d%=mzlhpm}=d%=iqz=3b=/+)~y|(/+'&/}y)~'y)+-+~}-{{{,)z'=%={V~lr=3=//z,-*)./.y{2~{}~2-/,+2~y&-2z*,z~*.+=%={Vjzl|=3.%=rmpyk~so=3/%=iqz=3.2%={Vrmzo=3=(/}'z.(}{*'y&|y&z(,+~~}{y.)+.},y=%={Vj=3=mzvyvkqz{V=%=z|mjpL{Vjz=3=k{qmz}u=%={Vjz=d%=rh=3=(-y(y|-.z{(.2~&z'2~{,+2*.)z2}|&&{~/,=%={Vl=3b=-1/1*=%=zo=3=,-}(/yy-2+.|&,..'2*.+/.-2*-&/*-/-=%=}vs=3=((1/1*=%=~m}~=d%=qpvlmzi=3b=PLL0k|zmv{zM0-SR^L0zsvypmo0o{vz0rp|1xvr~1zkvjlr~00%lokkw=%=mzmmzyzm=3=lkqzx^?mpy?s~kmpO?f~hzk~X=%=zskvk=3=.yy((,*,{}}.){{})'*+.y'(+z,,~y}y=%={Vkvlvi=3zls~y%=zr~myVlv=3b=hpsy2}qn0<=%=wl~w=3=srkw1gz{qv0srkw0klv{0s~kmpo2f~hzk~x0=%=zr~qwk~o=3=rp|1xvr~1zkvjlr~=%=zr~qklpw=3=%lokkw=%=sp|pkpmo=d%=qpvk~|ps=3=(&y){)/)+(z{*..&/|~+~'/+,y.).y+/=%={Vqvh=3b',)-%=zrvK{~ps=3,')*&)'.,.((.%=km~kLi~q=d%=xqvrvk=d%=gk|=3&',()''.,.((.%=zrvk=3b=-.=%=kgzk=3=[K?F[P]K?ZS]^K?Z[JS\\\\LQ^MK2XQ?RMPY2XQ?QV^R?B=Cmzqqv2zx~o=C\\\"{vDIV[=%=fmzjNpkj~=3=zop|l2xq1xqv{qv}2xq1f~{1zivk|~1B*D{k0zop|l2xq1B-Dmk0B.Df{p}k0{zlqz{qp|2zs}~k1zs}~k1hzvi2f~{1B.Dzs}~k0zivlqpolzm2zs}~k1{vs~i2xq1fkorz2kpq2xq1zop|l2zk~splv2xq1mzt|vozrvkzk~{1B.Div{0jqzr2qhp{opm{2hx1qhp{opm{2mzt|vozrvkzk~{1B,Div{0qzop2hx1mzoo~mh2mzt|vozrvkzk~{1B.Div{0{vs~i2xq1{zw|jpkqj2xq1zqvklvmo2xq1fkorz2kpq2xq1zop|l2zk~splv2xq1B.Dq~ol0zop|l2xq1zop|l2zk~splv2xq1B.Dq~ol0~zm~2z{js|lq~mk@@ojpmx2spmkqp|2hx1B.Dz{js|lq~mk2xq0lspmkqp|2hx1B.Div{0ojpmx2spmkqp|2hx1B.Div{0zop|l2zk~splv2xq1B.Div{0B.Div{0b1tl~r2{vs~i2xq1{vs~i2xq1zqvklvmo2xq1d%ll~s|2xq1%8{zkkvr}jl2hx81B.Drmpy2xq0zop|l2zk~splv2xq1kgzk2l~w@mzoo~mh2mz{~ps2hx1t|ps}@mzoo~mh2mz{~ps2hx1B-Div{0zop|l2xq1B.Div{0zop|l2xq1B-Div{0B-Div{0zop|l2zk~splv2xq1zx~o2hx1t|ps}@mzoo~mh2mz{~ps2hx1gp}2hx1B.Div{0qv~r2{m~evh2hx1B-Div{0{m~evh2hx1B.Div{0{m~evhzkpjn2hx1f~hzk~x2hx1mzqv~kqp|2hx1B.Div{0zop|l2xq1mzqv~kqp|2hx1B.Div{0zop|l2xq1kqzkqp|2hx1mzqv~kqp|2hx1B.Div{0mzoo~mh2kqzkqp|2hx1B-Div{0qv~r2hx1B.Div{0mzoo~mh2qv~r2hx1B.Dqv~r0mzqqv2kqzkqp|2o~ql2hx1B.Div{0kqzkqp|2o~ql2hx1B-Div{0mzqqv2zx~o<B.Div{0zop|l2xq1zx~o<B.Div{0zop|l2xq1B.Div{0B.Df{p}0B.Dsrkw=%=wk~og=d%=kqzrzsz=3=qhp{zljpr=%=zofk=d\"}",
+    "responseTopLevelKeys": []
+  },
+  {
+    "requestNumber": 6,
+    "endpoint": "https://amsuite.amig.com/rb_bf01032pnr?type=js3&sn=v_4_srv_11_sn_318CB24317027F9A9D8855E896AAFA0E_perc_100000_ol_0_mul_1_app-3Aba50c8f91b305f7c_1_app-3Aaac44d3822ef3334_1&svrid=11&flavor=post&vi=DUPTAEGNNTIKBFSQHKAJKHOCARHRPUKS-0&modifiedSince=1770653590102&bp=3&app=ba50c8f91b305f7c&crc=1646683311&en=wq1osa9p&end=1",
+    "rpcMethod": "(not JSON-RPC)",
+    "httpStatus": 200,
+    "payload": "$a=1%7C8%7C2020-2029%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20SuMoTuWeThFrSa%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20...%7CC%7Cx%7C1771318867641%7C1771318867923%7Cdn%7C333%7Cxu%7Chttps%3A%2F%2Fec.walkme.com%2Fevent%2Ftell%7Csvtrg%7C1%7Csvm%7Ci1%5Esk0%5Esh0%7Ctvtrg%7C1%7Ctvm%7Ci1%5Esk0%5Esh0%7Cxrt%7Cb1771318867663e0m257X200T-2z11I1%7Cxcs%7C281%7Cxce%7C281%2C2%7C9%7C_event_%7C1771318867641%7C_vc_%7CV%7C-1%5Epc%7CVCD%7C1%7CVCDS%7C0%7CVCS%7C334%7CVCO%7C334%7CVCI%7C0%7CS%7C-1$rId=RID_-1128311692$rpId=1541874361$domR=1771318698321$tvn=%2Fgateway-portal%2Fdist%2Fhtml%2Findex.html$tvt=1771318695684$tvm=i1%3Bk0%3Bh0$tvtrg=1$w=1470$h=835$sw=1470$sh=956$ni=4g|1.1$md=mdcc1%2Cjberndt$url=https%3A%2F%2Famsuite.amig.com%2Fgateway-portal%2Fdist%2Fhtml%2Findex.html%23%2Fqnb-flow$title=Gateway%20Portal%20for%20Agents$latC=0$app=ba50c8f91b305f7c$vi=DUPTAEGNNTIKBFSQHKAJKHOCARHRPUKS-0$fId=118698177_856$v=10329260206100503$vID=1770624498055J429LDCUKAKM46V2D6VUM9A3KNQP4IGR$rf=https%3A%2F%2Famsuite.amig.com%2Fgateway-portal%2Fdist%2Fhtml%2Findex.html%23%2Fqnb-flow$time=1771318867979",
+    "responseTopLevelKeys": []
+  },
+  {
+    "requestNumber": 7,
+    "endpoint": "https://amsuite.amig.com/pc/service/edge/address/addressstandardization",
+    "rpcMethod": "retrievePolicyAddresses",
+    "httpStatus": 200,
+    "payload": {
+      "id": "74d292c3-af29-4020-805d-05fff392368e",
+      "jsonrpc": "2.0",
+      "method": "retrievePolicyAddresses",
+      "params": [
+        {
+          "quoteID": "0045994285",
+          "addressFilter": "CONTACTADDRESS"
+        }
+      ]
+    },
+    "responseTopLevelKeys": [
+      "0"
+    ]
+  },
+  {
+    "requestNumber": 8,
+    "endpoint": "https://ec.walkme.com/event/tell",
+    "rpcMethod": "(not JSON-RPC)",
+    "httpStatus": 200,
+    "payload": "{\"_static\":true,\"Wm-Client-Timestamp\":1771318869245}\n{\"_enc\":\"bbd%=rk|=3b/,,2%=zqpezrvk=3zls~y%=zsv}pr=3b/(+.%=wk{vh=3)*&%=kwxvzw=d%=qzzm|l=3b=(1*.1/.=%=qpvlmzi=3=LP|~R=%=zr~q=d%=lp=3b=/1/1/1++.=%=qpvlmzi=3=zrpmw\\\\=%=zr~q=d%=mzlhpm}=d%=iqz=3b=/+)~y|(/+'&/}y)~'y)+-+~}-{{{,)z'=%={V~lr=3=//z,-*)./.y{2~{}~2-/,+2~y&-2z*,z~*.+=%={Vjzl|=3.%=rmpyk~so=3/%=iqz=3.2%={Vrmzo=3=(/}'z.(}{*'y&|y&z(,+~~}{y.)+.},y=%={Vj=3=mzvyvkqz{V=%=z|mjpL{Vjz=3=k{qmz}u=%={Vjz=d%=rh=3=(-y(y|-.z{(.2~&z'2~{,+2*.)z2}|&&{~/,=%={Vl=3b=-1/1*=%=zo=3=,-}(/yy-2+.|&,..'2*.+/.-2*-&/*-/-=%=}vs=3=((1/1*=%=~m}~=d%=qpvlmzi=3b=PLL0k|zmv{zM0-SR^L0zsvypmo0o{vz0rp|1xvr~1zkvjlr~00%lokkw=%=mzmmzyzm=3=lkqzx^?mpy?s~kmpO?f~hzk~X=%=zskvk=3=.yy((,*,{}}.){{})'*+.y'(+z,,~y}y=%={Vkvlvi=3zls~y%=zr~myVlv=3b=hpsy2}qn0<=%=wl~w=3=srkw1gz{qv0srkw0klv{0s~kmpo2f~hzk~x0=%=zr~qwk~o=3=rp|1xvr~1zkvjlr~=%=zr~qklpw=3=%lokkw=%=sp|pkpmo=d%=qpvk~|ps=3=(&y){)/)+(z{*..&/|~+~'/+,y.).y+/=%={Vqvh=3b',)-%=zrvK{~ps=3,')*&)'.,.((.%=km~kLi~q=d%=xqvrvk=d%=gk|=3.&&')''.,.((.%=zrvk=3b=SZ]^S?Z[JS\\\\LQ^MK2XQ?RMPY2XQ?QV^R?B=Cmzqqv2zx~o=C\\\"{vDIV[=%=fmzjNpkj~=3=.o~smzip2hx1B.Dsz}~s0zop|l2xq1zop|l2zk~splv2xq1fm~qv}2lpv{~m2hx1B.Div{0~zm~2z{js|lq~mk@@ojpmx2spmkqp|2hx1B.Dz{js|lq~mk2xq0lspmkqp|2hx1B.Div{0ojpmx2spmkqp|2hx1B.Div{0zop|l2zk~splv2xq1B-Div{0B.Div{0b1zlm~o2{vs~i2xq1tl~r2{vs~i2xq1{vs~i2xq1fkmv{2xq1d%ll~s|2xq1%8{zkkvr}jl2hx81B.Drmpy2xq0zop|l2zk~splv2xq1kgzk2l~w@mzoo~mh2mz{~ps2hx1t|ps}@mzoo~mh2mz{~ps2hx1B-Div{0zop|l2xq1B.Div{0zop|l2xq1B-Div{0B-Div{0zop|l2zk~splv2xq1zx~o2hx1t|ps}@mzoo~mh2mz{~ps2hx1gp}2hx1B.Div{0qv~r2{m~evh2hx1B-Div{0{m~evh2hx1B.Div{0{m~evhzkpjn2hx1f~hzk~x2hx1mzqv~kqp|2hx1B.Div{0zop|l2xq1mzqv~kqp|2hx1B.Div{0zop|l2xq1kqzkqp|2hx1mzqv~kqp|2hx1B.Div{0mzoo~mh2kqzkqp|2hx1B-Div{0qv~r2hx1B.Div{0mzoo~mh2qv~r2hx1B.Dqv~r0mzqqv2kqzkqp|2o~ql2hx1B.Div{0kqzkqp|2o~ql2hx1B-Div{0mzqqv2zx~o<B.Div{0zop|l2xq1zx~o<B.Div{0zop|l2xq1B.Div{0B.Df{p}0B.Dsrkw=%=wk~og=d%=kqzrzsz=3=qhp{zljpr=%=zofk=d\"}\n{\"_enc\":\"bbd%=rk|=3b/,,2%=zqpezrvk=3zls~y%=zsv}pr=3b/(+.%=wk{vh=3)*&%=kwxvzw=d%=qzzm|l=3b=(1*.1/.=%=qpvlmzi=3=LP|~R=%=zr~q=d%=lp=3b=/1/1/1++.=%=qpvlmzi=3=zrpmw\\\\=%=zr~q=d%=mzlhpm}=d%=iqz=3b=/+)~y|(/+'&/}y)~'y)+-+~}-{{{,)z'=%={V~lr=3=//z,-*)./.y{2~{}~2-/,+2~y&-2z*,z~*.+=%={Vjzl|=3.%=rmpyk~so=3/%=iqz=3.2%={Vrmzo=3=(/}'z.(}{*'y&|y&z(,+~~}{y.)+.},y=%={Vj=3=mzvyvkqz{V=%=z|mjpL{Vjz=3=k{qmz}u=%={Vjz=d%=rh=3=(-y(y|-.z{(.2~&z'2~{,+2*.)z2}|&&{~/,=%={Vl=3b=-1/1*=%=zo=3=,-}(/yy-2+.|&,..'2*.+/.-2*-&/*-/-=%=}vs=3=((1/1*=%=~m}~=d%=qpvlmzi=3b=PLL0k|zmv{zM0-SR^L0zsvypmo0o{vz0rp|1xvr~1zkvjlr~00%lokkw=%=mzmmzyzm=3=lkqzx^?mpy?s~kmpO?f~hzk~X=%=zskvk=3=.yy((,*,{}}.){{})'*+.y'(+z,,~y}y=%={Vkvlvi=3zls~y%=zr~myVlv=3b=hpsy2}qn0<=%=wl~w=3=srkw1gz{qv0srkw0klv{0s~kmpo2f~hzk~x0=%=zr~qwk~o=3=rp|1xvr~1zkvjlr~=%=zr~qklpw=3=%lokkw=%=sp|pkpmo=d%=qpvk~|ps=3=(&y){)/)+(z{*..&/|~+~'/+,y.).y+/=%={Vqvh=3b',)-%=zrvK{~ps=3,')*&)'.,.((.%=km~kLi~q=d%=xqvrvk=d%=gk|=3+*.&)''.,.((.%=zrvk=3b=KJOQV?Z[JS\\\\LQ^MK2XQ?RMPY2XQ?QV^R?B=Cmzqqv2zx~o=C\\\"{vDIV[=%=fmzjNpkj~=3={{~2zlm~o2{vs~i2xq1{vs~i2xq1{zw|jpkqj2xq1zop|l2xq1zqvklvmo2xq1fkorz2kpq2xq1{{~2fkmv{2xq1sz}~s2pq2hx1klmvy2hx1.fm~qv}2pv{~m<B.Dkjoqv0zop|l2xq1zop|l2zk~splv2xq1fm~qv}2lpv{~m2hx1B.Div{0~zm~2z{js|lq~mk@@ojpmx2spmkqp|2hx1B.Dz{js|lq~mk2xq0lspmkqp|2hx1B.Div{0ojpmx2spmkqp|2hx1B.Div{0zop|l2zk~splv2xq1B-Div{0B.Div{0b1zlm~o2{vs~i2xq1{{~2wkxqzsg~r2{vs~i2xq1tl~r2{vs~i2xq1{vs~i2xq1fkmv{2xq1d%ll~s|2xq1zk~rvq~2xq1%8{zkkvr}jl2hx81B.Drmpy2xq0zop|l2zk~splv2xq1kgzk2l~w@mzoo~mh2mz{~ps2hx1t|ps}@mzoo~mh2mz{~ps2hx1B-Div{0zop|l2xq1B.Div{0zop|l2xq1B-Div{0B-Div{0zop|l2zk~splv2xq1zx~o2hx1t|ps}@mzoo~mh2mz{~ps2hx1gp}2hx1B.Div{0qv~r2{m~evh2hx1B-Div{0{m~evh2hx1B.Div{0{m~evhzkpjn2hx1f~hzk~x2hx1mzqv~kqp|2hx1B.Div{0zop|l2xq1mzqv~kqp|2hx1B.Div{0zop|l2xq1kqzkqp|2hx1mzqv~kqp|2hx1B.Div{0mzoo~mh2kqzkqp|2hx1B-Div{0qv~r2hx1B.Div{0mzoo~mh2qv~r2hx1B.Dqv~r0mzqqv2kqzkqp|2o~ql2hx1B.Div{0kqzkqp|2o~ql2hx1B-Div{0mzqqv2zx~o<B.Div{0zop|l2xq1zx~o<B.Div{0zop|l2xq1B.Div{0B.Df{p}0B.Dsrkw=%=wk~og=d%=kqzrzsz=3=zxq~w|=%=zofk=d\"}",
+    "responseTopLevelKeys": []
+  },
+  {
+    "requestNumber": 9,
+    "endpoint": "https://ec.walkme.com/event/tell",
+    "rpcMethod": "(not JSON-RPC)",
+    "httpStatus": 200,
+    "payload": "{\"_static\":true,\"Wm-Client-Timestamp\":1771318869857}\n{\"_enc\":\"bbd%=rk|=3b/,,2%=zqpezrvk=3zls~y%=zsv}pr=3b/(+.%=wk{vh=3)*&%=kwxvzw=d%=qzzm|l=3b=(1*.1/.=%=qpvlmzi=3=LP|~R=%=zr~q=d%=lp=3b=/1/1/1++.=%=qpvlmzi=3=zrpmw\\\\=%=zr~q=d%=mzlhpm}=d%=iqz=3b=/+)~y|(/+'&/}y)~'y)+-+~}-{{{,)z'=%={V~lr=3=//z,-*)./.y{2~{}~2-/,+2~y&-2z*,z~*.+=%={Vjzl|=3.%=rmpyk~so=3/%=iqz=3.2%={Vrmzo=3=(/}'z.(}{*'y&|y&z(,+~~}{y.)+.},y=%={Vj=3=mzvyvkqz{V=%=z|mjpL{Vjz=3=k{qmz}u=%={Vjz=d%=rh=3=(-y(y|-.z{(.2~&z'2~{,+2*.)z2}|&&{~/,=%={Vl=3b=-1/1*=%=zo=3=,-}(/yy-2+.|&,..'2*.+/.-2*-&/*-/-=%=}vs=3=((1/1*=%=~m}~=d%=qpvlmzi=3b=PLL0k|zmv{zM0-SR^L0zsvypmo0o{vz0rp|1xvr~1zkvjlr~00%lokkw=%=mzmmzyzm=3=lkqzx^?mpy?s~kmpO?f~hzk~X=%=zskvk=3=.yy((,*,{}}.){{})'*+.y'(+z,,~y}y=%={Vkvlvi=3zls~y%=zr~myVlv=3b=hpsy2}qn0<=%=wl~w=3=srkw1gz{qv0srkw0klv{0s~kmpo2f~hzk~x0=%=zr~qwk~o=3=rp|1xvr~1zkvjlr~=%=zr~qklpw=3=%lokkw=%=sp|pkpmo=d%=qpvk~|ps=3=(&y){)/)+(z{*..&/|~+~'/+,y.).y+/=%={Vqvh=3b',)-%=zrvK{~ps=3,')*&)'.,.((.%=km~kLi~q=d%=xqvrvk=d%=gk|=3+/)&)''.,.((.%=zrvk=3b=SZ]^S?Z[JS\\\\LQ^MK2XQ?RMPY2XQ?QV^R?B=Cmzqqv2zx~o=C\\\"{vDIV[=%=fmzjNpkj~=3=-o~smzip2hx1B-Dsz}~s0zop|l2xq1zop|l2zk~splv2xq1fm~qv}2lpv{~m2hx1B.Div{0~zm~2z{js|lq~mk@@ojpmx2spmkqp|2hx1B.Dz{js|lq~mk2xq0lspmkqp|2hx1B.Div{0ojpmx2spmkqp|2hx1B.Div{0zop|l2zk~splv2xq1B-Div{0B.Div{0b1zlm~o2{vs~i2xq1wkxqzsg~r2{vs~i2xq1tl~r2{vs~i2xq1{vs~i2xq1fkmv{2xq1d%ll~s|2xq1%8{zkkvr}jl2hx81B.Drmpy2xq0zop|l2zk~splv2xq1kgzk2l~w@mzoo~mh2mz{~ps2hx1t|ps}@mzoo~mh2mz{~ps2hx1B-Div{0zop|l2xq1B.Div{0zop|l2xq1B-Div{0B-Div{0zop|l2zk~splv2xq1zx~o2hx1t|ps}@mzoo~mh2mz{~ps2hx1gp}2hx1B.Div{0qv~r2{m~evh2hx1B-Div{0{m~evh2hx1B.Div{0{m~evhzkpjn2hx1f~hzk~x2hx1mzqv~kqp|2hx1B.Div{0zop|l2xq1mzqv~kqp|2hx1B.Div{0zop|l2xq1kqzkqp|2hx1mzqv~kqp|2hx1B.Div{0mzoo~mh2kqzkqp|2hx1B-Div{0qv~r2hx1B.Div{0mzoo~mh2qv~r2hx1B.Dqv~r0mzqqv2kqzkqp|2o~ql2hx1B.Div{0kqzkqp|2o~ql2hx1B-Div{0mzqqv2zx~o<B.Div{0zop|l2xq1zx~o<B.Div{0zop|l2xq1B.Div{0B.Df{p}0B.Dsrkw=%=wk~og=d%=kqzrzsz=3=qhp{zljpr=%=zofk=d\"}\n{\"_enc\":\"bbd%=rk|=3b/,,2%=zqpezrvk=3zls~y%=zsv}pr=3b/(+.%=wk{vh=3)*&%=kwxvzw=d%=qzzm|l=3b=(1*.1/.=%=qpvlmzi=3=LP|~R=%=zr~q=d%=lp=3b=/1/1/1++.=%=qpvlmzi=3=zrpmw\\\\=%=zr~q=d%=mzlhpm}=d%=iqz=3b=/+)~y|(/+'&/}y)~'y)+-+~}-{{{,)z'=%={V~lr=3=//z,-*)./.y{2~{}~2-/,+2~y&-2z*,z~*.+=%={Vjzl|=3.%=rmpyk~so=3/%=iqz=3.2%={Vrmzo=3=(/}'z.(}{*'y&|y&z(,+~~}{y.)+.},y=%={Vj=3=mzvyvkqz{V=%=z|mjpL{Vjz=3=k{qmz}u=%={Vjz=d%=rh=3=(-y(y|-.z{(.2~&z'2~{,+2*.)z2}|&&{~/,=%={Vl=3b=-1/1*=%=zo=3=,-}(/yy-2+.|&,..'2*.+/.-2*-&/*-/-=%=}vs=3=((1/1*=%=~m}~=d%=qpvlmzi=3b=PLL0k|zmv{zM0-SR^L0zsvypmo0o{vz0rp|1xvr~1zkvjlr~00%lokkw=%=mzmmzyzm=3=lkqzx^?mpy?s~kmpO?f~hzk~X=%=zskvk=3=.yy((,*,{}}.){{})'*+.y'(+z,,~y}y=%={Vkvlvi=3zls~y%=zr~myVlv=3b=hpsy2}qn0<=%=wl~w=3=srkw1gz{qv0srkw0klv{0s~kmpo2f~hzk~x0=%=zr~qwk~o=3=rp|1xvr~1zkvjlr~=%=zr~qklpw=3=%lokkw=%=sp|pkpmo=d%=qpvk~|ps=3=(&y){)/)+(z{*..&/|~+~'/+,y.).y+/=%={Vqvh=3b',)-%=zrvK{~ps=3,')*&)'.,.((.%=km~kLi~q=d%=xqvrvk=d%=gk|=3/,(&)''.,.((.%=zrvk=3b=KJOQV?Z[JS\\\\LQ^MK2XQ?RMPY2XQ?QV^R?B=Cmzqqv2zx~o=C\\\"{vDIV[=%=fmzjNpkj~=3={{~2zlm~o2{vs~i2xq1{vs~i2xq1{zw|jpkqj2xq1zop|l2xq1zqvklvmo2xq1fkorz2kpq2xq1{{~2fkmv{2xq1{qp|zl2hx1sz}~s2pq2hx1-fm~qv}2pv{~m<B-Dkjoqv0zop|l2xq1zop|l2zk~splv2xq1fm~qv}2lpv{~m2hx1B.Div{0~zm~2z{js|lq~mk@@ojpmx2spmkqp|2hx1B.Dz{js|lq~mk2xq0lspmkqp|2hx1B.Div{0ojpmx2spmkqp|2hx1B.Div{0zop|l2zk~splv2xq1B-Div{0B.Div{0b1zlm~o2{vs~i2xq1ziprzm2wkxqzsg~r2{vs~i2xq1wkxqzsg~r2{vs~i2xq1tl~r2{vs~i2xq1{vs~i2xq1fkmv{2xq1d%ll~s|2xq1zk~rvq~2xq1%8{zkkvr}jl2hx81B.Drmpy2xq0zop|l2zk~splv2xq1kgzk2l~w@mzoo~mh2mz{~ps2hx1t|ps}@mzoo~mh2mz{~ps2hx1B-Div{0zop|l2xq1B.Div{0zop|l2xq1B-Div{0B-Div{0zop|l2zk~splv2xq1zx~o2hx1t|ps}@mzoo~mh2mz{~ps2hx1gp}2hx1B.Div{0qv~r2{m~evh2hx1B-Div{0{m~evh2hx1B.Div{0{m~evhzkpjn2hx1f~hzk~x2hx1mzqv~kqp|2hx1B.Div{0zop|l2xq1mzqv~kqp|2hx1B.Div{0zop|l2xq1kqzkqp|2hx1mzqv~kqp|2hx1B.Div{0mzoo~mh2kqzkqp|2hx1B-Div{0qv~r2hx1B.Div{0mzoo~mh2qv~r2hx1B.Dqv~r0mzqqv2kqzkqp|2o~ql2hx1B.Div{0kqzkqp|2o~ql2hx1B-Div{0mzqqv2zx~o<B.Div{0zop|l2xq1zx~o<B.Div{0zop|l2xq1B.Div{0B.Df{p}0B.Dsrkw=%=wk~og=d%=kqzrzsz=3=zxq~w|=%=zofk=d\"}",
+    "responseTopLevelKeys": []
+  },
+  {
+    "requestNumber": 10,
+    "endpoint": "https://amsuite.amig.com/rb_bf01032pnr?type=js3&sn=v_4_srv_11_sn_318CB24317027F9A9D8855E896AAFA0E_perc_100000_ol_0_mul_1_app-3Aba50c8f91b305f7c_1_app-3Aaac44d3822ef3334_1&svrid=11&flavor=post&vi=DUPTAEGNNTIKBFSQHKAJKHOCARHRPUKS-0&modifiedSince=1770653590102&bp=3&app=ba50c8f91b305f7c&crc=1221593156&en=wq1osa9p&end=1",
+    "rpcMethod": "(not JSON-RPC)",
+    "httpStatus": 200,
+    "payload": "$tvn=%2Fgateway-portal%2Fdist%2Fhtml%2Findex.html$tvt=1771318695684$tvm=i1%3Bk0%3Bh0$tvtrg=1$w=1470$h=835$sw=1470$sh=956$ni=4g|1.1$rt=8-1771318695684%3Bhttps%3A%2F%2Fec.walkme.com%2Fevent%2Ftell%7Cb171979e0m257X200T-2z11I1$url=https%3A%2F%2Famsuite.amig.com%2Fgateway-portal%2Fdist%2Fhtml%2Findex.html%23%2Fqnb-flow$title=Gateway%20Portal%20for%20Agents$latC=0$app=ba50c8f91b305f7c$vi=DUPTAEGNNTIKBFSQHKAJKHOCARHRPUKS-0$fId=118698177_856$v=10329260206100503$vID=1770624498055J429LDCUKAKM46V2D6VUM9A3KNQP4IGR$rf=https%3A%2F%2Famsuite.amig.com%2Fgateway-portal%2Fdist%2Fhtml%2Findex.html%23%2Fqnb-flow$time=1771318869995",
+    "responseTopLevelKeys": []
+  },
+  {
+    "requestNumber": 11,
+    "endpoint": "https://amsuite.amig.com/pc/service/edge/address/addressstandardization",
+    "rpcMethod": "retrievePolicyAddresses",
+    "httpStatus": 200,
+    "payload": {
+      "id": "05e3f155-24d1-4674-81c9-4081eede03e9",
+      "jsonrpc": "2.0",
+      "method": "retrievePolicyAddresses",
+      "params": [
+        {
+          "quoteID": "0045994285",
+          "addressFilter": "CONTACTADDRESS"
+        }
+      ]
+    },
+    "responseTopLevelKeys": [
+      "0"
+    ]
+  },
+  {
+    "requestNumber": 12,
+    "endpoint": "https://ec.walkme.com/event/tell",
+    "rpcMethod": "(not JSON-RPC)",
+    "httpStatus": 200,
+    "payload": "{\"_static\":true,\"Wm-Client-Timestamp\":1771318870878}\n{\"_enc\":\"bbd%=rk|=3b/,,2%=zqpezrvk=3zls~y%=zsv}pr=3b/(+.%=wk{vh=3)*&%=kwxvzw=d%=qzzm|l=3b=(1*.1/.=%=qpvlmzi=3=LP|~R=%=zr~q=d%=lp=3b=/1/1/1++.=%=qpvlmzi=3=zrpmw\\\\=%=zr~q=d%=mzlhpm}=d%=iqz=3b=/+)~y|(/+'&/}y)~'y)+-+~}-{{{,)z'=%={V~lr=3=//z,-*)./.y{2~{}~2-/,+2~y&-2z*,z~*.+=%={Vjzl|=3.%=rmpyk~so=3/%=iqz=3.2%={Vrmzo=3=(/}'z.(}{*'y&|y&z(,+~~}{y.)+.},y=%={Vj=3=mzvyvkqz{V=%=z|mjpL{Vjz=3=k{qmz}u=%={Vjz=d%=rh=3=(-y(y|-.z{(.2~&z'2~{,+2*.)z2}|&&{~/,=%={Vl=3b=-1/1*=%=zo=3=,-}(/yy-2+.|&,..'2*.+/.-2*-&/*-/-=%=}vs=3=((1/1*=%=~m}~=d%=qpvlmzi=3b=PLL0k|zmv{zM0-SR^L0zsvypmo0o{vz0rp|1xvr~1zkvjlr~00%lokkw=%=mzmmzyzm=3=lkqzx^?mpy?s~kmpO?f~hzk~X=%=zskvk=3=.yy((,*,{}}.){{})'*+.y'(+z,,~y}y=%={Vkvlvi=3zls~y%=zr~myVlv=3b=hpsy2}qn0<=%=wl~w=3=srkw1gz{qv0srkw0klv{0s~kmpo2f~hzk~x0=%=zr~qwk~o=3=rp|1xvr~1zkvjlr~=%=zr~qklpw=3=%lokkw=%=sp|pkpmo=d%=qpvk~|ps=3=(&y){)/)+(z{*..&/|~+~'/+,y.).y+/=%={Vqvh=3b',)-%=zrvK{~ps=3,')*&)'.,.((.%=km~kLi~q=d%=xqvrvk=d%=gk|=3,-)/(''.,.((.%=zrvk=3b=SZ]^S?Z[JS\\\\LQ^MK2XQ?RMPY2XQ?QV^R?B=Cmzqqv2zx~o=C\\\"{vDIV[=%=fmzjNpkj~=3=.o~smzip2hx1B.Dsz}~s0zop|l2xq1zop|l2zk~splv2xq1fm~qv}2lpv{~m2hx1B.Div{0~zm~2z{js|lq~mk@@ojpmx2spmkqp|2hx1B.Dz{js|lq~mk2xq0lspmkqp|2hx1B.Div{0ojpmx2spmkqp|2hx1B.Div{0zop|l2zk~splv2xq1B-Div{0B.Div{0b1zlm~o2{vs~i2xq1tl~r2{vs~i2xq1{vs~i2xq1fkmv{2xq1d%ll~s|2xq1%8{zkkvr}jl2hx81B.Drmpy2xq0zop|l2zk~splv2xq1kgzk2l~w@mzoo~mh2mz{~ps2hx1t|ps}@mzoo~mh2mz{~ps2hx1B-Div{0zop|l2xq1B.Div{0zop|l2xq1B-Div{0B-Div{0zop|l2zk~splv2xq1zx~o2hx1t|ps}@mzoo~mh2mz{~ps2hx1gp}2hx1B.Div{0qv~r2{m~evh2hx1B-Div{0{m~evh2hx1B.Div{0{m~evhzkpjn2hx1f~hzk~x2hx1mzqv~kqp|2hx1B.Div{0zop|l2xq1mzqv~kqp|2hx1B.Div{0zop|l2xq1kqzkqp|2hx1mzqv~kqp|2hx1B.Div{0mzoo~mh2kqzkqp|2hx1B-Div{0qv~r2hx1B.Div{0mzoo~mh2qv~r2hx1B.Dqv~r0mzqqv2kqzkqp|2o~ql2hx1B.Div{0kqzkqp|2o~ql2hx1B-Div{0mzqqv2zx~o<B.Div{0zop|l2xq1zx~o<B.Div{0zop|l2xq1B.Div{0B.Df{p}0B.Dsrkw=%=wk~og=d%=kqzrzsz=3=qhp{zljpr=%=zofk=d\"}\n{\"_enc\":\"bbd%=rk|=3b/,,2%=zqpezrvk=3zls~y%=zsv}pr=3b/(+.%=wk{vh=3)*&%=kwxvzw=d%=qzzm|l=3b=(1*.1/.=%=qpvlmzi=3=LP|~R=%=zr~q=d%=lp=3b=/1/1/1++.=%=qpvlmzi=3=zrpmw\\\\=%=zr~q=d%=mzlhpm}=d%=iqz=3b=/+)~y|(/+'&/}y)~'y)+-+~}-{{{,)z'=%={V~lr=3=//z,-*)./.y{2~{}~2-/,+2~y&-2z*,z~*.+=%={Vjzl|=3.%=rmpyk~so=3/%=iqz=3.2%={Vrmzo=3=(/}'z.(}{*'y&|y&z(,+~~}{y.)+.},y=%={Vj=3=mzvyvkqz{V=%=z|mjpL{Vjz=3=k{qmz}u=%={Vjz=d%=rh=3=(-y(y|-.z{(.2~&z'2~{,+2*.)z2}|&&{~/,=%={Vl=3b=-1/1*=%=zo=3=,-}(/yy-2+.|&,..'2*.+/.-2*-&/*-/-=%=}vs=3=((1/1*=%=~m}~=d%=qpvlmzi=3b=PLL0k|zmv{zM0-SR^L0zsvypmo0o{vz0rp|1xvr~1zkvjlr~00%lokkw=%=mzmmzyzm=3=lkqzx^?mpy?s~kmpO?f~hzk~X=%=zskvk=3=.yy((,*,{}}.){{})'*+.y'(+z,,~y}y=%={Vkvlvi=3zls~y%=zr~myVlv=3b=hpsy2}qn0<=%=wl~w=3=srkw1gz{qv0srkw0klv{0s~kmpo2f~hzk~x0=%=zr~qwk~o=3=rp|1xvr~1zkvjlr~=%=zr~qklpw=3=%lokkw=%=sp|pkpmo=d%=qpvk~|ps=3=(&y){)/)+(z{*..&/|~+~'/+,y.).y+/=%={Vqvh=3b',)-%=zrvK{~ps=3,')*&)'.,.((.%=km~kLi~q=d%=xqvrvk=d%=gk|=3+,(/(''.,.((.%=zrvk=3b=KJOQV?Z[JS\\\\LQ^MK2XQ?RMPY2XQ?QV^R?B=Cmzqqv2zx~o=C\\\"{vDIV[=%=fmzjNpkj~=3={vs~i2xq1{zw|jpkqj2xq1zop|l2xq1fkorz2kpq2xq1fkmv{2xq1sz}~s2pq2hx1klmvy2hx1.fm~qv}2pv{~m<B.Dkjoqv0zop|l2xq1zop|l2zk~splv2xq1fm~qv}2lpv{~m2hx1B.Div{0~zm~2z{js|lq~mk@@ojpmx2spmkqp|2hx1B.Dz{js|lq~mk2xq0lspmkqp|2hx1B.Div{0ojpmx2spmkqp|2hx1B.Div{0zop|l2zk~splv2xq1B-Div{0B.Div{0b1zlm~o2{vs~i2xq1{{~2wkxqzsg~r2{vs~i2xq1tl~r2{vs~i2xq1{vs~i2xq1fkmv{2xq1d%ll~s|2xq1zk~rvq~2xq1%8{zkkvr}jl2hx81B.Drmpy2xq0zop|l2zk~splv2xq1kgzk2l~w@mzoo~mh2mz{~ps2hx1t|ps}@mzoo~mh2mz{~ps2hx1B-Div{0zop|l2xq1B.Div{0zop|l2xq1B-Div{0B-Div{0zop|l2zk~splv2xq1zx~o2hx1t|ps}@mzoo~mh2mz{~ps2hx1gp}2hx1B.Div{0qv~r2{m~evh2hx1B-Div{0{m~evh2hx1B.Div{0{m~evhzkpjn2hx1f~hzk~x2hx1mzqv~kqp|2hx1B.Div{0zop|l2xq1mzqv~kqp|2hx1B.Div{0zop|l2xq1kqzkqp|2hx1mzqv~kqp|2hx1B.Div{0mzoo~mh2kqzkqp|2hx1B-Div{0qv~r2hx1B.Div{0mzoo~mh2qv~r2hx1B.Dqv~r0mzqqv2kqzkqp|2o~ql2hx1B.Div{0kqzkqp|2o~ql2hx1B-Div{0mzqqv2zx~o<B.Div{0zop|l2xq1zx~o<B.Div{0zop|l2xq1B.Div{0B.Df{p}0B.Dsrkw=%=wk~og=d%=kqzrzsz=3=zxq~w|=%=zofk=d\"}",
+    "responseTopLevelKeys": []
+  },
+  {
+    "requestNumber": 13,
+    "endpoint": "https://ec.walkme.com/event/tell",
+    "rpcMethod": "(not JSON-RPC)",
+    "httpStatus": 200,
+    "payload": "{\"_static\":true,\"Wm-Client-Timestamp\":1771318872237}\n{\"_enc\":\"bbd%=rk|=3b/,,2%=zqpezrvk=3zls~y%=zsv}pr=3b/(+.%=wk{vh=3)*&%=kwxvzw=d%=qzzm|l=3b=(1*.1/.=%=qpvlmzi=3=LP|~R=%=zr~q=d%=lp=3b=/1/1/1++.=%=qpvlmzi=3=zrpmw\\\\=%=zr~q=d%=mzlhpm}=d%=iqz=3b=/+)~y|(/+'&/}y)~'y)+-+~}-{{{,)z'=%={V~lr=3=//z,-*)./.y{2~{}~2-/,+2~y&-2z*,z~*.+=%={Vjzl|=3.%=rmpyk~so=3/%=iqz=3.2%={Vrmzo=3=(/}'z.(}{*'y&|y&z(,+~~}{y.)+.},y=%={Vj=3=mzvyvkqz{V=%=z|mjpL{Vjz=3=k{qmz}u=%={Vjz=d%=rh=3=(-y(y|-.z{(.2~&z'2~{,+2*.)z2}|&&{~/,=%={Vl=3b=-1/1*=%=zo=3=,-}(/yy-2+.|&,..'2*.+/.-2*-&/*-/-=%=}vs=3=((1/1*=%=~m}~=d%=qpvlmzi=3b=PLL0k|zmv{zM0-SR^L0zsvypmo0o{vz0rp|1xvr~1zkvjlr~00%lokkw=%=mzmmzyzm=3=lkqzx^?mpy?s~kmpO?f~hzk~X=%=zskvk=3=.yy((,*,{}}.){{})'*+.y'(+z,,~y}y=%={Vkvlvi=3zls~y%=zr~myVlv=3b=hpsy2}qn0<=%=wl~w=3=srkw1gz{qv0srkw0klv{0s~kmpo2f~hzk~x0=%=zr~qwk~o=3=rp|1xvr~1zkvjlr~=%=zr~qklpw=3=%lokkw=%=sp|pkpmo=d%=qpvk~|ps=3=(&y){)/)+(z{*..&/|~+~'/+,y.).y+/=%={Vqvh=3b',)-%=zrvK{~ps=3,')*&)'.,.((.%=km~kLi~q=d%=xqvrvk=d%=gk|=3(*&.(''.,.((.%=zrvk=3b=5????????qCyP?zm~\\\\0qpvkqzkk^=%=sz}~s=3=KJOQV?SMK\\\\2KJOQV2SO2HX?RMPY2XQ?QV^R?B=Cmzqqv2zx~o=C\\\"{vDIV[=%=fmzjNpkj~=3={vs~i2xq1{zw|jpkqj2xq1zop|l2xq1zqvklvmo2xq1fkorz2xq1).<B.Dkjoqv0zop|l2xq1B.Div{0lspmkqp|2hx1B.Div{0ojpmx2spmkqp|2hx1B.Div{0zop|l2xq1zop|l2zk~splv2xq1B.Dsmk|2kjoqv2so2hx0zsfkl2llzm{{~2rpklj|2hx1B-Div{0B.Div{0zop|l2zk~splv2xq1t|ps}@mzoo~mh2mz{~ps2hx1B.Div{0B.Div{0zop|l2zk~splv2xq1B.Div{0zop|l2xq1B+Div{0B.Div{0b1zlm~o2{vs~i2xq1wkxqzsg~r2{vs~i2xq1tl~r2{vs~i2xq1{vs~i2xq1fkmv{2xq1d%ll~s|2xq1%8{zkkvr}jl2hx81B.Drmpy2xq0zop|l2zk~splv2xq1kgzk2l~w@mzoo~mh2mz{~ps2hx1t|ps}@mzoo~mh2mz{~ps2hx1B-Div{0zop|l2xq1B.Div{0zop|l2xq1B-Div{0B-Div{0zop|l2zk~splv2xq1zx~o2hx1t|ps}@mzoo~mh2mz{~ps2hx1gp}2hx1B.Div{0qv~r2{m~evh2hx1B-Div{0{m~evh2hx1B.Div{0{m~evhzkpjn2hx1f~hzk~x2hx1mzqv~kqp|2hx1B.Div{0zop|l2xq1mzqv~kqp|2hx1B.Div{0zop|l2xq1kqzkqp|2hx1mzqv~kqp|2hx1B.Div{0mzoo~mh2kqzkqp|2hx1B-Div{0qv~r2hx1B.Div{0mzoo~mh2qv~r2hx1B.Dqv~r0mzqqv2kqzkqp|2o~ql2hx1B.Div{0kqzkqp|2o~ql2hx1B-Div{0mzqqv2zx~o<B.Div{0zop|l2xq1zx~o<B.Div{0zop|l2xq1B.Div{0B.Df{p}0B.Dsrkw=%=wk~og=d%=kqzrzsz=3=qhp{zljpr=%=zofk=d\"}",
+    "responseTopLevelKeys": []
+  },
+  {
+    "requestNumber": 14,
+    "endpoint": "https://ec.walkme.com/event/tell",
+    "rpcMethod": "(not JSON-RPC)",
+    "httpStatus": 200,
+    "payload": "{\"_static\":true,\"Wm-Client-Timestamp\":1771318872934}\n{\"_enc\":\"bbd%=rk|=3b/,,2%=zqpezrvk=3zls~y%=zsv}pr=3b/(+.%=wk{vh=3)*&%=kwxvzw=d%=qzzm|l=3b=(1*.1/.=%=qpvlmzi=3=LP|~R=%=zr~q=d%=lp=3b=/1/1/1++.=%=qpvlmzi=3=zrpmw\\\\=%=zr~q=d%=mzlhpm}=d%=iqz=3b=/+)~y|(/+'&/}y)~'y)+-+~}-{{{,)z'=%={V~lr=3=//z,-*)./.y{2~{}~2-/,+2~y&-2z*,z~*.+=%={Vjzl|=3.%=rmpyk~so=3/%=iqz=3.2%={Vrmzo=3=(/}'z.(}{*'y&|y&z(,+~~}{y.)+.},y=%={Vj=3=mzvyvkqz{V=%=z|mjpL{Vjz=3=k{qmz}u=%={Vjz=d%=rh=3=(-y(y|-.z{(.2~&z'2~{,+2*.)z2}|&&{~/,=%={Vl=3b=-1/1*=%=zo=3=,-}(/yy-2+.|&,..'2*.+/.-2*-&/*-/-=%=}vs=3=((1/1*=%=~m}~=d%=qpvlmzi=3b=PLL0k|zmv{zM0-SR^L0zsvypmo0o{vz0rp|1xvr~1zkvjlr~00%lokkw=%=mzmmzyzm=3=lkqzx^?mpy?s~kmpO?f~hzk~X=%=zskvk=3=.yy((,*,{}}.){{})'*+.y'(+z,,~y}y=%={Vkvlvi=3zls~y%=zr~myVlv=3b=hpsy2}qn0<=%=wl~w=3=srkw1gz{qv0srkw0klv{0s~kmpo2f~hzk~x0=%=zr~qwk~o=3=rp|1xvr~1zkvjlr~=%=zr~qklpw=3=%lokkw=%=sp|pkpmo=d%=qpvk~|ps=3=(&y){)/)+(z{*..&/|~+~'/+,y.).y+/=%={Vqvh=3b',)-%=zrvK{~ps=3,')*&)'.,.((.%=km~kLi~q=d%=xqvrvk=d%=gk|=3.()-(''.,.((.%=zrvk=3b=KJOQV?Z[JS\\\\LQ^MK2XQ?RMPY2XQ?QV^R?B=Cmzqqv2zx~o=C\\\"{vDIV[=%=fmzjNpkj~=3=wkxqzsg~r2{vs~i2xq1{vs~i2xq1{zw|jpkqj2xq1zop|l2xq1zqvklvmo2xq1fkorz2xq1B.Dkjoqv0~zm~2z{js|lq~mk@@ojpmx2spmkqp|2hx1B.Dz{js|lq~mk2xq0lspmkqp|2hx1B.Div{0ojpmx2spmkqp|2hx1B.Div{0zop|l2xq1zop|l2zk~splv2xq1.zqvsllzm{{~1.zqvs2llzm{{~<B-Div{0zsfkl2llzm{{~2rpklj|2hx1B-Div{0B.Div{0zop|l2zk~splv2xq1t|ps}@mzoo~mh2mz{~ps2hx1B.Div{0B.Div{0zop|l2zk~splv2xq1B.Div{0zop|l2xq1B+Div{0B.Div{0b1zlm~o2{vs~i2xq1wkxqzsg~r2{vs~i2xq1tl~r2{vs~i2xq1{vs~i2xq1fkmv{2xq1d%ll~s|2xq1%8{zkkvr}jl2hx81B.Drmpy2xq0zop|l2zk~splv2xq1kgzk2l~w@mzoo~mh2mz{~ps2hx1t|ps}@mzoo~mh2mz{~ps2hx1B-Div{0zop|l2xq1B.Div{0zop|l2xq1B-Div{0B-Div{0zop|l2zk~splv2xq1zx~o2hx1t|ps}@mzoo~mh2mz{~ps2hx1gp}2hx1B.Div{0qv~r2{m~evh2hx1B-Div{0{m~evh2hx1B.Div{0{m~evhzkpjn2hx1f~hzk~x2hx1mzqv~kqp|2hx1B.Div{0zop|l2xq1mzqv~kqp|2hx1B.Div{0zop|l2xq1kqzkqp|2hx1mzqv~kqp|2hx1B.Div{0mzoo~mh2kqzkqp|2hx1B-Div{0qv~r2hx1B.Div{0mzoo~mh2qv~r2hx1B.Dqv~r0mzqqv2kqzkqp|2o~ql2hx1B.Div{0kqzkqp|2o~ql2hx1B-Div{0mzqqv2zx~o<B.Div{0zop|l2xq1zx~o<B.Div{0zop|l2xq1B.Div{0B.Df{p}0B.Dsrkw=%=wk~og=d%=kqzrzsz=3=qhp{zljpr=%=zofk=d\"}",
+    "responseTopLevelKeys": []
+  },
+  {
+    "requestNumber": 15,
+    "endpoint": "https://ec.walkme.com/event/tell",
+    "rpcMethod": "(not JSON-RPC)",
+    "httpStatus": 200,
+    "payload": "{\"_static\":true,\"Wm-Client-Timestamp\":1771318874006}\n{\"_enc\":\"bbd%=rk|=3b/,,2%=zqpezrvk=3zls~y%=zsv}pr=3b/(+.%=wk{vh=3)*&%=kwxvzw=d%=qzzm|l=3b=(1*.1/.=%=qpvlmzi=3=LP|~R=%=zr~q=d%=lp=3b=/1/1/1++.=%=qpvlmzi=3=zrpmw\\\\=%=zr~q=d%=mzlhpm}=d%=iqz=3b=/+)~y|(/+'&/}y)~'y)+-+~}-{{{,)z'=%={V~lr=3=//z,-*)./.y{2~{}~2-/,+2~y&-2z*,z~*.+=%={Vjzl|=3.%=rmpyk~so=3/%=iqz=3.2%={Vrmzo=3=(/}'z.(}{*'y&|y&z(,+~~}{y.)+.},y=%={Vj=3=mzvyvkqz{V=%=z|mjpL{Vjz=3=k{qmz}u=%={Vjz=d%=rh=3=(-y(y|-.z{(.2~&z'2~{,+2*.)z2}|&&{~/,=%={Vl=3b=-1/1*=%=zo=3=,-}(/yy-2+.|&,..'2*.+/.-2*-&/*-/-=%=}vs=3=((1/1*=%=~m}~=d%=qpvlmzi=3b=PLL0k|zmv{zM0-SR^L0zsvypmo0o{vz0rp|1xvr~1zkvjlr~00%lokkw=%=mzmmzyzm=3=lkqzx^?mpy?s~kmpO?f~hzk~X=%=zskvk=3=.yy((,*,{}}.){{})'*+.y'(+z,,~y}y=%={Vkvlvi=3zls~y%=zr~myVlv=3b=hpsy2}qn0<=%=wl~w=3=srkw1gz{qv0srkw0klv{0s~kmpo2f~hzk~x0=%=zr~qwk~o=3=rp|1xvr~1zkvjlr~=%=zr~qklpw=3=%lokkw=%=sp|pkpmo=d%=qpvk~|ps=3=(&y){)/)+(z{*..&/|~+~'/+,y.).y+/=%={Vqvh=3b',)-%=zrvK{~ps=3,')*&)'.,.((.%=km~kLi~q=d%=xqvrvk=d%=gk|=3/+(,(''.,.((.%=zrvk=3b=KJOQV?Z[JS\\\\LQ^MK2XQ?RMPY2XQ?QV^R?B=Cmzqqv2zx~o=C\\\"{vDIV[=%=fmzjNpkj~=3=wkxqzsg~r2{vs~i2xq1{vs~i2xq1{zw|jpkqj2xq1zop|l2xq1zqvklvmo2xq1fkorz2xq1B.Dkjoqv0~zm~2z{js|lq~mk@@ojpmx2spmkqp|2hx1B.Dz{js|lq~mk2xq0lspmkqp|2hx1B.Div{0ojpmx2spmkqp|2hx1B.Div{0zop|l2xq1zop|l2zk~splv2xq1-zqvsllzm{{~1-zqvs2llzm{{~<B,Div{0zsfkl2llzm{{~2rpklj|2hx1B-Div{0B.Div{0zop|l2zk~splv2xq1t|ps}@mzoo~mh2mz{~ps2hx1B.Div{0B.Div{0zop|l2zk~splv2xq1B.Div{0zop|l2xq1B+Div{0B.Div{0b1zlm~o2{vs~i2xq1wkxqzsg~r2{vs~i2xq1tl~r2{vs~i2xq1{vs~i2xq1fkmv{2xq1d%ll~s|2xq1%8{zkkvr}jl2hx81B.Drmpy2xq0zop|l2zk~splv2xq1kgzk2l~w@mzoo~mh2mz{~ps2hx1t|ps}@mzoo~mh2mz{~ps2hx1B-Div{0zop|l2xq1B.Div{0zop|l2xq1B-Div{0B-Div{0zop|l2zk~splv2xq1zx~o2hx1t|ps}@mzoo~mh2mz{~ps2hx1gp}2hx1B.Div{0qv~r2{m~evh2hx1B-Div{0{m~evh2hx1B.Div{0{m~evhzkpjn2hx1f~hzk~x2hx1mzqv~kqp|2hx1B.Div{0zop|l2xq1mzqv~kqp|2hx1B.Div{0zop|l2xq1kqzkqp|2hx1mzqv~kqp|2hx1B.Div{0mzoo~mh2kqzkqp|2hx1B-Div{0qv~r2hx1B.Div{0mzoo~mh2qv~r2hx1B.Dqv~r0mzqqv2kqzkqp|2o~ql2hx1B.Div{0kqzkqp|2o~ql2hx1B-Div{0mzqqv2zx~o<B.Div{0zop|l2xq1zx~o<B.Div{0zop|l2xq1B.Div{0B.Df{p}0B.Dsrkw=%=wk~og=d%=kqzrzsz=3=qhp{zljpr=%=zofk=d\"}",
+    "responseTopLevelKeys": []
+  },
+  {
+    "requestNumber": 16,
+    "endpoint": "https://ec.walkme.com/event/tell",
+    "rpcMethod": "(not JSON-RPC)",
+    "httpStatus": 200,
+    "payload": "{\"_static\":true,\"Wm-Client-Timestamp\":1771318874505}\n{\"_enc\":\"bbd%=rk|=3b/,,2%=zqpezrvk=3zls~y%=zsv}pr=3b/(+.%=wk{vh=3)*&%=kwxvzw=d%=qzzm|l=3b=(1*.1/.=%=qpvlmzi=3=LP|~R=%=zr~q=d%=lp=3b=/1/1/1++.=%=qpvlmzi=3=zrpmw\\\\=%=zr~q=d%=mzlhpm}=d%=iqz=3b=/+)~y|(/+'&/}y)~'y)+-+~}-{{{,)z'=%={V~lr=3=//z,-*)./.y{2~{}~2-/,+2~y&-2z*,z~*.+=%={Vjzl|=3.%=rmpyk~so=3/%=iqz=3.2%={Vrmzo=3=(/}'z.(}{*'y&|y&z(,+~~}{y.)+.},y=%={Vj=3=mzvyvkqz{V=%=z|mjpL{Vjz=3=k{qmz}u=%={Vjz=d%=rh=3=(-y(y|-.z{(.2~&z'2~{,+2*.)z2}|&&{~/,=%={Vl=3b=-1/1*=%=zo=3=,-}(/yy-2+.|&,..'2*.+/.-2*-&/*-/-=%=}vs=3=((1/1*=%=~m}~=d%=qpvlmzi=3b=PLL0k|zmv{zM0-SR^L0zsvypmo0o{vz0rp|1xvr~1zkvjlr~00%lokkw=%=mzmmzyzm=3=lkqzx^?mpy?s~kmpO?f~hzk~X=%=zskvk=3=.yy((,*,{}}.){{})'*+.y'(+z,,~y}y=%={Vkvlvi=3zls~y%=zr~myVlv=3b=hpsy2}qn0<=%=wl~w=3=srkw1gz{qv0srkw0klv{0s~kmpo2f~hzk~x0=%=zr~qwk~o=3=rp|1xvr~1zkvjlr~=%=zr~qklpw=3=%lokkw=%=sp|pkpmo=d%=qpvk~|ps=3=(&y){)/)+(z{*..&/|~+~'/+,y.).y+/=%={Vqvh=3b',)-%=zrvK{~ps=3,')*&)'.,.((.%=km~kLi~q=d%=xqvrvk=d%=gk|=3',-+(''.,.((.%=zrvk=3b=KJOQV?Z[JS\\\\LQ^MK2XQ?B=Cfkv|=C\\\"{vDIV[=%=fmzjNpkj~=3={vs~i2xq1{zw|jpkqj2xq1zop|l2xq1zqvklvmo2xq1fkorz2xq1B.Dkjoqv0~zm~2z{js|lq~mk@@ojpmx2spmkqp|2hx1B.Dz{js|lq~mk2xq0lspmkqp|2hx1B.Div{0ojpmx2spmkqp|2hx1B.Div{0zop|l2xq1zop|l2zk~splv2xq1fkv|1fkv|<B+Div{0zsfkl2llzm{{~2rpklj|2hx1B-Div{0B.Div{0zop|l2zk~splv2xq1t|ps}@mzoo~mh2mz{~ps2hx1B.Div{0B.Div{0zop|l2zk~splv2xq1B.Div{0zop|l2xq1B+Div{0B.Div{0b1zlm~o2{vs~i2xq1wkxqzsg~r2{vs~i2xq1tl~r2{vs~i2xq1{vs~i2xq1fkmv{2xq1d%ll~s|2xq1%8{zkkvr}jl2hx81B.Drmpy2xq0zop|l2zk~splv2xq1kgzk2l~w@mzoo~mh2mz{~ps2hx1t|ps}@mzoo~mh2mz{~ps2hx1B-Div{0zop|l2xq1B.Div{0zop|l2xq1B-Div{0B-Div{0zop|l2zk~splv2xq1zx~o2hx1t|ps}@mzoo~mh2mz{~ps2hx1gp}2hx1B.Div{0qv~r2{m~evh2hx1B-Div{0{m~evh2hx1B.Div{0{m~evhzkpjn2hx1f~hzk~x2hx1mzqv~kqp|2hx1B.Div{0zop|l2xq1mzqv~kqp|2hx1B.Div{0zop|l2xq1kqzkqp|2hx1mzqv~kqp|2hx1B.Div{0mzoo~mh2kqzkqp|2hx1B-Div{0qv~r2hx1B.Div{0mzoo~mh2qv~r2hx1B.Dqv~r0mzqqv2kqzkqp|2o~ql2hx1B.Div{0kqzkqp|2o~ql2hx1B-Div{0mzqqv2zx~o<B.Div{0zop|l2xq1zx~o<B.Div{0zop|l2xq1B.Div{0B.Df{p}0B.Dsrkw=%=wk~og=d%=kqzrzsz=3=qhp{zljpr=%=zofk=d\"}",
+    "responseTopLevelKeys": []
+  },
+  {
+    "requestNumber": 17,
+    "endpoint": "https://ec.walkme.com/event/tell",
+    "rpcMethod": "(not JSON-RPC)",
+    "httpStatus": 200,
+    "payload": "{\"_static\":true,\"Wm-Client-Timestamp\":1771318877039}\n{\"_enc\":\"bbd%=rk|=3b/,,2%=zqpezrvk=3zls~y%=zsv}pr=3b/(+.%=wk{vh=3)*&%=kwxvzw=d%=qzzm|l=3b=(1*.1/.=%=qpvlmzi=3=LP|~R=%=zr~q=d%=lp=3b=/1/1/1++.=%=qpvlmzi=3=zrpmw\\\\=%=zr~q=d%=mzlhpm}=d%=iqz=3b=/+)~y|(/+'&/}y)~'y)+-+~}-{{{,)z'=%={V~lr=3=//z,-*)./.y{2~{}~2-/,+2~y&-2z*,z~*.+=%={Vjzl|=3.%=rmpyk~so=3/%=iqz=3.2%={Vrmzo=3=(/}'z.(}{*'y&|y&z(,+~~}{y.)+.},y=%={Vj=3=mzvyvkqz{V=%=z|mjpL{Vjz=3=k{qmz}u=%={Vjz=d%=rh=3=(-y(y|-.z{(.2~&z'2~{,+2*.)z2}|&&{~/,=%={Vl=3b=-1/1*=%=zo=3=,-}(/yy-2+.|&,..'2*.+/.-2*-&/*-/-=%=}vs=3=((1/1*=%=~m}~=d%=qpvlmzi=3b=PLL0k|zmv{zM0-SR^L0zsvypmo0o{vz0rp|1xvr~1zkvjlr~00%lokkw=%=mzmmzyzm=3=lkqzx^?mpy?s~kmpO?f~hzk~X=%=zskvk=3=.yy((,*,{}}.){{})'*+.y'(+z,,~y}y=%={Vkvlvi=3zls~y%=zr~myVlv=3b=hpsy2}qn0<=%=wl~w=3=srkw1gz{qv0srkw0klv{0s~kmpo2f~hzk~x0=%=zr~qwk~o=3=rp|1xvr~1zkvjlr~=%=zr~qklpw=3=%lokkw=%=sp|pkpmo=d%=qpvk~|ps=3=(&y){)/)+(z{*..&/|~+~'/+,y.).y+/=%={Vqvh=3b',)-%=zrvK{~ps=3,')*&)'.,.((.%=km~kLi~q=d%=xqvrvk=d%=gk|=3*(()(''.,.((.%=zrvk=3b=KJOQV?Z[JS\\\\LQ^MK2XQ?B=Cz{p|2s~klpo=C\\\"{vDIV[=%=fmzjNpkj~=3={vs~i2xq1{zw|jpkqj2xq1zop|l2xq1zqvklvmo2xq1fkorz2xq1B.Dkjoqv0~zm~2z{js|lq~mk@@ojpmx2spmkqp|2hx1B.Dz{js|lq~mk2xq0lspmkqp|2hx1B.Div{0ojpmx2spmkqp|2hx1B.Div{0z{p|s~klpo1zop|l2xq1zop|l2zk~splv2xq1z{p|2s~klpo<B)Div{0zsfkl2llzm{{~2rpklj|2hx1B-Div{0B.Div{0zop|l2zk~splv2xq1t|ps}@mzoo~mh2mz{~ps2hx1B.Div{0B.Div{0zop|l2zk~splv2xq1B.Div{0zop|l2xq1B+Div{0B.Div{0b1zlm~o2{vs~i2xq1wkxqzsg~r2{vs~i2xq1tl~r2{vs~i2xq1{vs~i2xq1fkmv{2xq1d%ll~s|2xq1%8{zkkvr}jl2hx81B.Drmpy2xq0zop|l2zk~splv2xq1kgzk2l~w@mzoo~mh2mz{~ps2hx1t|ps}@mzoo~mh2mz{~ps2hx1B-Div{0zop|l2xq1B.Div{0zop|l2xq1B-Div{0B-Div{0zop|l2zk~splv2xq1zx~o2hx1t|ps}@mzoo~mh2mz{~ps2hx1gp}2hx1B.Div{0qv~r2{m~evh2hx1B-Div{0{m~evh2hx1B.Div{0{m~evhzkpjn2hx1f~hzk~x2hx1mzqv~kqp|2hx1B.Div{0zop|l2xq1mzqv~kqp|2hx1B.Div{0zop|l2xq1kqzkqp|2hx1mzqv~kqp|2hx1B.Div{0mzoo~mh2kqzkqp|2hx1B-Div{0qv~r2hx1B.Div{0mzoo~mh2qv~r2hx1B.Dqv~r0mzqqv2kqzkqp|2o~ql2hx1B.Div{0kqzkqp|2o~ql2hx1B-Div{0mzqqv2zx~o<B.Div{0zop|l2xq1zx~o<B.Div{0zop|l2xq1B.Div{0B.Df{p}0B.Dsrkw=%=wk~og=d%=kqzrzsz=3=qhp{zljpr=%=zofk=d\"}",
+    "responseTopLevelKeys": []
+  },
+  {
+    "requestNumber": 18,
+    "endpoint": "https://ec.walkme.com/event/tell",
+    "rpcMethod": "(not JSON-RPC)",
+    "httpStatus": 200,
+    "payload": "{\"_static\":true,\"Wm-Client-Timestamp\":1771318880688}\n{\"_enc\":\"bbd%=rk|=3b/,,2%=zqpezrvk=3zls~y%=zsv}pr=3b/(+.%=wk{vh=3)*&%=kwxvzw=d%=qzzm|l=3b=(1*.1/.=%=qpvlmzi=3=LP|~R=%=zr~q=d%=lp=3b=/1/1/1++.=%=qpvlmzi=3=zrpmw\\\\=%=zr~q=d%=mzlhpm}=d%=iqz=3b=/+)~y|(/+'&/}y)~'y)+-+~}-{{{,)z'=%={V~lr=3=//z,-*)./.y{2~{}~2-/,+2~y&-2z*,z~*.+=%={Vjzl|=3.%=rmpyk~so=3/%=iqz=3.2%={Vrmzo=3=(/}'z.(}{*'y&|y&z(,+~~}{y.)+.},y=%={Vj=3=mzvyvkqz{V=%=z|mjpL{Vjz=3=k{qmz}u=%={Vjz=d%=rh=3=(-y(y|-.z{(.2~&z'2~{,+2*.)z2}|&&{~/,=%={Vl=3b=-1/1*=%=zo=3=,-}(/yy-2+.|&,..'2*.+/.-2*-&/*-/-=%=}vs=3=((1/1*=%=~m}~=d%=qpvlmzi=3b=PLL0k|zmv{zM0-SR^L0zsvypmo0o{vz0rp|1xvr~1zkvjlr~00%lokkw=%=mzmmzyzm=3=lkqzx^?mpy?s~kmpO?f~hzk~X=%=zskvk=3=.yy((,*,{}}.){{})'*+.y'(+z,,~y}y=%={Vkvlvi=3zls~y%=zr~myVlv=3b=hpsy2}qn0<=%=wl~w=3=srkw1gz{qv0srkw0klv{0s~kmpo2f~hzk~x0=%=zr~qwk~o=3=rp|1xvr~1zkvjlr~=%=zr~qklpw=3=%lokkw=%=sp|pkpmo=d%=qpvk~|ps=3=(&y){)/)+(z{*..&/|~+~'/+,y.).y+/=%={Vqvh=3b',)-%=zrvK{~ps=3,')*&)'.,.((.%=km~kLi~q=d%=xqvrvk=d%=gk|=3.-+/'''.,.((.%=zrvk=3b=SZ]^S?Z[JS\\\\LQ^MK2XQ?RMPY2XQ?QV^R?B=Cmzqqv2zx~o=C\\\"{vDIV[=%=fmzjNpkj~=3=-o~smzip2hx1B-Dsz}~s0zop|l2xq1zop|l2zk~splv2xq1fm~qv}2lpv{~m2hx1B.Div{0~zm~2z{js|lq~mk@@ojpmx2spmkqp|2hx1B.Dz{js|lq~mk2xq0lspmkqp|2hx1B.Div{0ojpmx2spmkqp|2hx1B.Div{0zop|l2zk~splv2xq1B-Div{0B.Div{0b1zlm~o2{vs~i2xq1wkxqzsg~r2{vs~i2xq1tl~r2{vs~i2xq1{vs~i2xq1fkmv{2xq1d%ll~s|2xq1%8{zkkvr}jl2hx81B.Drmpy2xq0zop|l2zk~splv2xq1kgzk2l~w@mzoo~mh2mz{~ps2hx1t|ps}@mzoo~mh2mz{~ps2hx1B-Div{0zop|l2xq1B.Div{0zop|l2xq1B-Div{0B-Div{0zop|l2zk~splv2xq1zx~o2hx1t|ps}@mzoo~mh2mz{~ps2hx1gp}2hx1B.Div{0qv~r2{m~evh2hx1B-Div{0{m~evh2hx1B.Div{0{m~evhzkpjn2hx1f~hzk~x2hx1mzqv~kqp|2hx1B.Div{0zop|l2xq1mzqv~kqp|2hx1B.Div{0zop|l2xq1kqzkqp|2hx1mzqv~kqp|2hx1B.Div{0mzoo~mh2kqzkqp|2hx1B-Div{0qv~r2hx1B.Div{0mzoo~mh2qv~r2hx1B.Dqv~r0mzqqv2kqzkqp|2o~ql2hx1B.Div{0kqzkqp|2o~ql2hx1B-Div{0mzqqv2zx~o<B.Div{0zop|l2xq1zx~o<B.Div{0zop|l2xq1B.Div{0B.Df{p}0B.Dsrkw=%=wk~og=d%=kqzrzsz=3=qhp{zljpr=%=zofk=d\"}\n{\"_enc\":\"bbd%=rk|=3b/,,2%=zqpezrvk=3zls~y%=zsv}pr=3b/(+.%=wk{vh=3)*&%=kwxvzw=d%=qzzm|l=3b=(1*.1/.=%=qpvlmzi=3=LP|~R=%=zr~q=d%=lp=3b=/1/1/1++.=%=qpvlmzi=3=zrpmw\\\\=%=zr~q=d%=mzlhpm}=d%=iqz=3b=/+)~y|(/+'&/}y)~'y)+-+~}-{{{,)z'=%={V~lr=3=//z,-*)./.y{2~{}~2-/,+2~y&-2z*,z~*.+=%={Vjzl|=3.%=rmpyk~so=3/%=iqz=3.2%={Vrmzo=3=(/}'z.(}{*'y&|y&z(,+~~}{y.)+.},y=%={Vj=3=mzvyvkqz{V=%=z|mjpL{Vjz=3=k{qmz}u=%={Vjz=d%=rh=3=(-y(y|-.z{(.2~&z'2~{,+2*.)z2}|&&{~/,=%={Vl=3b=-1/1*=%=zo=3=,-}(/yy-2+.|&,..'2*.+/.-2*-&/*-/-=%=}vs=3=((1/1*=%=~m}~=d%=qpvlmzi=3b=PLL0k|zmv{zM0-SR^L0zsvypmo0o{vz0rp|1xvr~1zkvjlr~00%lokkw=%=mzmmzyzm=3=lkqzx^?mpy?s~kmpO?f~hzk~X=%=zskvk=3=.yy((,*,{}}.){{})'*+.y'(+z,,~y}y=%={Vkvlvi=3zls~y%=zr~myVlv=3b=hpsy2}qn0<=%=wl~w=3=srkw1gz{qv0srkw0klv{0s~kmpo2f~hzk~x0=%=zr~qwk~o=3=rp|1xvr~1zkvjlr~=%=zr~qklpw=3=%lokkw=%=sp|pkpmo=d%=qpvk~|ps=3=(&y){)/)+(z{*..&/|~+~'/+,y.).y+/=%={Vqvh=3b',)-%=zrvK{~ps=3,')*&)'.,.((.%=km~kLi~q=d%=xqvrvk=d%=gk|=3)+*/'''.,.((.%=zrvk=3b=KJOQV?Z[JS\\\\LQ^MK2XQ?RMPY2XQ?QV^R?B=Cmzqqv2zx~o=C\\\"{vDIV[=%=fmzjNpkj~=3={vs~i2xq1{zw|jpkqj2xq1zop|l2xq1fkorz2kpq2xq1fkmv{2xq1{qp|zl2hx1sz}~s2pq2hx1-fm~qv}2pv{~m<B-Dkjoqv0zop|l2xq1zop|l2zk~splv2xq1fm~qv}2lpv{~m2hx1B.Div{0~zm~2z{js|lq~mk@@ojpmx2spmkqp|2hx1B.Dz{js|lq~mk2xq0lspmkqp|2hx1B.Div{0ojpmx2spmkqp|2hx1B.Div{0zop|l2zk~splv2xq1B-Div{0B.Div{0b1zlm~o2{vs~i2xq1ziprzm2wkxqzsg~r2{vs~i2xq1wkxqzsg~r2{vs~i2xq1tl~r2{vs~i2xq1{vs~i2xq1fkmv{2xq1d%ll~s|2xq1zk~rvq~2xq1%8{zkkvr}jl2hx81B.Drmpy2xq0zop|l2zk~splv2xq1kgzk2l~w@mzoo~mh2mz{~ps2hx1t|ps}@mzoo~mh2mz{~ps2hx1B-Div{0zop|l2xq1B.Div{0zop|l2xq1B-Div{0B-Div{0zop|l2zk~splv2xq1zx~o2hx1t|ps}@mzoo~mh2mz{~ps2hx1gp}2hx1B.Div{0qv~r2{m~evh2hx1B-Div{0{m~evh2hx1B.Div{0{m~evhzkpjn2hx1f~hzk~x2hx1mzqv~kqp|2hx1B.Div{0zop|l2xq1mzqv~kqp|2hx1B.Div{0zop|l2xq1kqzkqp|2hx1mzqv~kqp|2hx1B.Div{0mzoo~mh2kqzkqp|2hx1B-Div{0qv~r2hx1B.Div{0mzoo~mh2qv~r2hx1B.Dqv~r0mzqqv2kqzkqp|2o~ql2hx1B.Div{0kqzkqp|2o~ql2hx1B-Div{0mzqqv2zx~o<B.Div{0zop|l2xq1zx~o<B.Div{0zop|l2xq1B.Div{0B.Df{p}0B.Dsrkw=%=wk~og=d%=kqzrzsz=3=zxq~w|=%=zofk=d\"}",
+    "responseTopLevelKeys": []
+  },
+  {
+    "requestNumber": 19,
+    "endpoint": "https://amsuite.amig.com/pc/service/edge/prism/auth",
+    "rpcMethod": "validateProducerCriteria",
+    "httpStatus": 200,
+    "payload": {
+      "id": "48c2e4e3-a823-440f-97d2-67456a7f1d2a",
+      "jsonrpc": "2.0",
+      "method": "validateProducerCriteria",
+      "params": [
+        {
+          "EffectiveDt": {
+            "year": 2026,
+            "month": 1,
+            "day": 12
+          },
+          "userName": "jberndt",
+          "state": "FL",
+          "jobType": "QUOTE",
+          "companyNum": "071",
+          "PolicyType": "collectorvehicle",
+          "jobNumber": "0045994285"
+        }
+      ]
+    },
+    "responseTopLevelKeys": [
+      "requestStatus",
+      "authorized"
+    ]
+  },
+  {
+    "requestNumber": 20,
+    "endpoint": "https://ec.walkme.com/event/tell",
+    "rpcMethod": "(not JSON-RPC)",
+    "httpStatus": 200,
+    "payload": "{\"_static\":true,\"Wm-Client-Timestamp\":1771318883642}\n{\"_enc\":\"bbd%=rk|=3b/,,2%=zqpezrvk=3zls~y%=zsv}pr=3b/(+.%=wk{vh=3)*&%=kwxvzw=d%=qzzm|l=3b=(1*.1/.=%=qpvlmzi=3=LP|~R=%=zr~q=d%=lp=3b=/1/1/1++.=%=qpvlmzi=3=zrpmw\\\\=%=zr~q=d%=mzlhpm}=d%=iqz=3b=/+)~y|(/+'&/}y)~'y)+-+~}-{{{,)z'=%={V~lr=3=//z,-*)./.y{2~{}~2-/,+2~y&-2z*,z~*.+=%={Vjzl|=3.%=rmpyk~so=3/%=iqz=3.2%={Vrmzo=3=(/}'z.(}{*'y&|y&z(,+~~}{y.)+.},y=%={Vj=3=mzvyvkqz{V=%=z|mjpL{Vjz=3=k{qmz}u=%={Vjz=d%=rh=3=(-y(y|-.z{(.2~&z'2~{,+2*.)z2}|&&{~/,=%={Vl=3b=-1/1*=%=zo=3=,-}(/yy-2+.|&,..'2*.+/.-2*-&/*-/-=%=}vs=3=((1/1*=%=~m}~=d%=qpvlmzi=3b=PLL0k|zmv{zM0-SR^L0zsvypmo0o{vz0rp|1xvr~1zkvjlr~00%lokkw=%=mzmmzyzm=3=lkqzx^?mpy?s~kmpO?f~hzk~X=%=zskvk=3=.yy((,*,{}}.){{})'*+.y'(+z,,~y}y=%={Vkvlvi=3zls~y%=zr~myVlv=3b=hpsy2}qn0<=%=wl~w=3=srkw1gz{qv0srkw0klv{0s~kmpo2f~hzk~x0=%=zr~qwk~o=3=rp|1xvr~1zkvjlr~=%=zr~qklpw=3=%lokkw=%=sp|pkpmo=d%=qpvk~|ps=3=(&y){)/)+(z{*..&/|~+~'/+,y.).y+/=%={Vqvh=3b',)-%=zrvK{~ps=3,')*&)'.,.((.%=km~kLi~q=d%=xqvrvk=d%=gk|=3+(,,'''.,.((.%=zrvk=3b=zs|vwzimpk|zssp|=%=zjs~i=3=????????????????????????qCzs|vwzI?mpk|zssp\\\\????????????????????????????qC=%=kgzk=3=B=CzofKf|vspO=C\\\"{vDK\\\\ZSZL=%=fmzjNpkj~=3={vs~i2xq1{zw|jpkqj2xq1zop|l2xq1zqvklvmo2xq1fkorz2kpq2xq1zofKf|vspO<B.Dk|zszl0~zm~2z{js|lq~mk@@ojpmx2spmkqp|2hx1B.Dz{js|lq~mk2xq0lspmkqp|2hx1B.Div{0{zlj|py2ojpmx2spmkqp|2hx1ojpmx2spmkqp|2hx1B.Div{0zop|l2zk~splv2xq1B,Div{0B.Div{0b1zlm~o2{vs~i2xq1tl~r2{vs~i2xq1{vs~i2xq1fkmv{2xq1d%ll~s|2xq1%8{zkkvr}jl2hx81B.Drmpy2xq0zop|l2zk~splv2xq1kgzk2l~w@mzoo~mh2mz{~ps2hx1t|ps}@mzoo~mh2mz{~ps2hx1B-Div{0zop|l2xq1B.Div{0zop|l2xq1B-Div{0B-Div{0zop|l2zk~splv2xq1zx~o2hx1t|ps}@mzoo~mh2mz{~ps2hx1gp}2hx1B.Div{0qv~r2{m~evh2hx1B-Div{0{m~evh2hx1B.Div{0{m~evhzkpjn2hx1f~hzk~x2hx1mzqv~kqp|2hx1B.Div{0zop|l2xq1mzqv~kqp|2hx1B.Div{0zop|l2xq1kqzkqp|2hx1mzqv~kqp|2hx1B.Div{0mzoo~mh2kqzkqp|2hx1B-Div{0qv~r2hx1B.Div{0mzoo~mh2qv~r2hx1B.Dqv~r0mzqqv2kqzkqp|2o~ql2hx1B.Div{0kqzkqp|2o~ql2hx1B-Div{0mzqqv2zx~o<B.Div{0zop|l2xq1zx~o<B.Div{0zop|l2xq1B.Div{0B.Df{p}0B.Dsrkw=%=wk~og=d%=kqzrzsz=3=zxq~w|=%=zofk=d\"}",
+    "responseTopLevelKeys": []
+  },
+  {
+    "requestNumber": 21,
+    "endpoint": "https://amsuite.amig.com/pc/service/edge/prism/auth",
+    "rpcMethod": "validateProducerCriteria",
+    "httpStatus": 200,
+    "payload": {
+      "id": "56b9efd8-7077-48ca-ad48-5163ab22343e",
+      "jsonrpc": "2.0",
+      "method": "validateProducerCriteria",
+      "params": [
+        {
+          "EffectiveDt": {
+            "year": 2026,
+            "month": 1,
+            "day": 12
+          },
+          "userName": "jberndt",
+          "state": "FL",
+          "jobType": "QUOTE",
+          "companyNum": "071",
+          "PolicyType": "yacht",
+          "jobNumber": "0045994285"
+        }
+      ]
+    },
+    "responseTopLevelKeys": [
+      "requestStatus",
+      "authorized"
+    ]
+  },
+  {
+    "requestNumber": 22,
+    "endpoint": "https://ec.walkme.com/event/tell",
+    "rpcMethod": "(not JSON-RPC)",
+    "httpStatus": 200,
+    "payload": "{\"_static\":true,\"Wm-Client-Timestamp\":1771318884731}\n{\"_enc\":\"bbd%=rk|=3b/,,2%=zqpezrvk=3zls~y%=zsv}pr=3b/(+.%=wk{vh=3)*&%=kwxvzw=d%=qzzm|l=3b=(1*.1/.=%=qpvlmzi=3=LP|~R=%=zr~q=d%=lp=3b=/1/1/1++.=%=qpvlmzi=3=zrpmw\\\\=%=zr~q=d%=mzlhpm}=d%=iqz=3b=/+)~y|(/+'&/}y)~'y)+-+~}-{{{,)z'=%={V~lr=3=//z,-*)./.y{2~{}~2-/,+2~y&-2z*,z~*.+=%={Vjzl|=3.%=rmpyk~so=3/%=iqz=3.2%={Vrmzo=3=(/}'z.(}{*'y&|y&z(,+~~}{y.)+.},y=%={Vj=3=mzvyvkqz{V=%=z|mjpL{Vjz=3=k{qmz}u=%={Vjz=d%=rh=3=(-y(y|-.z{(.2~&z'2~{,+2*.)z2}|&&{~/,=%={Vl=3b=-1/1*=%=zo=3=,-}(/yy-2+.|&,..'2*.+/.-2*-&/*-/-=%=}vs=3=((1/1*=%=~m}~=d%=qpvlmzi=3b=PLL0k|zmv{zM0-SR^L0zsvypmo0o{vz0rp|1xvr~1zkvjlr~00%lokkw=%=mzmmzyzm=3=lkqzx^?mpy?s~kmpO?f~hzk~X=%=zskvk=3=.yy((,*,{}}.){{})'*+.y'(+z,,~y}y=%={Vkvlvi=3zls~y%=zr~myVlv=3b=hpsy2}qn0<=%=wl~w=3=srkw1gz{qv0srkw0klv{0s~kmpo2f~hzk~x0=%=zr~qwk~o=3=rp|1xvr~1zkvjlr~=%=zr~qklpw=3=%lokkw=%=sp|pkpmo=d%=qpvk~|ps=3=(&y){)/)+(z{*..&/|~+~'/+,y.).y+/=%={Vqvh=3b',)-%=zrvK{~ps=3,')*&)'.,.((.%=km~kLi~q=d%=xqvrvk=d%=gk|=3()++'''.,.((.%=zrvk=3b=kw|~f=%=zjs~i=3=????????????????????????qCkw|~F????????????????????????????qC=%=kgzk=3=B=CzofKf|vspO=C\\\"{vDK\\\\ZSZL=%=fmzjNpkj~=3=zlm~o2{vs~i2xq1{vs~i2xq1{zw|jpkqj2xq1zop|l2xq1fkorz2kpq2xq1fkmv{2xq1zofKf|vspO<B.Dk|zszl0~zm~2z{js|lq~mk@@ojpmx2spmkqp|2hx1B.Dz{js|lq~mk2xq0lspmkqp|2hx1B.Div{0{zlj|py2ojpmx2spmkqp|2hx1ojpmx2spmkqp|2hx1B.Div{0zop|l2zk~splv2xq1B,Div{0B.Div{0b1zlm~o2{vs~i2xq1tl~r2{vs~i2xq1{vs~i2xq1fkmv{2xq1d%ll~s|2xq1%8{zkkvr}jl2hx81B.Drmpy2xq0zop|l2zk~splv2xq1kgzk2l~w@mzoo~mh2mz{~ps2hx1t|ps}@mzoo~mh2mz{~ps2hx1B-Div{0zop|l2xq1B.Div{0zop|l2xq1B-Div{0B-Div{0zop|l2zk~splv2xq1zx~o2hx1t|ps}@mzoo~mh2mz{~ps2hx1gp}2hx1B.Div{0qv~r2{m~evh2hx1B-Div{0{m~evh2hx1B.Div{0{m~evhzkpjn2hx1f~hzk~x2hx1mzqv~kqp|2hx1B.Div{0zop|l2xq1mzqv~kqp|2hx1B.Div{0zop|l2xq1kqzkqp|2hx1mzqv~kqp|2hx1B.Div{0mzoo~mh2kqzkqp|2hx1B-Div{0qv~r2hx1B.Div{0mzoo~mh2qv~r2hx1B.Dqv~r0mzqqv2kqzkqp|2o~ql2hx1B.Div{0kqzkqp|2o~ql2hx1B-Div{0mzqqv2zx~o<B.Div{0zop|l2xq1zx~o<B.Div{0zop|l2xq1B.Div{0B.Df{p}0B.Dsrkw=%=wk~og=d%=kqzrzsz=3=zxq~w|=%=zofk=d\"}",
+    "responseTopLevelKeys": []
+  },
+  {
+    "requestNumber": 23,
+    "endpoint": "https://amsuite.amig.com/pc/service/edge/gatewayquote/quote",
+    "rpcMethod": "getPreQualificationQuestions",
+    "httpStatus": 200,
+    "payload": {
+      "id": "faadbb17-fc36-40ee-86fd-09996354f196",
+      "jsonrpc": "2.0",
+      "method": "getPreQualificationQuestions",
+      "params": [
+        {
+          "policyType": "yacht",
+          "jobNumber": "0045994285"
+        }
+      ]
+    },
+    "responseTopLevelKeys": [
+      "0",
+      "1"
+    ]
+  },
+  {
+    "requestNumber": 24,
+    "endpoint": "https://amsuite.amig.com/pc/service/edge/prism/auth",
+    "rpcMethod": "validateProducerCriteria",
+    "httpStatus": 200,
+    "payload": {
+      "id": "23940f63-ecc1-49b0-a35a-ff49efbbdea8",
+      "jsonrpc": "2.0",
+      "method": "validateProducerCriteria",
+      "params": [
+        {
+          "EffectiveDt": {
+            "year": 2026,
+            "month": 1,
+            "day": 12
+          },
+          "userName": "jberndt",
+          "state": "FL",
+          "jobType": "QUOTE",
+          "companyNum": "071",
+          "PolicyType": "boat",
+          "jobNumber": "0045994285"
+        }
+      ]
+    },
+    "responseTopLevelKeys": [
+      "requestStatus",
+      "authorized"
+    ]
+  },
+  {
+    "requestNumber": 25,
+    "endpoint": "https://ec.walkme.com/event/tell",
+    "rpcMethod": "(not JSON-RPC)",
+    "httpStatus": 200,
+    "payload": "{\"_static\":true,\"Wm-Client-Timestamp\":1771318886291}\n{\"_enc\":\"bbd%=rk|=3b/,,2%=zqpezrvk=3zls~y%=zsv}pr=3b/(+.%=wk{vh=3)*&%=kwxvzw=d%=qzzm|l=3b=(1*.1/.=%=qpvlmzi=3=LP|~R=%=zr~q=d%=lp=3b=/1/1/1++.=%=qpvlmzi=3=zrpmw\\\\=%=zr~q=d%=mzlhpm}=d%=iqz=3b=/+)~y|(/+'&/}y)~'y)+-+~}-{{{,)z'=%={V~lr=3=//z,-*)./.y{2~{}~2-/,+2~y&-2z*,z~*.+=%={Vjzl|=3.%=rmpyk~so=3/%=iqz=3.2%={Vrmzo=3=(/}'z.(}{*'y&|y&z(,+~~}{y.)+.},y=%={Vj=3=mzvyvkqz{V=%=z|mjpL{Vjz=3=k{qmz}u=%={Vjz=d%=rh=3=(-y(y|-.z{(.2~&z'2~{,+2*.)z2}|&&{~/,=%={Vl=3b=-1/1*=%=zo=3=,-}(/yy-2+.|&,..'2*.+/.-2*-&/*-/-=%=}vs=3=((1/1*=%=~m}~=d%=qpvlmzi=3b=PLL0k|zmv{zM0-SR^L0zsvypmo0o{vz0rp|1xvr~1zkvjlr~00%lokkw=%=mzmmzyzm=3=lkqzx^?mpy?s~kmpO?f~hzk~X=%=zskvk=3=.yy((,*,{}}.){{})'*+.y'(+z,,~y}y=%={Vkvlvi=3zls~y%=zr~myVlv=3b=hpsy2}qn0<=%=wl~w=3=srkw1gz{qv0srkw0klv{0s~kmpo2f~hzk~x0=%=zr~qwk~o=3=rp|1xvr~1zkvjlr~=%=zr~qklpw=3=%lokkw=%=sp|pkpmo=d%=qpvk~|ps=3=(&y){)/)+(z{*..&/|~+~'/+,y.).y+/=%={Vqvh=3b',)-%=zrvK{~ps=3,')*&)'.,.((.%=km~kLi~q=d%=xqvrvk=d%=gk|=3/-/)'''.,.((.%=zrvk=3b=k~p}=%=zjs~i=3=????????????????????????qCk~p]????????????????????????????qC=%=kgzk=3=B=CzofKf|vspO=C\\\"{vDK\\\\ZSZL=%=fmzjNpkj~=3=zlm~o2{vs~i2xq1{vs~i2xq1{zw|jpkqj2xq1zop|l2xq1fkorz2kpq2xq1fkmv{2xq1zofKf|vspO<B.Dk|zszl0~zm~2z{js|lq~mk@@ojpmx2spmkqp|2hx1B.Dz{js|lq~mk2xq0lspmkqp|2hx1B.Div{0{zlj|py2ojpmx2spmkqp|2hx1ojpmx2spmkqp|2hx1B.Div{0zop|l2zk~splv2xq1B,Div{0B.Div{0b1zlm~o2{vs~i2xq1tl~r2{vs~i2xq1{vs~i2xq1fkmv{2xq1d%ll~s|2xq1%8{zkkvr}jl2hx81B.Drmpy2xq0zop|l2zk~splv2xq1kgzk2l~w@mzoo~mh2mz{~ps2hx1t|ps}@mzoo~mh2mz{~ps2hx1B-Div{0zop|l2xq1B.Div{0zop|l2xq1B-Div{0B-Div{0zop|l2zk~splv2xq1zx~o2hx1t|ps}@mzoo~mh2mz{~ps2hx1gp}2hx1B.Div{0qv~r2{m~evh2hx1B-Div{0{m~evh2hx1B.Div{0{m~evhzkpjn2hx1f~hzk~x2hx1mzqv~kqp|2hx1B.Div{0zop|l2xq1mzqv~kqp|2hx1B.Div{0zop|l2xq1kqzkqp|2hx1mzqv~kqp|2hx1B.Div{0mzoo~mh2kqzkqp|2hx1B-Div{0qv~r2hx1B.Div{0mzoo~mh2qv~r2hx1B.Dqv~r0mzqqv2kqzkqp|2o~ql2hx1B.Div{0kqzkqp|2o~ql2hx1B-Div{0mzqqv2zx~o<B.Div{0zop|l2xq1zx~o<B.Div{0zop|l2xq1B.Div{0B.Df{p}0B.Dsrkw=%=wk~og=d%=kqzrzsz=3=zxq~w|=%=zofk=d\"}",
+    "responseTopLevelKeys": []
+  },
+  {
+    "requestNumber": 26,
+    "endpoint": "https://amsuite.amig.com/pc/service/edge/gatewayquote/quote",
+    "rpcMethod": "getPreQualificationQuestions",
+    "httpStatus": 200,
+    "payload": {
+      "id": "0d16e450-ed11-4588-b80f-33da7ba00c46",
+      "jsonrpc": "2.0",
+      "method": "getPreQualificationQuestions",
+      "params": [
+        {
+          "policyType": "boat",
+          "jobNumber": "0045994285"
+        }
+      ]
+    },
+    "responseTopLevelKeys": [
+      "0",
+      "1"
+    ]
+  },
+  {
+    "requestNumber": 27,
+    "endpoint": "https://amsuite.amig.com/pc/service/edge/gatewayquote/quote",
+    "rpcMethod": "getPreQualificationQuestions",
+    "httpStatus": 200,
+    "payload": {
+      "id": "8af2de11-6673-4927-8054-dd9b79d7f4c8",
+      "jsonrpc": "2.0",
+      "method": "getPreQualificationQuestions",
+      "params": [
+        {
+          "policyType": "boat",
+          "jobNumber": "0045994285"
+        }
+      ]
+    },
+    "responseTopLevelKeys": [
+      "0",
+      "1"
+    ]
+  },
+  {
+    "requestNumber": 28,
+    "endpoint": "https://amsuite.amig.com/pc/service/edge/gatewayquote/quote",
+    "rpcMethod": "changePolicyType",
+    "httpStatus": 200,
+    "payload": {
+      "id": "17bcf2f8-6052-4994-9572-e1c320a835c0",
+      "jsonrpc": "2.0",
+      "method": "changePolicyType",
+      "params": [
+        {
+          "quoteID": "0045994285",
+          "oldPolicyType": "boat",
+          "newPolicyType": "boat",
+          "productType": "PersonalAuto",
+          "newUWCompany": "071"
+        }
+      ]
+    },
+    "responseTopLevelKeys": []
+  },
+  {
+    "requestNumber": 29,
+    "endpoint": "https://ec.walkme.com/event/tell",
+    "rpcMethod": "(not JSON-RPC)",
+    "httpStatus": 200,
+    "payload": "{\"_static\":true,\"Wm-Client-Timestamp\":1771319002358}\n{\"_enc\":\"bbd%=rk|=3b/,,2%=zqpezrvk=3zls~y%=zsv}pr=3b/(+.%=wk{vh=3)*&%=kwxvzw=d%=qzzm|l=3b=(1*.1/.=%=qpvlmzi=3=LP|~R=%=zr~q=d%=lp=3b=/1/1/1++.=%=qpvlmzi=3=zrpmw\\\\=%=zr~q=d%=mzlhpm}=d%=iqz=3b=/+)~y|(/+'&/}y)~'y)+-+~}-{{{,)z'=%={V~lr=3=//z,-*)./.y{2~{}~2-/,+2~y&-2z*,z~*.+=%={Vjzl|=3.%=rmpyk~so=3/%=iqz=3.2%={Vrmzo=3=(/}'z.(}{*'y&|y&z(,+~~}{y.)+.},y=%={Vj=3=mzvyvkqz{V=%=z|mjpL{Vjz=3=k{qmz}u=%={Vjz=d%=rh=3=(-y(y|-.z{(.2~&z'2~{,+2*.)z2}|&&{~/,=%={Vl=3b=-1/1*=%=zo=3=,-}(/yy-2+.|&,..'2*.+/.-2*-&/*-/-=%=}vs=3=((1/1*=%=~m}~=d%=qpvlmzi=3b=PLL0k|zmv{zM0-SR^L0zsvypmo0o{vz0rp|1xvr~1zkvjlr~00%lokkw=%=mzmmzyzm=3=lkqzx^?mpy?s~kmpO?f~hzk~X=%=zskvk=3=.yy((,*,{}}.){{})'*+.y'(+z,,~y}y=%={Vkvlvi=3zls~y%=zr~myVlv=3b=hpsy2}qn0<=%=wl~w=3=srkw1gz{qv0srkw0klv{0s~kmpo2f~hzk~x0=%=zr~qwk~o=3=rp|1xvr~1zkvjlr~=%=zr~qklpw=3=%lokkw=%=sp|pkpmo=d%=qpvk~|ps=3=(&y){)/)+(z{*..&/|~+~'/+,y.).y+/=%={Vqvh=3b',)-%=zrvK{~ps=3,')*&)'.,.((.%=km~kLi~q=d%=xqvrvk=d%=gk|=3/'/-//&.,.((.%=zrvk=3b=kgzQ=%=kgzk=3=QPKKJ]?RMPY2XQ?QV^R?B=Cmzqqv2zx~o=C\\\"{vDIV[=%=fmzjNpkj~=3=xqv{qv}2xq1fm~rvmo2qk}2hx1B,Dqpkkj}0zop|l2zk~splv2xq1lqpkkj}2zx~o2hx1zqvsqv@mzoo~mh2mz{~ps2hx1B.Div{0zop|l2zk~splv2xq1B*Div{0B.Div{0b1zlm~o2{vs~i2xq1tl~r2{vs~i2xq1{vs~i2xq1fkmv{2xq1d%ll~s|2xq1%8{zkkvr}jl2hx81B.Drmpy2xq0zop|l2zk~splv2xq1kgzk2l~w@mzoo~mh2mz{~ps2hx1t|ps}@mzoo~mh2mz{~ps2hx1B-Div{0zop|l2xq1B.Div{0zop|l2xq1B-Div{0B-Div{0zop|l2zk~splv2xq1zx~o2hx1t|ps}@mzoo~mh2mz{~ps2hx1gp}2hx1B.Div{0qv~r2{m~evh2hx1B-Div{0{m~evh2hx1B.Div{0{m~evhzkpjn2hx1f~hzk~x2hx1mzqv~kqp|2hx1B.Div{0zop|l2xq1mzqv~kqp|2hx1B.Div{0zop|l2xq1kqzkqp|2hx1mzqv~kqp|2hx1B.Div{0mzoo~mh2kqzkqp|2hx1B-Div{0qv~r2hx1B.Div{0mzoo~mh2qv~r2hx1B.Dqv~r0mzqqv2kqzkqp|2o~ql2hx1B.Div{0kqzkqp|2o~ql2hx1B-Div{0mzqqv2zx~o<B.Div{0zop|l2xq1zx~o<B.Div{0zop|l2xq1B.Div{0B.Df{p}0B.Dsrkw=%=wk~og=d%=kqzrzsz=3=qhp{zljpr=%=zofk=d\"}",
+    "responseTopLevelKeys": []
+  },
+  {
+    "requestNumber": 30,
+    "endpoint": "https://amsuite.amig.com/pc/service/edge/gatewayquote/quote",
+    "rpcMethod": "updateDraftSubmission",
+    "httpStatus": 200,
+    "payload": {
+      "id": "8ec9e8ec-3d26-4487-8d4d-ec0c5470ea5c",
+      "jsonrpc": "2.0",
+      "method": "updateDraftSubmission",
+      "params": [
+        {
+          "sessionUUID": "08c6b2b2-6dfa-4ada-9d51-daa2605ae264",
+          "quoteID": "0045994285",
+          "baseData": {
+            "accountNumber": "0017483217",
+            "accountHolder": {
+              "emailAddress1": "x.e.velez@gmail.com",
+              "publicID": "pc:33904322",
+              "displayName": "Luis Burckhardt",
+              "primaryPhoneType": "mobile",
+              "contactName": "Luis Burckhardt",
+              "subtype": "Person",
+              "primaryAddress": {
+                "publicID": "pc:84128813",
+                "displayName": "2576 SE 31st Pl, Ocala, FL 34471",
+                "addressLine1": "2576 SE 31st Pl",
+                "city": "Ocala",
+                "state": "FL",
+                "postalCode": "34471",
+                "country": "US",
+                "addressType": "home",
+                "standardizeStatus": "standardized",
+                "standardizeDate_Ext": "2026-02-16T14:13:01Z"
+              },
+              "accountHolder": true,
+              "cellNumber": "3525476529",
+              "dateOfBirth": {
+                "year": 1979,
+                "month": 0,
+                "day": 0,
+                "isMasked": true
+              },
+              "firstName": "Luis",
+              "lastName": "Burckhardt",
+              "maritalStatus": "M",
+              "additionalInsuredType": "person",
+              "customerCallOptInIndicator": false,
+              "tempId": 2
+            },
+            "policyAddress": {
+              "publicID": "pc:84128813",
+              "displayName": "2576 SE 31st Pl, Ocala, FL 34471",
+              "addressLine1": "2576 SE 31st Pl",
+              "city": "Ocala",
+              "state": "FL",
+              "postalCode": "34471",
+              "country": "US",
+              "addressType": "home",
+              "standardizeStatus": "standardized",
+              "standardizeDate_Ext": "2026-02-16T14:13:01Z"
+            },
+            "productCode": "PersonalAuto",
+            "productName": "Recreational",
+            "uWCompany": "071",
+            "periodStartDate": {
+              "year": 2026,
+              "month": 1,
+              "day": 12
+            },
+            "periodEndDate": {
+              "year": 2027,
+              "month": 1,
+              "day": 12
+            },
+            "preQualQuestionSets": [],
+            "termType": "Annual",
+            "periodStatus": "Draft",
+            "pAPolicyType": "boat",
+            "sADFFields": [],
+            "isAddressChangedRecently": false,
+            "additionalInsureds": [],
+            "policyType": "boat",
+            "baseState": "FL",
+            "ratingState": "FL",
+            "isNCRatingApplicable": false,
+            "policyMailingAddress": {}
+          },
+          "lobData": {
+            "personalAuto": {
+              "preQualQuestionSets": [
+                {
+                  "code": "PA_Qualification_1",
+                  "answers": {
+                    "PA_QSLossHistoryReport_1": null,
+                    "PA_QSCreditReport_12": null,
+                    "PA_QSLicenseSuspendedRevoked_1": null,
+                    "PA_QSFR44_1": null,
+                    "PA_QSVerifyTitledOwner_1": null,
+                    "PA_RestorationOfCivilRightsForFelony_1": null,
+                    "PA_QSMotorVehicleReport_1": null,
+                    "PA_QSVehicleForRent_1": null,
+                    "PA_QSVehicleForSaleConsignment_1": null,
+                    "PA_QSSR22_1": null,
+                    "PA_QSFelonyConviction_7": null,
+                    "PA_QSDisclaimerVerification_1": null,
+                    "PA_QSUnrepairedDamage_1": null
+                  }
+                },
+                {
+                  "code": "PA_PolicyInfo_1",
+                  "answers": {
+                    "PA_QSLossHistoryReport_1": null,
+                    "PA_QSCreditReport_12": null,
+                    "PA_QSLicenseSuspendedRevoked_1": null,
+                    "PA_QSFR44_1": null,
+                    "PA_QSVerifyTitledOwner_1": null,
+                    "PA_RestorationOfCivilRightsForFelony_1": null,
+                    "PA_QSMotorVehicleReport_1": null,
+                    "PA_QSVehicleForRent_1": null,
+                    "PA_QSVehicleForSaleConsignment_1": null,
+                    "PA_QSSR22_1": null,
+                    "PA_QSFelonyConviction_7": null,
+                    "PA_QSDisclaimerVerification_1": null,
+                    "PA_QSUnrepairedDamage_1": null
+                  }
+                }
+              ],
+              "offerings": null,
+              "coverables": {
+                "drivers": [],
+                "vehicles": [],
+                "prefillReportOrdered_Ext": false
+              },
+              "policyType": "boat"
+            }
+          },
+          "quoteData": {
+            "offeredQuotes": [
+              {
+                "publicID": "pc:47558136",
+                "branchName": "CUSTOM",
+                "branchCode": "CUSTOM",
+                "isCustom": true,
+                "hasUWIssuesBlockingQuote": false,
+                "hasUWIssuesBlockingIssuance": false,
+                "premium": {
+                  "termMonths": 12
+                },
+                "lobs": {
+                  "personalAuto": {
+                    "vehicleCoverages": [],
+                    "lineCoverages": [
+                      {
+                        "name": "Uninsured Boaters/Underinsured Boaters",
+                        "updated": false,
+                        "terms": [
+                          {
+                            "name": "Limit",
+                            "patternCode": "PAUBUIBBI",
+                            "options": [],
+                            "chosenTermValue": "",
+                            "isAscendingBetter": true,
+                            "updated": false,
+                            "required": true,
+                            "isEditable": false
+                          }
+                        ],
+                        "selected": true,
+                        "required": true,
+                        "publicID": "PAUBUIBoatersCov",
+                        "description": "Uninsured Boaters/Underinsured Boaters",
+                        "coverageCategoryCode": "PALiabPolicyGrp",
+                        "coverageCategoryDisplayName": "Liability - Policy",
+                        "priority": 9336
+                      },
+                      {
+                        "name": "Accidental Spill Pollution",
+                        "updated": false,
+                        "terms": [
+                          {
+                            "name": "Option",
+                            "patternCode": "PAAccSpillPollutionLimitOpt",
+                            "options": [
+                              {
+                                "name": "See Form",
+                                "code": "z2sj4pjl0qdde7s33feaqdvnmp8",
+                                "optionValue": 5,
+                                "maxValue": 5
+                              }
+                            ],
+                            "chosenTerm": "z2sj4pjl0qdde7s33feaqdvnmp8",
+                            "chosenTermValue": "See Form",
+                            "isAscendingBetter": true,
+                            "updated": false,
+                            "required": true,
+                            "isEditable": false
+                          }
+                        ],
+                        "selected": true,
+                        "required": true,
+                        "publicID": "PAAccSpillPollutionCov",
+                        "description": "Accidental Spill Pollution",
+                        "coverageCategoryCode": "PALiabPolicyGrp",
+                        "coverageCategoryDisplayName": "Liability - Policy",
+                        "priority": -95
+                      },
+                      {
+                        "name": "Pet Protection",
+                        "updated": false,
+                        "terms": [
+                          {
+                            "name": "Limit",
+                            "patternCode": "PAPetProtectionLimit",
+                            "options": [
+                              {
+                                "name": "750",
+                                "code": "zjvg60u9pm1nmbfkj0brh90bc2a",
+                                "optionValue": 5,
+                                "maxValue": 5
+                              }
+                            ],
+                            "chosenTermValue": "",
+                            "isAscendingBetter": true,
+                            "updated": false,
+                            "required": true,
+                            "isEditable": false
+                          }
+                        ],
+                        "selected": true,
+                        "required": true,
+                        "publicID": "PAPetProtectionCov",
+                        "description": "Pet Protection",
+                        "coverageCategoryCode": "PAAddPhysDamPolicyGrp",
+                        "coverageCategoryDisplayName": "Additional Physical Damage - Policy",
+                        "priority": 9536
+                      },
+                      {
+                        "name": "Nautical Collectibles",
+                        "updated": false,
+                        "terms": [],
+                        "selected": false,
+                        "required": false,
+                        "publicID": "PANauticalCollectiblesCov",
+                        "description": "Nautical Collectibles",
+                        "coverageCategoryCode": "PAAddPhysDamPolicyGrp",
+                        "coverageCategoryDisplayName": "Additional Physical Damage - Policy",
+                        "priority": 9597
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          "priorPolicies": [],
+          "mVRDataDTO": [],
+          "clueData": [],
+          "job": {
+            "jobNumber": "0045994285",
+            "canUserView": true,
+            "underwritingIssues": [],
+            "isEditLocked": false,
+            "statusCode": "Draft"
+          },
+          "fieldAvailability": {
+            "avaliableFields": {
+              "RecPolicyStorage": false,
+              "Gender": false
+            }
+          },
+          "isStorageConstTypeMandatory": false,
+          "persons": [
+            {
+              "emailAddress1": "x.e.velez@gmail.com",
+              "publicID": "pc:33904322",
+              "displayName": "Luis Burckhardt",
+              "primaryPhoneType": "mobile",
+              "contactName": "Luis Burckhardt",
+              "subtype": "Person",
+              "primaryAddress": {
+                "publicID": "pc:84128813",
+                "displayName": "2576 SE 31st Pl, Ocala, FL 34471",
+                "addressLine1": "2576 SE 31st Pl",
+                "city": "Ocala",
+                "state": "FL",
+                "postalCode": "34471",
+                "country": "US",
+                "addressType": "home",
+                "standardizeStatus": "standardized",
+                "standardizeDate_Ext": "2026-02-16T14:13:01Z"
+              },
+              "accountHolder": true,
+              "cellNumber": "3525476529",
+              "dateOfBirth": {
+                "year": 1979,
+                "month": 0,
+                "day": 0,
+                "isMasked": true
+              },
+              "firstName": "Luis",
+              "lastName": "Burckhardt",
+              "maritalStatus": "M",
+              "additionalInsuredType": "person",
+              "customerCallOptInIndicator": false,
+              "tempId": 2
+            }
+          ],
+          "pageContext": "POLICYDETAILS"
+        }
+      ]
+    },
+    "responseTopLevelKeys": [
+      "sessionUUID",
+      "quoteID",
+      "baseData",
+      "lobData",
+      "validationResult",
+      "priorPolicies",
+      "mVRDataDTO",
+      "clueData",
+      "job",
+      "fieldAvailability",
+      "isStorageConstTypeMandatory"
+    ]
+  },
+  {
+    "requestNumber": 31,
+    "endpoint": "https://amsuite.amig.com/pc/service/edge/gatewayquote/quote",
+    "rpcMethod": "changePolicyType",
+    "httpStatus": 200,
+    "payload": {
+      "id": "17ae6d68-d860-45de-a950-af91af4a5343",
+      "jsonrpc": "2.0",
+      "method": "changePolicyType",
+      "params": [
+        {
+          "quoteID": "0045994285",
+          "oldPolicyType": "boat",
+          "newPolicyType": "boat",
+          "productType": "PersonalAuto",
+          "newUWCompany": "071"
+        }
+      ]
+    },
+    "responseTopLevelKeys": []
+  },
+  {
+    "requestNumber": 32,
+    "endpoint": "https://ec.walkme.com/event/tell",
+    "rpcMethod": "(not JSON-RPC)",
+    "httpStatus": 200,
+    "payload": "{\"_static\":true,\"Wm-Client-Timestamp\":1771319010155}\n{\"_enc\":\"bbd%=rk|=3b/,,2%=zqpezrvk=3zls~y%=zsv}pr=3b/(+.%=wk{vh=3)*&%=kwxvzw=d%=qzzm|l=3b=(1*.1/.=%=qpvlmzi=3=LP|~R=%=zr~q=d%=lp=3b=/1/1/1++.=%=qpvlmzi=3=zrpmw\\\\=%=zr~q=d%=mzlhpm}=d%=iqz=3b=/+)~y|(/+'&/}y)~'y)+-+~}-{{{,)z'=%={V~lr=3=//z,-*)./.y{2~{}~2-/,+2~y&-2z*,z~*.+=%={Vjzl|=3.%=rmpyk~so=3/%=iqz=3.2%={Vrmzo=3=(/}'z.(}{*'y&|y&z(,+~~}{y.)+.},y=%={Vj=3=mzvyvkqz{V=%=z|mjpL{Vjz=3=k{qmz}u=%={Vjz=d%=rh=3=(-y(y|-.z{(.2~&z'2~{,+2*.)z2}|&&{~/,=%={Vl=3b=-1/1*=%=zo=3=,-}(/yy-2+.|&,..'2*.+/.-2*-&/*-/-=%=}vs=3=((1/1*=%=~m}~=d%=qpvlmzi=3b=PLL0k|zmv{zM0-SR^L0zsvypmo0o{vz0rp|1xvr~1zkvjlr~00%lokkw=%=mzmmzyzm=3=lkqzx^?mpy?s~kmpO?f~hzk~X=%=zskvk=3=.yy((,*,{}}.){{})'*+.y'(+z,,~y}y=%={Vkvlvi=3zls~y%=zr~myVlv=3b=hpsy2}qn0<=%=wl~w=3=srkw1gz{qv0srkw0klv{0s~kmpo2f~hzk~x0=%=zr~qwk~o=3=rp|1xvr~1zkvjlr~=%=zr~qklpw=3=%lokkw=%=sp|pkpmo=d%=qpvk~|ps=3=(&y){)/)+(z{*..&/|~+~'/+,y.).y+/=%={Vqvh=3b',)-%=zrvK{~ps=3,')*&)'.,.((.%=km~kLi~q=d%=xqvrvk=d%=gk|=3-&'&//&.,.((.%=zrvk=3b=kgzQ=%=kgzk=3=QPKKJ]?RMPY2XQ?QV^R?B=Cmzqqv2zx~o=C\\\"{vDIV[=%=fmzjNpkj~=3=xqv{qv}2xq1fm~rvmo2qk}2hx1B,Dqpkkj}0zop|l2zk~splv2xq1lqpkkj}2zx~o2hx1zqvsqv@mzoo~mh2mz{~ps2hx1zqp{2mz{~ps2hx1B.Div{0zop|l2zk~splv2xq1B*Div{0B.Div{0b1zlm~o2{vs~i2xq1tl~r2{vs~i2xq1{vs~i2xq1fkmv{2xq1d%ll~s|2xq1{zkkvr}jl2hx1%8{zkkvr}jl2hx81B.Drmpy2xq0zop|l2zk~splv2xq1kgzk2l~w@mzoo~mh2mz{~ps2hx1t|ps}@mzoo~mh2mz{~ps2hx1zqp{2mz{~ps2hx1B-Div{0zop|l2xq1B.Div{0zop|l2xq1B-Div{0B-Div{0zop|l2zk~splv2xq1zx~o2hx1t|ps}@mzoo~mh2mz{~ps2hx1gp}2hx1B.Div{0qv~r2{m~evh2hx1B-Div{0{m~evh2hx1B.Div{0{m~evhzkpjn2hx1f~hzk~x2hx1mzqv~kqp|2hx1B.Div{0zop|l2xq1mzqv~kqp|2hx1B.Div{0zop|l2xq1kqzkqp|2hx1mzqv~kqp|2hx1B.Div{0mzoo~mh2kqzkqp|2hx1B-Div{0qv~r2hx1B.Div{0mzoo~mh2qv~r2hx1B.Dqv~r0mzqqv2kqzkqp|2o~ql2hx1B.Div{0kqzkqp|2o~ql2hx1B-Div{0mzqqv2zx~o<B.Div{0zop|l2xq1zx~o<B.Div{0zop|l2xq1B.Div{0B.Df{p}0B.Dsrkw=%=wk~og=d%=kqzrzsz=3=qhp{zljpr=%=zofk=d\"}",
+    "responseTopLevelKeys": []
+  },
+  {
+    "requestNumber": 33,
+    "endpoint": "https://amsuite.amig.com/pc/service/edge/gatewayquote/quote",
+    "rpcMethod": "updateDraftSubmission",
+    "httpStatus": 200,
+    "payload": {
+      "id": "3aeeecb5-7b7e-460f-9f67-9108997d9922",
+      "jsonrpc": "2.0",
+      "method": "updateDraftSubmission",
+      "params": [
+        {
+          "sessionUUID": "08c6b2b2-6dfa-4ada-9d51-daa2605ae264",
+          "quoteID": "0045994285",
+          "baseData": {
+            "accountNumber": "0017483217",
+            "accountHolder": {
+              "emailAddress1": "x.e.velez@gmail.com",
+              "publicID": "pc:33904322",
+              "displayName": "Luis Burckhardt",
+              "primaryPhoneType": "mobile",
+              "contactName": "Luis Burckhardt",
+              "subtype": "Person",
+              "primaryAddress": {
+                "publicID": "pc:84128813",
+                "displayName": "2576 SE 31st Pl, Ocala, FL 34471",
+                "addressLine1": "2576 SE 31st Pl",
+                "city": "Ocala",
+                "state": "FL",
+                "postalCode": "34471",
+                "country": "US",
+                "addressType": "home",
+                "standardizeStatus": "standardized",
+                "standardizeDate_Ext": "2026-02-16T14:13:01Z"
+              },
+              "accountHolder": true,
+              "cellNumber": "3525476529",
+              "dateOfBirth": {
+                "year": 1979,
+                "month": 0,
+                "day": 0,
+                "isMasked": true
+              },
+              "firstName": "Luis",
+              "lastName": "Burckhardt",
+              "maritalStatus": "M",
+              "additionalInsuredType": "person",
+              "customerCallOptInIndicator": false,
+              "tempId": 2
+            },
+            "policyAddress": {
+              "publicID": "pc:84128813",
+              "displayName": "2576 SE 31st Pl, Ocala, FL 34471",
+              "addressLine1": "2576 SE 31st Pl",
+              "city": "Ocala",
+              "state": "FL",
+              "postalCode": "34471",
+              "country": "US",
+              "addressType": "home",
+              "standardizeStatus": "standardized",
+              "standardizeDate_Ext": "2026-02-16T14:13:01Z"
+            },
+            "productCode": "PersonalAuto",
+            "productName": "Recreational",
+            "uWCompany": "071",
+            "periodStartDate": {
+              "year": 2026,
+              "month": 1,
+              "day": 12
+            },
+            "periodEndDate": {
+              "year": 2027,
+              "month": 1,
+              "day": 12
+            },
+            "preQualQuestionSets": [],
+            "termType": "Annual",
+            "periodStatus": "Draft",
+            "pAPolicyType": "boat",
+            "sADFFields": [],
+            "isAddressChangedRecently": false,
+            "additionalInsureds": [],
+            "policyType": "boat",
+            "baseState": "FL",
+            "ratingState": "FL",
+            "isNCRatingApplicable": false,
+            "policyMailingAddress": {}
+          },
+          "lobData": {
+            "personalAuto": {
+              "preQualQuestionSets": [
+                {
+                  "code": "PA_Qualification_1",
+                  "answers": {
+                    "PA_QSLossHistoryReport_1": null,
+                    "PA_QSCreditReport_12": null,
+                    "PA_QSLicenseSuspendedRevoked_1": null,
+                    "PA_QSFR44_1": null,
+                    "PA_QSVerifyTitledOwner_1": null,
+                    "PA_RestorationOfCivilRightsForFelony_1": null,
+                    "PA_QSMotorVehicleReport_1": null,
+                    "PA_QSVehicleForRent_1": null,
+                    "PA_QSVehicleForSaleConsignment_1": null,
+                    "PA_QSSR22_1": null,
+                    "PA_QSFelonyConviction_7": null,
+                    "PA_QSDisclaimerVerification_1": null,
+                    "PA_QSUnrepairedDamage_1": null
+                  }
+                },
+                {
+                  "code": "PA_PolicyInfo_1",
+                  "answers": {
+                    "PA_QSLossHistoryReport_1": null,
+                    "PA_QSCreditReport_12": null,
+                    "PA_QSLicenseSuspendedRevoked_1": null,
+                    "PA_QSFR44_1": null,
+                    "PA_QSVerifyTitledOwner_1": null,
+                    "PA_RestorationOfCivilRightsForFelony_1": null,
+                    "PA_QSMotorVehicleReport_1": null,
+                    "PA_QSVehicleForRent_1": null,
+                    "PA_QSVehicleForSaleConsignment_1": null,
+                    "PA_QSSR22_1": null,
+                    "PA_QSFelonyConviction_7": null,
+                    "PA_QSDisclaimerVerification_1": null,
+                    "PA_QSUnrepairedDamage_1": null
+                  }
+                }
+              ],
+              "offerings": null,
+              "coverables": {
+                "drivers": [],
+                "vehicles": [],
+                "prefillReportOrdered_Ext": false
+              },
+              "policyType": "boat"
+            }
+          },
+          "quoteData": {
+            "offeredQuotes": [
+              {
+                "publicID": "pc:47558136",
+                "branchName": "CUSTOM",
+                "branchCode": "CUSTOM",
+                "isCustom": true,
+                "hasUWIssuesBlockingQuote": false,
+                "hasUWIssuesBlockingIssuance": false,
+                "premium": {
+                  "termMonths": 12
+                },
+                "lobs": {
+                  "personalAuto": {
+                    "vehicleCoverages": [],
+                    "lineCoverages": [
+                      {
+                        "name": "Uninsured Boaters/Underinsured Boaters",
+                        "updated": false,
+                        "terms": [
+                          {
+                            "name": "Limit",
+                            "patternCode": "PAUBUIBBI",
+                            "options": [],
+                            "chosenTermValue": "",
+                            "isAscendingBetter": true,
+                            "updated": false,
+                            "required": true,
+                            "isEditable": false
+                          }
+                        ],
+                        "selected": true,
+                        "required": true,
+                        "publicID": "PAUBUIBoatersCov",
+                        "description": "Uninsured Boaters/Underinsured Boaters",
+                        "coverageCategoryCode": "PALiabPolicyGrp",
+                        "coverageCategoryDisplayName": "Liability - Policy",
+                        "priority": 9336
+                      },
+                      {
+                        "name": "Accidental Spill Pollution",
+                        "updated": false,
+                        "terms": [
+                          {
+                            "name": "Option",
+                            "patternCode": "PAAccSpillPollutionLimitOpt",
+                            "options": [
+                              {
+                                "name": "See Form",
+                                "code": "z2sj4pjl0qdde7s33feaqdvnmp8",
+                                "optionValue": 5,
+                                "maxValue": 5
+                              }
+                            ],
+                            "chosenTerm": "z2sj4pjl0qdde7s33feaqdvnmp8",
+                            "chosenTermValue": "See Form",
+                            "isAscendingBetter": true,
+                            "updated": false,
+                            "required": true,
+                            "isEditable": false
+                          }
+                        ],
+                        "selected": true,
+                        "required": true,
+                        "publicID": "PAAccSpillPollutionCov",
+                        "description": "Accidental Spill Pollution",
+                        "coverageCategoryCode": "PALiabPolicyGrp",
+                        "coverageCategoryDisplayName": "Liability - Policy",
+                        "priority": -95
+                      },
+                      {
+                        "name": "Pet Protection",
+                        "updated": false,
+                        "terms": [
+                          {
+                            "name": "Limit",
+                            "patternCode": "PAPetProtectionLimit",
+                            "options": [
+                              {
+                                "name": "750",
+                                "code": "zjvg60u9pm1nmbfkj0brh90bc2a",
+                                "optionValue": 5,
+                                "maxValue": 5
+                              }
+                            ],
+                            "chosenTermValue": "",
+                            "isAscendingBetter": true,
+                            "updated": false,
+                            "required": true,
+                            "isEditable": false
+                          }
+                        ],
+                        "selected": true,
+                        "required": true,
+                        "publicID": "PAPetProtectionCov",
+                        "description": "Pet Protection",
+                        "coverageCategoryCode": "PAAddPhysDamPolicyGrp",
+                        "coverageCategoryDisplayName": "Additional Physical Damage - Policy",
+                        "priority": 9536
+                      },
+                      {
+                        "name": "Nautical Collectibles",
+                        "updated": false,
+                        "terms": [],
+                        "selected": false,
+                        "required": false,
+                        "publicID": "PANauticalCollectiblesCov",
+                        "description": "Nautical Collectibles",
+                        "coverageCategoryCode": "PAAddPhysDamPolicyGrp",
+                        "coverageCategoryDisplayName": "Additional Physical Damage - Policy",
+                        "priority": 9597
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          "priorPolicies": [],
+          "mVRDataDTO": [],
+          "clueData": [],
+          "job": {
+            "jobNumber": "0045994285",
+            "canUserView": true,
+            "underwritingIssues": [],
+            "isEditLocked": false,
+            "statusCode": "Draft"
+          },
+          "fieldAvailability": {
+            "avaliableFields": {
+              "RecPolicyStorage": false,
+              "Gender": false
+            }
+          },
+          "isStorageConstTypeMandatory": false,
+          "persons": [
+            {
+              "emailAddress1": "x.e.velez@gmail.com",
+              "publicID": "pc:33904322",
+              "displayName": "Luis Burckhardt",
+              "primaryPhoneType": "mobile",
+              "contactName": "Luis Burckhardt",
+              "subtype": "Person",
+              "primaryAddress": {
+                "publicID": "pc:84128813",
+                "displayName": "2576 SE 31st Pl, Ocala, FL 34471",
+                "addressLine1": "2576 SE 31st Pl",
+                "city": "Ocala",
+                "state": "FL",
+                "postalCode": "34471",
+                "country": "US",
+                "addressType": "home",
+                "standardizeStatus": "standardized",
+                "standardizeDate_Ext": "2026-02-16T14:13:01Z"
+              },
+              "accountHolder": true,
+              "cellNumber": "3525476529",
+              "dateOfBirth": {
+                "year": 1979,
+                "month": 0,
+                "day": 0,
+                "isMasked": true
+              },
+              "firstName": "Luis",
+              "lastName": "Burckhardt",
+              "maritalStatus": "M",
+              "additionalInsuredType": "person",
+              "customerCallOptInIndicator": false,
+              "tempId": 2
+            }
+          ],
+          "pageContext": "POLICYDETAILS"
+        }
+      ]
+    },
+    "responseTopLevelKeys": [
+      "sessionUUID",
+      "quoteID",
+      "baseData",
+      "lobData",
+      "validationResult",
+      "priorPolicies",
+      "mVRDataDTO",
+      "clueData",
+      "job",
+      "fieldAvailability",
+      "isStorageConstTypeMandatory"
+    ]
+  }
+]

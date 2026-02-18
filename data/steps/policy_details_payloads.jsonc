@@ -1,0 +1,415 @@
+{
+    // ============================================================================
+    // POLICY DETAILS — Essential API Payloads
+    // Only these two calls are needed for the Policy Details wizard step.
+    //   1. createNewSubmission — creates a brand new quote (skip if resuming a draft)
+    //   2. updateDraftSubmission — saves and advances to the next wizard step
+    // ============================================================================
+    "createNewSubmission": {
+        // ENDPOINT: POST https://amsuite.amig.com/pc/service/edge/gateway/submission
+        // PURPOSE: Creates a new draft quote for an existing customer account.
+        //          Only needed for the "New Quote" flow; skip if you already have a quoteID.
+        // RETURNS: jobNumber (the new quoteID), full policy object with account details
+        "id": "uuid-v4-here", // Unique request ID (generate a UUID)
+        "jsonrpc": "2.0",
+        "method": "createNewSubmission",
+        "params": [
+            {
+                "effectiveDate": "2026-02-17T18:30:00.000Z", // Policy effective date (ISO 8601)
+                "producerCode": "029610", // Agent/producer code (e.g. NBOA Marine)
+                "state": "FL", // Rating state (2-letter code)
+                "productCode": "PersonalAuto", // Always "PersonalAuto" for Recreational
+                "policyType": "boat", // "boat" | "yacht" | "collectorvehicle"
+                "uWCompany": "071", // Underwriting company code
+                "country": "US", // Country code
+                "accountNumber": "0017483217" // Existing AMSuite account number
+            }
+        ]
+    },
+    "updateDraftSubmission": {
+        // ENDPOINT: POST https://amsuite.amig.com/pc/service/edge/gatewayquote/quote
+        // PURPOSE: Saves the Policy Details step and advances the wizard to the next step (Qualification).
+        //          This is THE call that moves the wizard forward.
+        // RETURNS: Updated quote state with sessionUUID, validationResult, updated lobData, etc.
+        "id": "uuid-v4-here", // Unique request ID (generate a UUID)
+        "jsonrpc": "2.0",
+        "method": "updateDraftSubmission",
+        "params": [
+            {
+                // --- Session & Quote Identifiers ---
+                "sessionUUID": "1c23e75e-2f0c-4aab-8f61-b60836c90156", // Session ID from retrieve() response
+                "quoteID": "0046077452", // Quote/job number
+                // --- Base Data: Account, Address, Product Info ---
+                "baseData": {
+                    "accountNumber": "0017483217", // AMSuite account number
+                    // Account holder (primary named insured) details
+                    "accountHolder": {
+                        "emailAddress1": "x.e.velez@gmail.com",
+                        "publicID": "pc:33904322", // Internal GW Contact ID
+                        "displayName": "Luis Burckhardt",
+                        "primaryPhoneType": "mobile", // "mobile" | "home" | "work"
+                        "contactName": "Luis Burckhardt",
+                        "subtype": "Person", // Always "Person" for individual accounts
+                        "primaryAddress": {
+                            "publicID": "pc:84128813", // Internal GW Address ID
+                            "displayName": "2576 SE 31st Pl, Ocala, FL 34471",
+                            "addressLine1": "2576 SE 31st Pl",
+                            "city": "Ocala",
+                            "state": "FL", // 2-letter state code
+                            "postalCode": "34471",
+                            "country": "US",
+                            "addressType": "home", // "home" | "work" | "mailing"
+                            "standardizeStatus": "standardized", // "standardized" | "override" | "notValidated"
+                            "standardizeDate_Ext": "2026-02-17T09:04:35Z" // When address was last validated
+                        },
+                        "accountHolder": true, // Always true for the primary insured
+                        "cellNumber": "3525476529", // Phone number (no formatting)
+                        "dateOfBirth": { // MASKED DOB
+                            "year": 1979,
+                            "month": 0, // 0-indexed (0 = January) — MASKED, always 0
+                            "day": 0, // MASKED, always 0
+                            "isMasked": true // DOB is masked for security
+                        },
+                        "firstName": "Luis",
+                        "lastName": "Burckhardt",
+                        "maritalStatus": "M", // "M" (Married) | "S" (Single) | etc.
+                        "additionalInsuredType": "person", // Type of insured entity
+                        "customerCallOptInIndicator": false, // Marketing call opt-in
+                        "tempId": 10 // Temporary ID used by the UI
+                    },
+                    // Policy mailing address (usually same as primary)
+                    "policyAddress": {
+                        "publicID": "pc:84128813",
+                        "displayName": "2576 SE 31st Pl, Ocala, FL 34471",
+                        "addressLine1": "2576 SE 31st Pl",
+                        "city": "Ocala",
+                        "state": "FL",
+                        "postalCode": "34471",
+                        "country": "US",
+                        "addressType": "home",
+                        "standardizeStatus": "standardized",
+                        "standardizeDate_Ext": "2026-02-17T09:04:35Z"
+                    },
+                    // Product/policy metadata
+                    "productCode": "PersonalAuto", // Always "PersonalAuto" for Recreational line
+                    "productName": "Recreational", // Display name of the product
+                    "uWCompany": "071", // Underwriting company code
+                    // Policy period (effective → expiration)
+                    "periodStartDate": {
+                        "year": 2026,
+                        "month": 1,
+                        "day": 17
+                    }, // month is 0-indexed (1 = Feb)
+                    "periodEndDate": {
+                        "year": 2027,
+                        "month": 1,
+                        "day": 17
+                    },
+                    "preQualQuestionSets": [], // Empty at base level (questions are in lobData)
+                    "termType": "Annual", // "Annual" | "ShortRate"
+                    "periodStatus": "Draft", // "Draft" | "Quoted" | "Bound"
+                    "pAPolicyType": "boat", // PA-specific policy type code
+                    "sADFFields": [], // Supplemental application data fields (empty)
+                    "isAddressChangedRecently": false, // Whether address was changed in this session
+                    // --- ADDITIONAL INSUREDS (UPDATED) ---
+                    "additionalInsureds": [
+                        {
+                            "contactRole": "PolicyAddlNamedInsured", // Role code
+                            "contact": {
+                                "publicID": "pc:33937888", // Internal ID (null for new?)
+                                "displayName": "Xiomara Burckhardt",
+                                "firstName": "Xiomara",
+                                "lastName": "Burckhardt",
+                                "relationship": "SP", // "SP" = Spouse
+                                "additionalInsuredType": "person",
+                                "descOfInterest": "additionalnamedinsured", // Description code
+                                "primaryPhoneType": "mobile",
+                                "subtype": "Person",
+                                "primaryAddress": { /* ... Same structure as accountHolder address ... */},
+                                "accountHolder": true, // NOTE: This seems to be true in the HAR even for additional? Double check.
+                                "cellNumber": "2025550185",
+                                "dateOfBirth": {
+                                    "year": 1981,
+                                    "month": 0,
+                                    "day": 0,
+                                    "isMasked": true
+                                },
+                                "maritalStatus": "M",
+                                "marina": "no",
+                                "companyPrimaryContact": false
+                            },
+                            // If existing, will have publicID here too
+                            "publicID": "pc:127635324"
+                        }
+                    ],
+                    "policyType": "boat", // "boat" | "yacht" | "collectorvehicle"
+                    "baseState": "FL", // Home state of the policy
+                    "ratingState": "FL", // State used for rating (usually same as baseState)
+                    "isNCRatingApplicable": false, // North Carolina-specific rating flag
+                    "policyMailingAddress": {} // Separate mailing address (empty = same as policy)
+                },
+                // --- LOB (Line of Business) Data: Questions, Coverages, Coverables ---
+                "lobData": {
+                    "personalAuto": {
+                        // Pre-qualification question sets
+                        "preQualQuestionSets": [
+                            {
+                                // SET 1: Qualification questions (underwriting eligibility)
+                                "code": "PA_Qualification_1",
+                                "answers": {
+                                    "PA_QSLossHistoryReport_1": null, // Allow loss history report? (null = unanswered)
+                                    "PA_QSCreditReport_12": null, // Allow credit report?
+                                    "PA_QSLicenseSuspendedRevoked_1": null, // Has license been suspended/revoked?
+                                    "PA_QSFR44_1": null, // FR44 filing required?
+                                    "PA_QSVerifyTitledOwner_1": null, // Is applicant the titled owner?
+                                    "PA_RestorationOfCivilRightsForFelony_1": null, // Felony civil rights restoration?
+                                    "PA_QSMotorVehicleReport_1": null, // Allow motor vehicle report?
+                                    "PA_QSVehicleForRent_1": null, // Is vehicle used for rent?
+                                    "PA_QSVehicleForSaleConsignment_1": null, // Is vehicle for sale/consignment?
+                                    "PA_QSSR22_1": null, // SR22 filing required?
+                                    "PA_QSFelonyConviction_7": null, // Any felony convictions?
+                                    "PA_QSDisclaimerVerification_1": null, // Disclaimer verification accepted?
+                                    "PA_QSUnrepairedDamage_1": null // Any unrepaired damage?
+                                }
+                            },
+                            {
+                                // SET 2: Policy info / discount questions
+                                "code": "PA_PolicyInfo_1",
+                                "answers": {
+                                    "PA_QSPaperlessDiscount_1": "false", // Paperless discount? ("true" | "false")
+                                    "PA_QSMultiPolicyDiscount_1": "false", // Multi-policy discount? ("true" | "false")
+                                    "PA_QSPriorInsurance_1": null, // Has prior insurance? ("Yes" | "No" | null)
+                                    "PA_QSWatercraftLossesAccidents_1": null, // Any watercraft losses/accidents?
+                                    "PA_QSPaidInFullDiscount_1": "false", // Paid in full discount? ("true" | "false")
+                                    "PA_QSApplicantPrimaryResidence_1": null // Primary residence type? ("OwnHome" | "Other" | null)
+                                }
+                            }
+                        ],
+                        // Coverage offerings (pre-populated by the system, echo back unchanged)
+                        "offerings": [
+                            {
+                                "branchName": "CUSTOM",
+                                "coverages": {
+                                    "vehicleCoverages": [], // Per-vehicle coverages (empty at Policy Details step)
+                                    "lineCoverages": [ // Policy-level coverages (pre-loaded defaults)
+                                        {
+                                            "name": "Uninsured Boaters/Underinsured Boaters",
+                                            "updated": false,
+                                            "terms": [
+                                                {
+                                                    "name": "Limit",
+                                                    "patternCode": "PAUBUIBBI",
+                                                    "options": [],
+                                                    "chosenTermValue": "",
+                                                    "isAscendingBetter": true,
+                                                    "updated": false,
+                                                    "required": true,
+                                                    "isEditable": false
+                                                }
+                                            ],
+                                            "selected": true,
+                                            "required": true,
+                                            "publicID": "PAUBUIBoatersCov",
+                                            "description": "Uninsured Boaters/Underinsured Boaters",
+                                            "coverageCategoryCode": "PALiabPolicyGrp",
+                                            "coverageCategoryDisplayName": "Liability - Policy",
+                                            "priority": 9336
+                                        },
+                                        {
+                                            "name": "Accidental Spill Pollution",
+                                            "updated": false,
+                                            "terms": [
+                                                {
+                                                    "name": "Option",
+                                                    "patternCode": "PAAccSpillPollutionLimitOpt",
+                                                    "options": [
+                                                        {
+                                                            "name": "See Form",
+                                                            "code": "z2sj4pjl0qdde7s33feaqdvnmp8",
+                                                            "optionValue": 5,
+                                                            "maxValue": 5
+                                                        }
+                                                    ],
+                                                    "chosenTerm": "z2sj4pjl0qdde7s33feaqdvnmp8",
+                                                    "chosenTermValue": "See Form",
+                                                    "isAscendingBetter": true,
+                                                    "updated": false,
+                                                    "required": true,
+                                                    "isEditable": false
+                                                }
+                                            ],
+                                            "selected": true,
+                                            "required": true,
+                                            "publicID": "PAAccSpillPollutionCov",
+                                            "description": "Accidental Spill Pollution",
+                                            "coverageCategoryCode": "PALiabPolicyGrp",
+                                            "coverageCategoryDisplayName": "Liability - Policy",
+                                            "priority": -95
+                                        },
+                                        {
+                                            "name": "Pet Protection",
+                                            "updated": false,
+                                            "terms": [
+                                                {
+                                                    "name": "Limit",
+                                                    "patternCode": "PAPetProtectionLimit",
+                                                    "options": [
+                                                        {
+                                                            "name": "750",
+                                                            "code": "zjvg60u9pm1nmbfkj0brh90bc2a",
+                                                            "optionValue": 5,
+                                                            "maxValue": 5
+                                                        }
+                                                    ],
+                                                    "chosenTermValue": "",
+                                                    "isAscendingBetter": true,
+                                                    "updated": false,
+                                                    "required": true,
+                                                    "isEditable": false
+                                                }
+                                            ],
+                                            "selected": true,
+                                            "required": true,
+                                            "publicID": "PAPetProtectionCov",
+                                            "description": "Pet Protection",
+                                            "coverageCategoryCode": "PAAddPhysDamPolicyGrp",
+                                            "coverageCategoryDisplayName": "Additional Physical Damage - Policy",
+                                            "priority": 9536
+                                        },
+                                        {
+                                            "name": "Nautical Collectibles",
+                                            "updated": false,
+                                            "terms": [],
+                                            "selected": false,
+                                            "required": false,
+                                            "publicID": "PANauticalCollectiblesCov",
+                                            "description": "Nautical Collectibles",
+                                            "coverageCategoryCode": "PAAddPhysDamPolicyGrp",
+                                            "coverageCategoryDisplayName": "Additional Physical Damage - Policy",
+                                            "priority": 9597
+                                        }
+                                    ]
+                                }
+                            }
+                        ],
+                        // Coverables (drivers/vehicles — empty at Policy Details step, filled later)
+                        "coverables": {
+                            "drivers": [],
+                            "vehicles": [],
+                            "prefillReportOrdered_Ext": false // Whether prefill report has been ordered
+                        }
+                    }
+                },
+                // --- Quote Data: Offered quotes with coverage details ---
+                "quoteData": {
+                    "offeredQuotes": [
+                        {
+                            "publicID": "pc:47635190", // Internal quote version ID
+                            "branchName": "CUSTOM",
+                            "branchCode": "CUSTOM",
+                            "isCustom": true,
+                            "hasUWIssuesBlockingQuote": false, // UW issues blocking quoting
+                            "hasUWIssuesBlockingIssuance": false, // UW issues blocking issuance
+                            "premium": {
+                                "termMonths": 12 // Policy term in months
+                            },
+                            // Line coverages are duplicated here (mirror of offerings)
+                            "lobs": {
+                                "personalAuto": {
+                                    "vehicleCoverages": [],
+                                    "lineCoverages": [
+                                        // ... same 4 lineCoverages as in offerings above ...
+                                    ]
+                                }
+                            }
+                        }
+                    ]
+                },
+                // --- Supporting Data (usually empty at Policy Details step) ---
+                "priorPolicies": [], // Prior policy numbers / details
+                "mVRDataDTO": [], // Motor Vehicle Report data
+                "clueData": [], // CLUE (loss history) report data
+                // --- Job Metadata ---
+                "job": {
+                    "jobNumber": "0046077452", // Same as quoteID
+                    "canUserView": true,
+                    "underwritingIssues": [], // Active UW issues
+                    "isEditLocked": false, // Whether the quote is locked for editing
+                    "statusCode": "Draft" // "Draft" | "Quoted" | "Bound"
+                },
+                // --- Field Availability (controls which UI fields are shown) ---
+                "fieldAvailability": {
+                    "avaliableFields": { // Note: "avaliable" is a typo in the API
+                        "RecPolicyStorage": false, // Show storage location on policy details?
+                        "Gender": false // Show gender field?
+                    }
+                },
+                "isStorageConstTypeMandatory": false, // Is storage construction type mandatory?
+                // --- Persons: Contact details for all named persons on the policy ---
+                "persons": [
+                    // Primary Insured
+                    {
+                        "emailAddress1": "x.e.velez@gmail.com",
+                        "publicID": "pc:33904322", // Internal GW contact ID
+                        "displayName": "Luis Burckhardt",
+                        "primaryPhoneType": "mobile",
+                        "contactName": "Luis Burckhardt",
+                        "subtype": "Person",
+                        "primaryAddress": {
+                            "publicID": "pc:84128813",
+                            "displayName": "2576 SE 31st Pl, Ocala, FL 34471",
+                            "addressLine1": "2576 SE 31st Pl",
+                            "city": "Ocala",
+                            "state": "FL",
+                            "postalCode": "34471",
+                            "country": "US",
+                            "addressType": "home",
+                            "standardizeStatus": "standardized",
+                            "standardizeDate_Ext": "2026-02-17T09:04:35Z"
+                        },
+                        "accountHolder": true,
+                        "cellNumber": "3525476529",
+                        "dateOfBirth": {
+                            "year": 1979,
+                            "month": 0,
+                            "day": 0,
+                            "isMasked": true
+                        },
+                        "firstName": "Luis",
+                        "lastName": "Burckhardt",
+                        "maritalStatus": "M",
+                        "additionalInsuredType": "person",
+                        "customerCallOptInIndicator": false,
+                        "tempId": 10 // Temporary ID for UI tracking
+                    },
+                    // Additional Insured (MUST be added here too)
+                    {
+                        "publicID": "pc:33937888",
+                        "displayName": "Xiomara Burckhardt",
+                        "firstName": "Xiomara",
+                        "lastName": "Burckhardt",
+                        "relationship": "SP",
+                        "additionalInsuredType": "person", // Crucial!
+                        "descOfInterest": "additionalnamedinsured",
+                        "primaryPhoneType": "mobile",
+                        "subtype": "Person",
+                        "primaryAddress": { /* ... */},
+                        "accountHolder": true, // Wait, HAR says true?
+                        "cellNumber": "2025550185",
+                        "dateOfBirth": {
+                            "year": 1981,
+                            "month": 0,
+                            "day": 0,
+                            "isMasked": true
+                        },
+                        "maritalStatus": "M",
+                        "marina": "no",
+                        "companyPrimaryContact": false
+                    }
+                ],
+                // --- Page Context: Tells the API which wizard step this is ---
+                "pageContext": "POLICYDETAILS" // "POLICYDETAILS" | "QUALIFICATION" | "DRIVERS" | "VEHICLES" | "QUOTE" | "POLICYINFO" | "PAYMENTDETAILS"
+            }
+        ]
+    }
+}

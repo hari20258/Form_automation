@@ -1,0 +1,40 @@
+{
+    // ==========================================================================================
+    // STEP 6: QUOTE & BIND
+    // ==========================================================================================
+    // ------------------------------------------------------------------------------------------
+    // 1. MAIN UPDATE: CALCULATE PREMIUM
+    // usage: Submits full finalized state to get the price.
+    // ------------------------------------------------------------------------------------------
+    "updateCustomQuote": {
+        "endpoint": "https://amsuite.amig.com/pc/service/edge/gatewayquote/quote",
+        "method": "updateCustomQuote",
+        "params": [
+            {
+                "sessionUUID": "<SESSION_UUID>",
+                "quoteID": "<QUOTE_ID>",
+                "baseData": { /* ... Full Final State ... */},
+                "lobData": { /* ... Full Final State ... */},
+                "pageContext": "QUOTE"
+            }
+        ]
+        // RESPONSE: response.result.quote.premium.total.amount = "1375.62"
+    },
+    // ------------------------------------------------------------------------------------------
+    // 2. FINAL ACTION: BIND / ISSUE
+    // usage: Finalizes the policy issuance.
+    // ------------------------------------------------------------------------------------------
+    "updateCustomAMIGQuote": {
+        "endpoint": "https://amsuite.amig.com/pc/service/edge/gatewayquote/quote",
+        "method": "updateCustomAMIGQuote",
+        "params": [
+            {
+                "sessionUUID": "<SESSION_UUID>",
+                "quoteID": "<QUOTE_ID>",
+                "baseData": { /* ... Full Final State ... */},
+                "hasUWIssuesBlockingIssuance": true, // Usually checked before bind
+                "pageContext": "QUOTE"
+            }
+        ]
+    }
+}

@@ -1,0 +1,120 @@
+{
+    // ==========================================================================================
+    // STEP 5: COVERAGES (Risk Analysis)
+    // ==========================================================================================
+    // ------------------------------------------------------------------------------------------
+    // 1. CONDITIONAL: ADD PRIOR LOSSES
+    // Trigger: ONLY if `PA_QSWatercraftLossesAccidents_1` was answered "true" in Step 2.
+    // ------------------------------------------------------------------------------------------
+    "addManualPriorLosses": {
+        "endpoint": "https://amsuite.amig.com/pc/service/edge/gatewayquote/claim", // Check HAR for exact endpoint if different
+        "method": "addManualPriorLosses",
+        "params": [
+            {
+                "amountPaid": {
+                    "currency": "usd",
+                    "amount": "200"
+                },
+                "vehicleClass": "WATERCRAFT",
+                "occurDate": {
+                    "year": 2014,
+                    "month": 2,
+                    "day": 10
+                },
+                "description": "Other",
+                "driver": "Luis Burckhardt",
+                "atFault": "yes",
+                "source": "manual"
+            },
+            "<QUOTE_ID>"
+        ]
+    },
+    // ------------------------------------------------------------------------------------------
+    // 2. MAIN UPDATE: COVERAGES
+    // usage: Configures Hull Deductibles, Liability Limits, etc.
+    // ------------------------------------------------------------------------------------------
+    "updateDraftSubmission": {
+        "endpoint": "https://amsuite.amig.com/pc/service/edge/gatewayquote/quote",
+        "method": "updateDraftSubmission",
+        "params": [
+            {
+                "sessionUUID": "<SESSION_UUID>",
+                "quoteID": "<QUOTE_ID>",
+                "baseData": { /* ... */},
+                "lobData": {
+                    "personalAuto": {
+                        "offerings": [
+                            {
+                                "branchName": "CUSTOM",
+                                "coverages": {
+                                    // A. VEHICLE SPECIFIC COVERAGES (Hull, Trailer)
+                                    "vehicleCoverages": [
+                                        {
+                                            "publicID": "<BOAT_PUBLIC_ID>", // Match ID from Step 4
+                                            "coverages": [
+                                                {
+                                                    "patternCode": "PAHullCov",
+                                                    "terms": [
+                                                        {
+                                                            "patternCode": "PAHullDeductibleMoney",
+                                                            "chosenTermValue": "500"
+                                                        },
+                                                        {
+                                                            "patternCode": "PAHullSettlementOpt",
+                                                            "chosenTermValue": "Agreed Value"
+                                                        }
+                                                    ]
+                                                }
+                                                // ... other boat coverages (Towing, PersonalEffects)
+                                            ]
+                                        },
+                                        {
+                                            "publicID": "<TRAILER_PUBLIC_ID>", // Match ID from Step 4
+                                            "coverages": [
+                                                {
+                                                    "patternCode": "PATrailerPhysicalDamageCov",
+                                                    "terms": [
+                                                        {
+                                                            "patternCode": "PATrailerPhysicalDamageLimit",
+                                                            "chosenTermValue": "40,500"
+                                                        },
+                                                        {
+                                                            "patternCode": "PATrailerPhysicalDamageDeductible",
+                                                            "chosenTermValue": "250"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    // B. POLICY WIDE COVERAGES (Liability, Medical)
+                                    "lineCoverages": [
+                                        {
+                                            "patternCode": "PALiabilityCov",
+                                            "terms": [
+                                                {
+                                                    "patternCode": "PALiability",
+                                                    "chosenTermValue": "100,000 CSL"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "patternCode": "PAUBUIBoatersCov",
+                                            "terms": [
+                                                {
+                                                    "patternCode": "PAUBUIBBI",
+                                                    "chosenTermValue": "100,000 CSL"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                },
+                "pageContext": "COVERAGES" // <--- CRITICAL
+            }
+        ]
+    }
+}

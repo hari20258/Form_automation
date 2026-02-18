@@ -1,0 +1,153 @@
+{
+    // ==========================================================================================
+    // STEP 1: POLICY DETAILS
+    // ==========================================================================================
+    // ------------------------------------------------------------------------------------------
+    // 1. INITIAL CREATION (Start Logic)
+    // ------------------------------------------------------------------------------------------
+    "createNewSubmission": {
+        "endpoint": "https://amsuite.amig.com/pc/service/edge/gateway/submission",
+        "method": "createNewSubmission",
+        "params": [
+            {
+                "effectiveDate": "<EFFECTIVE_DATE>", // e.g., "2026-02-17T18:30:00.000Z"
+                "producerCode": "<PRODUCER_CODE>", // e.g., "029610"
+                "state": "FL",
+                "productCode": "PersonalAuto",
+                "policyType": "boat",
+                "uWCompany": "071",
+                "accountNumber": "<ACCOUNT_NUMBER>"
+            }
+        ]
+    },
+    // ------------------------------------------------------------------------------------------
+    // 2. VALIDATION: PRODUCER (Required)
+    // Checks if the agent can sell this product.
+    // ------------------------------------------------------------------------------------------
+    "validateProducerCriteria": {
+        "endpoint": "https://amsuite.amig.com/pc/service/edge/prism/auth",
+        "method": "validateProducerCriteria",
+        "params": [
+            {
+                "EffectiveDt": {
+                    "year": 2026,
+                    "month": 2,
+                    "day": 17
+                },
+                "userName": "<USERNAME>",
+                "state": "FL",
+                "jobType": "QUOTE",
+                "companyNum": "071",
+                "PolicyType": "boat",
+                "jobNumber": "<QUOTE_ID>"
+            }
+        ]
+    },
+    // ------------------------------------------------------------------------------------------
+    // 3. VALIDATION: ADDRESS (Required for new addresses)
+    // Validates address against USPS/System data.
+    // ------------------------------------------------------------------------------------------
+    "lookupAddressUsingObject": {
+        "endpoint": "https://amsuite.amig.com/pc/service/edge/address/addressstandardization",
+        "method": "lookupAddressUsingObject",
+        "params": [
+            {
+                "addressLine1": "2576 SE 31st Pl",
+                "city": "Ocala",
+                "state": "FL",
+                "postalCode": "34471",
+                "country": "US",
+                "showOverride": false
+            }
+        ]
+    },
+    // ------------------------------------------------------------------------------------------
+    // 4. MAIN UPDATE: POLICY DETAILS
+    // usage: Saves the customer, address, and product configuration.
+    // ------------------------------------------------------------------------------------------
+    "updateDraftSubmission": {
+        "endpoint": "https://amsuite.amig.com/pc/service/edge/gatewayquote/quote",
+        "method": "updateDraftSubmission",
+        "params": [
+            {
+                "sessionUUID": "<SESSION_UUID>",
+                "quoteID": "<QUOTE_ID>",
+                "baseData": {
+                    "accountNumber": "<ACCOUNT_NUMBER>",
+                    "productCode": "PersonalAuto",
+                    "policyType": "boat",
+                    "periodStartDate": {
+                        "year": 2026,
+                        "month": 1,
+                        "day": 17
+                    },
+                    "periodEndDate": {
+                        "year": 2027,
+                        "month": 1,
+                        "day": 17
+                    },
+                    "accountHolder": {
+                        "publicID": "<ACCOUNT_HOLDER_ID>",
+                        "firstName": "Luis",
+                        "lastName": "Burckhardt",
+                        "primaryPhoneType": "mobile",
+                        "cellNumber": "3525476529",
+                        "emailAddress1": "x.e.velez@gmail.com",
+                        "dateOfBirth": {
+                            "year": 1979,
+                            "month": 0,
+                            "day": 0,
+                            "isMasked": true
+                        },
+                        "primaryAddress": {
+                            "publicID": "pc:84128813",
+                            "displayName": "2576 SE 31st Pl, Ocala, FL 34471",
+                            "addressLine1": "2576 SE 31st Pl",
+                            "city": "Ocala",
+                            "state": "FL",
+                            "postalCode": "34471",
+                            "country": "US",
+                            "addressType": "home",
+                            "standardizeStatus": "standardized",
+                            "standardizeDate_Ext": "2026-02-16T14:13:01Z"
+                        },
+                        "accountHolder": true
+                    },
+                    "policyAddress": {
+                        "publicID": "pc:84128813",
+                        "displayName": "2576 SE 31st Pl, Ocala, FL 34471",
+                        "addressLine1": "2576 SE 31st Pl",
+                        "city": "Ocala",
+                        "state": "FL",
+                        "postalCode": "34471",
+                        "country": "US",
+                        "addressType": "home",
+                        "standardizeStatus": "standardized",
+                        "standardizeDate_Ext": "2026-02-16T14:13:01Z"
+                    },
+                    "additionalInsureds": [
+                        // Example Structure for Additional Insured (Spouse, etc.)
+                        /*
+                        {
+                            "publicID": "pc:NEW_ID_IF_CREATED",
+                            "firstName": "Jane",
+                            "lastName": "Doe",
+                            "dateOfBirth": { "year": 1980, "month": 5, "day": 15 },
+                            "primaryAddress": {
+                                "addressLine1": "2576 SE 31st Pl",
+                                "city": "Ocala",
+                                "state": "FL",
+                                "postalCode": "34471",
+                                "country": "US"
+                            },
+                            "additionalInsuredType": "person", 
+                            "relationship": "SP" // Spouse
+                        }
+                        */
+                    ]
+                },
+                "pageContext": "POLICYDETAILS" // <--- CRITICAL
+            }
+        ]
+    }
+}

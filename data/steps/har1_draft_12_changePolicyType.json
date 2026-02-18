@@ -1,0 +1,19 @@
+{
+  "endpoint": "https://amsuite.amig.com/pc/service/edge/gatewayquote/quote",
+  "rpcMethod": "changePolicyType",
+  "payload": {
+    "id": "17ae6d68-d860-45de-a950-af91af4a5343",
+    "jsonrpc": "2.0",
+    "method": "changePolicyType",
+    "params": [
+      {
+        "quoteID": "0045994285",
+        "oldPolicyType": "boat",
+        "newPolicyType": "boat",
+        "productType": "PersonalAuto",
+        "newUWCompany": "071"
+      }
+    ]
+  },
+  "response": true
+}

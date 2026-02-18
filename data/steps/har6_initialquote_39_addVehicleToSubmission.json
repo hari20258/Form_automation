@@ -1,0 +1,134 @@
+{
+  "endpoint": "https://amsuite.amig.com/pc/service/edge/gatewayquote/vehicle",
+  "rpcMethod": "addVehicleToSubmission",
+  "pageContext": "unknown",
+  "payload": {
+    "id": "7ce3a005-5ea3-45ad-be91-dbcd5d4d939c",
+    "jsonrpc": "2.0",
+    "method": "addVehicleToSubmission",
+    "params": [
+      {
+        "SubmissionNumber": "0046077452",
+        "SessionUUID": "57b9add4-46fb-477e-a539-57902f9cf182",
+        "Vehicle": {
+          "tempId": 44,
+          "costNew": {
+            "amount": 0
+          },
+          "vehicleNumber": 2,
+          "vehicleType": "trailer",
+          "storageAddress": {
+            "country": "US"
+          },
+          "registrationAddress": {
+            "country": "US"
+          },
+          "$$hashKey": "object:10927",
+          "year": "2013",
+          "make": "ALL OTHER",
+          "model": "All Other Trailer",
+          "vin": "LYGNB102E314",
+          "makeDescription": "Magic Trail Trailers",
+          "length": 24,
+          "modelDescription": "2 axile",
+          "totalHorsepower": "0",
+          "fuelType": "Gasoline",
+          "numberOfEnginesChanged_Ext": false,
+          "vehicleValue": "40500",
+          "streetUse": false,
+          "vehicleQuestionSets": [
+            {
+              "code": "PA_VehicleDetails_1",
+              "answers": {},
+              "$$hashKey": "object:10956"
+            },
+            {
+              "code": "PA_VehicleDetails_3",
+              "answers": {},
+              "$$hashKey": "object:10957"
+            },
+            {
+              "code": "PA_VehicleDetails_5",
+              "answers": {},
+              "$$hashKey": "object:10958"
+            }
+          ],
+          "vinNumberChanged_Ext": true,
+          "version": 1,
+          "eligibleInd": "Y",
+          "availableInd": "Y",
+          "horsePowerChanged_Ext": false,
+          "hullConstructionChanged_Ext": false,
+          "engineTypeChanged_Ext": false,
+          "fuelTypeChanged_Ext": false,
+          "engineSizeChanged_Ext": false,
+          "primaryUse": "commuting"
+        },
+        "PolicyType": "boat",
+        "RatingState": "FL"
+      }
+    ]
+  },
+  "response": {
+    "result": {
+      "fixedId": 13288905,
+      "publicID": "pc:13288905",
+      "vehicleNumber": 2,
+      "year": 2013,
+      "make": "ALL OTHER",
+      "model": "All Other Trailer",
+      "vin": "LYGNB102E314",
+      "primaryUse": "commuting",
+      "displayName": "ALL OTHER All Other Trailer 2013",
+      "vehicleType": "trailer",
+      "makeDescription": "Magic Trail Trailers",
+      "length": "24",
+      "modelDescription": "2 axile",
+      "vehicleValue": 40500,
+      "streetUse": false,
+      "vehicleAge": 13,
+      "storageAddress": {
+        "publicID": "pc:84128814",
+        "displayName": "2576 SE 31st Pl, Ocala, FL 34471",
+        "addressLine1": "2576 SE 31st Pl",
+        "city": "Ocala",
+        "state": "FL",
+        "postalCode": "34471",
+        "country": "US",
+        "countyName": "MARION"
+      },
+      "vehicleQuestionSets": [
+        {
+          "code": "PA_VehicleDetails_1",
+          "answers": {}
+        },
+        {
+          "code": "PA_VehicleDetails_3",
+          "answers": {}
+        },
+        {
+          "code": "PA_VehicleDetails_5",
+          "answers": {}
+        }
+      ],
+      "version": "1",
+      "eligibleInd": "Y",
+      "totalHorsepower": "0",
+      "engineSize": "0",
+      "fuelType": "Gasoline",
+      "numberOfEnginesChanged_Ext": false,
+      "purchasePrice": "0.00",
+      "engineDetails": [],
+      "availableInd": "Y",
+      "cC": "0",
+      "vinNumberChanged_Ext": true,
+      "fuelTypeChanged_Ext": false,
+      "engineTypeChanged_Ext": false,
+      "hullConstructionChanged_Ext": false,
+      "engineSizeChanged_Ext": false,
+      "horsePowerChanged_Ext": false
+    },
+    "id": "7ce3a005-5ea3-45ad-be91-dbcd5d4d939c",
+    "jsonrpc": "2.0"
+  }
+}

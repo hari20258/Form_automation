@@ -1,0 +1,377 @@
+{
+    // ==============================================================================================
+    // MASTER PAYLOAD REFERENCE
+    // This file consolidates all data structures required for a full AMSuite Recreational Quote.
+    // ==============================================================================================
+    // ----------------------------------------------------------------------------------------------
+    // 1. MAIN WIZARD UPDATE PAYLOAD (updateDraftSubmission)
+    // This payload is used for almost every step (Policy, Qualification, Drivers, Vehicles).
+    // The structure below represents the "Full State" at the final Quote step.
+    // ----------------------------------------------------------------------------------------------
+    "updateDraftSubmission_Master": {
+        "endpoint": "https://amsuite.amig.com/pc/service/edge/gatewayquote/quote",
+        "method": "updateDraftSubmission",
+        "params": [
+            {
+                "sessionUUID": "<SESSION_UUID>",
+                "quoteID": "<QUOTE_ID>",
+                // --- BASE DATA: Account, Policy, Product, & Insureds ---
+                "baseData": {
+                    "accountNumber": "0017483217",
+                    "productCode": "PersonalAuto",
+                    "policyType": "boat",
+                    "periodStartDate": {
+                        "year": 2026,
+                        "month": 1,
+                        "day": 17
+                    },
+                    "periodEndDate": {
+                        "year": 2027,
+                        "month": 1,
+                        "day": 17
+                    },
+                    "termType": "Annual",
+                    "periodStatus": "Draft",
+                    // Primary Account Holder
+                    "accountHolder": {
+                        "publicID": "pc:33904322",
+                        "contactName": "Luis Burckhardt",
+                        "firstName": "Luis",
+                        "lastName": "Burckhardt",
+                        "displayName": "Luis Burckhardt",
+                        "primaryPhoneType": "mobile",
+                        "cellNumber": "3525476529",
+                        "emailAddress1": "x.e.velez@gmail.com",
+                        "dateOfBirth": {
+                            "year": 1979,
+                            "month": 0,
+                            "day": 0,
+                            "isMasked": true
+                        },
+                        "maritalStatus": "M",
+                        "subtype": "Person",
+                        "accountHolder": true,
+                        "primaryAddress": {
+                            "publicID": "pc:84128813",
+                            "addressLine1": "2576 SE 31st Pl",
+                            "city": "Ocala",
+                            "state": "FL",
+                            "postalCode": "34471",
+                            "country": "US",
+                            "addressType": "home",
+                            "standardizeStatus": "standardized"
+                        }
+                    },
+                    "policyAddress": { /* Same as accountHolder.primaryAddress */},
+                    // Additional Named Insureds (ANI) & Interests
+                    "additionalInsureds": [
+                        {
+                            "contactRole": "PolicyAddlNamedInsured",
+                            "publicID": "pc:127635324",
+                            "contact": {
+                                "publicID": "pc:33937888",
+                                "firstName": "Xiomara",
+                                "lastName": "Burckhardt",
+                                "displayName": "Xiomara Burckhardt",
+                                "relationship": "SP", // SP = Spouse
+                                "additionalInsuredType": "person",
+                                "descOfInterest": "additionalnamedinsured",
+                                "primaryPhoneType": "mobile",
+                                "cellNumber": "2025550185",
+                                "subtype": "Person",
+                                "accountHolder": true // Note: HAR shows true even for ANI
+                            }
+                        }
+                    ]
+                },
+                // --- LOB DATA: The Core Business Data (Questions, Drivers, Vehicles, Coverages) ---
+                "lobData": {
+                    "personalAuto": {
+                        // A. QUESTION SETS (Qualification & Policy Info)
+                        "preQualQuestionSets": [
+                            {
+                                "code": "PA_Qualification_1",
+                                "answers": {
+                                    "PA_QSLossHistoryReport_1": "true",
+                                    "PA_QSCreditReport_12": "true",
+                                    "PA_QSLicenseSuspendedRevoked_1": "false",
+                                    "PA_QSFR44_1": "false",
+                                    "PA_QSVerifyTitledOwner_1": "false",
+                                    "PA_RestorationOfCivilRightsForFelony_1": "false",
+                                    "PA_QSMotorVehicleReport_1": "true",
+                                    "PA_QSVehicleForRent_1": "false",
+                                    "PA_QSVehicleForSaleConsignment_1": "false",
+                                    "PA_QSSR22_1": "false",
+                                    "PA_QSFelonyConviction_7": "false",
+                                    "PA_QSDisclaimerVerification_1": "true",
+                                    "PA_QSUnrepairedDamage_1": "false"
+                                }
+                            },
+                            {
+                                "code": "PA_PolicyInfo_1",
+                                "answers": {
+                                    "PA_QSPriorInsurance_1": "Yes",
+                                    "PA_QSWatercraftLossesAccidents_1": "true", // Triggers requirement for addManualPriorLosses
+                                    "PA_QSApplicantPrimaryResidence_1": "OwnHome",
+                                    "PA_QSPaperlessDiscount_1": "false",
+                                    "PA_QSMultiPolicyDiscount_1": "false",
+                                    "PA_QSPaidInFullDiscount_1": "false"
+                                }
+                            }
+                        ],
+                        "coverables": {
+                            // B. DRIVERS
+                            "drivers": [
+                                {
+                                    "publicID": "pc:127635327",
+                                    "isPolicyHolder": true, // Primary Driver
+                                    "relationship": "pni_ext",
+                                    "licenseState": "FL",
+                                    "licenseNumber": "B626526793780",
+                                    "licensed": true,
+                                    "accidents": 0,
+                                    "violations": 0,
+                                    "person": { /* Duplicate of Account Holder Person Object */},
+                                    "dateOfBirth": {
+                                        "year": 1979,
+                                        "month": 0,
+                                        "day": 0,
+                                        "isMasked": true
+                                    },
+                                    "driverQuestionSets": [
+                                        {
+                                            "code": "PA_DriverRoles_1",
+                                            "answers": {
+                                                "PA_QSYearsBoatingExperience_1": "20",
+                                                "PA_QSDateCompletedSafetyCourse_1": null,
+                                                "PA_QSIneligibleDriver_1": "false"
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "publicID": "pc:127635329",
+                                    "isPolicyHolder": false,
+                                    "relationship": "SP", // Spouse
+                                    "licenseState": "FL",
+                                    "licenseNumber": "B225720598000",
+                                    "licensed": true,
+                                    "person": { /* Duplicate of Additional Insured Person Object */},
+                                    "driverQuestionSets": [
+                                        {
+                                            "code": "PA_DriverRoles_1",
+                                            "answers": {
+                                                "PA_QSYearsBoatingExperience_1": "20",
+                                                "PA_QSIneligibleDriver_1": "false"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ],
+                            // C. VEHICLES
+                            "vehicles": [
+                                // Vehicle 1: BOAT
+                                {
+                                    "vehicleNumber": 1,
+                                    "vehicleType": "boat",
+                                    "year": 2014,
+                                    "make": "SEA FOX",
+                                    "model": "246 COMMANDER",
+                                    "hullId": "LYGNB102E314",
+                                    "vehicleValue": 40500,
+                                    "purchasePrice": "43500.00",
+                                    "purchaseDate": {
+                                        "year": 2026,
+                                        "month": 0,
+                                        "day": 27
+                                    },
+                                    "length": "24",
+                                    "hullConstruction": "F", // Fiberglass
+                                    "fuelType": "Gasoline",
+                                    "primaryUse": "commuting", // Commuting/Pleasure
+                                    "storageAddress": { /* Full Address Object */},
+                                    "storageType": "Other",
+                                    "engineDetails": [
+                                        {
+                                            "year": "2017",
+                                            "make": "YAMAHA",
+                                            "model": "F250XCA 4-STROKE",
+                                            "horsePower": "250"
+                                        }
+                                    ],
+                                    "vehicleQuestionSets": [
+                                        {
+                                            "code": "PA_VehicleDetails_1",
+                                            "answers": {
+                                                "PA_QSAntiTheftVehicleRecoveryTrackingSystem_1": "false"
+                                            }
+                                        }
+                                    ],
+                                    "primaryOperator": {
+                                        "publicID": "pc:127635327" // Link to Driver PublicID
+                                    },
+                                    "additionalInterests": [] // Lienholders go here
+                                },
+                                // Vehicle 2: TRAILER
+                                {
+                                    "vehicleNumber": 2,
+                                    "vehicleType": "trailer",
+                                    "year": "2013",
+                                    "make": "ALL OTHER",
+                                    "model": "All Other Trailer",
+                                    "vin": "LYGNB102E314", // Should match trailer VIN
+                                    "vehicleValue": 40500,
+                                    "length": "24",
+                                    "makeDescription": "Magic Trail Trailers",
+                                    "modelDescription": "2 axile",
+                                    "storageAddress": { /* Full Address Object */},
+                                    "engineDetails": []
+                                }
+                            ]
+                        },
+                        // D. COVERAGES
+                        "offerings": [
+                            {
+                                "branchName": "CUSTOM",
+                                "coverages": {
+                                    "vehicleCoverages": [
+                                        // Specific coverages for the Boat
+                                        {
+                                            "vehicleName": "2014 SEA FOX 246 COMMANDER ",
+                                            "coverages": [
+                                                {
+                                                    "name": "Hull",
+                                                    "patternCode": "PAHullCov",
+                                                    "terms": [
+                                                        {
+                                                            "name": "Deductible",
+                                                            "chosenTermValue": "500",
+                                                            "patternCode": "PAHullDeductibleMoney"
+                                                        },
+                                                        {
+                                                            "name": "Settlement Option",
+                                                            "chosenTermValue": "Agreed Value",
+                                                            "patternCode": "PAHullSettlementOpt"
+                                                        }
+                                                    ]
+                                                }
+                                                // ... other boat coverages (Towing, Personal Effects)
+                                            ]
+                                        },
+                                        // Specific coverages for the Trailer
+                                        {
+                                            "vehicleName": "2013 ALL OTHER All Other Trailer ",
+                                            "coverages": [
+                                                {
+                                                    "name": "Trailer Physical Damage",
+                                                    "patternCode": "PATrailerPhysicalDamageCov",
+                                                    "terms": [
+                                                        {
+                                                            "name": "Limit",
+                                                            "chosenTermValue": "40,500",
+                                                            "patternCode": "PATrailerPhysicalDamageLimit"
+                                                        },
+                                                        {
+                                                            "name": "Deductible",
+                                                            "chosenTermValue": "250",
+                                                            "patternCode": "PATrailerPhysicalDamageDeductible"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "lineCoverages": [
+                                        // Policy-wide coverages
+                                        {
+                                            "name": "Liability",
+                                            "patternCode": "PALiabilityCov",
+                                            "terms": [
+                                                {
+                                                    "name": "Limit",
+                                                    "chosenTermValue": "100,000 CSL",
+                                                    "patternCode": "PALiability"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "name": "Uninsured Boaters",
+                                            "patternCode": "PAUBUIBoatersCov",
+                                            "terms": [
+                                                {
+                                                    "name": "Limit",
+                                                    "chosenTermValue": "100,000 CSL",
+                                                    "patternCode": "PAUBUIBBI"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "name": "Medical Payments",
+                                            "patternCode": "PAMedPayCov",
+                                            "terms": [
+                                                {
+                                                    "name": "Limit",
+                                                    "chosenTermValue": "5,000",
+                                                    "patternCode": "PAMedPayLimit"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                },
+                // --- PERSONS ARRAY (All contacts in one flat list) ---
+                "persons": [
+                    { /* Luis Object */},
+                    { /* Xiomara Object */}
+                ],
+                "pageContext": "QUOTE" // The context changes depending on the step being submitted
+            }
+        ]
+    },
+    // ----------------------------------------------------------------------------------------------
+    // 2. REFERENCE: PRIOR LOSSES (Called Separately)
+    // This MUST be called if PA_QSWatercraftLossesAccidents_1 is "true".
+    // ----------------------------------------------------------------------------------------------
+    "_reference_addManualPriorLosses": {
+        "method": "addManualPriorLosses",
+        "params": [
+            {
+                "amountPaid": {
+                    "currency": "usd",
+                    "amount": "200"
+                },
+                "vehicleClass": "WATERCRAFT",
+                "occurDate": {
+                    "year": 2014,
+                    "month": 2,
+                    "day": 10
+                },
+                "description": "Other",
+                "driver": "Luis Burckhardt",
+                "atFault": "yes",
+                "source": "manual"
+            },
+            "<QUOTE_ID>"
+        ]
+    },
+    // ----------------------------------------------------------------------------------------------
+    // 3. REFERENCE: INITIAL SUBMISSION (Step 1)
+    // ----------------------------------------------------------------------------------------------
+    "_reference_createNewSubmission": {
+        "method": "createNewSubmission",
+        "params": [
+            {
+                "effectiveDate": "2026-02-17T18:30:00.000Z",
+                "producerCode": "029610",
+                "state": "FL",
+                "productCode": "PersonalAuto",
+                "policyType": "boat",
+                "uWCompany": "071",
+                "accountNumber": "0017483217"
+            }
+        ]
+    }
+}

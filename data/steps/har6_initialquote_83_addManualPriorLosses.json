@@ -1,0 +1,50 @@
+{
+  "endpoint": "https://amsuite.amig.com/pc/service/edge/gatewayquote/quote",
+  "rpcMethod": "addManualPriorLosses",
+  "pageContext": "unknown",
+  "payload": {
+    "id": "e7bfe30c-0271-4f24-be08-8642fc9aaf69",
+    "jsonrpc": "2.0",
+    "method": "addManualPriorLosses",
+    "params": [
+      {
+        "amountPaid": {
+          "currency": "usd",
+          "amount": "200"
+        },
+        "vehicleClass": "WATERCRAFT",
+        "occurDate": {
+          "year": 2014,
+          "month": 2,
+          "day": 10
+        },
+        "description": "Other",
+        "driver": "Luis Burckhardt",
+        "atFault": "yes",
+        "source": "manual"
+      },
+      "0046077452"
+    ]
+  },
+  "response": {
+    "result": {
+      "publicID": "pc:19445257",
+      "source": "manual",
+      "vehicleClass": "WATERCRAFT",
+      "driver": "Luis Burckhardt",
+      "occurDate": {
+        "year": 2014,
+        "month": 2,
+        "day": 10
+      },
+      "description": "Other",
+      "amountPaid": {
+        "amount": 200,
+        "currency": "usd"
+      },
+      "atFault": "yes"
+    },
+    "id": "e7bfe30c-0271-4f24-be08-8642fc9aaf69",
+    "jsonrpc": "2.0"
+  }
+}

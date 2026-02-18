@@ -1,0 +1,59 @@
+// Full Quote / Pricing Payload Documentation
+// Based on amsuite.amiquote-fullquote.har
+{
+    // ----------------------------------------------------------------------------------
+    // 1. UPDATE / RE-CALCULATE QUOTE
+    // Endpoint: customquote
+    // Method: updateCustomQuote OR updateCustomAMIGQuote
+    // Context: QUOTE Page (Finalizing price)
+    // ----------------------------------------------------------------------------------
+    "updateCustomQuotePayload": {
+        "method": "updateCustomQuote",
+        "params": [
+            {
+                "quote": {
+                    "publicID": "pc:47635190",
+                    "branchName": "CUSTOM",
+                    "premium": {
+                        // This is usually output, but sometimes echoed back
+                    },
+                    "lobs": {
+                        "personalAuto": {
+                            // Same Coverage Structure as updateDraftSubmission
+                            "vehicleCoverages": [ /* ... Hull, Trailer ... */],
+                            "lineCoverages": [ /* ... Liability, Medical ... */]
+                        }
+                    }
+                }
+            }
+        ]
+    },
+    // ----------------------------------------------------------------------------------
+    // 2. PRICING RESPONSE (Where to get the money)
+    // Found in response.result.quote.premium
+    // ----------------------------------------------------------------------------------
+    "pricingResponse": {
+        "result": {
+            "quote": {
+                "premium": {
+                    "total": {
+                        "amount": 1375.62,
+                        "currency": "usd"
+                    },
+                    "monthlyPremium": {
+                        "amount": 114.64,
+                        "currency": "usd"
+                    },
+                    "taxes": {
+                        "amount": 0,
+                        "currency": "usd"
+                    },
+                    "totalBeforeTaxes": {
+                        "amount": 1362,
+                        "currency": "usd"
+                    }
+                }
+            }
+        }
+    }
+}

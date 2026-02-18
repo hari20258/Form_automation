@@ -1,0 +1,30 @@
+{
+  "endpoint": "https://amsuite.amig.com/pc/service/edge/vmm/lookup",
+  "rpcMethod": "getBoatLengthsModels",
+  "pageContext": "unknown",
+  "payload": {
+    "id": "d8e48d37-d3be-4734-828c-e7601851e999",
+    "jsonrpc": "2.0",
+    "method": "getBoatLengthsModels",
+    "params": [
+      {
+        "Year": "2013",
+        "VehicleType": "trailer",
+        "PolicyType": "boat",
+        "Make": "AQUACART"
+      }
+    ]
+  },
+  "response": {
+    "result": {
+      "amodLength": 0,
+      "version": 0,
+      "lengths": [
+        72,
+        84
+      ]
+    },
+    "id": "d8e48d37-d3be-4734-828c-e7601851e999",
+    "jsonrpc": "2.0"
+  }
+}

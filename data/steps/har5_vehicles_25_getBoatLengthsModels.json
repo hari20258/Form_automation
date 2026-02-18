@@ -1,0 +1,72 @@
+{
+  "endpoint": "https://amsuite.amig.com/pc/service/edge/vmm/lookup",
+  "rpcMethod": "getBoatLengthsModels",
+  "pageContext": "unknown",
+  "payload": {
+    "id": "bb38229e-5654-4bf5-a935-c25392673054",
+    "jsonrpc": "2.0",
+    "method": "getBoatLengthsModels",
+    "params": [
+      {
+        "Year": "2013",
+        "VehicleType": "trailer",
+        "PolicyType": "boat",
+        "Make": "ALL OTHER"
+      }
+    ]
+  },
+  "response": {
+    "result": {
+      "amodLength": 0,
+      "version": 0,
+      "lengths": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50
+      ]
+    },
+    "id": "bb38229e-5654-4bf5-a935-c25392673054",
+    "jsonrpc": "2.0"
+  }
+}

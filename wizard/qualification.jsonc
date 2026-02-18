@@ -1,0 +1,213 @@
+{
+    // ==========================================================================================
+    // STEP 2: QUALIFICATIONS
+    // ==========================================================================================
+    // ------------------------------------------------------------------------------------------
+    // 1. CONTEXT CHECK: PRODUCE VALIDATION (Likely Required)
+    // usage: Re-validates that the agent is authorized for this product/state before accepted quals.
+    // ------------------------------------------------------------------------------------------
+    "validateProducerCriteria": {
+        "endpoint": "https://amsuite.amig.com/pc/service/edge/prism/auth",
+        "method": "validateProducerCriteria",
+        "params": [
+            {
+                "EffectiveDt": {
+                    "year": 2026,
+                    "month": 1,
+                    "day": 17
+                },
+                "userName": "<USERNAME>", // e.g., "jberndt"
+                "state": "FL",
+                "jobType": "QUOTE",
+                "companyNum": "071",
+                "PolicyType": "boat",
+                "jobNumber": "<QUOTE_ID>"
+            }
+        ]
+    },
+    // ------------------------------------------------------------------------------------------
+    // 2. UI HELPER: GET PRODUCTS (Optional)
+    // usage: Fetches the list of products available to the producer. Used by UI to validate selection.
+    // ------------------------------------------------------------------------------------------
+    "getProducerProducts": {
+        "endpoint": "https://amsuite.amig.com/pc/service/edge/prism/auth",
+        "method": "getProducerProducts",
+        "params": [
+            {
+                "EffectiveDt": {
+                    "year": 2026,
+                    "month": 1,
+                    "day": 17
+                },
+                "userName": "<USERNAME>",
+                "state": "FL",
+                "jobType": "QUOTE",
+                "companyNum": "071",
+                "PolicyType": "boat",
+                "jobNumber": "<QUOTE_ID>"
+            }
+        ]
+    },
+    // ------------------------------------------------------------------------------------------
+    // 3. MAIN UPDATE: QUALIFICATION ANSWERS
+    // usage: Submits answers to underwriting questions.
+    // ------------------------------------------------------------------------------------------
+    "updateDraftSubmission": {
+        "endpoint": "https://amsuite.amig.com/pc/service/edge/gatewayquote/quote",
+        "method": "updateDraftSubmission",
+        "params": [
+            {
+                "sessionUUID": "<SESSION_UUID>",
+                "quoteID": "<QUOTE_ID>",
+                "baseData": {
+                    "accountNumber": "0017483217",
+                    "accountHolder": {
+                        "emailAddress1": "x.e.velez@gmail.com",
+                        "publicID": "pc:33904322",
+                        "displayName": "Luis Burckhardt",
+                        "primaryPhoneType": "mobile",
+                        "contactName": "Luis Burckhardt",
+                        "subtype": "Person",
+                        "primaryAddress": {
+                            "publicID": "pc:84128813",
+                            "displayName": "2576 SE 31st Pl, Ocala, FL 34471",
+                            "addressLine1": "2576 SE 31st Pl",
+                            "city": "Ocala",
+                            "state": "FL",
+                            "postalCode": "34471",
+                            "country": "US",
+                            "addressType": "other",
+                            "standardizeStatus": "standardized",
+                            "standardizeDate_Ext": "2026-02-17T10:02:11Z"
+                        },
+                        "accountHolder": true,
+                        "cellNumber": "3525476529",
+                        "dateOfBirth": {
+                            "year": 1979,
+                            "month": 0,
+                            "day": 0,
+                            "isMasked": true
+                        },
+                        "firstName": "Luis",
+                        "lastName": "Burckhardt",
+                        "maritalStatus": "M",
+                        "additionalInsuredType": "person",
+                        "customerCallOptInIndicator": false,
+                        "tempId": 7
+                    },
+                    "policyAddress": {
+                        "publicID": "pc:84128813",
+                        "displayName": "2576 SE 31st Pl, Ocala, FL 34471",
+                        "addressLine1": "2576 SE 31st Pl",
+                        "city": "Ocala",
+                        "state": "FL",
+                        "postalCode": "34471",
+                        "country": "US",
+                        "addressType": "other",
+                        "standardizeStatus": "standardized",
+                        "standardizeDate_Ext": "2026-02-17T10:02:11Z"
+                    },
+                    "productCode": "PersonalAuto",
+                    "productName": "Recreational",
+                    "uWCompany": "071",
+                    "periodStartDate": {
+                        "year": 2026,
+                        "month": 1,
+                        "day": 17
+                    },
+                    "periodEndDate": {
+                        "year": 2027,
+                        "month": 1,
+                        "day": 17
+                    },
+                    "preQualQuestionSets": [],
+                    "termType": "Annual",
+                    "periodStatus": "Draft",
+                    "pAPolicyType": "boat",
+                    "sADFFields": [],
+                    "isAddressChangedRecently": false,
+                    "additionalInsureds": [
+                        {
+                            "contactRole": "PolicyAddlNamedInsured",
+                            "contact": {
+                                "publicID": "pc:33937888",
+                                "displayName": "Xiomara Burckhardt",
+                                "primaryPhoneType": "mobile",
+                                "subtype": "Person",
+                                "primaryAddress": {
+                                    "publicID": "pc:84128813",
+                                    "displayName": "2576 SE 31st Pl, Ocala, FL 34471",
+                                    "addressLine1": "2576 SE 31st Pl",
+                                    "city": "Ocala",
+                                    "state": "FL",
+                                    "postalCode": "34471",
+                                    "country": "US",
+                                    "addressType": "other",
+                                    "standardizeStatus": "standardized",
+                                    "standardizeDate_Ext": "2026-02-17T10:02:11Z"
+                                },
+                                "accountHolder": true,
+                                "cellNumber": "2025550185",
+                                "dateOfBirth": {
+                                    "year": 1981,
+                                    "month": 0,
+                                    "day": 0,
+                                    "isMasked": true
+                                },
+                                "firstName": "Xiomara",
+                                "lastName": "Burckhardt",
+                                "maritalStatus": "M",
+                                "relationship": "SP",
+                                "descOfInterest": "additionalnamedinsured",
+                                "marina": "no",
+                                "additionalInsuredType": "person",
+                                "companyPrimaryContact": false
+                            },
+                            "publicID": "pc:127635324"
+                        }
+                    ],
+                    "policyType": "boat",
+                    "baseState": "FL",
+                    "ratingState": "FL",
+                    "isNCRatingApplicable": false
+                },
+                "lobData": {
+                    "personalAuto": {
+                        "preQualQuestionSets": [
+                            {
+                                "code": "PA_Qualification_1",
+                                "answers": {
+                                    "PA_QSLossHistoryReport_1": "true",
+                                    "PA_QSCreditReport_12": "true",
+                                    "PA_QSLicenseSuspendedRevoked_1": "false",
+                                    "PA_QSFR44_1": "false",
+                                    "PA_QSVerifyTitledOwner_1": "false",
+                                    "PA_RestorationOfCivilRightsForFelony_1": null,
+                                    "PA_QSMotorVehicleReport_1": "true",
+                                    "PA_QSVehicleForRent_1": "false",
+                                    "PA_QSVehicleForSaleConsignment_1": "false",
+                                    "PA_QSSR22_1": "false",
+                                    "PA_QSFelonyConviction_7": "false",
+                                    "PA_QSDisclaimerVerification_1": "true",
+                                    "PA_QSUnrepairedDamage_1": "false"
+                                }
+                            },
+                            {
+                                "code": "PA_PolicyInfo_1",
+                                "answers": {
+                                    "PA_QSPaperlessDiscount_1": "false",
+                                    "PA_QSMultiPolicyDiscount_1": "false",
+                                    "PA_QSPriorInsurance_1": "No",
+                                    "PA_QSWatercraftLossesAccidents_1": "false", // If "true", triggers need for 'addManualPriorLosses'
+                                    "PA_QSPaidInFullDiscount_1": "false",
+                                    "PA_QSApplicantPrimaryResidence_1": "OwnHome"
+                                }
+                            }
+                        ]
+                    }
+                },
+                "pageContext": "QUESTION"
+            }
+        ]
+    }
+}

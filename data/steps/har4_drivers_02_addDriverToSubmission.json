@@ -1,0 +1,129 @@
+{
+  "endpoint": "https://amsuite.amig.com/pc/service/edge/gatewayquote/driver",
+  "rpcMethod": "addDriverToSubmission",
+  "pageContext": "unknown",
+  "payload": {
+    "id": "a29ce4a0-7fb5-4c21-b27f-8db74552698e",
+    "jsonrpc": "2.0",
+    "method": "addDriverToSubmission",
+    "params": [
+      {
+        "driver": {
+          "person": {
+            "emailAddress1": "x.e.velez@gmail.com",
+            "publicID": "pc:33904322",
+            "displayName": "Luis Burckhardt",
+            "primaryPhoneType": "mobile",
+            "contactName": "Luis Burckhardt",
+            "subtype": "Person",
+            "primaryAddress": {
+              "publicID": "pc:84128813",
+              "displayName": "2576 SE 31st Pl, Ocala, FL 34471",
+              "addressLine1": "2576 SE 31st Pl",
+              "city": "Ocala",
+              "state": "FL",
+              "postalCode": "34471",
+              "country": "US",
+              "addressType": "other",
+              "standardizeStatus": "standardized",
+              "standardizeDate_Ext": "2026-02-17T10:02:11Z",
+              "countyName": ""
+            },
+            "accountHolder": true,
+            "cellNumber": "3525476529",
+            "dateOfBirth": {
+              "year": 1979,
+              "month": 0,
+              "day": 0,
+              "isMasked": true
+            },
+            "firstName": "Luis",
+            "lastName": "Burckhardt",
+            "maritalStatus": "M",
+            "additionalInsuredType": "person",
+            "customerCallOptInIndicator": false,
+            "tempId": 7
+          },
+          "dateOfBirth": {
+            "year": 1979,
+            "month": 0,
+            "day": 0,
+            "isMasked": true
+          },
+          "tempID": 18,
+          "relationship": "pni_ext",
+          "accidents": 0,
+          "violations": 0,
+          "$$hashKey": "object:3696",
+          "driverQuestionSets": [
+            {
+              "code": "PA_DriverRoles_1",
+              "answers": {
+                "PA_QSDateCompletedSafetyCourse_1": null,
+                "PA_QSYearsBoatingExperience_1": "20",
+                "PA_QSIneligibleDriver_1": "false"
+              },
+              "$$hashKey": "object:3972"
+            }
+          ],
+          "licensed": true,
+          "licenseState": "FL",
+          "licenseNumber": "B626526793780"
+        },
+        "submissionNumber": "0046077452"
+      }
+    ]
+  },
+  "response": {
+    "result": {
+      "publicID": "pc:127635327",
+      "person": {
+        "publicID": "pc:33904322",
+        "displayName": "Luis Burckhardt",
+        "firstName": "Luis",
+        "lastName": "Burckhardt",
+        "primaryPhoneType": "mobile",
+        "cellNumber": "3525476529",
+        "maritalStatus": "M",
+        "dateOfBirth": {
+          "year": 1979,
+          "month": 0,
+          "day": 0,
+          "isMasked": true
+        },
+        "primaryAddress": {
+          "publicID": "pc:84128813",
+          "addressLine1": "2576 SE 31st Pl",
+          "city": "Ocala",
+          "state": "FL",
+          "postalCode": "34471",
+          "country": "US",
+          "addressType": "other"
+        }
+      },
+      "licenseState": "FL",
+      "licenseNumber": "*********3780",
+      "licensed": true,
+      "dateOfBirth": {
+        "year": 1979,
+        "month": 0,
+        "day": 0,
+        "isMasked": true
+      },
+      "isPolicyHolder": true,
+      "driverQuestionSets": [
+        {
+          "code": "PA_DriverRoles_1",
+          "answers": {
+            "PA_QSDateCompletedSafetyCourse_1": null,
+            "PA_QSYearsBoatingExperience_1": "20",
+            "PA_QSIneligibleDriver_1": "false"
+          }
+        }
+      ],
+      "relationship": "pni_ext"
+    },
+    "id": "a29ce4a0-7fb5-4c21-b27f-8db74552698e",
+    "jsonrpc": "2.0"
+  }
+}

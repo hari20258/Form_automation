@@ -1,0 +1,58 @@
+{
+  "endpoint": "https://amsuite.amig.com/pc/service/edge/gatewayquote/questionset",
+  "rpcMethod": "refreshQuestionSets",
+  "pageContext": "unknown",
+  "payload": {
+    "id": "f3063c44-3376-40a0-9669-b6528449282c",
+    "jsonrpc": "2.0",
+    "method": "refreshQuestionSets",
+    "params": [
+      {
+        "questionSets": [
+          {
+            "code": "PA_VehicleDetails_1",
+            "answers": {}
+          },
+          {
+            "code": "PA_VehicleDetails_3",
+            "answers": {}
+          },
+          {
+            "code": "PA_VehicleDetails_5",
+            "answers": {}
+          }
+        ],
+        "submissionNumber": "0046077452",
+        "params": {
+          "vehicleType": "pwc"
+        }
+      }
+    ]
+  },
+  "response": {
+    "result": {
+      "submissionNumber": "0046077452",
+      "questionSets": [
+        {
+          "code": "PA_VehicleDetails_1",
+          "answers": {
+            "PA_QSAntiTheftVehicleRecoveryTrackingSystem_1": "false"
+          }
+        },
+        {
+          "code": "PA_VehicleDetails_3",
+          "answers": {}
+        },
+        {
+          "code": "PA_VehicleDetails_5",
+          "answers": {}
+        }
+      ],
+      "params": {
+        "vehicleType": "pwc"
+      }
+    },
+    "id": "f3063c44-3376-40a0-9669-b6528449282c",
+    "jsonrpc": "2.0"
+  }
+}

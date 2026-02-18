@@ -1,0 +1,252 @@
+{
+    // ==========================================================================================
+    // STEP 3: DRIVERS
+    // ==========================================================================================
+    // ------------------------------------------------------------------------------------------
+    // 1. ATOMIC ACTION: ADD DRIVER (Required for each new driver)
+    // usage: Creates a new driver entity and returns a `publicID` (e.g., "pc:127635327")
+    // NOTE: `submissionNumber` is the same as your `quoteID` (e.g., "0046077452") obtained in Step 1.
+    // ------------------------------------------------------------------------------------------
+    "addDriverToSubmission": {
+        "endpoint": "https://amsuite.amig.com/pc/service/edge/gatewayquote/driver",
+        "method": "addDriverToSubmission",
+        "params": [
+            {
+                "submissionNumber": "<QUOTE_ID>", // This is the ID returned from 'createNewSubmission' in Step 1
+                "driver": {
+                    "person": {
+                        "firstName": "Xiomara",
+                        "lastName": "Burckhardt",
+                        "dateOfBirth": { // DOB is repeated in person and root driver object
+                            "year": 1981,
+                            "month": 4, // 0-indexed in some contexts
+                            "day": 29
+                        },
+                        "maritalStatus": "M", // S=Single, M=Married
+                        "primaryPhoneType": "mobile",
+                        "cellNumber": "3525476529",
+                        "primaryAddress": {
+                            "addressLine1": "2576 SE 31st Pl",
+                            "city": "Ocala",
+                            "state": "FL",
+                            "postalCode": "34471",
+                            "country": "US",
+                            "addressType": "other",
+                            "standardizeStatus": "standardized"
+                        }
+                    },
+                    "dateOfBirth": {
+                        "year": 1981,
+                        "month": 4,
+                        "day": 29
+                    },
+                    "relationship": "SP", // SP=Spouse, CH=Child, etc.
+                    "driverQuestionSets": [
+                        {
+                            "code": "PA_DriverRoles_1",
+                            "answers": {
+                                "PA_QSDateCompletedSafetyCourse_1": null,
+                                "PA_QSYearsBoatingExperience_1": "20",
+                                "PA_QSIneligibleDriver_1": "false"
+                            }
+                        }
+                    ],
+                    "licensed": true,
+                    "licenseState": "FL",
+                    "licenseNumber": "B626526793780",
+                    "accidents": 0,
+                    "violations": 0
+                }
+            }
+        ]
+        // RETURNS: { ..., "publicID": "pc:127635327", ... } <--- SAVE THIS ID for 'updateDraftSubmission'
+    },
+    // ------------------------------------------------------------------------------------------
+    // 2. VALIDATION: LICENSE NUMBER (Required)
+    // usage: Validates the format and validity of the driver's license.
+    // ------------------------------------------------------------------------------------------
+    "validateLicenseNumber": {
+        "endpoint": "https://amsuite.amig.com/pc/service/edge/validation/policyValidator",
+        "method": "validateLicenseNumber",
+        "params": [
+            {
+                "licenseNumber": "B225720598000",
+                "licenseState": "FL"
+            }
+        ]
+    },
+    // ------------------------------------------------------------------------------------------
+    // 3. MAIN UPDATE: DRIVERS PAGE
+    // usage: Links the created drivers and submits their full details/questions.
+    // ------------------------------------------------------------------------------------------
+    "updateDraftSubmission": {
+        "endpoint": "https://amsuite.amig.com/pc/service/edge/gatewayquote/quote",
+        "method": "updateDraftSubmission",
+        "params": [
+            {
+                "sessionUUID": "<SESSION_UUID>",
+                "quoteID": "<QUOTE_ID>",
+                "baseData": {
+                    "accountNumber": "0017483217",
+                    "accountHolder": {
+                        "emailAddress1": "x.e.velez@gmail.com",
+                        "publicID": "pc:33904322",
+                        "displayName": "Luis Burckhardt",
+                        "primaryPhoneType": "mobile",
+                        "contactName": "Luis Burckhardt",
+                        "subtype": "Person",
+                        "primaryAddress": {
+                            "publicID": "pc:84128813",
+                            "displayName": "2576 SE 31st Pl, Ocala, FL 34471",
+                            "addressLine1": "2576 SE 31st Pl",
+                            "city": "Ocala",
+                            "state": "FL",
+                            "postalCode": "34471",
+                            "country": "US",
+                            "addressType": "other",
+                            "standardizeStatus": "standardized",
+                            "standardizeDate_Ext": "2026-02-17T10:17:19Z"
+                        },
+                        "accountHolder": true,
+                        "cellNumber": "3525476529",
+                        "dateOfBirth": {
+                            "year": 1979,
+                            "month": 0,
+                            "day": 0,
+                            "isMasked": true
+                        },
+                        "firstName": "Luis",
+                        "lastName": "Burckhardt",
+                        "maritalStatus": "M",
+                        "additionalInsuredType": "person",
+                        "customerCallOptInIndicator": false,
+                        "tempId": 7
+                    },
+                    "policyAddress": {
+                        "publicID": "pc:84128813",
+                        "displayName": "2576 SE 31st Pl, Ocala, FL 34471",
+                        "addressLine1": "2576 SE 31st Pl",
+                        "city": "Ocala",
+                        "state": "FL",
+                        "postalCode": "34471",
+                        "country": "US",
+                        "addressType": "other",
+                        "standardizeStatus": "standardized",
+                        "standardizeDate_Ext": "2026-02-17T10:17:19Z"
+                    },
+                    "productCode": "PersonalAuto",
+                    "productName": "Recreational",
+                    "uWCompany": "071",
+                    "periodStartDate": {
+                        "year": 2026,
+                        "month": 1,
+                        "day": 17
+                    },
+                    "periodEndDate": {
+                        "year": 2027,
+                        "month": 1,
+                        "day": 17
+                    },
+                    "preQualQuestionSets": [],
+                    "termType": "Annual",
+                    "periodStatus": "Draft",
+                    "pAPolicyType": "boat",
+                    "sADFFields": [],
+                    "isAddressChangedRecently": false,
+                    "additionalInsureds": [
+                        {
+                            "contactRole": "PolicyAddlNamedInsured",
+                            "contact": {
+                                "publicID": "pc:33937888",
+                                "displayName": "Xiomara Burckhardt",
+                                "primaryPhoneType": "mobile",
+                                "subtype": "Person",
+                                "primaryAddress": {
+                                    "publicID": "pc:84128813",
+                                    "displayName": "2576 SE 31st Pl, Ocala, FL 34471",
+                                    "addressLine1": "2576 SE 31st Pl",
+                                    "city": "Ocala",
+                                    "state": "FL",
+                                    "postalCode": "34471",
+                                    "country": "US",
+                                    "addressType": "other",
+                                    "standardizeStatus": "standardized",
+                                    "standardizeDate_Ext": "2026-02-17T10:17:19Z"
+                                },
+                                "accountHolder": true,
+                                "cellNumber": "2025550185",
+                                "dateOfBirth": {
+                                    "year": 1981,
+                                    "month": 0,
+                                    "day": 0,
+                                    "isMasked": true
+                                },
+                                "firstName": "Xiomara",
+                                "lastName": "Burckhardt",
+                                "maritalStatus": "M",
+                                "relationship": "SP",
+                                "descOfInterest": "additionalnamedinsured",
+                                "marina": "no",
+                                "additionalInsuredType": "person",
+                                "companyPrimaryContact": false
+                            },
+                            "publicID": "pc:127635324"
+                        }
+                    ],
+                    "policyType": "boat",
+                    "baseState": "FL",
+                    "ratingState": "FL",
+                    "isNCRatingApplicable": false
+                },
+                "lobData": {
+                    "personalAuto": {
+                        "coverables": {
+                            "drivers": [
+                                // DRIVER 1: Primary (Account Holder)
+                                {
+                                    "publicID": "pc:127635327",
+                                    "person": {
+                                        "publicID": "pc:33904322",
+                                        "firstName": "Luis",
+                                        "lastName": "Burckhardt",
+                                        "relationship": "pni_ext",
+                                        "driverQuestionSets": [ /*...*/]
+                                    },
+                                    "licenseState": "FL",
+                                    "licenseNumber": "*********3780",
+                                    "isPolicyHolder": true
+                                },
+                                // DRIVER 2: Spouse (Added via atomic call)
+                                {
+                                    "publicID": "<DRIVER_ID_FROM_ADD_STEP>", // e.g. "pc:127635329" from 'addDriverToSubmission'
+                                    "person": {
+                                        "publicID": "pc:33937889",
+                                        "firstName": "Xiomara",
+                                        "lastName": "Burckhardt",
+                                        "relationship": "SP",
+                                        "driverQuestionSets": [
+                                            {
+                                                "code": "PA_DriverRoles_1",
+                                                "answers": {
+                                                    "PA_QSDateCompletedSafetyCourse_1": null,
+                                                    "PA_QSYearsBoatingExperience_1": "20",
+                                                    "PA_QSIneligibleDriver_1": "false"
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    "licenseState": "FL",
+                                    "licenseNumber": "*********8000",
+                                    "isPolicyHolder": false
+                                }
+                            ],
+                            "vehicles": [],
+                            "prefillReportOrdered_Ext": false
+                        }
+                    }
+                },
+                "pageContext": "DRIVER"
+            }
+        ]
+    }
+}
